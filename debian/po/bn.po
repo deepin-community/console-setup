@@ -33,7 +33,7 @@ msgstr ""
 "Project-Id-Version: bn\n"
 "Report-Msgid-Bugs-To: console-setup@packages.debian.org\n"
 "POT-Creation-Date: 2020-10-28 20:01+0000\n"
-"PO-Revision-Date: 2021-01-09 15:33+0000\n"
+"PO-Revision-Date: 2023-05-14 17:53+0000\n"
 "Last-Translator: Indrani Roy <indrani@scriptek.co.in>\n"
 "Language-Team: Bengali\n"
 "Language: bn\n"
@@ -381,7 +381,7 @@ msgid ""
 "multiple common layouts. Please select the country of origin for the "
 "keyboard of this computer."
 msgstr ""
-"দেশ অনুযায়ী কীবোর্ডের লেআউট পরিবর্তন হয়। কোন কোন দেশের  একাধিক সাধারণ লেআউট "
+"দেশ অনুযায়ী কীবোর্ডের লেআউট পরিবর্তন হয়। কোন-কোন দেশের একাধিক সাধারণ লেআউট "
 "থাকে। অনুগ্রহপূর্বক এই কম্পিউটারের কীবোর্ডের জন্য মূল উৎস দেশ নির্বাচন করুন।"
 
 #. Type: select
@@ -389,7 +389,7 @@ msgstr ""
 #. :sl1:
 #: ../keyboard-configuration.templates:6001
 msgid "Keyboard layout:"
-msgstr "কীবোর্ড লেআউট"
+msgstr "কীবোর্ড লেআউট:"
 
 #. Type: select
 #. Description
@@ -544,7 +544,7 @@ msgstr "ক্যাপস্ লক"
 #: ../keyboard-configuration.templates:13001
 #: ../keyboard-configuration.templates:14001
 msgid "Right Alt (AltGr)"
-msgstr "ডান Alt  (AltGr)"
+msgstr "ডান Alt (AltGr)"
 
 #. Type: select
 #. Choices
@@ -727,17 +727,17 @@ msgid ""
 "+Shift is also a popular combination; it will however lose its usual "
 "behavior in Emacs and other programs that use it for specific needs."
 msgstr ""
-"সঙ্গত কারনে ডান অল্ট  বা ক্যাপস্ লক প্রায়ই ব্যবহার হয় (পরের ‌ক্ষেত্রে শিফট্+ক্যাপস্ লক  "
-"কম্বিনেশন সাধারণ ক্যাপস্ টগল্ এর জন্য ব্যবহার হয়। অল্ট+শিফট্ ও একটি জনপ্রিয় কম্বিনেশন; "
-"তবে এর ফলে  Emacs ও অন্যান্য প্রোগ্রামে যেখানেএদের বিশেষ কাজ নির্দেশিত, সেগুলো "
-"হারাবে।"
+"ডান Alt বা Caps Lock কীগুলি প্রায়শই এর্গোনোমিক কারণে বেছে নেওয়া হয় (দ্বিতীয় "
+"ক্ষেত্রে, সাধারণ ক্যাপ টগলের জন্য Shift+Caps Lock ব্যবহার করুন)। Alt+Shift ও "
+"ব্যবহার হয়; তবে এটি Emacs এবং অন্যান্য প্রোগ্রামে, যেখানে এটির অন্য নির্দিষ্ট ব্যবহার "
+"আছে সেখানে কাজ করবে না।"
 
 #. Type: select
 #. Description
 #. :sl1:
 #: ../keyboard-configuration.templates:11002
 msgid "Not all listed keys are present on all keyboards."
-msgstr "তালিকাভুক্ত সব কী কীবোর্ডে নেই। "
+msgstr "তালিকায় দেওয়া সমস্ত কীগুলি সব কীবোর্ডে থাকে না ।"
 
 #. Type: select
 #. Choices
@@ -956,7 +956,7 @@ msgstr "বেলজিয়"
 #. :sl1:
 #: ../keyboard-configuration.templates:16001
 msgid "Berber (Latin)"
-msgstr ""
+msgstr "বারবার (ল্যাটিন)"
 
 #. Type: select
 #. Choices
@@ -986,9 +986,8 @@ msgstr "বৃটিশ ইংরেজী"
 #. Choices
 #. :sl1:
 #: ../keyboard-configuration.templates:16001
-#, fuzzy
 msgid "Bulgarian (BDS layout)"
-msgstr "বুলগেরীয় (phonetic লেআউট)"
+msgstr "বুলগেরীয় (BDS লেআউট)"
 
 # console-keymaps-acorn, Bulgarian (phonetic layout)
 #. Type: select
@@ -1003,7 +1002,7 @@ msgstr "বুলগেরীয় (phonetic লেআউট)"
 #. :sl1:
 #: ../keyboard-configuration.templates:16001
 msgid "Burmese"
-msgstr ""
+msgstr "বার্মিজ"
 
 # console-keymaps-acorn, Canadian
 #. Type: select
@@ -1335,7 +1334,7 @@ msgstr "ফারসি"
 #. :sl1:
 #: ../keyboard-configuration.templates:16001
 msgid "Philippines"
-msgstr ""
+msgstr "ফিলিপিন্স"
 
 # console-keymaps-acorn, Polish
 #. Type: select
@@ -1449,7 +1448,7 @@ msgstr "সুইস জার্মান"
 #. :sl1:
 #: ../keyboard-configuration.templates:16001
 msgid "Tajik"
-msgstr ""
+msgstr "তাজিক"
 
 #. Type: select
 #. Choices
@@ -1477,7 +1476,7 @@ msgstr "থাই"
 #. :sl1:
 #: ../keyboard-configuration.templates:16001
 msgid "Tibetan"
-msgstr ""
+msgstr "তিব্বতী"
 
 # console-keymaps-acorn, Russian
 #. Type: select

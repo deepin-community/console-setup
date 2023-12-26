@@ -1,122 +1,118 @@
-CKBCOMP(1)                Console-setup User's Manual               CKBCOMP(1)
+4mCKBCOMP24m(1)                Console-setup User's Manual               4mCKBCOMP24m(1)
 
-
-
-NAME
+1mNAME0m
        ckbcomp  -  compile a XKB keyboard description to a keymap suitable for
        loadkeys or kbdcontrol
 
 
-SYNOPSIS
-       ckbcomp [OPTION...] [XKBLAYOUT [XKBVARIANT [XKBOPTIONS]...]]
+1mSYNOPSIS0m
+       1mckbcomp 22m[4mOPTION24m...] [4mXKBLAYOUT24m [4mXKBVARIANT24m [4mXKBOPTIONS24m]...]]
 
 
-DESCRIPTION
-       The ckbcomp keymap compiler converts a description of an  XKB  keyboard
-       layout  into  a console keymap that can be read directly by loadkeys(1)
-       or kbdcontrol(1).
+1mDESCRIPTION0m
+       The 1mckbcomp 22mkeymap compiler converts a description of an  XKB  keyboard
+       layout  into  a console keymap that can be read directly by 1mloadkeys22m(1)
+       or 1mkbdcontrol22m(1).
 
-       On its standard output ckbcomp dumps the generated keyboard definition.
-       The most important difference between the arguments of setxkbmap(1) and
-       the arguments of ckbcomp is the additional parameter -charmap when non-
-       Unicode keyboard map is wanted.  Without -charmap ckbcomp will generate
+       On its standard output 1mckbcomp 22mdumps the generated keyboard definition.
+       The most important difference between the arguments of 1msetxkbmap22m(1) and
+       the arguments of 1mckbcomp 22mis the additional parameter 4m-charmap24m when non-
+       Unicode keyboard map is wanted.  Without 4m-charmap24m 1mckbcomp 22mwill generate
        Unicode keyboard.
 
 
 
-OPTIONS
-   General options
-       -?,-help
+1mOPTIONS0m
+   1mGeneral options0m
+       1m-?22m,1m-help0m
               Print a usage message and exit.
 
-       -charmap charmap
+       1m-charmap 4m22mcharmap0m
               The encoding to use for the output keymap.  There should  be  an
-              character  mapping  table  defining  this  encoding  in /usr/lo-
-              cal/share/consoletrans.  Definitions of the  following  charmaps
-              are  provided:  ARMSCII-8,  CP1251,  CP1255,  CP1256,  GEORGIAN-
-              ACADEMY,   GEORGIAN-PS,   IBM1133,    ISIRI-3342,    ISO-8859-1,
-              ISO-8859-2,   ISO-8859-3,  ISO-8859-4,  ISO-8859-5,  ISO-8859-6,
-              ISO-8859-7, ISO-8859-8,  ISO-8859-9,  ISO-8859-10,  ISO-8859-11,
-              ISO-8859-13,   ISO-8859-14,  ISO-8859-15,  ISO-8859-16,  KOI8-R,
-              KOI8-U, TIS-620 and VISCII.
+              character  mapping  table  defining  this  encoding  in 4m/usr/lo-0m
+              4mcal/share/consoletrans24m.  Definitions of the  following  charmaps
+              are  provided:  1mARMSCII-822m,  1mCP125122m,  1mCP125522m,  1mCP125622m,  1mGEORGIAN-0m
+              1mACADEMY22m,   1mGEORGIAN-PS22m,   1mIBM113322m,    1mISIRI-334222m,    1mISO-8859-122m,
+              1mISO-8859-222m,   1mISO-8859-322m,  1mISO-8859-422m,  1mISO-8859-522m,  1mISO-8859-622m,
+              1mISO-8859-722m, 1mISO-8859-822m,  1mISO-8859-922m,  1mISO-8859-1022m,  1mISO-8859-1122m,
+              1mISO-8859-1322m,   1mISO-8859-1422m,  1mISO-8859-1522m,  1mISO-8859-1622m,  1mKOI8-R22m,
+              1mKOI8-U22m, 1mTIS-620 22mand 1mVISCII22m.
 
 
-       -Idir  Look in the top-level directory dir for files  included  by  the
+       1m-I4m22mdir24m  Look in the top-level directory 4mdir24m for files  included  by  the
               keymap description.  This option may be used multiple times.  If
-              a file can not be found in any of the specified directories,  it
-              will  be searched also in some other standard locations, such as
-              /usr/local/etc/console-setup/ckb,  /usr/local/share/X11/xkb  and
-              /etc/X11/xkb
+              a  file can not be found in any of the specified directories, it
+              will be searched also in some other standard locations, such  as
+              4m/usr/local/etc/console-setup/ckb24m,  4m/usr/local/share/X11/xkb24m  and
+              4m/etc/X11/xkb0m
 
 
-       -v level
-              Set  level  of detail for listing.  The argument level must be a
+       1m-v 4m22mlevel0m
+              Set level of detail for listing.  The argument 4mlevel24m must  be  a
               number from 1 to 10.
 
-       -compact
-              Generate a compact keymap with at most two xkb  groups  and  two
+       1m-compact0m
+              Generate  a  compact  keymap with at most two xkb groups and two
               levels in each or only one xkb-group and up to four levels.
 
-       -freebsd
+       1m-freebsd0m
               Generate a keymap for FreeBSD.
 
-       -backspace [bs|del]
-              Specifies  the  behaviour  of the <BackSpace> and <Delete> keys.
-              Value bs specifies VT100-conformant behaviour: <BackSpace>  will
-              generate  ^H  (ASCII  BS)  and <Delete> will generate ^?  (ASCII
-              DEL).    Value   del   specifies   VT220-conformant    behavior:
-              <BackSpace> will generate ^?  (ASCII DEL) and <Delete> will gen-
+       1m-backspace 22m[1mbs22m|1mdel22m]
+              Specifies the behaviour of the <BackSpace>  and  <Delete>  keys.
+              Value  1mbs 22mspecifies VT100-conformant behaviour: <BackSpace> will
+              generate 1m^H 22m(ASCII BS) and <Delete>  will  generate  1m^?   22m(ASCII
+              DEL).     Value   1mdel   22mspecifies   VT220-conformant   behavior:
+              <BackSpace> will generate 1m^?  22m(ASCII DEL) and <Delete> will gen-
               erate a special function sequence.
 
 
-   XKB Keyboard Description
+   1mXKB Keyboard Description0m
        The keyboard layout, variant and options components can be also  speci-
        fied directly on the command line.  See the synopsis of the command.
 
-       -symbols name
+       1m-symbols 4m22mname0m
               Specifies  the  symbols  component  name of the XKB keyboard de-
               scription.
 
-       -keycodes name
+       1m-keycodes 4m22mname0m
               Specifies the keycodes component name of the  XKB  keyboard  de-
               scription.
 
-       -rules name
+       1m-rules 4m22mname0m
               The name of the rules file to use.
 
-       -model name
+       1m-model 4m22mname0m
               Specifies the keyboard model used to choose the component names.
 
-       -layout name
+       1m-layout 4m22mname0m
               Specifies the layout used to choose the component names.
 
-       -variant name
+       1m-variant 4m22mname0m
               Specifies the layout variant used to choose the component names.
 
-       -option name
+       1m-option 4m22mname0m
               Adds an option used to choose component names.
 
 
-FILES
-       /usr/local/share/consoletrans
-       /usr/local/etc/console-setup/ckb
-       /usr/share/X11/xkb
-       /etc/X11/xkb
+1mFILES0m
+       4m/usr/local/share/consoletrans0m
+       4m/usr/local/etc/console-setup/ckb0m
+       4m/usr/share/X11/xkb0m
+       4m/etc/X11/xkb0m
 
 
-NOTES
-       If  the  option -freebsd is used together with -backspace del, then the
-       key <Delete> will generate the special code fkey70.  It is your respon-
-       sibility  to  assign  the appropriate sequence to this special  code by
+1mNOTES0m
+       If  the  option 4m-freebsd24m is used together with 4m-backspace24m 4mdel24m, then the
+       key <Delete> will generate the special code 1mfkey7022m.  It is your respon-
+       sibility to assign the appropriate sequence to this  special   code  by
        using the following command:
 
            kbdcontrol -f 70 "`printf '\033[3~'`"
 
 
 
-SEE ALSO
-       keyboard(5), setxkbmap(1)
+1mSEE ALSO0m
+       1mkeyboard22m(5), 1msetxkbmap22m(1)
 
-
-
-console-setup                     2011-03-17                        CKBCOMP(1)
+console-setup                     2011-03-17                        4mCKBCOMP24m(1)

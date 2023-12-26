@@ -17,13 +17,13 @@
 # Alexander Nyakhaychyk <nyakhaychyk@gmail.com>, 2009.
 # Ihar Hrachyshka <ihar.hrachyshka@gmail.com>, 2007, 2010.
 # Viktar Siarheichyk <viсs@eq.by>, 2014.
-# Viktar Siarheichyk <vics@fsfe.org>, 2014, 2015, 2017, 2018.
+# Viktar Siarheichyk <vics@fsfe.org>, 2014, 2015, 2017, 2018, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: be\n"
 "Report-Msgid-Bugs-To: console-setup@packages.debian.org\n"
 "POT-Creation-Date: 2020-10-28 20:01+0000\n"
-"PO-Revision-Date: 2018-07-10 13:44+0300\n"
+"PO-Revision-Date: 2023-04-27 15:36+0300\n"
 "Last-Translator: Viktar Siarheichyk <vics@eq.by>\n"
 "Language-Team: Belarusian <i18n@mova.org>\n"
 "Language: be\n"
@@ -310,13 +310,12 @@ msgstr ""
 #. Description
 #. :sl3:
 #: ../console-setup.templates:8001
-#, fuzzy
 msgid ""
 "Please select the size of the font for the console.  Some font sizes require "
 "framebuffer."
 msgstr ""
-"Вызначце памер шрыфта для кансолі Linux. Падказка: шрыфт, з якім кампутар "
-"запускаецца, мае памер 16."
+"Выберыце памер шрыфта для кансолі. Некаторыя памеры шрыфтоў патрабуюць "
+"framebuffer."
 
 #. Type: select
 #. Description
@@ -951,7 +950,7 @@ msgstr "Бельгійская"
 #. :sl1:
 #: ../keyboard-configuration.templates:16001
 msgid "Berber (Latin)"
-msgstr ""
+msgstr "Берберская (лацінка)"
 
 #. Type: select
 #. Choices

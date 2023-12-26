@@ -24,8 +24,8 @@ msgstr ""
 "Project-Id-Version: Debian Installer Level 1\n"
 "Report-Msgid-Bugs-To: console-setup@packages.debian.org\n"
 "POT-Creation-Date: 2020-10-28 20:01+0000\n"
-"PO-Revision-Date: 2020-03-18 06:36+0000\n"
-"Last-Translator: Fahad Shihab <fahadshihab@gmail.com>\n"
+"PO-Revision-Date: 2023-09-20 17:02+0000\n"
+"Last-Translator: Anish Sheela <aneesh.nl@gmail.com>\n"
 "Language-Team: Swatantra Malayalam Computing <discuss@lists.smc.org.in>\n"
 "Language: ml\n"
 "MIME-Version: 1.0\n"
@@ -495,7 +495,7 @@ msgid ""
 "the settings in /etc/X11/xorg.conf."
 msgstr ""
 "കീബോര്‍ഡ് ലേയൗട്ടിന്റെ ഡീഫാള്‍ട്ട് വാല്യു XKBOPTIONS=\"${XKBOPTIONS}\" എന്നതാണ്. ഇത് /etc/"
-"X11/xorg.conf എന്ന ഫയലില്‍ ഇപ്പോള്‍ വിവരിച്ചിരിക്കുന്ന ഭാഷക്ക്/പ്രദേശത്തിന് അനുസൃതമായാണ്. "
+"X11/xorg.conf എന്ന ഫയലില്‍ ഇപ്പോള്‍ വിവരിച്ചിരിക്കുന്ന ഭാഷക്ക്/പ്രദേശത്തിന് നുസൃതമായാണ്."
 
 #. Type: boolean
 #. Description
@@ -881,7 +881,7 @@ msgid ""
 "By default the combination Control+Alt+Backspace does nothing.  If you want "
 "it can be used to terminate the X server."
 msgstr ""
-"സാധാരണ ഗതിയില്‍ Ctrl+Alt+Backspace കീ സംയോജനം ഒന്നും ചെയ്യുന്നില്ല. താങ്കള്‍ക്ക് "
+"സാധാരണ ഗതിയില്‍ Ctrl+Alt+Backspace കീ സംയോജനം ഒന്നും ചെയ്യുന്നില്ല. ..താങ്കള്‍ക്ക് "
 "വേണമെങ്കിള്‍ X സേവകന്‍ അവസാനിപ്പിക്കാന്‍ അതുപയോഗിക്കാം"
 
 # console-keymaps-acorn, American

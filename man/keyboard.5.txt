@@ -1,21 +1,19 @@
-KEYBOARD(5)               Console-setup User's Manual              KEYBOARD(5)
+4mKEYBOARD24m(5)               Console-setup User's Manual              4mKEYBOARD24m(5)
 
-
-
-NAME
+1mNAME0m
        keyboard - keyboard configuration file
 
-DESCRIPTION
-       The  keyboard file describes the properties of the keyboard. It is read
-       by setupcon(1) in order to configure the keyboard on the  console.   In
-       Debian  systems  the  default  keyboard layout is described in /etc/de-
-       fault/keyboard and it is shared between X and the console.
+1mDESCRIPTION0m
+       The  1mkeyboard 22mfile describes the properties of the keyboard. It is read
+       by 1msetupcon22m(1) in order to configure the keyboard on the  console.   In
+       Debian  systems  the  default  keyboard layout is described in 4m/etc/de-0m
+       4mfault/keyboard24m and it is shared between X and the console.
 
-       The specification of the keyboard layout in the keyboard file is  based
+       The specification of the keyboard layout in the 1mkeyboard 22mfile is  based
        on the XKB options XkbModel, XkbLayout, XkbVariant and XkbOptions.  Un-
-       fortunately, there is little documentation how to use  them.   Descrip-
-       tion  of all possible values for these options can be found in the file
-       base.lst.
+       fortunately,  there  is little documentation how to use them.  Descrip-
+       tion of all possible values for these options can be found in the  file
+       4mbase.lst24m.
 
        You might want to read "The XKB Configuration Guide" by Kamil Toman and
        Ivan U. Pascal:
@@ -32,78 +30,78 @@ DESCRIPTION
 
               http://xfree86.org/current/XKBproto.pdf
 
-       The file keyboard consists of variable settings in POSIX format:
+       The file 1mkeyboard 22mconsists of variable settings in POSIX format:
 
-              VARIABLE=VALUE
+              4mVARIABLE24m=4mVALUE0m
 
        Only  one assignment is allowed per line.  Comments (starting with '#')
        are also allowed.
 
 
-OPTIONS
+1mOPTIONS0m
        The following variables can be set.
 
 
-       XKBMODEL
-              Specifies the XKB keyboard model name.  Default: pc105  on  most
+       1mXKBMODEL0m
+              Specifies the XKB keyboard model name.  Default: 1mpc105  22mon  most
               platforms.
 
 
-       XKBLAYOUT
+       1mXKBLAYOUT0m
               Specifies  the  XKB  keyboard  layout  name. This is usually the
-              country or language type of the keyboard. Default:  us  on  most
+              country or language type of the keyboard. Default:  1mus  22mon  most
               platforms
 
 
-       XKBVARIANT
+       1mXKBVARIANT0m
               Specifies the XKB keyboard variant components. These can be used
-              to further specify the keyboard  layout  details.  Default:  not
+              to  further  specify  the  keyboard layout details. Default: not
               set.
 
 
-       XKBOPTIONS
-              Specifies  the  XKB keyboard option components.  Options usually
-              relate to the behavior of the special keys (<Shift>,  <Control>,
+       1mXKBOPTIONS0m
+              Specifies the XKB keyboard option components.   Options  usually
+              relate  to the behavior of the special keys (<Shift>, <Control>,
               <Alt>, <CapsLock>, etc.)  Default: not set.
 
 
-       BACKSPACE
-              Determines  the behavior of <BackSpace> and <Delete> keys on the
-              console.  Allowed values: bs, del and guess.  In most cases  you
-              can  specify guess here, in which case the current terminal set-
-              tings and the kernel of your operating system will  be  used  to
-              determine  the  correct value.  Value bs specifies VT100-confor-
-              mant behavior: <BackSpace>  will  generate  ^H  (ASCII  BS)  and
-              <Delete>  will  generate  ^?   (ASCII DEL).  Value del specifies
-              VT220-conformant behavior: <BackSpace> will generate ^?   (ASCII
+       1mBACKSPACE0m
+              Determines the behavior of <BackSpace> and <Delete> keys on  the
+              console.   Allowed values: 1mbs22m, 1mdel 22mand 1mguess22m.  In most cases you
+              can specify 1mguess 22mhere, in which case the current terminal  set-
+              tings  and  the  kernel of your operating system will be used to
+              determine the correct value.  Value 1mbs  22mspecifies  VT100-confor-
+              mant  behavior:  <BackSpace>  will  generate  1m^H  22m(ASCII BS) and
+              <Delete> will generate 1m^?  22m(ASCII  DEL).   Value  1mdel  22mspecifies
+              VT220-conformant  behavior: <BackSpace> will generate 1m^?  22m(ASCII
               DEL) and <Delete> will generate a special function sequence.
 
 
-       KMAP   Usually this variable will be unset but if you don't want to use
+       1mKMAP   22mUsually this variable will be unset but if you don't want to use
               a XKB layout on the console,  you  can  specify  an  alternative
-              keymap here.  Specify a file that is suitable as input for load-
-              keys(1) on Linux or for kbdcontrol(1) on FreeBSD.
+              keymap here.  Specify a file that is suitable as input for 1mload-0m
+              1mkeys22m(1) on Linux or for 1mkbdcontrol22m(1) on FreeBSD.
 
 
-FILES
-       The standard  location  of  the  keyboard  file  is  /usr/local/etc/de-
-       fault/keyboard.  Description of all available keyboard models, layouts,
-       variants     and     options     is     available      in      /usr/lo-
-       cal/share/X11/xkb/rules/base.lst.       In      most      cases,     in
-       /usr/share/keymaps/ or /usr/share/syscons/keymaps/ you will find sever-
-       al keymaps that can be used with the variable KMAP.
+1mFILES0m
+       The  standard  location  of  the  1mkeyboard  22mfile  is 4m/usr/local/etc/de-0m
+       4mfault/keyboard24m.  Description of all available keyboard models, layouts,
+       variants     and     options     is     available      in      4m/usr/lo-0m
+       4mcal/share/X11/xkb/rules/base.lst24m.       In      most      cases,     in
+       4m/usr/share/keymaps/24m or 4m/usr/share/syscons/keymaps/24m you will find sever-
+       al keymaps that can be used with the variable 1mKMAP22m.
 
 
-NOTES
-       In Debian systems, changes in /etc/default/keyboard do not become imme-
+1mNOTES0m
+       In Debian systems, changes in 4m/etc/default/keyboard24m do not become imme-
        diately visible to X.  You should either reboot the system, or use
 
            udevadm trigger --subsystem-match=input --action=change
 
-       In order to activate the changes on the console, run setupcon(1).
+       In order to activate the changes on the console, run 1msetupcon22m(1)1m.0m
 
 
-BUGS
+1mBUGS0m
        When a triple-layout is used on the console, i.e. a layout  with  three
        XKB  groups,  then  the  group  toggling  happens in the following way:
        Group1 -> Group2 -> Group1 -> Group3.
@@ -111,21 +109,21 @@ BUGS
        On FreeBSD triple- and quadruple-layouts are not supported on the  con-
        sole (only the first and the second layout are taken into account).
 
-       The option grp:shifts_toggle is not supported on the console.
+       The option 1mgrp:shifts_toggle 22mis not supported on the console.
 
 
-EXAMPLES
+1mEXAMPLES0m
        The following configuration will give you the standard US QWERTY layout
-       (us).  The key <Menu> will act as  a  compose  key  (compose:menu)  and
-       <CapsLock> will act as third control key (ctrl:nocaps).
+       (1mus22m).   The  key  <Menu>  will  act as a compose key (1mcompose:menu22m) and
+       <CapsLock> will act as third control key (1mctrl:nocaps22m).
 
            XKBLAYOUT=us
            XKBVARIANT=
            XKBOPTIONS=compose:menu,ctrl:nocaps
 
-       In  the  following  configuration the right <Alt> key (grp:toggle) will
-       toggle between US QWERTY layout (us) and Greek (gr) layout.  The option
-       grp_led:scroll  is  ignored on the console but in X in means to use the
+       In the following configuration the right <Alt>  key  (1mgrp:toggle22m)  will
+       toggle between US QWERTY layout (1mus22m) and Greek (1mgr22m) layout.  The option
+       1mgrp_led:scroll  22mis  ignored on the console but in X in means to use the
        ScrollLock keyboard led as indicator for  the  current  layout  (US  or
        Greek).
 
@@ -134,19 +132,17 @@ EXAMPLES
            XKBOPTIONS=grp:toggle,grp_led:scroll
 
        In  the  following  configuration the <Control>+<Shift> key combination
-       will toggle (grp:ctrl_shift_toggle) between French keyboard (fr)  with-
-       out dead keys (nodeadkeys) and British (gb) "Dvorak" (dvorak) keyboard.
-       The right <Win> key will be a compose-key (compose:rwin) and the  right
-       <Alt> key will function as AltGr (lv3:lalt_switch).
+       will toggle (1mgrp:ctrl_shift_toggle22m) between French keyboard (1mfr22m)  with-
+       out dead keys (1mnodeadkeys22m) and British (1mgb22m) "Dvorak" (1mdvorak22m) keyboard.
+       The  right <Win> key will be a compose-key (1mcompose:rwin22m) and the right
+       <Alt> key will function as AltGr (1mlv3:lalt_switch22m).
 
            XKBLAYOUT=fr,gb
            XKBVARIANT=nodeadkeys,dvorak
            XKBOPTIONS=grp:ctrl_shift_toggle,compose:rwin,lv3:ralt_switch
 
 
-SEE ALSO
-       setupcon(1), ckbcomp(1), console-setup(5), loadkeys(1), kbdcontrol(1)
+1mSEE ALSO0m
+       1msetupcon22m(1), 1mckbcomp22m(1), 1mconsole-setup22m(5), 1mloadkeys22m(1), 1mkbdcontrol22m(1)
 
-
-
-console-setup                     2011-03-17                       KEYBOARD(5)
+console-setup                     2011-03-17                       4mKEYBOARD24m(5)

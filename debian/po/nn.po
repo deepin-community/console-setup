@@ -11,6 +11,7 @@
 # Eirik U. Birkeland <eirbir@gmail.com>, 2010.
 # Allan Nordhøy <epost@anotheragency.no>, 2017.
 # Alexander Jansen <bornxlo@gmail.com>, 2018.
+# aujawindar <eivind.odegard@sogn.no>, 2022.
 #
 # Translations from iso-codes:
 #   Alastair McKinstry <mckinstry@computer.org>, 2001.
@@ -26,8 +27,8 @@ msgstr ""
 "Project-Id-Version: nn\n"
 "Report-Msgid-Bugs-To: console-setup@packages.debian.org\n"
 "POT-Creation-Date: 2020-10-28 20:01+0000\n"
-"PO-Revision-Date: 2019-08-28 18:10+0000\n"
-"Last-Translator: leela <53352@protonmail.com>\n"
+"PO-Revision-Date: 2023-05-17 23:53+0000\n"
+"Last-Translator: Yngve Spjeld-Landro <l10n@landro.net>\n"
 "Language-Team: Norwegian Nynorsk <i18n-nn@lister.ping.uio.no>\n"
 "Language: nn\n"
 "MIME-Version: 1.0\n"
@@ -40,7 +41,7 @@ msgstr ""
 #. :sl3:
 #: ../console-setup.templates:2001
 msgid "Do not change the boot/kernel font"
-msgstr "Ikkje endra oppstarts-/kjerneskrifta"
+msgstr "Endra ikkje oppstarts-/kjerneskrifta"
 
 #. Type: text
 #. Description
@@ -55,7 +56,7 @@ msgstr "La systemet velje ein passande skrifttype"
 #. :sl3:
 #: ../console-setup.templates:4001
 msgid "framebuffer only"
-msgstr "kun framebuffer"
+msgstr "berre framebuffer"
 
 #. Type: select
 #. Choices
@@ -89,9 +90,8 @@ msgstr "# Kyrillisk – ikkje-slaviske språk"
 #. Choices
 #. :sl3:
 #: ../console-setup.templates:5001
-#, fuzzy
 msgid ". Cyrillic - non-Slavic languages (for blind users)"
-msgstr "# Kyrillisk – ikkje-slaviske språk"
+msgstr ". Kyrillisk – ikkje-slaviske språk (for blinde brukarar)"
 
 #. Type: select
 #. Choices
@@ -106,11 +106,8 @@ msgstr ""
 #. Choices
 #. :sl3:
 #: ../console-setup.templates:5001
-#, fuzzy
 msgid ". Cyrillic - Slavic languages (for blind users)"
-msgstr ""
-"# Kyrillisk – slaviske språk (også bosnisk og serbisk med det latinske "
-"alfabetet)"
+msgstr ". Kyrillisk – slaviske språk (for blinde brukarar)"
 
 #. Type: select
 #. Choices
@@ -138,7 +135,7 @@ msgstr "# Gresk"
 #. :sl3:
 #: ../console-setup.templates:5001
 msgid ". Greek (for blind users)"
-msgstr ""
+msgstr ". Gresk (for blinde brukarar)"
 
 #. Type: select
 #. Choices
@@ -226,9 +223,8 @@ msgstr ""
 #. Choices
 #. :sl3:
 #: ../console-setup.templates:5001
-#, fuzzy
 msgid "Guess optimal character set"
-msgstr "Tast inn vilkårlege teikn"
+msgstr "Giss optimalt teiknsett"
 
 #. Type: select
 #. Description
@@ -280,7 +276,7 @@ msgid ""
 "fatigue, though some symbols have a similar aspect which may be a problem "
 "for programmers."
 msgstr ""
-"«VGA» har ein tradisjonell utsjånad og ei mellom dekning av internasjonale "
+"«VGA» har ein tradisjonell utsjånad og middels dekning av internasjonale "
 "teikn. «Fixed» har ein enkel utsjånad og betre støtte for internasjonale "
 "teikn. «Terminus» kan gjera til at du ikkje så fort vert sliten i auga, men "
 "nokre teikn kan vera ganske like og såleis skapa problem for utviklarar."
@@ -314,25 +310,22 @@ msgstr "Skriftstorleik:"
 #. Description
 #. :sl3:
 #: ../console-setup.templates:7001
-#, fuzzy
 msgid ""
 "Please select the size of the font for the console. For reference, the font "
 "used when the computer boots has size 8x16."
 msgstr ""
-"Vel storleik på skrifta i Linux-konsollen. Til samanlikning har skrifta som "
-"vert brukt i oppstarten storleik 16."
+"Vel storleik på skrifta i konsollen. Til samanlikning har skrifta som vert "
+"brukt i maskinoppstarten storleik 8x16."
 
 #. Type: select
 #. Description
 #. :sl3:
 #: ../console-setup.templates:8001
-#, fuzzy
 msgid ""
 "Please select the size of the font for the console.  Some font sizes require "
 "framebuffer."
 msgstr ""
-"Vel storleik på skrifta i Linux-konsollen. Til samanlikning har skrifta som "
-"vert brukt i oppstarten storleik 16."
+"Vel storleik på skrifta i konsollen. Somme skriftstorleikar krev framebuffer."
 
 #. Type: select
 #. Description
@@ -360,17 +353,15 @@ msgstr "Anna"
 #. Description
 #. :sl2:
 #: ../keyboard-configuration.templates:4001
-#, fuzzy
 msgid "Keyboard model:"
-msgstr "Vel eit tastaturoppsett"
+msgstr "Tastaturoppsett:"
 
 #. Type: select
 #. Description
 #. :sl2:
 #: ../keyboard-configuration.templates:4001
-#, fuzzy
 msgid "Please select the model of the keyboard of this machine."
-msgstr "Vel tastaturtypen som skal setjast opp."
+msgstr "Vel kva tastaturtype denne maskina har."
 
 #. Type: select
 #. Description
@@ -388,8 +379,8 @@ msgid ""
 "multiple common layouts. Please select the country of origin for the "
 "keyboard of this computer."
 msgstr ""
-"Tastaturutformingen varierer frå land til land, der nokre land har fleire "
-"vanlege oppsett. Vel opphavleg land for tastaturet på denne maskinen."
+"Tastaturutforminga varierer frå land til land, der nokre land har fleire "
+"vanlege oppsett. Vel opphavleg land for tastaturet på denne maskina."
 
 #. Type: select
 #. Description
@@ -409,9 +400,8 @@ msgstr "Vel utforminga som stemmer med tastaturet på denne maskina."
 #. Description
 #. :sl3:
 #: ../keyboard-configuration.templates:7001
-#, fuzzy
 msgid "Keep the current keyboard layout in the configuration file?"
-msgstr "Halde på noverande partisjonsoppsett og setje opp logisk volumstyring?"
+msgstr "Halde på noverande tastaturoppsett i konfigurasjonsfila?"
 
 #. Type: boolean
 #. Description
@@ -428,14 +418,14 @@ msgstr ""
 #. Description
 #. :sl3:
 #: ../keyboard-configuration.templates:7001
-#, fuzzy
 msgid ""
 "Please choose whether you want to keep it. If you choose this option, no "
 "questions about the keyboard layout will be asked and the current "
 "configuration will be preserved."
 msgstr ""
-"Vel om vil du at den nye partisjonen skal opprettast ved starten eller ved "
-"slutten av det ledige området."
+"Vel om du vil behalda det. Om du vel dette, så vil du ikkje få nokon "
+"spørsmål om tastaturoppsettet og den gjeldande innstillinga vert teken vare "
+"på."
 
 #. Type: boolean
 #. Description
@@ -461,21 +451,19 @@ msgstr ""
 #. Description
 #. :sl3:
 #: ../keyboard-configuration.templates:8001
-#, fuzzy
 msgid ""
 "Please choose whether you want to keep it. If you choose this option, no "
 "questions about the keyboard layout will be asked."
 msgstr ""
-"Vel om vil du at den nye partisjonen skal opprettast ved starten eller ved "
-"slutten av det ledige området."
+"Vel om du vil behalda det. Om du vel å behalda, så vil du ikkje få nokon "
+"spørsmål om tastaturoppsettet."
 
 #. Type: boolean
 #. Description
 #. :sl3:
 #: ../keyboard-configuration.templates:9001
-#, fuzzy
 msgid "Keep current keyboard options in the configuration file?"
-msgstr "Krypteringsoppsett mislukkast"
+msgstr "Behalda noverande tastaturval i konfigurasjonsfila?"
 
 #. Type: boolean
 #. Description
@@ -485,20 +473,19 @@ msgid ""
 "The current keyboard options in the configuration file /etc/default/keyboard "
 "are defined as XKBOPTIONS=\"${XKBOPTIONS}\"."
 msgstr ""
-"Dei gjeldande tastaturvala i oppsettfila /etc/default/keyboard er definert "
+"Dei gjeldande tastaturvala i oppsettfila /etc/default/keyboard er definerte "
 "som XKBOPTIONS=\"${XKBOPTIONS}\"."
 
 #. Type: boolean
 #. Description
 #. :sl3:
 #: ../keyboard-configuration.templates:9001
-#, fuzzy
 msgid ""
 "If you choose to keep these options, no questions about the keyboard options "
 "will be asked."
 msgstr ""
-"Vel om vil du at den nye partisjonen skal opprettast ved starten eller ved "
-"slutten av det ledige området."
+"Om du vel å behalda desse vala, så vil du ikkje få nokon spørsmål om "
+"tastaturvala."
 
 #. Type: boolean
 #. Description
@@ -524,13 +511,11 @@ msgstr ""
 #. Description
 #. :sl3:
 #: ../keyboard-configuration.templates:10001
-#, fuzzy
 msgid ""
 "If you choose to keep it, no questions about the keyboard options will be "
 "asked."
 msgstr ""
-"Vel om vil du at den nye partisjonen skal opprettast ved starten eller ved "
-"slutten av det ledige området."
+"Om du vel å behalda det, så vil du ikkje få nokon spørsmål om tastaturvala."
 
 #. Type: select
 #. Choices
@@ -560,7 +545,7 @@ msgstr "Caps Lock"
 #: ../keyboard-configuration.templates:13001
 #: ../keyboard-configuration.templates:14001
 msgid "Right Alt (AltGr)"
-msgstr "Høgre Alt (Alt Gr)"
+msgstr "Høgre Alt (AltGr)"
 
 #. Type: select
 #. Choices
@@ -713,14 +698,14 @@ msgstr "Scroll Lock tast"
 #. :sl1:
 #: ../keyboard-configuration.templates:11001
 msgid "No toggling"
-msgstr "Ingen skifting"
+msgstr "Inga skifting"
 
 #. Type: select
 #. Description
 #. :sl1:
 #: ../keyboard-configuration.templates:11002
 msgid "Method for toggling between national and Latin mode:"
-msgstr "Metode for å skifte mellom nasjonal- og Latin-modus:"
+msgstr "Metode for å skifte mellom nasjonal- og latin-modus:"
 
 #. Type: select
 #. Description
@@ -744,7 +729,7 @@ msgid ""
 "behavior in Emacs and other programs that use it for specific needs."
 msgstr ""
 "Høgre Alt eller Caps Lock blir ofte brukt av ergonomiske grunnar (i det "
-"sistnevnte tilfelle, bruk kombinasjonen Shift + Caps Lock for vanleg Caps-"
+"siste tilfellet bruk kombinasjonen Shift + Caps Lock for vanleg Caps-"
 "oppførsel). Alt+Shift er òg ein vanleg kombinasjon, men den mister den "
 "vanlege oppførselen i Emacs og andre program som bruker den av særskilde "
 "grunnar."
@@ -779,7 +764,7 @@ msgstr "Båe logotastane"
 #. :sl2:
 #: ../keyboard-configuration.templates:12002
 msgid "Method for temporarily toggling between national and Latin input:"
-msgstr "Metode for å midlertidig byte mellom nasjonal- og latin-modus:"
+msgstr "Metode for å byte mellombels mellom nasjonal- og latin-modus:"
 
 #. Type: select
 #. Description
@@ -792,11 +777,11 @@ msgid ""
 "That key may also be used to input national letters when the keyboard is in "
 "Latin mode."
 msgstr ""
-"Når tastaturet er i nasjonal modus og du berre vil skrive nokre få latinske "
-"bokstavar, kan det vere betre å byte mellombels til latinsk modus. "
-"Tastaturet held seg i den modusen så lenge den valde tasten er heldt inne. "
-"Den tasten kan òg brukast for å skriva nasjonale bokstavar når tastaturet er "
-"i latinmodus."
+"Når tastaturet er sett til lokalt språk og du ønskjer å skriva nokre få "
+"latinske bokstavar, kan det enklaste vera å byte mellombels til latinske "
+"teikn. Tastaturet vil vera i latinsk modus så lenge den valde tasten vert "
+"halden nede. Denne tasten kan også brukast for å skriva inn lokale teikn når "
+"tastaturet er i latin-modus."
 
 #. Type: select
 #. Description
@@ -810,9 +795,8 @@ msgstr ""
 #. Choices
 #. :sl2:
 #: ../keyboard-configuration.templates:13001
-#, fuzzy
 msgid "The default for the keyboard layout"
-msgstr "Vel eit tastaturoppsett"
+msgstr "Standard tastaturoppsett"
 
 #. Type: select
 #. Choices
@@ -840,7 +824,7 @@ msgstr "Båe Alt-tastane"
 #. :sl2:
 #: ../keyboard-configuration.templates:13002
 msgid "Key to function as AltGr:"
-msgstr "Tast som skal fungere som AltGr:"
+msgstr "Tast som skal verka som AltGr-tast:"
 
 #. Type: select
 #. Description
@@ -852,26 +836,24 @@ msgid ""
 "layout, such as foreign currency symbols and accented letters. These are "
 "often printed as an extra symbol on keys."
 msgstr ""
-"I nokre tastaturutformingar er AltGr ein modifiserande tast som blir brukt "
-"for å skrive nokre teikn, særs teikn som er uvanlege på språket i "
-"tastaturutforminga, som utanlandske valutateikn og aksentteikn. Dei er ofte "
-"trykte som ekstra symbol på tastane."
+"På nokre tastatur er AltGr ein endringstast som vert brukt for å skriva inn "
+"spesielle teikn, som oftast teikn som er uvanlege i det språket tastaturet "
+"er sett opp for. Dette kan vera valutasymbol for andre språk, aksentteikn og "
+"liknande. Desse er ofte merkte med eit ekstra symbol på tastane."
 
 #. Type: select
 #. Choices
 #. :sl2:
 #: ../keyboard-configuration.templates:14001
-#, fuzzy
 msgid "No compose key"
-msgstr "Vel harddisk:"
+msgstr "Ingen modifiseringstast"
 
 #. Type: select
 #. Description
 #. :sl2:
 #: ../keyboard-configuration.templates:14002
-#, fuzzy
 msgid "Compose key:"
-msgstr "Vel harddisk:"
+msgstr "Modifiseringstast:"
 
 #. Type: select
 #. Description
@@ -882,9 +864,8 @@ msgid ""
 "the next few keystrokes as a combination in order to produce a character not "
 "found on the keyboard."
 msgstr ""
-"Modifiseringstasten (òg kjend som Multi_key) gjer at datamaskinen tolker dei "
-"neste tastetrykka som ein kombinasjon for å lage eit teikn som ikkje finst "
-"på tastaturet."
+"Modifiseringstasten gjer at dei neste få tastetrykka vert tolka som ei "
+"samansetjing for å laga eit teikn som ikkje finst på tastaturet."
 
 #. Type: select
 #. Description
@@ -895,16 +876,16 @@ msgid ""
 "Unicode mode, regardless of what you choose here, you can always also use "
 "the Control+period combination as a Compose key."
 msgstr ""
-"I tekstkonsollen fungerer ikkje modifiseringstasten i Unicode-modus. Viss "
-"Unicode-modus ikkje er sett, uansett kva du vel her, kan du alltid bruka "
-"«Ctrl + punktum» som ein modifiseringstast."
+"Modifiseringstasten verkar ikkje i Unicode-modus på tekstkonsollen. Når "
+"Unicode-modus ikkje er sett, kan du alltid bruka kombinasjonen Ctrl + "
+"punktum som ein modifiseringstast uavhengig av kva du har vald her."
 
 #. Type: boolean
 #. Description
 #. :sl3:
 #: ../keyboard-configuration.templates:15001
 msgid "Use Control+Alt+Backspace to terminate the X server?"
-msgstr "Bruk Ctrl + Alt + Rettetast for å stoppe X-tenaren?"
+msgstr "Vil du bruke Ctrl + Alt + Rettetast for å stoppe X-tenaren?"
 
 #. Type: boolean
 #. Description
@@ -914,8 +895,8 @@ msgid ""
 "By default the combination Control+Alt+Backspace does nothing.  If you want "
 "it can be used to terminate the X server."
 msgstr ""
-"Som standard gjør kombinasjonen Ctrl + Alt + Rettetast ingenting. Viss du "
-"vil, kan han brukast til å stoppe X-tenaren."
+"Standardvalet er at kombinasjonen Ctrl + Alt + Rettetast ikkje gjer noko. "
+"Viss du vil, kan han brukast til å stoppe X-tenaren."
 
 #. Type: select
 #. Choices
@@ -957,7 +938,7 @@ msgstr "Bangladesh"
 #. :sl1:
 #: ../keyboard-configuration.templates:16001
 msgid "Belarusian"
-msgstr "Kviterussisk"
+msgstr "Belarusisk"
 
 #. Type: select
 #. Choices
@@ -978,7 +959,7 @@ msgstr "Belgisk"
 #. :sl1:
 #: ../keyboard-configuration.templates:16001
 msgid "Berber (Latin)"
-msgstr ""
+msgstr "Berbersk (latin)"
 
 #. Type: select
 #. Choices
@@ -1160,7 +1141,7 @@ msgstr "Gujarati"
 #. :sl1:
 #: ../keyboard-configuration.templates:16001
 msgid "Gurmukhi"
-msgstr "gurmukhi"
+msgstr "Gurmukhi"
 
 #. Type: select
 #. Choices
@@ -1335,7 +1316,7 @@ msgstr "Persisk"
 #. :sl1:
 #: ../keyboard-configuration.templates:16001
 msgid "Philippines"
-msgstr "Filippinsk"
+msgstr "Filipino"
 
 #. Type: select
 #. Choices
@@ -1356,7 +1337,7 @@ msgstr "Portugisisk"
 #. :sl1:
 #: ../keyboard-configuration.templates:16001
 msgid "Punjabi"
-msgstr "Punjabi"
+msgstr "Panjabi"
 
 #. Type: select
 #. Choices
@@ -1397,7 +1378,6 @@ msgstr "Singalesisk"
 #. Choices
 #. :sl1:
 #: ../keyboard-configuration.templates:16001
-#, fuzzy
 msgid "Slovak"
 msgstr "Slovakisk"
 
@@ -1476,7 +1456,7 @@ msgstr "Tibetansk"
 #. :sl1:
 #: ../keyboard-configuration.templates:16001
 msgid "Turkish (F layout)"
-msgstr "Russisk"
+msgstr "Tyrkisk (F-oppsett)"
 
 #. Type: select
 #. Choices
@@ -1497,7 +1477,7 @@ msgstr "Ukrainsk"
 #. :sl1:
 #: ../keyboard-configuration.templates:16001
 msgid "Uyghur"
-msgstr "Uigursk"
+msgstr "Uigurisk"
 
 #. Type: select
 #. Choices

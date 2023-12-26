@@ -1,331 +1,327 @@
-CONSOLE-SETUP(5)          Console-setup User's Manual         CONSOLE-SETUP(5)
+4mCONSOLE-SETUP24m(5)          Console-setup User's Manual         4mCONSOLE-SETUP24m(5)
 
-
-
-NAME
+1mNAME0m
        console-setup - configuration file for setupcon
 
-DESCRIPTION
-       The  file  console-setup specifies the encoding and the font to be used
-       by setupcon(1) in order to setup the console.  It can be used  also  to
+1mDESCRIPTION0m
+       The  file  1mconsole-setup 22mspecifies the encoding and the font to be used
+       by 1msetupcon22m(1) in order to setup the console.  It can be used  also  to
        specify  the  keyboard  layout  but it is not recommended to do so, use
-       keyboard(5) instead.
+       1mkeyboard22m(5) instead.
 
        The font specification consists of three  parameters  -  codeset,  font
        face and font size.  The codeset specifies what characters will be sup-
-       ported by the font.   There  isn't  one-to-one  correspondence  between
-       codeset  and  encoding,  for  example the codeset Lat15 is suitable for
-       ISO 8859-1, ISO 8859-9 and ISO 8859-15.  The codesets are two  kinds  -
+       ported  by  the  font.   There  isn't one-to-one correspondence between
+       codeset and encoding, for example the codeset  1mLat15  22mis  suitable  for
+       ISO 8859-1,  ISO 8859-9  and ISO 8859-15.  The codesets are two kinds -
        small and big.  Only small codesets are supported on FreeBSD.
 
-       The  font face determines the general look of the font.  Each font face
-       is available in certain possible sizes.  On FreeBSD only 8x16, 8x14 and
-       8x8  are  valid  sizes.   On  Linux  if framebuffer is not used or con-
-       solechars(1) is installed instead of  setfont(1),  then  the  permitted
-       sizes have the form 8xNUMBER.
+       The font face determines the general look of the font.  Each font  face
+       is available in certain possible sizes.  On FreeBSD only 1m8x1622m, 1m8x14 22mand
+       1m8x8  22mare  valid  sizes.   On  Linux  if framebuffer is not used or 1mcon-0m
+       1msolechars22m(1) is installed instead of  1msetfont22m(1),  then  the  permitted
+       sizes have the form 8x4mNUMBER24m.
 
 
        The  console  driver  of FreeBSD permits fonts in different sizes to be
        simultaneously loaded.  Which one of them will be actually used depends
-       on  the  current video mode.  Therefore, on this platform the font size
-       specification will be ignored and setupcon(1) will  load  the  selected
+       on the current video mode.  Therefore, on this platform the  font  size
+       specification  will  be  ignored and 1msetupcon22m(1) will load the selected
        font face in all available sizes.
 
-       The file console-setup consists of variable settings in POSIX format:
+       The file 1mconsole-setup 22mconsists of variable settings in POSIX format:
 
-              VARIABLE='VALUE'
+              4mVARIABLE24m='4mVALUE24m'
 
-       Only  one assignment is allowed per line.  Comments (starting with '#')
+       Only one assignment is allowed per line.  Comments (starting with  '#')
        are also allowed.
 
 
-OPTIONS
+1mOPTIONS0m
        The following variables can be set.
 
 
-       ACTIVE_CONSOLES
-              Specifies the device files in /dev of the virtual  terminals  to
-              be  configured.   File  name wild-cards (*, ?)  are allowed.  On
-              Linux usually you can set this to /dev/tty[1-6] and on FreeBSD a
-              sensible  value is /dev/ttyv[0-8].  You can assign to this vari-
-              able also the special value guess.  It will cause setupcon(1) to
-              attempt  to guess the active virtual consoles by looking in con-
-              figuration files  such  as  /etc/inittab  and  /etc/ttys.   This
+       1mACTIVE_CONSOLES0m
+              Specifies  the  device files in 4m/dev24m of the virtual terminals to
+              be configured.  File name wild-cards (1m*22m, 1m?22m)   are  allowed.   On
+              Linux usually you can set this to 1m/dev/tty[1-6] 22mand on FreeBSD a
+              sensible  value is 1m/dev/ttyv[0-8]22m.  You can assign to this vari-
+              able also the special value 1mguess22m.  It will cause 1msetupcon22m(1) to
+              attempt to guess the active virtual consoles by looking in  con-
+              figuration  files  such  as  4m/etc/inittab24m  and  4m/etc/ttys24m.  This
               guessing is not always reliable.
 
 
-       CHARMAP
-              Specifies  the  desired  encoding  on the console.  Valid values
-              are: UTF-8, ARMSCII-8, CP1251, CP1255, CP1256, GEORGIAN-ACADEMY,
-              GEORGIAN-PS,   IBM1133,   ISIRI-3342,   ISO-8859-1,  ISO-8859-2,
-              ISO-8859-3,  ISO-8859-4,  ISO-8859-5,  ISO-8859-6,   ISO-8859-7,
-              ISO-8859-8,  ISO-8859-9,  ISO-8859-10, ISO-8859-11, ISO-8859-13,
-              ISO-8859-14, ISO-8859-15, ISO-8859-16, KOI8-R,  KOI8-U,  TIS-620
-              and VISCII.  The special value guess is also recognized in which
-              case the system command locale(1) will be used to guess the  de-
-              sired  encoding  (currently  this  works  reliably only with GNU
+       1mCHARMAP0m
+              Specifies the desired encoding on  the  console.   Valid  values
+              are: 1mUTF-822m, 1mARMSCII-822m, 1mCP125122m, 1mCP125522m, 1mCP125622m, 1mGEORGIAN-ACADEMY22m,
+              1mGEORGIAN-PS22m,   1mIBM113322m,   1mISIRI-334222m,   1mISO-8859-122m,  1mISO-8859-222m,
+              1mISO-8859-322m,  1mISO-8859-422m,  1mISO-8859-522m,  1mISO-8859-622m,   1mISO-8859-722m,
+              1mISO-8859-822m,  1mISO-8859-922m,  1mISO-8859-1022m, 1mISO-8859-1122m, 1mISO-8859-1322m,
+              1mISO-8859-1422m, 1mISO-8859-1522m, 1mISO-8859-1622m, 1mKOI8-R22m,  1mKOI8-U22m,  1mTIS-6200m
+              and 1mVISCII22m.  The special value 1mguess 22mis also recognized in which
+              case  the system command 1mlocale22m(1) will be used to guess the de-
+              sired encoding (currently this  works  reliably  only  with  GNU
               libc).
 
 
-       CODESET
-              In most cases the special value guess can be used here in  which
+       1mCODESET0m
+              In  most cases the special value 1mguess 22mcan be used here in which
               case a suitable codeset will be guessed.  The codeset determines
               which symbols are supported by the font.  Valid  small  codesets
-              are:   Armenian,  CyrAsia,  CyrKoi,  CyrSlav,  Georgian,  Greek,
-              Hebrew, Lao, Lat15, Lat2, Lat38, Lat7 and Thai.  Valid big code-
-              sets  are:  Arabic,  Ethiopian, Uni1, Uni2, Uni3 and Vietnamese.
-              Only small codesets can be used on FreeBSD.  See below the  sec-
-              tion  entitled  "CODESETS"  for  detailed description of each of
+              are:   1mArmenian22m,  1mCyrAsia22m,  1mCyrKoi22m,  1mCyrSlav22m,  1mGeorgian22m,  1mGreek22m,
+              1mHebrew22m, 1mLao22m, 1mLat1522m, 1mLat222m, 1mLat3822m, 1mLat7 22mand 1mThai22m.  Valid big code-
+              sets are: 1mArabic22m, 1mEthiopian22m, 1mUni122m, 1mUni222m,  1mUni3  22mand  1mVietnamese22m.
+              Only  small codesets can be used on FreeBSD.  See below the sec-
+              tion entitled "CODESETS" for detailed  description  of  each  of
               these codesets.
 
 
-       FONTFACE and FONTSIZE
-              Valid font faces are: VGA (sizes  8x8,  8x14,  8x16,  16x28  and
-              16x32),  Terminus  (sizes  6x12, 8x14, 8x16, 10x20, 12x24, 14x28
-              and 16x32), TerminusBold (sizes 8x14, 8x16, 10x20, 12x24,  14x28
-              and  16x32),  TerminusBoldVGA  (sizes  8x14 and 8x16), and Fixed
-              (sizes  8x13,  8x14,  8x15,  8x16   and   8x18).    If   however
-              CODESET=Ethiopian,  then  the  available font faces are Goha and
-              GohaClassic, each in sizes 8x12, 8x14 and 8x16.
+       1mFONTFACE 22mand 1mFONTSIZE0m
+              Valid  font  faces  are:  1mVGA  22m(sizes 1m8x822m, 1m8x1422m, 1m8x1622m, 1m16x28 22mand
+              1m16x3222m), 1mTerminus 22m(sizes 1m6x1222m, 1m8x1422m, 1m8x1622m,  1m10x2022m,  1m12x2422m,  1m14x280m
+              and  1m16x3222m), 1mTerminusBold 22m(sizes 1m8x1422m, 1m8x1622m, 1m10x2022m, 1m12x2422m, 1m14x280m
+              and 1m16x3222m), 1mTerminusBoldVGA 22m(sizes 1m8x14  22mand  1m8x1622m),  and  1mFixed0m
+              (sizes   1m8x1322m,   1m8x1422m,   1m8x1522m,   1m8x16  22mand  1m8x1822m).   If  however
+              1mCODESET22m=1mEthiopian22m, then the available font faces  are  1mGoha  22mand
+              1mGohaClassic22m, each in sizes 1m8x1222m, 1m8x14 22mand 1m8x1622m.
 
-              Set FONTFACE and FONTSIZE to empty strings if you want  to  con-
-              figure  only  the  keyboard  and  to  leave the console font un-
+              Set  1mFONTFACE  22mand 1mFONTSIZE 22mto empty strings if you want to con-
+              figure only the keyboard and  to  leave  the  console  font  un-
               changed.
 
 
-       VIDEOMODE
-              Set VIDEOMODE to an empty string to avoid setting up  the  video
+       1mVIDEOMODE0m
+              Set  1mVIDEOMODE  22mto an empty string to avoid setting up the video
               mode.  On FreeBSD you can run
 
                   vidcontrol -i mode
 
-              in  order to see all possible video modes.  On Linux fbset(1) is
-              used to configure the video mode but  very  often  this  doesn't
-              work  because  the default framebuffer driver (VesaFB) is rather
+              in order to see all possible video modes.  On Linux 1mfbset22m(1)  is
+              used  to  configure  the  video mode but very often this doesn't
+              work because the default framebuffer driver (VesaFB)  is  rather
               limited and doesn't allow changes of the video mode.
 
 
-       FONT, FONT_MAP and CONSOLE_MAP
-              If set, specify that a non standard font is  to  be  used.   The
-              value  of  the variable FONT consists of one or more space sepa-
-              rated font file names.  On Linux, when the font doesn't  contain
-              embedded  Unicode map, an external map can be specified with the
-              variable FONT_MAP.  The value of  CONSOLE_MAP  is  a  file  that
-              specifies  a  translation  map from the user's 8-bit encoding to
+       1mFONT22m, 1mFONT_MAP 22mand 1mCONSOLE_MAP0m
+              If  set,  specify  that  a non standard font is to be used.  The
+              value of the variable 1mFONT 22mconsists of one or more  space  sepa-
+              rated  font file names.  On Linux, when the font doesn't contain
+              embedded Unicode map, an external map can be specified with  the
+              variable  1mFONT_MAP22m.   The  value  of  1mCONSOLE_MAP 22mis a file that
+              specifies a translation map from the user's  8-bit  encoding  to
               Unicode (Linux only) or directly to font positions.
 
 
-       SCREEN_WIDTH and SCREEN_HEIGHT
-              If set, these variables specify a screen size  that  setupcon(1)
-              will enforce with stty(1).  This can be useful with some braille
+       1mSCREEN_WIDTH 22mand 1mSCREEN_HEIGHT0m
+              If  set,  these variables specify a screen size that 1msetupcon22m(1)
+              will enforce with 1mstty22m(1).  This can be useful with some braille
               devices that are only 40 cells wide.  The screen  size  can  not
               exceed  what the current screen resolution can display according
               to the size of the loaded font.
 
 
-       BEEP   This variable controls the style of the system beep on the  con-
-              sole.   When unset or when BEEP=default no changes to the system
-              beep will be made.  Other possible values of BEEP are:  standard
-              -  set a standard beep; short - like the standard beep but some-
-              what shorter; shortest - even more  short,  suitable  when  your
-              work  generates  lots  of beeps; polite - a very short beep with
+       1mBEEP   22mThis variable controls the style of the system beep on the  con-
+              sole.   When unset or when 1mBEEP=default 22mno changes to the system
+              beep will be made.  Other possible values of 1mBEEP 22mare:  1mstandard0m
+              1m-  22mset a standard beep; 1mshort - 22mlike the standard beep but some-
+              what shorter; 1mshortest - 22meven more  short,  suitable  when  your
+              work  generates  lots  of beeps; 1mpolite - 22ma very short beep with
               low frequency, suitable when there are other people in the room;
-              attention  -  a  very  long beep, suitable when you want to warn
-              yourself about an occurring event; annoying - also a long  beep,
-              suitable  when you want to warn somebody else about an occurring
-              event; and off - disable the system beep on the console.
+              1mattention - 22ma very long beep, suitable when  you  want  to  warn
+              yourself  about an occurring event; 1mannoying - 22malso a long beep,
+              suitable when you want to warn somebody else about an  occurring
+              event; and 1moff - 22mdisable the system beep on the console.
 
 
-CODESETS
+1mCODESETS0m
        There are two kinds of codesets - small (up to 256 symbols) and big (up
        to 512 symbols).  Only small codesets can be used on FreeBSD.  When the
        screen is in text mode (i.e. framebuffer is not used) then fonts cover-
        ing big codesets will reduce the number of available foreground colors.
 
 
-   Arabic (a big codeset)
+   1mArabic (a big codeset)0m
        Supported languages: Arabic, Kurdish in Iran, Pashto, Persian and Urdu.
 
-       Completely  covered  by the following font faces: Fixed (size 8x16) and
-       VGA (sizes 8x16 and 16x32).
+       Completely  covered  by the following font faces: 1mFixed 22m(size 1m8x1622m) and
+       1mVGA 22m(sizes 1m8x16 22mand 1m16x3222m).
 
 
-   Armenian
+   1mArmenian0m
        Supported language: Armenian.
 
-       Completely covered by the following font faces: Fixed (all sizes).
+       Completely covered by the following font faces: 1mFixed 22m(all sizes).
 
 
-   CyrAsia
+   1mCyrAsia0m
        This codeset supports some of the non-Slavic Cyrillic languages -  Abk-
        hazia,  Avaric, Azerbaijani, Bashkir, Buryat, Chechen, Chuvash, Inupiaq
        (Eskimo), Kara-Kalpak, Kazakh, Kirgiz, Komi, Kumyk, Kurdish,  Lezghian,
        Mari  (Cheremis),  Mongolian,  Ossetic, Selkup (Ostyak-Samoyed), Tajik,
        Tatar, Turkmen, Tuvinian, Uzbek and Yakut.
 
-       Completely supported by the following font faces: Fixed (all sizes).
+       Completely supported by the following font faces: 1mFixed 22m(all sizes).
 
 
-   CyrKoi
+   1mCyrKoi0m
        Supports entirely the 8-bit encodings KOI8-R and KOI8-U.  Suitable  for
        Russian and Ukrainian when one of these two encodings is used.
 
-       Completely  covered  by the following font faces (in all sizes): Fixed,
-       Terminus, TerminusBold, TerminusBoldVGA and VGA.
+       Completely  covered  by the following font faces (in all sizes): 1mFixed22m,
+       1mTerminus22m, 1mTerminusBold22m, 1mTerminusBoldVGA 22mand 1mVGA22m.
 
 
-   CyrSlav
+   1mCyrSlav0m
        Supports entirely the 8-bit encodings ISO-8859-5 and CP1251.   Suitable
-       the Slavic Cyrillic languages - Belarusian, Bulgarian, Macedonian, Rus-
-       sian, Serbian and Ukrainian.  For Serbian both  the  Cyrillic  and  the
+       the  Slavic  Cyrillic  languages  -  Belarusian, Bulgarian, Macedonian,
+       Russian, Serbian and Ukrainian.  For Serbian both the Cyrillic and  the
        Latin alphabets are supported.
 
-       Completely covered by the following font faces: Fixed (all sizes), Ter-
-       minus (all  sizes),  TerminusBold  (all  sizes),  TerminusBoldVGA  (all
-       sizes), VGA (sizes 8x16 and 16x32).
+       Completely covered by the following font faces: 1mFixed 22m(all sizes), 1mTer-0m
+       1mminus  22m(all  sizes),  1mTerminusBold  22m(all  sizes),  1mTerminusBoldVGA 22m(all
+       sizes), 1mVGA 22m(sizes 1m8x16 22mand 1m16x3222m).
 
 
-   Ethiopian (a big codeset)
+   1mEthiopian (a big codeset)0m
        Supports Amharic, Ethiopic (Geez), Tigre and Tigrinya.
 
-       This  codeset  is  partially covered by the following font faces: Fixed
-       (sizes 8x15 and 8x18), Goha (all sizes) and GohaClassic (all sizes).
+       This codeset is partially covered by the following  font  faces:  1mFixed0m
+       (sizes 1m8x15 22mand 1m8x1822m), 1mGoha 22m(all sizes) and 1mGohaClassic 22m(all sizes).
 
 
-   Georgian
+   1mGeorgian0m
        Supported language: Georgian.
 
-       Completely covered by the following font faces: Fixed (all sizes).
+       Completely covered by the following font faces: 1mFixed 22m(all sizes).
 
 
-   Greek
+   1mGreek0m
        Supported language: Greek.
 
-       Completely covered by the following font faces: Fixed (all  sizes)  and
-       VGA (sizes 8x16 and 16x32).
+       Completely  covered  by the following font faces: 1mFixed 22m(all sizes) and
+       1mVGA 22m(sizes 1m8x16 22mand 1m16x3222m).
 
 
-   Hebrew
+   1mHebrew0m
        Supported languages: Hebrew and Yiddish.
 
-       Completely  covered  by  the  following  font faces: Fixed (sizes 8x13,
-       8x15, 8x16 and 8x18) and VGA (sizes 8x16 and 16x32).
+       Completely covered by the following  font  faces:  1mFixed  22m(sizes  1m8x1322m,
+       1m8x1522m, 1m8x16 22mand 1m8x1822m) and 1mVGA 22m(sizes 1m8x16 22mand 1m16x3222m).
 
 
-   Lao
+   1mLao0m
        Supported languages: Lao.
 
-       Completely covered by the following font faces: Fixed (sizes  8x15  and
-       8x16).
+       Completely  covered  by the following font faces: 1mFixed 22m(sizes 1m8x15 22mand
+       1m8x1622m).
 
 
-   Lat15
-       Covers  entirely  ISO-8859-1, ISO-8859-9 and ISO-8859-15.  Suitable for
-       the so called Latin1 and Latin5 languages - Afar, Afrikaans,  Albanian,
-       Aragonese,  Asturian, Aymara, Basque, Bislama, Breton, Catalan, Chamor-
+   1mLat150m
+       Covers entirely ISO-8859-1, ISO-8859-9 and ISO-8859-15.   Suitable  for
+       the  so called Latin1 and Latin5 languages - Afar, Afrikaans, Albanian,
+       Aragonese, Asturian, Aymara, Basque, Bislama, Breton, Catalan,  Chamor-
        ro, Danish, Dutch, English, Estonian, Faroese, Fijian, Finnish, French,
        Frisian, Friulian, Galician, German, Hiri Motu, Icelandic, Ido, Indone-
-       sian, Interlingua, Interlingue, Italian, Low Saxon, Lule  Sami,  Luxem-
-       bourgish,  Malagasy,  Manx Gaelic, Norwegian Bokmal, Norwegian Nynorsk,
-       Occitan, Oromo or Galla, Portuguese, Rhaeto-Romance  (Romansch),  Scots
+       sian,  Interlingua,  Interlingue, Italian, Low Saxon, Lule Sami, Luxem-
+       bourgish, Malagasy, Manx Gaelic, Norwegian Bokmal,  Norwegian  Nynorsk,
+       Occitan,  Oromo  or Galla, Portuguese, Rhaeto-Romance (Romansch), Scots
        Gaelic, Somali, South Sami, Spanish, Swahili, Swedish, Tswana, Turkish,
        Volapuk, Votic, Walloon, Xhosa, Yapese and Zulu.
 
-       Completely covered by the following font faces: Fixed (all sizes), Ter-
-       minus  (all  sizes),  TerminusBold  (all  sizes),  TerminusBoldVGA (all
-       sizes), VGA (sizes 8x16 and 16x32).
+       Completely covered by the following font faces: 1mFixed 22m(all sizes), 1mTer-0m
+       1mminus 22m(all  sizes),  1mTerminusBold  22m(all  sizes),  1mTerminusBoldVGA  22m(all
+       sizes), 1mVGA 22m(sizes 1m8x16 22mand 1m16x3222m).
 
 
-   Lat2
-       Covers entirely ISO-8859-2.  The Euro sign  and  the  Romanian  letters
+   1mLat20m
+       Covers  entirely  ISO-8859-2.   The  Euro sign and the Romanian letters
        with comma below are also supported.  Suitable for the so called Latin2
        languages - Bosnian, Croatian, Czech, Hungarian, Polish, Romanian, Slo-
        vak, Slovenian and Sorbian (lower and upper).
 
-       Completely covered by the following font faces: Fixed (all sizes), Ter-
-       minus (all  sizes),  TerminusBold  (all  sizes),  TerminusBoldVGA  (all
-       sizes), VGA (sizes 8x16 and 16x32).
+       Completely covered by the following font faces: 1mFixed 22m(all sizes), 1mTer-0m
+       1mminus 22m(all  sizes),  1mTerminusBold  22m(all  sizes),  1mTerminusBoldVGA  22m(all
+       sizes), 1mVGA 22m(sizes 1m8x16 22mand 1m16x3222m).
 
 
-   Lat38
+   1mLat380m
        Covers  entirely ISO-8859-3 and ISO-8859-14.  Suitable for Chichewa Es-
        peranto, Irish, Maltese and Welsh.
 
-       Completely covered by the following font faces: Fixed (all  sizes)  and
-       VGA (sizes 8x16 and 16x32).
+       Completely covered by the following font faces: 1mFixed 22m(all  sizes)  and
+       1mVGA 22m(sizes 1m8x16 22mand 1m16x3222m).
 
 
-   Lat7
+   1mLat70m
        Covers  entirely  ISO-8859-13.  Suitable for Lithuanian, Latvian, Maori
        and Marshallese.
 
-       Completely covered by the following font faces: Fixed (all sizes), Ter-
-       minus  (all  sizes),  TerminusBold  (all  sizes),  TerminusBoldVGA (all
-       sizes), VGA (sizes 8x16 and 16x32).
+       Completely covered by the following font faces: 1mFixed 22m(all sizes), 1mTer-0m
+       1mminus 22m(all  sizes),  1mTerminusBold  22m(all  sizes),  1mTerminusBoldVGA  22m(all
+       sizes), 1mVGA 22m(sizes 1m8x16 22mand 1m16x3222m).
 
 
-   Thai
+   1mThai0m
        Supported language: Thai.
 
-       Completely covered by the following font faces: Fixed (all sizes).
+       Completely covered by the following font faces: 1mFixed 22m(all sizes).
 
 
-   Uni1 (a big codeset)
-       Supports most of the Latin languages, the  Slavic  Cyrillic  languages,
+   1mUni1 (a big codeset)0m
+       Supports  most  of  the Latin languages, the Slavic Cyrillic languages,
        Hebrew and barely Arabic.
 
-       Completely  covered  by the following font faces: Fixed (sizes 8x15 and
-       8x16) and VGA (all sizes).
+       Completely covered by the following font faces: 1mFixed 22m(sizes  1m8x15  22mand
+       1m8x1622m) and 1mVGA 22m(all sizes).
 
 
-   Uni2 (a big codeset)
+   1mUni2 (a big codeset)0m
        Supports most of the Latin languages, the Slavic Cyrillic languages and
        Greek.
 
-       Completely  covered  by the following font faces: Fixed (all sizes) and
-       VGA (sizes 8x16 and 16x32).
+       Completely  covered  by the following font faces: 1mFixed 22m(all sizes) and
+       1mVGA 22m(sizes 1m8x16 22mand 1m16x3222m).
 
 
-   Uni3 (a big codeset)
+   1mUni3 (a big codeset)0m
        Supports most of the Latin and Cyrillic languages.
 
-       Completely covered by the following font faces: Fixed (all sizes).
+       Completely covered by the following font faces: 1mFixed 22m(all sizes).
 
 
-   Vietnamese (a big codeset)
+   1mVietnamese (a big codeset)0m
        Supported language: Vietnamese.
 
-       Completely covered by the following  font  faces:  Fixed  (sizes  8x13,
-       8x15, 8x16 and 8x18).
+       Completely covered by the following  font  faces:  1mFixed  22m(sizes  1m8x1322m,
+       1m8x1522m, 1m8x16 22mand 1m8x1822m).
 
 
-FILES
-       The  standard  location  of  the  console-setup  configuration  file is
-       /usr/local/etc/default/console-setup.  The keyboard configuration is in
-       /usr/local/etc/default/keyboard.  Fonts that can be used with the vari-
-       able  FONT  are  usually  installed  in   /usr/share/consolefonts/   or
-       /usr/share/syscons/fonts/.   Translation maps that can be used with the
-       variable CONSOLE_MAP are usually installed in  /usr/share/consoletrans/
-       or /usr/share/syscons/scrnmaps/.
+1mFILES0m
+       The  standard  location  of  the  1mconsole-setup  22mconfiguration  file is
+       4m/usr/local/etc/default/console-setup24m.  The keyboard configuration is in
+       4m/usr/local/etc/default/keyboard24m.  Fonts that can be used with the vari-
+       able  1mFONT  22mare  usually  installed  in   4m/usr/share/consolefonts/24m   or
+       4m/usr/share/syscons/fonts/24m.   Translation maps that can be used with the
+       variable CONSOLE_MAP are usually installed in  4m/usr/share/consoletrans/0m
+       or 4m/usr/share/syscons/scrnmaps/24m.
 
 
-NOTES
+1mNOTES0m
        The aim of the Terminus font is to reduce the eyes-fatigue when one has
        to read a lot.  Currently this font supports only the Latin, the Cyril-
-       lic  and  the  Greek  scripts  (the Lat15, Lat2, Lat7, CyrAsia, CyrKoi,
-       CyrSlav, Greek, Uni2 and Uni3 codesets).
+       lic  and  the  Greek  scripts  (the 1mLat1522m, 1mLat222m, 1mLat722m, 1mCyrAsia22m, 1mCyrKoi22m,
+       1mCyrSlav22m, 1mGreek22m, 1mUni2 22mand 1mUni3 22mcodesets).
 
-       The fonts with font face TerminusBoldVGA are  optimized  for  use  with
+       The fonts with font face 1mTerminusBoldVGA 22mare  optimized  for  use  with
        regular  text  video  modes.   They should not be used with framebuffer
-       video modes.  The fonts with font face TerminusBold are  optimized  for
-       use  with the framebuffer video modes.  The fonts with font face Termi-
-       nus can be used in all video modes.
+       video modes.  The fonts with font face 1mTerminusBold 22mare  optimized  for
+       use  with the framebuffer video modes.  The fonts with font face 1mTermi-0m
+       1mnus 22mcan be used in all video modes.
 
 
-SEE ALSO
-       setupcon(1), keyboard(5), setfont(8), vidcontrol(1)
+1mSEE ALSO0m
+       1msetupcon22m(1), 1mkeyboard22m(5), 1msetfont22m(8), 1mvidcontrol22m(1)
 
 
-
-
-console-setup                     2011-03-17                  CONSOLE-SETUP(5)
+console-setup                     2011-03-17                  4mCONSOLE-SETUP24m(5)
