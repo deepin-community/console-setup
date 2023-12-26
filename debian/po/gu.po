@@ -10,7 +10,7 @@
 # Debian Installer translators, please read the D-I i18n documentation
 # in doc/i18n/i18n.txt
 # Contributor:
-# Kartik Mistry <kartik.mistry@gmail.com>, 2006-2013
+# Kartik Mistry <kartik.mistry@gmail.com>, 2006-2023
 #
 #
 # Translations from iso-codes:
@@ -1476,4 +1476,4 @@ msgstr "વિયેતનામી"
 #. Description
 #: ../keyboard-configuration.templates:16002
 msgid "Keymap to use:"
-msgstr "ઉપયોગ કરવાનો કીમેપ:"
+msgstr "ઉપયોગ કરવાની કીમેપ:"

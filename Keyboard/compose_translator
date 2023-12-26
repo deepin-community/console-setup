@@ -20,7 +20,7 @@
 use warnings 'all';
 use strict;
 use utf8;
-binmode STDOUT, ':bytes';
+use open ':std', ':utf8';
 
 sub debug {
     if (1) {
@@ -47,12 +47,8 @@ if ($ARGV[0] eq '--acm') {
     shift @ARGV;
 }
 
-if (! $acm) {
-    die "$0: compose keys can not be used in UTF-8 mode " 
-	."due to kernel limitations\n";
-}
-
-my %acmtable;
+my %uni2acm;
+my %acm2uni;
 if ($acm) {
     for my $acmfile ("${acm}", "${acm}.gz", "${acm}.acm", "${acm}.acm.gz",
 		     "/usr/share/consoletrans/${acm}",
@@ -66,9 +62,9 @@ if ($acm) {
     }
     (-f $acm) or die "$0: $acm does not exist\n";
     if ($acm =~ /gz$/) {
-	open (ACM, "zcat $acm|") or die "$0: $acm: $!\n";
+	open (ACM, '-|:utf8', "zcat $acm|") or die "$0: $acm: $!\n";
     } else {
-	open (ACM, $acm) or die "$0: $acm: $!\n";
+	open (ACM, '<:utf8', $acm) or die "$0: $acm: $!\n";
     }
     while (<ACM>) {
 	s/\#.*//;
@@ -77,7 +73,8 @@ if ($acm) {
 	if (/^\s*0x([0-9a-fA-F]{1,2})\s+\'([^\']+)\'\s*$/) {
 	    my $uni = ord ($2);
 	    my $c = hex ($1);
-	    $acmtable{$uni} = $c;
+	    $uni2acm{$uni} = $c;
+	    $acm2uni{$c} = $uni;
 	} else {
 	    warning "Syntax error in ACM file: $_\n";
 	}
@@ -86,7 +83,8 @@ if ($acm) {
 }
 
 for my $i (0 .. 127) {
-    $acmtable{$i} = $i;
+    $uni2acm{$i} = $i;
+    $acm2uni{$i} = $i;
 }
 
 my %xkbsym_table = (
@@ -1749,36 +1747,41 @@ my %xkbsym_table = (
      'KP_F3' => 'F3',
      'KP_F4' => 'F4',
 # Dead symbols
-     'dead_grave' => 'dead_grave',
-     'SunFA_Grave' => 'dead_grave', # Is this recognised by X ?
-     'dead_acute' => 'dead_acute',
-     'SunFA_Acute' => 'dead_acute', # Is this recognised by X ?
-     'dead_circumflex' => 'dead_circumflex',
-     'SunFA_Circum' => 'dead_circumflex', # Is this recognised by X ?
-     'dead_tilde' => 'dead_tilde',
-     'SunFA_Tilde' => 'dead_tilde',
-     'dead_breve' => 'dead_breve',
-     'dead_diaeresis' => 'dead_diaeresis',
-     'SunFA_Diaeresis' => 'dead_diaeresis', # Is this recognised by X ?
-     'dead_doubleacute' => 'dead_doubleacute',
-     'dead_caron' => 'dead_caron',
-     'dead_V' => 'dead_caron', # Is this correct?
-     'dead_cedilla' => 'dead_cedilla',
-     'SunFA_Cedilla' => 'dead_cedilla', # Is this recognised by X ?
-     'dead_ogonek' => 'dead_ogonek',
+     'dead_grave' => '0060',
+     'SunFA_Grave' => '0060', # Is this recognised by X ?
+     'dead_acute' => '0027',
+     'SunFA_Acute' => '0027', # Is this recognised by X ?
+     'dead_circumflex' => '005e',
+     'SunFA_Circum' => '005e', # Is this recognised by X ?
+     'dead_tilde' => '007e',
+     'SunFA_Tilde' => '007e',
+     'dead_diaeresis' => '0022',
+     'SunFA_Diaeresis' => '0022', # Is this recognised by X ?
+     'dead_cedilla' => '002c',
+     'SunFA_Cedilla' => '002c', # Is this recognised by X ?
+     'dead_macron' => '005f',
+     'dead_breve' => '0055',
+     'dead_abovedot' => '002e',
+     'dead_abovering' => '002a',
+     'dead_doubleacute' => '003d',
+     'dead_caron' => '0063',
+     'dead_V' => '0063', # Is this correct?
+     'dead_ogonek' => '006b',
+     'dead_iota' => '0069',
+     'dead_voiced_sound' => '0023',
+     'dead_semivoiced_sound' => '006f',
+     'dead_belowdot' => '0021',
+     'dead_hook' => '003f',
+     'dead_horn' => '002b',
+     'dead_stroke' => '002d',
+     'dead_abovecomma' => '0029',
+     'dead_abovereversedcomma' => '0028',
+     'dead_doublegrave' => '003a',
+     'dead_invertedbreve' => '006e',
+     'dead_belowcomma' => '003b',
+     'dead_currency' => '0024',
+     'dead_greek' => '0040',
 # Dead symbols with no support in the kernel
-     'dead_macron' => '005f',         # underscore
-     'dead_abovedot' => '002e',       # period
-     'dead_abovering' => '00b0',      # degree
-     'dead_stroke' => '002d',         # hyphen
-     'dead_belowdot' => '0323',       # ???? Vietnamese or Romanian cedilla
-     'dead_hook' => '0309',           # ???? Vietnamese
-     'dead_belowcomma' => 'VoidSymbol',
-     'dead_currency' => 'VoidSymbol',
-     'dead_doublegrave' => 'VoidSymbol',
-     'dead_invertedbreve' => 'VoidSymbol',
-     'dead_iota' => '03b9',           # ???? Greek
-     'dead_horn' => '031b',           # ???? Greek
      'dead_psili' => 'VoidSymbol',    # ???? Greek
      'dead_dasia' => 'VoidSymbol',    # ???? Greek
 # Modifiers
@@ -2058,6 +2061,108 @@ my %xkbsym_table = (
      'SunVideoRaiseBrightness' => 'VoidSymbol',
     );
 
+# ASCII characters can be written as-is
+# Control characters have to be written with U+wxyz
+# Characters between 0xa0 and 0xff have Linux nicknames:
+my %linuxsym_table = (
+    0xa0 => "nobreakspace",
+    0xa1 => "exclamdown",
+    0xa2 => "cent",
+    0xa3 => "sterling",
+    0xa4 => "currency",
+    0xa5 => "yen",
+    0xa6 => "brokenbar",
+    0xa7 => "section",
+    0xa8 => "diaeresis",
+    0xa9 => "copyright",
+    0xaa => "ordfeminine",
+    0xab => "guillemotleft",
+    0xac => "notsign",
+    0xad => "hyphen",
+    0xae => "registered",
+    0xaf => "macron",
+    0xb0 => "degree",
+    0xb1 => "plusminus",
+    0xb2 => "twosuperior",
+    0xb3 => "threesuperior",
+    0xb4 => "acute",
+    0xb5 => "mu",
+    0xb6 => "paragraph",
+    0xb7 => "periodcentered",
+    0xb8 => "cedilla",
+    0xb9 => "onesuperior",
+    0xba => "masculine",
+    0xbb => "guillemotright",
+    0xbc => "onequarter",
+    0xbd => "onehalf",
+    0xbe => "threequarters",
+    0xbf => "questiondown",
+    0xc0 => "Agrave",
+    0xc1 => "Aacute",
+    0xc2 => "Acircumflex",
+    0xc3 => "Atilde",
+    0xc4 => "Adiaeresis",
+    0xc5 => "Aring",
+    0xc6 => "AE",
+    0xc7 => "Ccedilla",
+    0xc8 => "Egrave",
+    0xc9 => "Eacute",
+    0xca => "Ecircumflex",
+    0xcb => "Ediaeresis",
+    0xcc => "Igrave",
+    0xcd => "Iacute",
+    0xce => "Icircumflex",
+    0xcf => "Idiaeresis",
+    0xd0 => "ETH",
+    0xd1 => "Ntilde",
+    0xd2 => "Ograve",
+    0xd3 => "Oacute",
+    0xd4 => "Ocircumflex",
+    0xd5 => "Otilde",
+    0xd6 => "Odiaeresis",
+    0xd7 => "multiply",
+    0xd8 => "Ooblique",
+    0xd9 => "Ugrave",
+    0xda => "Uacute",
+    0xdb => "Ucircumflex",
+    0xdc => "Udiaeresis",
+    0xdd => "Yacute",
+    0xde => "THORN",
+    0xdf => "ssharp",
+    0xe0 => "agrave",
+    0xe1 => "aacute",
+    0xe2 => "acircumflex",
+    0xe3 => "atilde",
+    0xe4 => "adiaeresis",
+    0xe5 => "aring",
+    0xe6 => "ae",
+    0xe7 => "ccedilla",
+    0xe8 => "egrave",
+    0xe9 => "eacute",
+    0xea => "ecircumflex",
+    0xeb => "ediaeresis",
+    0xec => "igrave",
+    0xed => "iacute",
+    0xee => "icircumflex",
+    0xef => "idiaeresis",
+    0xf0 => "eth",
+    0xf1 => "ntilde",
+    0xf2 => "ograve",
+    0xf3 => "oacute",
+    0xf4 => "ocircumflex",
+    0xf5 => "otilde",
+    0xf6 => "odiaeresis",
+    0xf7 => "division",
+    0xf8 => "oslash",
+    0xf9 => "ugrave",
+    0xfa => "uacute",
+    0xfb => "ucircumflex",
+    0xfc => "udiaeresis",
+    0xfd => "yacute",
+    0xfe => "thorn",
+    0xff => "ydiaeresis",
+);
+
 for my $i (keys %xkbsym_table) {
     if ($xkbsym_table{$i} !~ /^[a-zA-Z0-9]{4}$/) {
         delete $xkbsym_table{$i};
@@ -2076,7 +2181,10 @@ sub lower_case {
     return "@k";
 }
 
-use bytes;
+if ($acm) {
+    binmode STDOUT, ':bytes';
+    use bytes;
+}
 
 my %compose;
 my $line = 0;
@@ -2094,14 +2202,15 @@ while (<>) {
     if ($result =~ /^([^\\])\"$/) {
 	$result = $1;
     } elsif ($result =~ /^\\([0-7]+)\"$/) {
-	$result = chr (oct ($1));
+	my $code = oct ($1);
+	if ($acm) {
+	    $code = $acm2uni{$code};
+	}
+	$result = chr($code);
     } elsif ($result =~ /^\\([\"\\])\"$/) {
 	$result = $1;
     } else {
 	die "$0: syntax error on line $line\n$_\n";
-    }
-    if ($result eq '\\' || $result eq '\'') {
-	$result = '\\'. $result;
     }
     if ($sequence =~ /^Multi_key [a-zA-Z0-9_]+ space/) {
 	next;
@@ -2109,6 +2218,13 @@ while (<>) {
     if ((' '. $sequence .' ') =~ / space /) {
 	next;
     }
+    # In general Linux doesn't support double dead keys, but we can special-case some of them.
+    if ($acm =~ 'ISO-8859-7.acm$') {
+	$sequence =~ s/dead_acute dead_diaeresis/dead_breve/g; #1026986, see ckbcomp
+	$sequence =~ s/dead_diaeresis dead_acute/dead_breve/g;
+    }
+    $sequence =~ s/dead_acute dead_acute/dead_doubleacute/g;
+    $sequence =~ s/dead_grave dead_grave/dead_doublegrave/g;
     if ($sequence =~ /(dead_[a-z]+) \1/) {
  	next;
     }
@@ -2157,22 +2273,44 @@ foreach my $lcase (sort keys %lc_compose) {
     $compose{$lcase} = $lc_compose{$lcase};
 }
 
+sub kbd_char {
+    my $char = $_[0];
+
+    if (ord ($char) < 0x20 || ord($char) >= 0x80) {
+	return sprintf ("U+%04X", ord($char));
+    } elsif ($char eq '\\' || $char eq '\'') {
+	return "\'\\\'\'";
+    } else {
+	return "\'$char\'";
+    }
+}
+
+sub kbd_char_alias {
+    my $char = $_[0];
+
+    if (ord($char) >= 0xa0 && ord($char) < 0x100) {
+	return $linuxsym_table{ord($char)};
+    } else {
+	return kbd_char($char);
+    }
+}
+
 my %output;
 my %original_sequences;
 foreach my $sequence (sort keys %compose) {
     my @k = split ' ', $sequence;
     for my $i (0 .. $#k) {
 	if (defined $xkbsym_table{$k[$i]}) {
-	    my $l = $acmtable{hex($xkbsym_table{$k[$i]})};
-	    if (! defined $l) {
-#		debug "Undefined in ACM $k[$i]\n";
-		@k = ();
-		last;
+	    my $l = hex($xkbsym_table{$k[$i]});
+	    if ($acm) {
+		my $c = $uni2acm{$l};
+		if (! defined $c) {
+#		    debug "Undefined in ACM $k[$i]\n";
+		    @k = ();
+		    last;
+		}
 	    }
 	    $k[$i] = chr($l);
-	    if ($k[$i] eq '\\' || $k[$i] eq '\'') {
-		$k[$i] = '\\'. $k[$i];
-	    }
 	} else {
 #	    debug "Undefined keysym $k[$i]\n";
 	    @k = ();
@@ -2184,15 +2322,15 @@ foreach my $sequence (sort keys %compose) {
 	warning "Skipping too short sequence: $sequence\n";
 	next;
     }
-    if (! defined $output{"\'$k[0]\' \'$k[1]\'"}) {
-	$output{"\'$k[0]\' \'$k[1]\'"} = "\'$compose{$sequence}\'";
-	$original_sequences{"\'$k[0]\' \'$k[1]\'"} = $sequence;
+    my $seq = kbd_char($k[0])." ".kbd_char($k[1]);
+    if (! defined $output{$seq}) {
+	$output{$seq} = kbd_char_alias($compose{$sequence});
+	$original_sequences{$seq} = $sequence;
     } else {
 	my $newsequence = $sequence;
-	my $newresult = "\'$compose{$sequence}\'";
-	my $oldsequence = $original_sequences{"\'$k[0]\' \'$k[1]\'"};
-	my $oldresult = $output{"\'$k[0]\' \'$k[1]\'"};
-	my $scsequence = "\'$k[0]\' \'$k[1]\'";
+	my $newresult = kbd_char($compose{$sequence});
+	my $oldsequence = $original_sequences{$seq};
+	my $oldresult = $output{$seq};
 	if ($oldresult ne $newresult) {
 	    # The keyboards for languages that need circumflex and tilde can
 	    # generate them natively so prefer caron and doubleacute.
@@ -2202,7 +2340,7 @@ foreach my $sequence (sort keys %compose) {
 		($oldsequence, $oldresult) = ($newsequence, $newresult);
 		($newsequence, $newresult) = ($x, $y);
 	    }
-	    warning "Skipping sequience due to collision:\n";
+	    warning "Skipping sequence due to collision:\n";
 	    warning "  Skip: $newsequence\n";
 	    warning "  Preserve: $oldsequence\n";
 	}
@@ -2210,6 +2348,11 @@ foreach my $sequence (sort keys %compose) {
 }
 
 @sequences = sort (keys %output);
+
+if ($#sequences > 256) {
+	# MAX_DIACR kernel limitation
+	die "too many compose sequences $#sequences (max 256)";
+}
 
 for my $sequence (@sequences) {
     print "compose $sequence to $output{$sequence}\n";
