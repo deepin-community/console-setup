@@ -23,14 +23,14 @@
 # Rihards Priedītis <rprieditis@gmail.com>, 2009, 2010.
 # Rūdolfs Mazurs <rudolfs.mazurs@gmail.com>, 2012, 2013, 2017.
 # Peteris Krisjanis <pecisk@gmail.com>, 2008, 2012.
-# Tranzistors <rudolfs.mazurs@gmail.com>, 2018, 2021.
+# Tranzistors <rudolfs.mazurs@gmail.com>, 2018, 2021, 2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: lv\n"
 "Report-Msgid-Bugs-To: console-setup@packages.debian.org\n"
-"POT-Creation-Date: 2020-10-28 20:01+0000\n"
-"PO-Revision-Date: 2021-01-29 15:32+0000\n"
+"POT-Creation-Date: 2025-10-15 20:01+0000\n"
+"PO-Revision-Date: 2025-03-10 16:49+0000\n"
 "Last-Translator: Tranzistors <rudolfs.mazurs@gmail.com>\n"
 "Language-Team: Latvian <lata-l10n@googlegroups.com>\n"
 "Language: lv\n"
@@ -271,12 +271,13 @@ msgid ""
 "international scripts. \"Fixed\" has a simplistic appearance and has better "
 "coverage of international scripts. \"Terminus\" may help to reduce eye "
 "fatigue, though some symbols have a similar aspect which may be a problem "
-"for programmers."
+"for programmers. \"DejaVu\" is suited to screens with HiDPI."
 msgstr ""
-"\"VGA\" ir tradicionāls izskats un vidējs starptautisko rakstu "
-"nodrošinājums. \"Fixed\" ir vienkāršots izskats un labāks starptautisko "
-"skriptu nodrošinājums. \"Terminus\" var mazināt acu nogurumu, bet dažiem "
-"simboliem ir līdzīgs izskats, kas var būt neērti programmētājiem."
+"\"VGA\" ir tradicionāls izskats un vidējs starptautisko skriptu pārklājums. "
+"\"Fixed\" izskats ir vienkāršots, un tajā ir labāks starptautisko skriptu "
+"pārklājums. \"Terminus\" var palīdzēt samazināt acu nogurumu, lai gan dažiem "
+"simboliem ir līdzīgs aspekts, kas var būt problēma programmētājiem. "
+"\"DejaVu\" ir piemērots ekrāniem ar HiDPI."
 
 #. Type: select
 #. Description
@@ -287,10 +288,12 @@ msgstr ""
 #: ../console-setup.templates:6001
 msgid ""
 "If you prefer a bold version of the Terminus font, choose either "
-"TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
+"TerminusBold or DejaVuBold (if you use a framebuffer) or TerminusBoldVGA "
+"(otherwise)."
 msgstr ""
 "Ja vēlaties Terminus fonta treknraksta versiju, izvēlieties vai nu "
-"TerminusBold (ja izmantojat kadru buferi), vai TerminusBoldVGA (citādi)."
+"TerminusBold vai DejaVuBold (ja izmantojat kadru buferi), vai "
+"TerminusBoldVGA (citādi)."
 
 #. Type: select
 #. Description
@@ -410,8 +413,8 @@ msgid ""
 "is defined as XKBLAYOUT=\"${XKBLAYOUT}\" and XKBVARIANT=\"${XKBVARIANT}\"."
 msgstr ""
 "Pašreizējais tastatūras izkārtojums ir noteikts konfigurācijas datnē /etc/"
-"default/keyboard kā XKBLAYOUT=\"${XKBLAYOUT}\" un XKBVARIANT="
-"\"${XKBVARIANT}\"."
+"default/keyboard kā XKBLAYOUT=\"${XKBLAYOUT}\" un "
+"XKBVARIANT=\"${XKBVARIANT}\"."
 
 #. Type: boolean
 #. Description
@@ -498,13 +501,13 @@ msgstr "Saglabāt noklusētos tastatūras iestatījumus (${XKBOPTIONS})?"
 #. :sl3:
 #: ../keyboard-configuration.templates:10001
 msgid ""
-"The default value for the options of the keyboard layout is XKBOPTIONS="
-"\"${XKBOPTIONS}\".  It is based on the currently defined language/region and "
-"the settings in /etc/X11/xorg.conf."
+"The default value for the options of the keyboard layout is "
+"XKBOPTIONS=\"${XKBOPTIONS}\".  It is based on the currently defined language/"
+"region and the settings in /etc/X11/xorg.conf."
 msgstr ""
-"Tastatūras izkārtojuma noklusējuma iestatījumi ir XKBOPTIONS="
-"\"${XKBOPTIONS}\". Tie noteikti pēc izvēlētās valodas un reģiona, kā arī "
-"iestatījumiem datnē /etc/X11/xorg.conf."
+"Tastatūras izkārtojuma noklusējuma iestatījumi ir "
+"XKBOPTIONS=\"${XKBOPTIONS}\". Tie noteikti pēc izvēlētās valodas un reģiona, "
+"kā arī iestatījumiem datnē /etc/X11/xorg.conf."
 
 #. Type: boolean
 #. Description
@@ -602,6 +605,15 @@ msgstr "Labais Logo taustiņš"
 #: ../keyboard-configuration.templates:14001
 msgid "Menu key"
 msgstr "Izvēlnes taustiņš"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:11001
+#, fuzzy
+#| msgid "Left Control+Left Shift"
+msgid "Left Alt+Left Shift"
+msgstr "Kreisais Crtl+Kreisais Shift"
 
 #. Type: select
 #. Choices
@@ -722,11 +734,18 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../keyboard-configuration.templates:11002
+#, fuzzy
+#| msgid ""
+#| "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in "
+#| "the latter case, use the combination Shift+Caps Lock for normal Caps "
+#| "toggle). Alt+Shift is also a popular combination; it will however lose "
+#| "its usual behavior in Emacs and other programs that use it for specific "
+#| "needs."
 msgid ""
 "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in the "
-"latter case, use the combination Shift+Caps Lock for normal Caps toggle). Alt"
-"+Shift is also a popular combination; it will however lose its usual "
-"behavior in Emacs and other programs that use it for specific needs."
+"latter case, use the combination Shift+Caps Lock for normal Caps toggle). "
+"Left Alt+Left Shift is also a popular combination; it will however lose its "
+"usual behavior in Emacs and other programs that use it for specific needs."
 msgstr ""
 "Ergonomisku apsvērumu dēļ bieži tiek lietoti taustiņi Labais Alt un Caps "
 "Lock (izvēloties šo variantu var lietot Shift+Caps Lock, lai izmantotu "
@@ -1466,6 +1485,13 @@ msgstr "Turku (F izklājums)"
 #: ../keyboard-configuration.templates:16001
 msgid "Turkish (Q layout)"
 msgstr "Turku (Q izklājums)"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:16001
+msgid "Taiwanese"
+msgstr "taivānietis"
 
 #. Type: select
 #. Choices

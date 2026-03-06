@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: console-setup@packages.debian.org\n"
-"POT-Creation-Date: 2020-10-28 20:01+0000\n"
+"POT-Creation-Date: 2025-10-15 20:01+0000\n"
 "PO-Revision-Date: 2017-09-11 23:13+0300\n"
 "Last-Translator: Sotirios Vrachas <sotirios@vrachas.net>\n"
 "Language-Team: Albanian <debian-l10n-albanian@lists.debian.org>\n"
@@ -263,12 +263,19 @@ msgstr "Gërma për konsolën:"
 #. relatively short.
 #. :sl3:
 #: ../console-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "\"VGA\" has a traditional appearance and has medium coverage of "
+#| "international scripts. \"Fixed\" has a simplistic appearance and has "
+#| "better coverage of international scripts. \"Terminus\" may help to reduce "
+#| "eye fatigue, though some symbols have a similar aspect which may be a "
+#| "problem for programmers."
 msgid ""
 "\"VGA\" has a traditional appearance and has medium coverage of "
 "international scripts. \"Fixed\" has a simplistic appearance and has better "
 "coverage of international scripts. \"Terminus\" may help to reduce eye "
 "fatigue, though some symbols have a similar aspect which may be a problem "
-"for programmers."
+"for programmers. \"DejaVu\" is suited to screens with HiDPI."
 msgstr ""
 "\"VGA\" ka një pamje tradicionale dhe ka shtrirje mesatare për skripte "
 "ndërkombëtarë. \"Fiksuar\" ka një pamje të thjeshtë dhe një shtrirje më të "
@@ -283,9 +290,14 @@ msgstr ""
 #. relatively short.
 #. :sl3:
 #: ../console-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "If you prefer a bold version of the Terminus font, choose either "
+#| "TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
 msgid ""
 "If you prefer a bold version of the Terminus font, choose either "
-"TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
+"TerminusBold or DejaVuBold (if you use a framebuffer) or TerminusBoldVGA "
+"(otherwise)."
 msgstr ""
 "Nëse preferon një version të trashë të gërmave Terminus, zgjidh ose "
 "TerminusBold (nëse përdor një framebuffer) ose TerminusBoldVGA (përndryshe)."
@@ -500,9 +512,9 @@ msgstr "Mbaj opsionet e tastierës së parazgjedhur (${XKBOPTIONS})?"
 #. :sl3:
 #: ../keyboard-configuration.templates:10001
 msgid ""
-"The default value for the options of the keyboard layout is XKBOPTIONS="
-"\"${XKBOPTIONS}\".  It is based on the currently defined language/region and "
-"the settings in /etc/X11/xorg.conf."
+"The default value for the options of the keyboard layout is "
+"XKBOPTIONS=\"${XKBOPTIONS}\".  It is based on the currently defined language/"
+"region and the settings in /etc/X11/xorg.conf."
 msgstr ""
 "Vlera e parazgjedhur për opsionet e paraqitjes së tastierës është XKBOPTIONS "
 "= \"${XKBOPTIONS}\". Bazohet në gjuhën / rajonin e përcaktuar aktualisht dhe "
@@ -603,6 +615,15 @@ msgstr "Logo key i djathtë"
 #: ../keyboard-configuration.templates:14001
 msgid "Menu key"
 msgstr "Çelësi i menysë"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:11001
+#, fuzzy
+#| msgid "Left Control+Left Shift"
+msgid "Left Alt+Left Shift"
+msgstr "Kontroll i Majtë+Shift i Majtë"
 
 #. Type: select
 #. Choices
@@ -723,11 +744,18 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../keyboard-configuration.templates:11002
+#, fuzzy
+#| msgid ""
+#| "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in "
+#| "the latter case, use the combination Shift+Caps Lock for normal Caps "
+#| "toggle). Alt+Shift is also a popular combination; it will however lose "
+#| "its usual behavior in Emacs and other programs that use it for specific "
+#| "needs."
 msgid ""
 "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in the "
-"latter case, use the combination Shift+Caps Lock for normal Caps toggle). Alt"
-"+Shift is also a popular combination; it will however lose its usual "
-"behavior in Emacs and other programs that use it for specific needs."
+"latter case, use the combination Shift+Caps Lock for normal Caps toggle). "
+"Left Alt+Left Shift is also a popular combination; it will however lose its "
+"usual behavior in Emacs and other programs that use it for specific needs."
 msgstr ""
 "Alt i djathte ose Caps lock zgjidhen zakonisht per arsye ergonomike (në "
 "rastin e fundit, përdor kombinimin Shift+Caps Lock për Caps toggle normal). "
@@ -790,8 +818,8 @@ msgstr ""
 #: ../keyboard-configuration.templates:12002
 msgid "You can disable this feature by choosing \"No temporary switch\"."
 msgstr ""
-"Ju mund ta çaktivizoni këtë veçori duke zgjedur \"Nuk ka kalim të përkohshëm"
-"\"."
+"Ju mund ta çaktivizoni këtë veçori duke zgjedur \"Nuk ka kalim të "
+"përkohshëm\"."
 
 #. Type: select
 #. Choices
@@ -1467,6 +1495,15 @@ msgstr "Turqisht (planimetri F)"
 #: ../keyboard-configuration.templates:16001
 msgid "Turkish (Q layout)"
 msgstr "Turqisht (planimetri Q)"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:16001
+#, fuzzy
+#| msgid "Japanese"
+msgid "Taiwanese"
+msgstr "Japoneze"
 
 #. Type: select
 #. Choices

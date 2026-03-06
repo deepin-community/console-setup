@@ -9,6 +9,8 @@
 # Jordi Mallach <jordi@debian.org>, 2002-2008, 2010, 2012, 2015, 2017-2018.
 # Guillem Jover <guillem@debian.org>, 2005, 2007.
 # d <dmanye@gmail.com>, 2021.
+# Maite Guix <maite.guix@gmail.com>, 2022.
+# Innocent De Marchi <tangram.peces@gmail.com>, 2017.
 #
 # Translations from iso-codes:
 # Alastair McKinstry <mckinstry@computer.org>, 2001.
@@ -19,11 +21,11 @@
 # Traductor: Jordi Ferré <jordiferre@catalonia.altranet.fr>
 msgid ""
 msgstr ""
-"Project-Id-Version: debian-installer buster\n"
+"Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: console-setup@packages.debian.org\n"
-"POT-Creation-Date: 2020-10-28 20:01+0000\n"
-"PO-Revision-Date: 2021-02-12 18:39+0000\n"
-"Last-Translator: d <dmanye@gmail.com>\n"
+"POT-Creation-Date: 2025-10-15 20:01+0000\n"
+"PO-Revision-Date: 2025-10-21 00:42+0000\n"
+"Last-Translator: poc senderi <pocsenderi@protonmail.com>\n"
 "Language-Team: Catalan <debian-l10n-catalan@lists.debian.org>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
@@ -264,13 +266,14 @@ msgid ""
 "international scripts. \"Fixed\" has a simplistic appearance and has better "
 "coverage of international scripts. \"Terminus\" may help to reduce eye "
 "fatigue, though some symbols have a similar aspect which may be a problem "
-"for programmers."
+"for programmers. \"DejaVu\" is suited to screens with HiDPI."
 msgstr ""
-"«VGA» té una aparença tradicional i una cobertura mitjana de les caligrafies "
-"internacionals. «Fixed» té una aparença simple i té una cobertura millor de "
-"les caligrafies internacionals. «Terminus» pot ajudar a reduir la fatiga "
+"«VGA» té una aparença tradicional i una cobertura mitjana dels alfabets "
+"internacionals. «Fixed» té una aparença simple i té una cobertura millor "
+"dels alfabets internacionals. «Terminus» pot ajudar a reduir la fatiga "
 "visual, tot i que alguns símbols tenen un aspecte similar, la qual cosa pot "
-"ser un problema per als programadors."
+"ser un problema per als programadors. «DejaVu» és adequada per a pantalles "
+"amb HiDPI."
 
 #. Type: select
 #. Description
@@ -281,11 +284,12 @@ msgstr ""
 #: ../console-setup.templates:6001
 msgid ""
 "If you prefer a bold version of the Terminus font, choose either "
-"TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
+"TerminusBold or DejaVuBold (if you use a framebuffer) or TerminusBoldVGA "
+"(otherwise)."
 msgstr ""
 "Si preferiu una versió negreta del tipus de lletra Terminus, seleccioneu "
-"TerminusBold (si useu un framebuffer) o TerminusBoldVGA (en qualsevol altre "
-"cas)."
+"TerminusBold o DejaVuBold (si useu un «framebuffer») o TerminusBoldVGA (en "
+"qualsevol altre cas)."
 
 #. Type: select
 #. Description
@@ -406,8 +410,8 @@ msgid ""
 "is defined as XKBLAYOUT=\"${XKBLAYOUT}\" and XKBVARIANT=\"${XKBVARIANT}\"."
 msgstr ""
 "La disposició del teclat actual al fitxer de configuració «/etc/default/"
-"keyboard» és definida com a XKBLAYOUT=\"${XKBLAYOUT}\" i XKBVARIANT="
-"\"${XKBVARIANT}\"."
+"keyboard» és definida com a XKBLAYOUT=\"${XKBLAYOUT}\" i "
+"XKBVARIANT=\"${XKBVARIANT}\"."
 
 #. Type: boolean
 #. Description
@@ -439,10 +443,10 @@ msgid ""
 "XKBVARIANT=\"${XKBVARIANT}\".  This default value is based on the currently "
 "defined language/region and the settings in /etc/X11/xorg.conf."
 msgstr ""
-"El valor per defecte per a la disposició del teclat és XKBLAYOUT="
-"\"${XKBLAYOUT}\" i XKBVARIANT=\"${XKBVARIANT}\". Aquest valor predeterminat "
-"es basa en la regió/llengua definida actualment i en els paràmetres del "
-"fitxer «/etc/X11/xorg.conf»."
+"El valor per defecte per a la disposició del teclat és "
+"XKBLAYOUT=\"${XKBLAYOUT}\" i XKBVARIANT=\"${XKBVARIANT}\". Aquest valor "
+"predeterminat es basa en la regió/llengua definida actualment i en els "
+"paràmetres del fitxer «/etc/X11/xorg.conf»."
 
 #. Type: boolean
 #. Description
@@ -497,9 +501,9 @@ msgstr "Voleu mantenir les opcions del teclat predeterminades (${XKBOPTIONS})?"
 #. :sl3:
 #: ../keyboard-configuration.templates:10001
 msgid ""
-"The default value for the options of the keyboard layout is XKBOPTIONS="
-"\"${XKBOPTIONS}\".  It is based on the currently defined language/region and "
-"the settings in /etc/X11/xorg.conf."
+"The default value for the options of the keyboard layout is "
+"XKBOPTIONS=\"${XKBOPTIONS}\".  It is based on the currently defined language/"
+"region and the settings in /etc/X11/xorg.conf."
 msgstr ""
 "El valor per defecte per a les opcions de la disposició del teclat és "
 "XKBOPTIONS=\"${XKBOPTIONS}\" Aquest valor es basa en la regió/llengua "
@@ -600,6 +604,13 @@ msgstr "Tecla de logotip dreta"
 #: ../keyboard-configuration.templates:14001
 msgid "Menu key"
 msgstr "Tecla de menú dreta"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:11001
+msgid "Left Alt+Left Shift"
+msgstr "Alt esquerra+Majúscules esquerra"
 
 #. Type: select
 #. Choices
@@ -722,15 +733,16 @@ msgstr ""
 #: ../keyboard-configuration.templates:11002
 msgid ""
 "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in the "
-"latter case, use the combination Shift+Caps Lock for normal Caps toggle). Alt"
-"+Shift is also a popular combination; it will however lose its usual "
-"behavior in Emacs and other programs that use it for specific needs."
+"latter case, use the combination Shift+Caps Lock for normal Caps toggle). "
+"Left Alt+Left Shift is also a popular combination; it will however lose its "
+"usual behavior in Emacs and other programs that use it for specific needs."
 msgstr ""
 "Sovint se seleccionen les tecles Alt dreta o Fixació de majúscules per raons "
-"d'ergonomia (en el segon cas, emrpreu la combinació Majúscules+Fixació de "
-"majúscules per a commutar la fixació normal). Alt+Majúscules també és una "
-"combinació habitual, tot i que perdrà el seu comportament habitual a l'Emacs "
-"i altres programes que l'empren per a necessitats específiques."
+"d'ergonomia (en el segon cas, empreu la combinació Majúscules+Fixació de "
+"majúscules per a commutar la fixació de majúscules normal). Alt esquerra + "
+"Majúscules esquerra també és una combinació habitual, tot i que perdrà el "
+"seu comportament habitual a l'Emacs i altres programes que l'empren per "
+"necessitats específiques."
 
 #. Type: select
 #. Description
@@ -904,7 +916,7 @@ msgstr ""
 #. :sl1:
 #: ../keyboard-configuration.templates:16001
 msgid "American English"
-msgstr "Anglès americà"
+msgstr "Anglès dels Estats Units"
 
 #. Type: select
 #. Choices
@@ -932,7 +944,7 @@ msgstr "Asturià"
 #. :sl1:
 #: ../keyboard-configuration.templates:16001
 msgid "Bangladesh"
-msgstr "Bangla Desh"
+msgstr "Bangladesh"
 
 #. Type: select
 #. Choices
@@ -1465,6 +1477,13 @@ msgstr "Turc (disposició F)"
 #: ../keyboard-configuration.templates:16001
 msgid "Turkish (Q layout)"
 msgstr "Turc (disposició Q)"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:16001
+msgid "Taiwanese"
+msgstr "taiwanès"
 
 #. Type: select
 #. Choices

@@ -15,7 +15,7 @@
 # Timo Jyrinki <timo.jyrinki@iki.fi>, 2012.
 # Juhani Numminen <juhaninumminen0@gmail.com>, 2018, 2019.
 # Arto Keiski <arto.keiski@iki.fi>, 2018.
-# Kimmo Kujansuu <mrkujansuu@gmail.com>, 2021.
+# Kimmo Kujansuu <mrkujansuu@gmail.com>, 2021, 2022.
 #
 # Translations from iso-codes:
 # Copyright (C) 2007 Tobias Toedter <t.toedter@gmx.net>.
@@ -27,9 +27,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: console-setup@packages.debian.org\n"
-"POT-Creation-Date: 2020-10-28 20:01+0000\n"
-"PO-Revision-Date: 2021-07-17 08:34+0000\n"
-"Last-Translator: Kimmo Kujansuu <mrkujansuu@gmail.com>\n"
+"POT-Creation-Date: 2025-10-15 20:01+0000\n"
+"PO-Revision-Date: 2025-07-18 15:36+0000\n"
+"Last-Translator: Ricky Tigg <ricky.tigg@gmail.com>\n"
 "Language-Team: Finnish <debian-l10n-finnish@lists.debian.org>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
@@ -268,13 +268,14 @@ msgid ""
 "international scripts. \"Fixed\" has a simplistic appearance and has better "
 "coverage of international scripts. \"Terminus\" may help to reduce eye "
 "fatigue, though some symbols have a similar aspect which may be a problem "
-"for programmers."
+"for programmers. \"DejaVu\" is suited to screens with HiDPI."
 msgstr ""
-"”VGA” tarjoaa perinteisen ulkoasun ja kohtuullisen tuen eri kielien "
-"merkeille. Vaihtoehdon ”Fixed” ulkoasu on yksinkertaisempi ja siinä on "
-"parempi tuki eri kielien merkeille. ”Terminus” on suunniteltu vähentämään "
-"silmien väsymistä. Sen tietyt merkit näyttävät toisiltaan, mikä saattaa "
-"haitata ohjelmoitaessa."
+"\"VGA\" on ulkoasultaan perinteinen ja kansainvälisten käsikirjoitusten "
+"kattavuus keskitasoa. \"Fixed\" on ulkoasultaan yksinkertainen, ja se kattaa "
+"paremmin kansainväliset käsikirjoitukset. \"Terminus\" voi auttaa "
+"vähentämään silmien väsymistä, vaikka joillakin symboleilla on samanlainen "
+"näkökohta, mikä voi olla ongelma ohjelmoijille. \"DejaVu\" sopii näytöille, "
+"joissa on HiDPI."
 
 #. Type: select
 #. Description
@@ -285,11 +286,12 @@ msgstr ""
 #: ../console-setup.templates:6001
 msgid ""
 "If you prefer a bold version of the Terminus font, choose either "
-"TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
+"TerminusBold or DejaVuBold (if you use a framebuffer) or TerminusBoldVGA "
+"(otherwise)."
 msgstr ""
-"Jos käyttöön halutaan Terminus-kirjasimen lihavoitu versio, valitse "
-"TerminusBold, jos kehyspuskurointi on käytössä, ja TerminusBoldVGA muussa "
-"tapauksessa."
+"Jos käyttöön halutaan Terminus-kirjasimen lihavoitu versio, valitann "
+"TerminusBold tai DejaVuBold , jos kehyspuskurointi on käytössä, ja "
+"TerminusBoldVGA muussa tapauksessa."
 
 #. Type: select
 #. Description
@@ -438,9 +440,9 @@ msgid ""
 "XKBVARIANT=\"${XKBVARIANT}\".  This default value is based on the currently "
 "defined language/region and the settings in /etc/X11/xorg.conf."
 msgstr ""
-"Näppäinasettelun oletusarvo on XKBLAYOUT=\"${XKBLAYOUT}\" ja XKBVARIANT="
-"\"${XKBVARIANT}\". Oletusarvo perustuu tällä hetkellä käytössä olevaan "
-"kieleen ja alueeseen sekä tiedoston /etc/X11/xorg.conf asetuksiin."
+"Näppäinasettelun oletusarvo on XKBLAYOUT=\"${XKBLAYOUT}\" ja "
+"XKBVARIANT=\"${XKBVARIANT}\". Oletusarvo perustuu tällä hetkellä käytössä "
+"olevaan kieleen ja alueeseen sekä tiedoston /etc/X11/xorg.conf asetuksiin."
 
 #. Type: boolean
 #. Description
@@ -494,9 +496,9 @@ msgstr "Säilytetäänkö näppäimistön oletusasetukset (${XKBOPTIONS})?"
 #. :sl3:
 #: ../keyboard-configuration.templates:10001
 msgid ""
-"The default value for the options of the keyboard layout is XKBOPTIONS="
-"\"${XKBOPTIONS}\".  It is based on the currently defined language/region and "
-"the settings in /etc/X11/xorg.conf."
+"The default value for the options of the keyboard layout is "
+"XKBOPTIONS=\"${XKBOPTIONS}\".  It is based on the currently defined language/"
+"region and the settings in /etc/X11/xorg.conf."
 msgstr ""
 "Näppäinasettelun asetusten oletusarvo on XKBOPTIONS=\"${XKBOPTIONS}\". Tämä "
 "perustuu tällä hetkellä käytössä olevaan kieleen ja alueeseen sekä "
@@ -598,6 +600,15 @@ msgstr "Oikea Logo-näppäin"
 #: ../keyboard-configuration.templates:14001
 msgid "Menu key"
 msgstr "Menu-näppäin"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:11001
+#, fuzzy
+#| msgid "Left Control+Left Shift"
+msgid "Left Alt+Left Shift"
+msgstr "Vasen Control+vasen Vaihto"
 
 #. Type: select
 #. Choices
@@ -718,11 +729,18 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../keyboard-configuration.templates:11002
+#, fuzzy
+#| msgid ""
+#| "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in "
+#| "the latter case, use the combination Shift+Caps Lock for normal Caps "
+#| "toggle). Alt+Shift is also a popular combination; it will however lose "
+#| "its usual behavior in Emacs and other programs that use it for specific "
+#| "needs."
 msgid ""
 "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in the "
-"latter case, use the combination Shift+Caps Lock for normal Caps toggle). Alt"
-"+Shift is also a popular combination; it will however lose its usual "
-"behavior in Emacs and other programs that use it for specific needs."
+"latter case, use the combination Shift+Caps Lock for normal Caps toggle). "
+"Left Alt+Left Shift is also a popular combination; it will however lose its "
+"usual behavior in Emacs and other programs that use it for specific needs."
 msgstr ""
 "Helpoin näistä vaihtoehdoista on ehkä oikea Alt tai Caps Lock (käytä "
 "jälkimmäisessä tapauksessa yhdistelmää Vaihto+Caps Lock normaaliin "
@@ -1497,6 +1515,14 @@ msgstr "turkkilainen (F-asettelu)"
 #: ../keyboard-configuration.templates:16001
 msgid "Turkish (Q layout)"
 msgstr "turkkilainen (Q-asettelu)"
+
+# console-keymaps-acorn, Japanese
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:16001
+msgid "Taiwanese"
+msgstr "Taiwanilainen"
 
 #. Type: select
 #. Choices

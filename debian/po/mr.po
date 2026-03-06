@@ -19,9 +19,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: console-setup@packages.debian.org\n"
-"POT-Creation-Date: 2020-10-28 20:01+0000\n"
-"PO-Revision-Date: 2020-10-10 17:26+0000\n"
-"Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
+"POT-Creation-Date: 2025-10-15 20:01+0000\n"
+"PO-Revision-Date: 2025-03-30 15:01+0000\n"
+"Last-Translator: Kalyani Kenekar <kalyaniknkr@gmail.com>\n"
 "Language-Team: CDAC_DI\n"
 "Language: mr\n"
 "MIME-Version: 1.0\n"
@@ -260,12 +260,12 @@ msgid ""
 "international scripts. \"Fixed\" has a simplistic appearance and has better "
 "coverage of international scripts. \"Terminus\" may help to reduce eye "
 "fatigue, though some symbols have a similar aspect which may be a problem "
-"for programmers."
+"for programmers. \"DejaVu\" is suited to screens with HiDPI."
 msgstr ""
-"\"VGA\" पारंपरिक दिसतो आणि आंतरराष्ट्रीय लिप्यांचा त्यात मध्यम समावेश असतो. \"Fixed\" "
-"साधा दिसतो आणि आंतरराष्ट्रीय लिप्यांचा त्यात चांगला समावेश असतो. \"Terminus\" "
-"डोळ्यांवरील ताण कमी करू शकतो, पण त्यात काही चिन्हे एकसमान दिसत असल्याने "
-"आज्ञावलीकारांना समस्या निर्माण होऊ शकतात."
+"\"VGA\" चे स्वरूप पारंपारिक आहे आणि त्यात आंतरराष्ट्रीय लिपींचे मध्यम कव्हरेज आहे. "
+"\"फिक्स्ड\" चे स्वरूप साधे आहे आणि त्यात आंतरराष्ट्रीय लिपींचे चांगले कव्हरेज आहे. \"टर्मिनस\" "
+"डोळ्यांचा थकवा कमी करण्यास मदत करू शकते, जरी काही चिन्हांमध्ये समान पैलू असतो जो "
+"प्रोग्रामरसाठी समस्या असू शकतो. \"DejaVu\" HiDPI असलेल्या स्क्रीनसाठी योग्य आहे."
 
 #. Type: select
 #. Description
@@ -276,10 +276,11 @@ msgstr ""
 #: ../console-setup.templates:6001
 msgid ""
 "If you prefer a bold version of the Terminus font, choose either "
-"TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
+"TerminusBold or DejaVuBold (if you use a framebuffer) or TerminusBoldVGA "
+"(otherwise)."
 msgstr ""
-"टर्मिनस टंकमुद्रांची ठळक आवृत्ती हवी असल्यास, एकतरTerminusBold (तुम्ही फ्रेमबफर वापरत "
-"असल्यास) किंवा TerminusBoldVGA (अन्यथा) निवडा."
+"जर तुम्हाला टर्मिनस फॉन्टची बोल्ड आवृत्ती आवडत असेल, तर टर्मिनसबोल्ड किंवा डेजावुबोल्ड (जर "
+"तुम्ही फ्रेमबफर वापरत असाल तर) किंवा टर्मिनसबोल्डव्हीजीए (अन्यथा) निवडा."
 
 #. Type: select
 #. Description
@@ -306,13 +307,11 @@ msgstr ""
 #. Description
 #. :sl3:
 #: ../console-setup.templates:8001
-#, fuzzy
 msgid ""
 "Please select the size of the font for the console.  Some font sizes require "
 "framebuffer."
 msgstr ""
-"कृपया कन्सोलच्या टंकमुद्रेचा आकार निवडा. संदर्भासाठी, संगणक आरंभ होताना वापरलेल्या "
-"टंकमुद्रेचा आकार 8x16 आहे."
+"कृपया कन्सोलसाठी फॉन्टचा आकार निवडा. काही फॉन्ट आकारांना फ्रेमबफरची आवश्यकता असते."
 
 #. Type: select
 #. Description
@@ -398,8 +397,8 @@ msgid ""
 "The current keyboard layout in the configuration file /etc/default/keyboard "
 "is defined as XKBLAYOUT=\"${XKBLAYOUT}\" and XKBVARIANT=\"${XKBVARIANT}\"."
 msgstr ""
-"/etc/default/keyboard संरचना फायलीतील सध्याचा कळफलक आराखडाXKBLAYOUT="
-"\"${XKBLAYOUT}\" व XKBVARIANT=\"${XKBVARIANT}\" आहे."
+"/etc/default/keyboard संरचना फायलीतील सध्याचा कळफलक "
+"आराखडाXKBLAYOUT=\"${XKBLAYOUT}\" व XKBVARIANT=\"${XKBVARIANT}\" आहे."
 
 #. Type: boolean
 #. Description
@@ -418,7 +417,7 @@ msgstr ""
 #. :sl3:
 #: ../keyboard-configuration.templates:8001
 msgid "Keep default keyboard layout (${XKBLAYOUTVARIANT})?"
-msgstr " (${XKBLAYOUTVARIANT}) हा मूलनिर्धारित कळफलक आराखडा ठेवायचा?"
+msgstr "(${XKBLAYOUTVARIANT}) हा मूलनिर्धारित कळफलक आराखडा ठेवायचा?"
 
 #. Type: boolean
 #. Description
@@ -442,7 +441,7 @@ msgid ""
 "questions about the keyboard layout will be asked."
 msgstr ""
 "आपल्याला हे ठेवायचे आहे का, ते निवडा. आपण हा पर्याय निवडल्यास कळफलक आराखड्याविषयी "
-"कोणतेही प्रश्न विचारले जाणार नाहीत, आणि सद्य संरचना तशीच राखली जाईल."
+"कोणतेही प्रश्न विचारले जाणार नाहीत."
 
 #. Type: boolean
 #. Description
@@ -459,8 +458,8 @@ msgid ""
 "The current keyboard options in the configuration file /etc/default/keyboard "
 "are defined as XKBOPTIONS=\"${XKBOPTIONS}\"."
 msgstr ""
-"/etc/default/keyboard संरचना फायलीतील सद्य कळफलक पर्याय हे XKBOPTIONS="
-"\"${XKBOPTIONS}\" असे आहेत."
+"/etc/default/keyboard संरचना फायलीतील सद्य कळफलक पर्याय हे "
+"XKBOPTIONS=\"${XKBOPTIONS}\" असे आहेत."
 
 #. Type: boolean
 #. Description
@@ -484,9 +483,9 @@ msgstr "(${XKBOPTIONS}) हे मूलनिर्धारित कळफल
 #. :sl3:
 #: ../keyboard-configuration.templates:10001
 msgid ""
-"The default value for the options of the keyboard layout is XKBOPTIONS="
-"\"${XKBOPTIONS}\".  It is based on the currently defined language/region and "
-"the settings in /etc/X11/xorg.conf."
+"The default value for the options of the keyboard layout is "
+"XKBOPTIONS=\"${XKBOPTIONS}\".  It is based on the currently defined language/"
+"region and the settings in /etc/X11/xorg.conf."
 msgstr ""
 "कळफलक आराखड्यासाठीच्या पर्यायांचे मूलनिर्धारित मूल्य XKBOPTIONS=\"${XKBOPTIONS}\" आहे."
 "हे मूलनिर्धारित मूल्य सद्ध्या ठरवलेले भाषा/प्रदेश व /etc/X11/xorg.conf मधील निर्धारणे "
@@ -586,6 +585,15 @@ msgstr "उजवी लोगो कळ"
 #: ../keyboard-configuration.templates:14001
 msgid "Menu key"
 msgstr "मेनू कळ"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:11001
+#, fuzzy
+#| msgid "Left Control+Left Shift"
+msgid "Left Alt+Left Shift"
+msgstr "डावी Control+डावी Shift"
 
 #. Type: select
 #. Choices
@@ -706,11 +714,18 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../keyboard-configuration.templates:11002
+#, fuzzy
+#| msgid ""
+#| "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in "
+#| "the latter case, use the combination Shift+Caps Lock for normal Caps "
+#| "toggle). Alt+Shift is also a popular combination; it will however lose "
+#| "its usual behavior in Emacs and other programs that use it for specific "
+#| "needs."
 msgid ""
 "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in the "
-"latter case, use the combination Shift+Caps Lock for normal Caps toggle). Alt"
-"+Shift is also a popular combination; it will however lose its usual "
-"behavior in Emacs and other programs that use it for specific needs."
+"latter case, use the combination Shift+Caps Lock for normal Caps toggle). "
+"Left Alt+Left Shift is also a popular combination; it will however lose its "
+"usual behavior in Emacs and other programs that use it for specific needs."
 msgstr ""
 "सोयीकरिता उजवी Alt वा Caps Lock कळी या कळी बहुतेकदा निवडल्या जातात ( नंतरच्या "
 "केसमध्ये, नेहमीच्या Caps टॉगलकरिता Shift+Caps Lock संयोग वापरा). Alt+Shift हा "
@@ -857,7 +872,7 @@ msgid ""
 "the Control+period combination as a Compose key."
 msgstr ""
 "मजकूर कन्सोलवर निर्माण कळ युनिकोड मोडमध्ये कार्य करत नाही. युनिकोड मोडमध्ये नसल्यास, "
-"तुम्ही येथे काहीही निवडले तरी,  तुम्ही नेहमीच Control+period एकत्रीकरणसुद्धा निर्माण कळ "
+"तुम्ही येथे काहीही निवडले तरी, तुम्ही नेहमीच Control+period एकत्रीकरणसुद्धा निर्माण कळ "
 "म्हणून वापरू शकता."
 
 #. Type: boolean
@@ -939,7 +954,7 @@ msgstr "बेल्जिअन"
 #. :sl1:
 #: ../keyboard-configuration.templates:16001
 msgid "Berber (Latin)"
-msgstr ""
+msgstr "बरबर (लॅटिन)"
 
 #. Type: select
 #. Choices
@@ -1444,6 +1459,13 @@ msgstr "तुर्किश (एफ आराखडा)"
 #: ../keyboard-configuration.templates:16001
 msgid "Turkish (Q layout)"
 msgstr "तुर्किश (ओ आराखडा)"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:16001
+msgid "Taiwanese"
+msgstr "तैवानी"
 
 #. Type: select
 #. Choices

@@ -1,3 +1,344 @@
+console-setup (1.246) unstable; urgency=medium
+
+  * Team upload
+
+  * Add missing changelog entry for 1.245 (MR!26).
+
+  [ Updated translations ]
+  * Bengali (bn.po) by emma peel
+  * German (de.po) by Holger Wansing
+  * Spanish (es.po) by emma peel
+  * Estonian (et.po) by Priit Jõerüüt
+  * Galician (gl.po) by HackingAll
+  * Kazakh (kk.po) by Baurzhan Muftakhidinov
+  * Kannada (kn.po) by Prasannakumar T Bhat
+  * Korean (ko.po) by Changwoo Ryu
+  * Punjabi (Gurmukhi) (pa.po) by Aman Alam
+  * Portuguese (pt.po) by Miguel Figueiredo
+  * Russian (ru.po) by Effently
+
+ -- Holger Wansing <hwansing@mailbox.org>  Mon, 02 Mar 2026 21:04:43 +0100
+
+console-setup (1.245) unstable; urgency=medium
+
+  [ Samuel Thibault ]
+  * Upload against newer xkb-data (Closes: #1122650)
+  * Keyboard/kbdcompiler: Fix checking ckbcomp success.
+  * Keyboard/ckbcomp: Support symbols = [...].
+
+  [ Daniel Lewart ]
+  * Fix runtime errors (closes: #968122)
+
+ -- Samuel Thibault <sthibault@debian.org>  Sat, 20 Dec 2025 02:20:42 +0100
+
+console-setup (1.244) unstable; urgency=medium
+
+  [ D-I role ]
+  * [l10n]  Commit changed/added po files (from l10n-sync run at dillon)
+
+  [ Philip Hands ]
+  * lintian: override depends-on-essential hurd
+  * setupcon: use a fixed name for the initrd keymap file (closes: #977877)
+
+ -- Philip Hands <phil@hands.com>  Sun, 26 Oct 2025 08:52:50 +0100
+
+console-setup (1.243) unstable; urgency=medium
+
+  [ Holger Wansing ]
+  * Change d/copyright and d/bdf2psf.copyright, to remove FSF's (outdated)
+    postal address.
+
+  [ Samuel Thibault ]
+  * keyboard-configuration.templates: Add Left Alt+Left Shift choice for group
+    toggle, set as default to avoid conflict with level3(ralt_switch)
+    (Closes: #1117976).
+  * keyboard-configuration.config: Manage Left Alt+Left Shift, make Alt+Shift
+    allocate both left and right alt.
+  * keyboard-configuration.preinst: Automatically migrate to Left Alt+Left
+    Shift.
+  * CHANGES: remove duplicate file.
+  * keyboard-configuration.templates: Fix dz(azerty-oss/deadkeys) into dz,
+    which is what xkb really provides.
+  * keyboard-configuration.config: Fix dz default layout.
+
+ -- Samuel Thibault <sthibault@debian.org>  Sun, 19 Oct 2025 16:03:57 +0200
+
+console-setup (1.242) unstable; urgency=medium
+
+  * keyboard-configuration.templates: Update dz(la) into dz(azerty-oss).
+  * rules: Check that d-i's kmaps have all the d-i layouts.
+
+ -- Samuel Thibault <sthibault@debian.org>  Fri, 29 Aug 2025 18:13:24 +0200
+
+console-setup (1.241) unstable; urgency=medium
+
+  * keyboard-configuration.templates: Use ca/multix variant instead of
+    ca/multi (Closes: #1111994).
+
+ -- Samuel Thibault <sthibault@debian.org>  Fri, 29 Aug 2025 01:11:18 +0200
+
+console-setup (1.240) unstable; urgency=medium
+
+  [ Updated translations ]
+  * Spanish (es.po) by Santiago Vila
+  * Russian (ru.po) by Алексей Шилин
+  * Tamil (ta.po) by தமிழ்நேரம்
+
+ -- Cyril Brulebois <kibi@debian.org>  Sun, 20 Jul 2025 06:30:07 +0200
+
+console-setup (1.239) unstable; urgency=medium
+
+  [ NoisyCoil ]
+  * Add support for Apple MTP keyboard and Apple SPI Keyboard, as found
+    on ARM-based Apple laptops like M1 MacBook Pro and M2 MacBook Air
+    (Closes: #1108360).
+
+ -- Cyril Brulebois <kibi@debian.org>  Fri, 27 Jun 2025 17:20:08 +0200
+
+console-setup (1.238) unstable; urgency=medium
+
+  * Team upload
+
+  [ Updated translations ]
+  * Belarusian (be.po) by Joe
+  * Greek (el.po) by galaxico
+  * Hungarian (hu.po) by Szia Tomi
+  * Khmer (km.po) by Chou Chamnan
+  * Punjabi (Gurmukhi) (pa.po) by DuskyElf
+  * Romanian (ro.po) by Remus-Gabriel Chelu
+  * Russian (ru.po) by vladiruzz
+  * Sinhala (si.po) by leela
+  * Telugu (te.po) by Sripath Roy Koganti
+  * Uyghur (ug.po) by Abduqadir Abliz
+  * Traditional Chinese (zh_TW.po) by reimu105
+
+ -- Holger Wansing <hwansing@mailbox.org>  Tue, 24 Jun 2025 23:11:35 +0200
+
+console-setup (1.237) unstable; urgency=medium
+
+  [ Updated translations ]
+  * Korean (ko.po) by Changwoo Ryu
+
+ -- Cyril Brulebois <kibi@debian.org>  Tue, 13 May 2025 15:18:09 +0200
+
+console-setup (1.236) unstable; urgency=medium
+
+  * Team upload
+
+  [ Updated translations ]
+  * Czech (cs.po) by Miroslav Kure
+  * German (de.po) by Holger Wansing
+  * Spanish (es.po) by Francisco Javier Carro Orgeira
+  * French (fr.po) by Baptiste Jammet
+  * Galician (gl.po) by Parodper
+  * Croatian (hr.po) by Valentin Vidic
+  * Hungarian (hu.po) by Szia Tomi
+  * Indonesian (id.po) by Andika Triwidada
+  * Latvian (lv.po) by Tranzistors
+  * Marathi (mr.po) by Kalyani Kenekar
+  * Uyghur (ug.po) by Abduqadir Abliz
+  * Simplified Chinese (zh_CN.po) by Boyuan Yang
+
+ -- Holger Wansing <hwansing@mailbox.org>  Tue, 01 Apr 2025 00:53:02 +0200
+
+console-setup (1.235) unstable; urgency=medium
+
+  * Team upload
+
+  [ Samuel Thibault ]
+  * Advertise DejaVu fonts.
+  * Regenerate/update documentation ('Hackers Guide for console-setup').
+
+  [ Updated translations ]
+  * Arabic (ar.po) by Amr Walryh
+  * Catalan (ca.po) by poc senderi
+  * Estonian (et.po) by Priit Jõerüüt
+  * Hebrew (he.po) by Yaron Shahrabani
+  * Hungarian (hu.po) by Szia Tomi
+  * Icelandic (is.po) by Sveinn í Felli
+  * Japanese (ja.po) by Sadaharu Wakisaka
+  * Georgian (ka.po) by Temuri Doghonadze
+  * Lithuanian (lt.po) by Rimas Kudelis
+  * Dutch (nl.po) by Frans Spiesschaert
+  * Polish (pl.po) by Matthaiks
+  * Portuguese (pt.po) by Miguel Figueiredo
+  * Portuguese (Brazil) (pt_BR.po) by Adriano Rafael Gomes
+  * Romanian (ro.po) by Vasile Cristian-Ilie
+  * Serbian (sr.po) by Мирослав Николић
+  * Swedish (sv.po) by Anders Jonsson
+  * Turkish (tr.po) by Fatih Altun
+  * Ukrainian (uk.po) by Hotripak
+  * Vietnamese (vi.po) by Dagon Vn
+
+ -- Holger Wansing <hwansing@mailbox.org>  Sat, 08 Mar 2025 23:10:52 +0100
+
+console-setup (1.234) unstable; urgency=medium
+
+  * Team upload
+
+  [ Updated translations ]
+  * Arabic (ar.po) by Maytham
+  * Belarusian (be.po) by vics
+  * Persian (fa.po) by Danial Behzadi
+  * Finnish (fi.po) by Ricky Tigg
+  * Italian (it.po) by Milo Casagrande
+  * Korean (ko.po) by Changwoo Ryu
+  * Marathi (mr.po) by omwani
+  * Polish (pl.po) by Matthaiks
+  * Romanian (ro.po) by Remus-Gabriel Chelu
+  * Tamil (ta.po) by தமிழ்நேரம்
+
+ -- Holger Wansing <hwansing@mailbox.org>  Sun, 02 Feb 2025 22:19:40 +0100
+
+console-setup (1.233) unstable; urgency=medium
+
+  * Team upload
+
+  [ Updated translations ]
+  * Estonian (et.po) by Kristjan Räts
+  * Persian (fa.po) by peylight
+  * French (fr.po) by Baptiste Jammet
+  * Galician (gl.po) by Víctor Posada
+  * Hungarian (hu.po) by Szia Tomi
+  * Icelandic (is.po) by Sveinn í Felli
+  * Japanese (ja.po) by Sadaharu Wakisaka
+  * Occitan (oc.po) by Quentin PAGÈS
+  * Russian (ru.po) by Yuri Kozlov
+  * Simplified Chinese (zh_CN.po) by Weng Qizhi
+
+ -- Holger Wansing <hwansing@mailbox.org>  Fri, 29 Nov 2024 22:30:53 +0100
+
+console-setup (1.232) unstable; urgency=medium
+
+  [ Updated translations ]
+  * Hungarian (hu.po) by Szia Tomi
+
+ -- Cyril Brulebois <kibi@debian.org>  Sat, 02 Nov 2024 21:21:36 +0100
+
+console-setup (1.231) unstable; urgency=medium
+
+  * Team upload
+
+  [ Updated translations ]
+  * Czech (cs.po) by Miroslav Kure
+  * Greek (el.po) by mpt.c
+  * Hindi (hi.po) by AYUSHMAN TIWARI
+  * Hungarian (hu.po) by Szia Tomi
+  * Indonesian (id.po) by Andika Triwidada
+  * Georgian (ka.po) by Temuri Doghonadze
+  * Latvian (lv.po) by GGLVXD
+  * Norwegian Bokmal (nb.po) by Petter Reinholdtsen
+  * Turkish (tr.po) by Fatih Altun
+  * Simplified Chinese (zh_CN.po) by Zi Jiaxu
+
+ -- Holger Wansing <hwansing@mailbox.org>  Sun, 20 Oct 2024 21:29:35 +0200
+
+console-setup (1.230) unstable; urgency=medium
+
+  * Team upload
+
+  [ Helmut Grohne ]
+  * DEP17: Move aliased files to /usr. Closes: #1064299.
+
+ -- Holger Wansing <hwansing@mailbox.org>  Thu, 11 Jul 2024 19:05:44 +0200
+
+console-setup (1.229) unstable; urgency=medium
+
+  [ Samuel Thibault ]
+  * Fonts/bdf2psf: Avoid numerous >32bit portability warning.
+
+  [ Holger Wansing ]
+  * Stop building kfreebsd packages (arch has been removed from the archive).
+    Closes: #619328.
+
+  [ Updated translations ]
+  * Portuguese (Brazil) (pt_BR.po) by Adriano Rafael Gomes
+
+ -- Holger Wansing <hwansing@mailbox.org>  Sat, 06 Jul 2024 13:23:37 +0200
+
+console-setup (1.228) unstable; urgency=medium
+
+  [ Steve Langasek ]
+  * setupcon: use /run for tempfiles (and dump the various unnecessary
+    fallback paths), since /run is always mountable rw at least as early as
+    /tmp is and is guaranteed to be safe from tmpcleaners at boot.  Only keep
+    /tmp as a fallback in case we have access to write to /tmp and to a
+    console, but not to /run.  LP: #1824227. Closes: Bug#1072204, #848972.
+
+  [ Cyril Brulebois ]
+  * Rebuild against newer xkb-data (closes: #1073857), with thanks to
+    Christian Stewart for the bug report.
+
+  [ Updated translations ]
+  * Georgian (ka.po) by Temuri Doghonadze
+  * Portuguese (Brazil) (pt_BR.po) by Adriano Rafael Gomes
+
+ -- Cyril Brulebois <kibi@debian.org>  Thu, 20 Jun 2024 00:43:24 +0200
+
+console-setup (1.227) unstable; urgency=medium
+
+  * Team upload
+
+  [ Jakub Wilk ]
+  * typos in documentation (closes: 1065561)
+
+  [ Samuel Thibault ]
+  * Fix key types, notably altgr not working with shift.
+  * Add dejavu fonts rasterized from the DejaVu vector font. This notably
+    provides fonts larger than 32 pixels, usable with linux ≥ 6.9.
+    (closes: 816111)
+  * rules,control: Add unifont and fonts-dejavu-mono to console-setup-linux
+    and console-setup-freebsd's Static-built-Using.
+  * console-setup.config, font-switch: Avoid warning on systems that don't
+    have lsmod (closes: 1071823)
+
+ -- Holger Wansing <hwansing@mailbox.org>  Thu, 30 May 2024 10:54:36 +0200
+console-setup (1.226) unstable; urgency=medium
+
+  * Team upload
+
+  * setupcon: fix mistaken $((  (closes: 1063518)
+
+ -- Philip Hands <phil@hands.com>  Fri, 09 Feb 2024 15:45:38 +0100
+
+console-setup (1.225) unstable; urgency=medium
+
+  * Team upload
+
+  [ Philip Hands ]
+  * eliminate use of egrep and \# (closes: #1019660)
+
+  [ Updated translations ]
+  * Catalan (ca.po) by d
+  * Norwegian Bokmal (nb.po) by Petter Reinholdtsen
+  * Polish (pl.po) by Matthaiks
+  * Swedish (sv.po) by bittin1ddc447d824349b2
+  * Turkish (tr.po) by Oğuz Ersen
+  * Ukrainian (uk.po) by Сергій
+
+ -- Holger Wansing <hwansing@mailbox.org>  Thu, 08 Feb 2024 22:42:09 +0100
+
+console-setup (1.224) unstable; urgency=medium
+
+  * Team upload
+
+  [ Alper Nebi Yasak ]
+  * Add Taiwanese as an xkb-keymap answer for taiwanese(indigenous) and
+    default to it for zh_TW as suggested by Andrew Lee (李健秋).
+
+  [ Updated translations ]
+  * Indonesian (id.po) by Andika Triwidada
+  * Lithuanian (lt.po) by Rimas Kudelis
+  * Marathi (mr.po) by omwani
+  * Dutch (nl.po) by Frans Spiesschaert
+  * Punjabi (Gurmukhi) (pa.po) by Aman Alam
+  * Romanian (ro.po) by Remus-Gabriel Chelu
+  * Turkish (tr.po) by Fatih Altun
+  * Ukrainian (uk.po) by Сергій
+  * Simplified Chinese (zh_CN.po) by Zi Jiaxu
+
+ -- Holger Wansing <hwansing@mailbox.org>  Sat, 27 Jan 2024 22:25:36 +0100
+
 console-setup (1.223) unstable; urgency=medium
 
   * Team upload

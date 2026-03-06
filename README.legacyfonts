@@ -2,7 +2,7 @@
 LEGACY FONTS: CONVERSION FROM PSF TO BDF
 ========================================
 
-The traditional font collection for Linux consolle was a big mess.
+The traditional font collection for Linux console was a big mess.
 There were many different fonts and nobody in the world knew the exact
 purpose of all of them.  During the years new fonts were added, but
 old were almost newer removed.
@@ -16,8 +16,8 @@ In order to reduce the total number of fonts, they were converted to
 BDF format.  During the conversion of the fonts, only one BDF font was
 generated for a group of fonts that share common typeface.  Console
 fonts that didn't have embedded Unicode table were simply ignored.
-The fonts LatArCyrHeb* were also ignored - partialy due to technical
-reasons and partialy because the other BDF fonts are better source for
+The fonts LatArCyrHeb* were also ignored - partially due to technical
+reasons and partially because the other BDF fonts are better source for
 making Unicode console fonts.
 
 The resulting BDF fonts are named after the scheme legacyNNp.bdf,
@@ -41,7 +41,7 @@ Only one PSF font per combination of codeset-size is generated from
 the legacy fonts and is named after the scheme CODESET-vgaSIZE.psf.
 For example Greek-vga14.psf is the legacy font for Greek code set and
 size 14.  The list of BDF fonts that is used to produce
-Greek-vga14.psf was determined as folows.
+Greek-vga14.psf was determined as follows.
 
 First, see which one of the legacy BDF fonts can provide as many
 glyphs for Greek-vga14.psf as possible.  This was legacy14g.bdf

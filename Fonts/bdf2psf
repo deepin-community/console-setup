@@ -432,6 +432,7 @@ for my $bdf (@bdfs) {
     my $beforebox;
     my $afterbox;
     my $shiftbits;
+    my $warn_trunc;
     while (<BDF>) {
 	$current_line++;
 	s/^\s*//;
@@ -452,26 +453,45 @@ for my $bdf (@bdfs) {
 	}
 	if (/^ENCODING +(.*)/) {
 	    $u = $1;
+            $warn_trunc = 0;
 	    next;
 	}
 	
 	if (/^(([0-9a-fA-F]{2})+)$/) {
 	    $bbx or die "$0: $bdf: no BBX at line $current_line\n";
-	    if (length($1) <= 2 * matrix_row_size ()) {
-                my $row = hex ($1);
-                if ($shiftbits > 0) {
-                    $row <<= $shiftbits;
-                } else {
-                    $row >>= -$shiftbits;
-                }
-		for my $i (1 ... matrix_row_size ()) {
-		    push (@glyph_bytes,
-			  ($row >> 8 * (matrix_row_size () - $i)) & 0xff);
+	    my $hex = $1;
+
+	    if (length($hex) > 2 * matrix_row_size ()) {
+		if (length($hex) >= 3 * matrix_row_size ()) {
+		    # Dumbly too large, skip
+		    $rows = -123456;
+		    next;
 		}
-		$rows++;
-	    } else {
-		$rows = -123456;
+		# Not that large, truncate
+		if (not $warn_trunc) {
+		    warning sprintf ("U+%04X: truncating width\n", $u);
+		    $warn_trunc = 1;
+		}
+		$hex = substr ($hex, 0, 2 * matrix_row_size ());
 	    }
+
+	    my $row;
+	    {
+		# We don't care about binary portability of integers beyond 32b
+		no warnings;
+		$row = hex ($hex);
+	    }
+	    if ($shiftbits > 0) {
+		$row <<= $shiftbits;
+	    } else {
+		$row >>= -$shiftbits;
+	    }
+	    for my $i (1 ... matrix_row_size ()) {
+		push (@glyph_bytes,
+		      ($row >> 8 * (matrix_row_size () - $i)) & 0xff);
+	    }
+	    $rows++;
+
 	    next;
 	}
 	if (/^ENDCHAR/) {
@@ -486,9 +506,11 @@ for my $bdf (@bdfs) {
 		if (! defined $glyphs{$u}) {
 		    if ($beforebox < 0) {
 			@glyph_bytes = @glyph_bytes[-$beforebox..$#glyph_bytes];
+			$beforebox = 0;
 		    }
 		    if ($afterbox < 0) {
 			@glyph_bytes = @glyph_bytes[0 .. $#glyph_bytes+$afterbox];
+			$afterbox = 0;
 		    }
 		    $glyphs{$u} = [ (0) x $beforebox,
 				    @glyph_bytes,

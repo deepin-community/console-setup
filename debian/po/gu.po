@@ -24,7 +24,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: d-i\n"
 "Report-Msgid-Bugs-To: console-setup@packages.debian.org\n"
-"POT-Creation-Date: 2020-10-28 20:01+0000\n"
+"POT-Creation-Date: 2025-10-15 20:01+0000\n"
 "PO-Revision-Date: 2008-08-07 11:42+0530\n"
 "Last-Translator: Kartik Mistry <kartik.mistry@gmail.com>\n"
 "Language-Team: \n"
@@ -261,12 +261,19 @@ msgstr "કૉન્સોલ માટે ફોન્ટ:"
 #. relatively short.
 #. :sl3:
 #: ../console-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "\"VGA\" has a traditional appearance and has medium coverage of "
+#| "international scripts. \"Fixed\" has a simplistic appearance and has "
+#| "better coverage of international scripts. \"Terminus\" may help to reduce "
+#| "eye fatigue, though some symbols have a similar aspect which may be a "
+#| "problem for programmers."
 msgid ""
 "\"VGA\" has a traditional appearance and has medium coverage of "
 "international scripts. \"Fixed\" has a simplistic appearance and has better "
 "coverage of international scripts. \"Terminus\" may help to reduce eye "
 "fatigue, though some symbols have a similar aspect which may be a problem "
-"for programmers."
+"for programmers. \"DejaVu\" is suited to screens with HiDPI."
 msgstr ""
 "\"VGA\" એ પરંપરાગત દેખાવ છે અને આંતરરાષ્ટ્રિય સ્ક્પ્ટિસ માટે મધ્યમ આધાર છે. \"Fixed\" એ "
 "સરળ દેખાવ છે અને આંતરરાષ્ટ્રિય સ્ક્પ્ટિસ માટે સારો આધાર છે. \"Terminus\" કદાચ આંખોને થતું "
@@ -280,9 +287,14 @@ msgstr ""
 #. relatively short.
 #. :sl3:
 #: ../console-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "If you prefer a bold version of the Terminus font, choose either "
+#| "TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
 msgid ""
 "If you prefer a bold version of the Terminus font, choose either "
-"TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
+"TerminusBold or DejaVuBold (if you use a framebuffer) or TerminusBoldVGA "
+"(otherwise)."
 msgstr ""
 "જો તમે ટર્મિનસ ફોન્ટની ઘાટી આવૃત્તિ પસંદ કરવા માંગતા હોવ તો, TerminusBold (જો તમે "
 "ફ્રેમબફર ઉપયોગ કરતા હોવ) અથવા TerminusBoldVGA (બાકીનું) પસંદ કરો."
@@ -404,8 +416,8 @@ msgid ""
 "The current keyboard layout in the configuration file /etc/default/keyboard "
 "is defined as XKBLAYOUT=\"${XKBLAYOUT}\" and XKBVARIANT=\"${XKBVARIANT}\"."
 msgstr ""
-"રૂપરેખાંકન ફાઈલ /etc/default/keyboard માં હાલનો કીબોર્ડ દેખાવ XKBLAYOUT="
-"\"${XKBLAYOUT}\" and XKBVARIANT=\"${XKBVARIANT}\" તરીકે વ્યાખ્યાયિત છે."
+"રૂપરેખાંકન ફાઈલ /etc/default/keyboard માં હાલનો કીબોર્ડ દેખાવ "
+"XKBLAYOUT=\"${XKBLAYOUT}\" and XKBVARIANT=\"${XKBVARIANT}\" તરીકે વ્યાખ્યાયિત છે."
 
 #. Type: boolean
 #. Description
@@ -435,9 +447,9 @@ msgid ""
 "XKBVARIANT=\"${XKBVARIANT}\".  This default value is based on the currently "
 "defined language/region and the settings in /etc/X11/xorg.conf."
 msgstr ""
-"કીબોર્ડ દેખાવની મૂળભૂત કિંમત XKBLAYOUT=\"${XKBLAYOUT}\" અને XKBVARIANT="
-"\"${XKBVARIANT}\" છે.  આ મૂળભૂત કિંમત હાલમાં વ્યાખ્યાયિત ભાષા/વિસ્તારઅને /etc/X11/"
-"xorg.conf ની ગોઠવણીઓ પર આધારિત છે."
+"કીબોર્ડ દેખાવની મૂળભૂત કિંમત XKBLAYOUT=\"${XKBLAYOUT}\" અને "
+"XKBVARIANT=\"${XKBVARIANT}\" છે.  આ મૂળભૂત કિંમત હાલમાં વ્યાખ્યાયિત ભાષા/વિસ્તારઅને /"
+"etc/X11/xorg.conf ની ગોઠવણીઓ પર આધારિત છે."
 
 #. Type: boolean
 #. Description
@@ -465,8 +477,8 @@ msgid ""
 "The current keyboard options in the configuration file /etc/default/keyboard "
 "are defined as XKBOPTIONS=\"${XKBOPTIONS}\"."
 msgstr ""
-"રૂપરેખાંકન ફાઇલ /etc/default/keyboard માં કીબોર્ડ વિકલ્પો XKBOPTIONS="
-"\"${XKBOPTIONS}\" તરીકે વ્યાખ્યાયિત કરેલ છે."
+"રૂપરેખાંકન ફાઇલ /etc/default/keyboard માં કીબોર્ડ વિકલ્પો "
+"XKBOPTIONS=\"${XKBOPTIONS}\" તરીકે વ્યાખ્યાયિત કરેલ છે."
 
 #. Type: boolean
 #. Description
@@ -491,9 +503,9 @@ msgstr "મૂળભૂત કીબોર્ડ વિકલ્પો (${XKBOPT
 #. :sl3:
 #: ../keyboard-configuration.templates:10001
 msgid ""
-"The default value for the options of the keyboard layout is XKBOPTIONS="
-"\"${XKBOPTIONS}\".  It is based on the currently defined language/region and "
-"the settings in /etc/X11/xorg.conf."
+"The default value for the options of the keyboard layout is "
+"XKBOPTIONS=\"${XKBOPTIONS}\".  It is based on the currently defined language/"
+"region and the settings in /etc/X11/xorg.conf."
 msgstr ""
 "કીબોર્ડ દેખાવના વિકલ્પોની મૂળભૂત કિંમત XKBOPTIONS=\"${XKBOPTIONS}\" છે.  તે હાલમાં "
 "વ્યાખ્યાયિતકરેલ ભાષા/વિસ્તાર અને /etc/X11/xorg.conf ની ગોઠવણીઓ પર આધારિત છે."
@@ -594,6 +606,15 @@ msgstr "જમણી લોગો કળ"
 #: ../keyboard-configuration.templates:14001
 msgid "Menu key"
 msgstr "મેનુ કળ"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:11001
+#, fuzzy
+#| msgid "Left Control+Left Shift"
+msgid "Left Alt+Left Shift"
+msgstr "ડાબી કંટ્રોલ+ડાબી શીફ્ટ"
 
 #. Type: select
 #. Choices
@@ -713,11 +734,18 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../keyboard-configuration.templates:11002
+#, fuzzy
+#| msgid ""
+#| "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in "
+#| "the latter case, use the combination Shift+Caps Lock for normal Caps "
+#| "toggle). Alt+Shift is also a popular combination; it will however lose "
+#| "its usual behavior in Emacs and other programs that use it for specific "
+#| "needs."
 msgid ""
 "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in the "
-"latter case, use the combination Shift+Caps Lock for normal Caps toggle). Alt"
-"+Shift is also a popular combination; it will however lose its usual "
-"behavior in Emacs and other programs that use it for specific needs."
+"latter case, use the combination Shift+Caps Lock for normal Caps toggle). "
+"Left Alt+Left Shift is also a popular combination; it will however lose its "
+"usual behavior in Emacs and other programs that use it for specific needs."
 msgstr ""
 "જમણી અલ્ટર અથવા કેપ્સ લોક કળો મોટાભાગે ઇર્ગોનોમિક કારણોસર (પછીના કિસ્સામાં, શીફ્ટ + "
 "કેપ્સ લોકનું જોડાણ સામાન્ય કેપ્સની બદલી માટે) પસંદ કરવામાં આવે છે. અલ્ટર+શીફ્ટ એ પણ "
@@ -945,7 +973,7 @@ msgstr "બેલ્જીયન"
 #. :sl1:
 #: ../keyboard-configuration.templates:16001
 msgid "Berber (Latin)"
-msgstr ""
+msgstr "બેર્બર (લેટિન)"
 
 #. Type: select
 #. Choices
@@ -1450,6 +1478,15 @@ msgstr "તુર્કિશ (F દેખાવ)"
 #: ../keyboard-configuration.templates:16001
 msgid "Turkish (Q layout)"
 msgstr "તુર્કિશ (Q દેખાવ)"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:16001
+#, fuzzy
+#| msgid "Japanese"
+msgid "Taiwanese"
+msgstr "જાપાનીઝ"
 
 #. Type: select
 #. Choices

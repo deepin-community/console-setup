@@ -8,7 +8,7 @@
 # This translation is released under the same licence as the debian-installer.
 #
 # Siim Põder <siim@p6drad-teel.net>, 2007.
-# Kristjan Räts <kristjanrats@gmail.com>, 2017, 2018, 2020, 2021.
+# Kristjan Räts <kristjanrats@gmail.com>, 2017, 2018, 2020, 2021, 2022.
 #
 # Thanks to following Ubuntu Translators for review and fixes:
 #     Laur Mõtus
@@ -31,9 +31,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: console-setup@packages.debian.org\n"
-"POT-Creation-Date: 2020-10-28 20:01+0000\n"
-"PO-Revision-Date: 2021-01-17 12:32+0000\n"
-"Last-Translator: Kristjan Räts <kristjanrats@gmail.com>\n"
+"POT-Creation-Date: 2025-10-15 20:01+0000\n"
+"PO-Revision-Date: 2025-12-18 17:00+0000\n"
+"Last-Translator: Priit Jõerüüt <jrthwlate@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Estonian <>\n"
 "Language: et\n"
 "MIME-Version: 1.0\n"
@@ -272,12 +272,13 @@ msgid ""
 "international scripts. \"Fixed\" has a simplistic appearance and has better "
 "coverage of international scripts. \"Terminus\" may help to reduce eye "
 "fatigue, though some symbols have a similar aspect which may be a problem "
-"for programmers."
+"for programmers. \"DejaVu\" is suited to screens with HiDPI."
 msgstr ""
 "\"VGA\" annab tavapärase väljanägemise ning selles on keskpäraselt maailma "
 "keelte märke. \"Fixed\" annab lihtsa väljanägemise ning selles on rohkem "
 "erinevate keelte märke. \"Terminus\" võib vähendada silmade väsimist, kuid "
-"mõned sümbolid on sarnased ning võivad programmeerijaid eksitada."
+"mõned sümbolid on sarnased ning võivad programmeerijaid eksitada. \"DejaVu\" "
+"sobib kõrglahutusega (HiDPI) ekraanidele."
 
 #. Type: select
 #. Description
@@ -288,10 +289,11 @@ msgstr ""
 #: ../console-setup.templates:6001
 msgid ""
 "If you prefer a bold version of the Terminus font, choose either "
-"TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
+"TerminusBold or DejaVuBold (if you use a framebuffer) or TerminusBoldVGA "
+"(otherwise)."
 msgstr ""
-"Kui sa eelistad fonti Terminus rasvaselt, vali kas TerminusBold (kui kasutad "
-"framebuffer'it) või TerminusBoldVGA (muul juhul)."
+"Kui sa eelistad fonti Terminus rasvaselt, vali kas TerminusBold või "
+"DejaVuBold (kui kasutad framebuffer'it) või TerminusBoldVGA (muul juhul)."
 
 #. Type: select
 #. Description
@@ -438,9 +440,9 @@ msgid ""
 "XKBVARIANT=\"${XKBVARIANT}\".  This default value is based on the currently "
 "defined language/region and the settings in /etc/X11/xorg.conf."
 msgstr ""
-"Klaviatuuri vaikimisi paigutus on XKBLAYOUT=\"${XKBLAYOUT}\" ja XKBVARIANT="
-"\"${XKBVARIANT}\". See vaikeväärtus määratakse valitud keele/regiooni ning /"
-"etc/X11/xorg.conf faili järgi."
+"Klaviatuuri vaikimisi paigutus on XKBLAYOUT=\"${XKBLAYOUT}\" ja "
+"XKBVARIANT=\"${XKBVARIANT}\". See vaikeväärtus määratakse valitud keele/"
+"regiooni ning /etc/X11/xorg.conf faili järgi."
 
 #. Type: boolean
 #. Description
@@ -494,9 +496,9 @@ msgstr "Kas säilitada (${XKBOPTIONS}) vaikimisi klaviatuurivalikud?"
 #. :sl3:
 #: ../keyboard-configuration.templates:10001
 msgid ""
-"The default value for the options of the keyboard layout is XKBOPTIONS="
-"\"${XKBOPTIONS}\".  It is based on the currently defined language/region and "
-"the settings in /etc/X11/xorg.conf."
+"The default value for the options of the keyboard layout is "
+"XKBOPTIONS=\"${XKBOPTIONS}\".  It is based on the currently defined language/"
+"region and the settings in /etc/X11/xorg.conf."
 msgstr ""
 "Klaviatuurivalikute vaikimisi väärtus on XKBOPTIONS=\"${XKBOPTIONS}\". See "
 "määratakse valitud keele/regiooni ning /etc/X11/xorg.conf faili järgi."
@@ -597,6 +599,13 @@ msgstr "Parem logoklahv"
 #: ../keyboard-configuration.templates:14001
 msgid "Menu key"
 msgstr "Menüüklahv"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:11001
+msgid "Left Alt+Left Shift"
+msgstr "Vasak Alt+vasak Shift"
 
 #. Type: select
 #. Choices
@@ -719,14 +728,14 @@ msgstr ""
 #: ../keyboard-configuration.templates:11002
 msgid ""
 "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in the "
-"latter case, use the combination Shift+Caps Lock for normal Caps toggle). Alt"
-"+Shift is also a popular combination; it will however lose its usual "
-"behavior in Emacs and other programs that use it for specific needs."
+"latter case, use the combination Shift+Caps Lock for normal Caps toggle). "
+"Left Alt+Left Shift is also a popular combination; it will however lose its "
+"usual behavior in Emacs and other programs that use it for specific needs."
 msgstr ""
-"Ergonoomika tõttu valitakse tihti Parem Alt või Caps Lock klahvid "
-"(kasutatakse ka Shift+Caps Lock või harilikku Caps Lock lülitamist). Alt"
-"+Shift on samuti sage kombinatsioon, kuid siis kaotab see oma tavapärase "
-"kasutuse Emacs'is ja teistes programmides, mis seda kasutavad."
+"Ergonoomika tõttu valitakse tihti „Parem Alt“ või „Caps Lock“ klahvid "
+"(kasutatakse ka „Shift+Caps Lock“ või harilikku „Caps Lock“ lülitamist). "
+"„Vasak Alt+Vasak Shift“ on samuti sage kombinatsioon, kuid siis kaotab see "
+"oma tavapärase kasutuse Emacs'is ja teistes programmides, mis seda kasutavad."
 
 #. Type: select
 #. Description
@@ -890,7 +899,7 @@ msgid ""
 "it can be used to terminate the X server."
 msgstr ""
 "Vaikimisi ei tee kombinatsioon Control+Alt+Backspace mitte midagi. Kui sa "
-"tahad, saab sellega X-serveri töö lõpetada."
+"tahad, saad sellega X-serveri töö lõpetada."
 
 #. Type: select
 #. Choices
@@ -904,14 +913,14 @@ msgstr "ameerika inglise"
 #. :sl1:
 #: ../keyboard-configuration.templates:16001
 msgid "Albanian"
-msgstr "Albaania"
+msgstr "albaania"
 
 #. Type: select
 #. Choices
 #. :sl1:
 #: ../keyboard-configuration.templates:16001
 msgid "Arabic"
-msgstr "Araabia"
+msgstr "araabia"
 
 #. Type: select
 #. Choices
@@ -925,7 +934,7 @@ msgstr "astuuria"
 #. :sl1:
 #: ../keyboard-configuration.templates:16001
 msgid "Bangladesh"
-msgstr "Bangladesh"
+msgstr "bangladeshi"
 
 #. Type: select
 #. Choices
@@ -1024,7 +1033,7 @@ msgstr "katalaani"
 #. :sl1:
 #: ../keyboard-configuration.templates:16001
 msgid "Chinese"
-msgstr "Hiina"
+msgstr "hiina"
 
 #. Type: select
 #. Choices
@@ -1059,7 +1068,7 @@ msgstr "hollandi"
 #. :sl1:
 #: ../keyboard-configuration.templates:16001
 msgid "Dvorak"
-msgstr "Dvoraki"
+msgstr "dvoraki"
 
 #. Type: select
 #. Choices
@@ -1073,7 +1082,7 @@ msgstr "dzongkha"
 #. :sl1:
 #: ../keyboard-configuration.templates:16001
 msgid "Esperanto"
-msgstr "Esperanto"
+msgstr "esperanto"
 
 #. Type: select
 #. Choices
@@ -1171,7 +1180,7 @@ msgstr "islandi"
 #. :sl1:
 #: ../keyboard-configuration.templates:16001
 msgid "Irish"
-msgstr "Iiri"
+msgstr "iiri"
 
 #. Type: select
 #. Choices
@@ -1220,7 +1229,7 @@ msgstr "kirgiisi"
 #. :sl1:
 #: ../keyboard-configuration.templates:16001
 msgid "Korean"
-msgstr "Korea"
+msgstr "korea"
 
 #. Type: select
 #. Choices
@@ -1311,7 +1320,7 @@ msgstr "pärsia"
 #. :sl1:
 #: ../keyboard-configuration.templates:16001
 msgid "Philippines"
-msgstr "filippiini"
+msgstr "filipiini"
 
 #. Type: select
 #. Choices
@@ -1353,7 +1362,7 @@ msgstr "vene"
 #. :sl1:
 #: ../keyboard-configuration.templates:16001
 msgid "Serbian (Cyrillic)"
-msgstr "serbia (krillits)"
+msgstr "serbia (krillitsa)"
 
 #. Type: select
 #. Choices
@@ -1374,14 +1383,14 @@ msgstr "singali"
 #. :sl1:
 #: ../keyboard-configuration.templates:16001
 msgid "Slovak"
-msgstr "slovakkia"
+msgstr "slovaki"
 
 #. Type: select
 #. Choices
 #. :sl1:
 #: ../keyboard-configuration.templates:16001
 msgid "Slovenian"
-msgstr "sloveenia"
+msgstr "sloveeni"
 
 #. Type: select
 #. Choices
@@ -1416,7 +1425,7 @@ msgstr "šveitsi"
 #. :sl1:
 #: ../keyboard-configuration.templates:16001
 msgid "Tajik"
-msgstr "Tadžiki"
+msgstr "tadžiki"
 
 #. Type: select
 #. Choices
@@ -1437,14 +1446,14 @@ msgstr "telugu"
 #. :sl1:
 #: ../keyboard-configuration.templates:16001
 msgid "Thai"
-msgstr "Tai"
+msgstr "tai"
 
 #. Type: select
 #. Choices
 #. :sl1:
 #: ../keyboard-configuration.templates:16001
 msgid "Tibetan"
-msgstr "Tiibeti"
+msgstr "tiibeti"
 
 #. Type: select
 #. Choices
@@ -1459,6 +1468,13 @@ msgstr "türgi (F asetus)"
 #: ../keyboard-configuration.templates:16001
 msgid "Turkish (Q layout)"
 msgstr "türgi (Q asetus)"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:16001
+msgid "Taiwanese"
+msgstr "taivani"
 
 #. Type: select
 #. Choices
@@ -1479,7 +1495,7 @@ msgstr "uiguuri"
 #. :sl1:
 #: ../keyboard-configuration.templates:16001
 msgid "Vietnamese"
-msgstr "Vietnami"
+msgstr "vietnami"
 
 #. Type: select
 #. Description

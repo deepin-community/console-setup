@@ -9,6 +9,7 @@
 # This file is distributed under the same license as debian-installer.
 # Jeyanthinath MuthuRam <jeyanthinath10@gmail.com>, 2020.
 # Vasudevan Tirumurti <agnihot3@gmail.com>, 2021.
+# Alex <alexraj2003@gmail.com>, 2022.
 #
 #
 # Translations from iso-codes:
@@ -23,9 +24,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ta\n"
 "Report-Msgid-Bugs-To: console-setup@packages.debian.org\n"
-"POT-Creation-Date: 2020-10-28 20:01+0000\n"
-"PO-Revision-Date: 2021-02-09 18:59+0000\n"
-"Last-Translator: Vasudevan Tirumurti <agnihot3@gmail.com>\n"
+"POT-Creation-Date: 2025-10-15 20:01+0000\n"
+"PO-Revision-Date: 2025-07-01 21:01+0000\n"
+"Last-Translator: தமிழ்நேரம் <anishprabu.t@gmail.com>\n"
 "Language-Team: Tamil <<gnome-tamil-translation@googlegroups.com>>\n"
 "Language: ta\n"
 "MIME-Version: 1.0\n"
@@ -264,12 +265,13 @@ msgid ""
 "international scripts. \"Fixed\" has a simplistic appearance and has better "
 "coverage of international scripts. \"Terminus\" may help to reduce eye "
 "fatigue, though some symbols have a similar aspect which may be a problem "
-"for programmers."
+"for programmers. \"DejaVu\" is suited to screens with HiDPI."
 msgstr ""
-"\"விஜிஏ\" பாரம்பரிய காட்சி கொண்டது. பன்னாட்டு எழுத்துருக்களுக்கு நடுத்தர பொருத்தம் "
-"உள்ளது. \"நிலையான\" (Fixed) என்பது எளிய காட்சி கொண்டது. பன்னாட்டு எழுத்துருக்களுக்கு "
-"அதிக பொருத்தம் உள்ளது \"டெர்மினஸ்\" (Terminus) என்பது கண்ணுக்கு இதமானது. ஆனால் "
-"கிட்டத்தட்ட ஒரே மாதிரி தோன்றும் சில குறிகள் உருவாக்குவோருக்கு பிரச்சினைகள் தரலாம்."
+"\"விசிஏ\" ஒரு பாரம்பரிய தோற்றத்தைக் கொண்டுள்ளது மற்றும் பன்னாட்டு ச்கிரிப்ட்களின் நடுத்தர "
+"கவரேச் உள்ளது. \"நிலையான\" ஒரு எளிமையான தோற்றத்தைக் கொண்டுள்ளது மற்றும் பன்னாட்டு "
+"ச்கிரிப்ட்களின் சிறந்த கவரேச் உள்ளது. \"டெர்மினச்\" கண் சோர்வு குறைக்க உதவக்கூடும், "
+"இருப்பினும் சில சின்னங்கள் இதேபோன்ற அம்சத்தைக் கொண்டுள்ளன, இது புரோகிராமர்களுக்கு சிக்கலாக "
+"இருக்கலாம். \"டிசாவ்\" HIDPI உடன் திரைகளுக்கு மிகவும் பொருத்தமானது."
 
 #. Type: select
 #. Description
@@ -280,10 +282,12 @@ msgstr ""
 #: ../console-setup.templates:6001
 msgid ""
 "If you prefer a bold version of the Terminus font, choose either "
-"TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
+"TerminusBold or DejaVuBold (if you use a framebuffer) or TerminusBoldVGA "
+"(otherwise)."
 msgstr ""
-"டெர்மினஸ் எழுத்துருவின் தடித்த வகை உங்களுக்கு பொருந்தினால்TerminusBold (ப்ரேம்பஃபர் "
-"பயன்படுத்தினால்) அல்லது TerminusBoldVGA (மற்றபடி) தேர்வு செய்க."
+"டெர்மினஸ் எழுத்துருவின் தடித்த வகை உங்களுக்கு பொருந்தினால்TerminusBold அல்லது "
+"தேசாவுதடிமன் (ப்ரேம்பஃபர் பயன்படுத்தினால்) அல்லது TerminusBoldVGA (மற்றபடி) தேர்வு "
+"செய்க."
 
 #. Type: select
 #. Description
@@ -403,8 +407,8 @@ msgid ""
 "is defined as XKBLAYOUT=\"${XKBLAYOUT}\" and XKBVARIANT=\"${XKBVARIANT}\"."
 msgstr ""
 "/etc/default/keyboard வடிவமைப்புக்கோப்பில் தற்போதைய இட அமைப்பு இப்படி "
-"வரையறுக்கப்பட்டுள்ளது: XKBLAYOUT=\"${XKBLAYOUT}\" மற்றும் XKBVARIANT="
-"\"${XKBVARIANT}\"."
+"வரையறுக்கப்பட்டுள்ளது: XKBLAYOUT=\"${XKBLAYOUT}\" மற்றும் "
+"XKBVARIANT=\"${XKBVARIANT}\"."
 
 #. Type: boolean
 #. Description
@@ -436,9 +440,9 @@ msgid ""
 "XKBVARIANT=\"${XKBVARIANT}\".  This default value is based on the currently "
 "defined language/region and the settings in /etc/X11/xorg.conf."
 msgstr ""
-"முன்னிருப்பு விசைப்பலகை இட அமைவு  XKBLAYOUT=\"${XKBLAYOUT}\" மற்றும் XKBVARIANT="
-"\"${XKBVARIANT}\".  இந்த முன்னிருப்பு அமைவு /etc/X11/xorg.conf. இல் உள்ள நாடு "
-"மற்றும் வட்டாரம் அமைப்பின் அடிப்படையில் தேர்ந்தெடுக்கப்பட்டது."
+"முன்னிருப்பு விசைப்பலகை இட அமைவு  XKBLAYOUT=\"${XKBLAYOUT}\" மற்றும் "
+"XKBVARIANT=\"${XKBVARIANT}\".  இந்த முன்னிருப்பு அமைவு /etc/X11/xorg.conf. இல் "
+"உள்ள நாடு மற்றும் வட்டாரம் அமைப்பின் அடிப்படையில் தேர்ந்தெடுக்கப்பட்டது."
 
 #. Type: boolean
 #. Description
@@ -492,13 +496,13 @@ msgstr "${XKBOPTIONS} முன்னிருப்பு விசைப்ப
 #. :sl3:
 #: ../keyboard-configuration.templates:10001
 msgid ""
-"The default value for the options of the keyboard layout is XKBOPTIONS="
-"\"${XKBOPTIONS}\".  It is based on the currently defined language/region and "
-"the settings in /etc/X11/xorg.conf."
+"The default value for the options of the keyboard layout is "
+"XKBOPTIONS=\"${XKBOPTIONS}\".  It is based on the currently defined language/"
+"region and the settings in /etc/X11/xorg.conf."
 msgstr ""
-"முன்னிருப்பு விசைப்பலகை இட அமைவு தேர்வுகளுக்கான மதிப்பு XKBOPTIONS="
-"\"${XKBOPTIONS}\". இந்த முன்னிருப்பு அமைவு /etc/X11/xorg.conf. இல் உள்ள நாடு "
-"மற்றும் வட்டாரம் அமைப்பின் அடிப்படையில் தேர்ந்தெடுக்கப்பட்டது."
+"முன்னிருப்பு விசைப்பலகை இட அமைவு தேர்வுகளுக்கான மதிப்பு "
+"XKBOPTIONS=\"${XKBOPTIONS}\". இந்த முன்னிருப்பு அமைவு /etc/X11/xorg.conf. இல் "
+"உள்ள நாடு மற்றும் வட்டாரம் அமைப்பின் அடிப்படையில் தேர்ந்தெடுக்கப்பட்டது."
 
 #. Type: boolean
 #. Description
@@ -595,6 +599,15 @@ msgstr "வலது லோகோ விசை"
 #: ../keyboard-configuration.templates:14001
 msgid "Menu key"
 msgstr "மெனு விசை"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:11001
+#, fuzzy
+#| msgid "Left Control+Left Shift"
+msgid "Left Alt+Left Shift"
+msgstr "இடது கன்ட்ரோல்+இடது ஷிப்ட்"
 
 #. Type: select
 #. Choices
@@ -715,15 +728,22 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../keyboard-configuration.templates:11002
+#, fuzzy
+#| msgid ""
+#| "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in "
+#| "the latter case, use the combination Shift+Caps Lock for normal Caps "
+#| "toggle). Alt+Shift is also a popular combination; it will however lose "
+#| "its usual behavior in Emacs and other programs that use it for specific "
+#| "needs."
 msgid ""
 "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in the "
-"latter case, use the combination Shift+Caps Lock for normal Caps toggle). Alt"
-"+Shift is also a popular combination; it will however lose its usual "
-"behavior in Emacs and other programs that use it for specific needs."
+"latter case, use the combination Shift+Caps Lock for normal Caps toggle). "
+"Left Alt+Left Shift is also a popular combination; it will however lose its "
+"usual behavior in Emacs and other programs that use it for specific needs."
 msgstr ""
 "உயிரியல்சார் தொழிலமைப்பு காரணங்களுக்காக வலது ஆல்ட் அல்லது கேப்ஸ் விசைகள் "
-"தேர்ந்தெடுக்கப்படுகின்றன. பின்னதில் வழக்கமான மேல் கீழ் நிலை எழுத்து நிலை மாற்றத்துக்கு ஷிப்ட்"
-"+கேப்ஸ் பூட்டு விசைஜோடியை பயன்படுத்தவும். ஆல்ட்+ஷிப்ட் கூட பரவலான ஜோடியாகும். ஆயின் "
+"தேர்ந்தெடுக்கப்படுகின்றன. பின்னதில் வழக்கமான மேல் கீழ் நிலை எழுத்து நிலை மாற்றத்துக்கு "
+"ஷிப்ட்+கேப்ஸ் பூட்டு விசைஜோடியை பயன்படுத்தவும். ஆல்ட்+ஷிப்ட் கூட பரவலான ஜோடியாகும். ஆயின் "
 "ஈமேக்ஸ் மற்றும் சில நிரல்களில் இவைகுறிப்பிட்ட தேவைகளுக்கு பயனாவதால் அவற்றின் வழக்கமான "
 "நடத்தை மாறிவிடும்."
 
@@ -869,8 +889,8 @@ msgid ""
 "the Control+period combination as a Compose key."
 msgstr ""
 "உரை கான்சோலில் உருவாக்க விசை யூனிக்கோட் பாங்கில் செயல்படுவதில்லை. யூனிக்கோட் பாங்கில் "
-"இல்லை எனில் இங்கு நீங்கள் என்ன தேர்ந்தெடுத்தாலும் பின்னர் எப்போது வேண்டுமானாலும் கன்ட்ரோல்"
-"+புள்ளி ஜோடியை உருவக்க விசையாக பயன்படுத்தலாம்."
+"இல்லை எனில் இங்கு நீங்கள் என்ன தேர்ந்தெடுத்தாலும் பின்னர் எப்போது வேண்டுமானாலும் "
+"கன்ட்ரோல்+புள்ளி ஜோடியை உருவக்க விசையாக பயன்படுத்தலாம்."
 
 #. Type: boolean
 #. Description
@@ -1490,6 +1510,14 @@ msgstr "துருக்கிய (F வடிவமைப்பு)"
 #: ../keyboard-configuration.templates:16001
 msgid "Turkish (Q layout)"
 msgstr "துருக்கிய (Q வடிவமைப்பு)"
+
+# console-keymaps-acorn, Japanese
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:16001
+msgid "Taiwanese"
+msgstr "தைவானிய"
 
 #. Type: select
 #. Choices

@@ -33,9 +33,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: console-setup@packages.debian.org\n"
-"POT-Creation-Date: 2020-10-28 20:01+0000\n"
-"PO-Revision-Date: 2021-02-16 09:50+0000\n"
-"Last-Translator: louies0623 <louies0623@gmail.com>\n"
+"POT-Creation-Date: 2025-10-15 20:01+0000\n"
+"PO-Revision-Date: 2025-05-19 18:44+0000\n"
+"Last-Translator: reimu105 <peter112548@gmail.com>\n"
 "Language-Team: Debian-user in Chinese [Big5] <debian-chinese-big5@lists."
 "debian.org>\n"
 "Language: zh_TW\n"
@@ -274,11 +274,11 @@ msgid ""
 "international scripts. \"Fixed\" has a simplistic appearance and has better "
 "coverage of international scripts. \"Terminus\" may help to reduce eye "
 "fatigue, though some symbols have a similar aspect which may be a problem "
-"for programmers."
+"for programmers. \"DejaVu\" is suited to screens with HiDPI."
 msgstr ""
-"【VGA】看起來較為傳統，同時包含了不少的各國書寫字體。【Fixed】看起來較為簡"
-"化，但包含了更多的各國書寫字體。【Terminus】可用來幫助減少眼睛疲勞，但有許多"
-"字元看起來比較類似，對於程式設技師而言這可能會帶來困擾。"
+"「VGA」為較傳統的外觀，支援中等的多國文字。「Fixed」看起來較為簡化，但包含了"
+"更多的多國文字。「Terminus」幫助減少眼睛疲勞，但有些字看起來很像，這可能會困"
+"擾程式設計師。「DejaVu」 則很適合用於高DPI的螢幕。"
 
 #. Type: select
 #. Description
@@ -289,10 +289,11 @@ msgstr ""
 #: ../console-setup.templates:6001
 msgid ""
 "If you prefer a bold version of the Terminus font, choose either "
-"TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
+"TerminusBold or DejaVuBold (if you use a framebuffer) or TerminusBoldVGA "
+"(otherwise)."
 msgstr ""
-"如果您比較喜歡使用粗體的 Terminus 字型，請選擇 TerminusBold（若有使用 "
-"framebuffer）或 TerminusBoldVGA（沒用 framebuffer）。"
+"如果您希望使用 Terminus 字體的粗體，請選擇 TerminusBold 或 DejaVuBold (如果您"
+"使用幀緩衝) 或 TerminusBoldVGA (其他情況)。"
 
 #. Type: select
 #. Description
@@ -407,8 +408,8 @@ msgid ""
 "The current keyboard layout in the configuration file /etc/default/keyboard "
 "is defined as XKBLAYOUT=\"${XKBLAYOUT}\" and XKBVARIANT=\"${XKBVARIANT}\"."
 msgstr ""
-"目前在設定檔 /etc/default/keyboard 中的鍵盤排列方式乃設定為 XKBLAYOUT="
-"\"${XKBLAYOUT}\" 及 XKBVARIANT=\"${XKBVARIANT}\"。"
+"目前在設定檔 /etc/default/keyboard 中的鍵盤排列方式乃設定為 "
+"XKBLAYOUT=\"${XKBLAYOUT}\" 及 XKBVARIANT=\"${XKBVARIANT}\"。"
 
 #. Type: boolean
 #. Description
@@ -438,9 +439,9 @@ msgid ""
 "XKBVARIANT=\"${XKBVARIANT}\".  This default value is based on the currently "
 "defined language/region and the settings in /etc/X11/xorg.conf."
 msgstr ""
-"鍵盤排列方式的預設值為 XKBLAYOUT=\"${XKBLAYOUT}\" 及 XKBVARIANT="
-"\"${XKBVARIANT}\"。這個預設值乃是取決於目前所設定的語言/地區，及 /etc/X11/"
-"xorg.conf 裡的設定。"
+"鍵盤排列方式的預設值為 XKBLAYOUT=\"${XKBLAYOUT}\" 及 "
+"XKBVARIANT=\"${XKBVARIANT}\"。這個預設值乃是取決於目前所設定的語言/地區，及 /"
+"etc/X11/xorg.conf 裡的設定。"
 
 #. Type: boolean
 #. Description
@@ -468,8 +469,8 @@ msgid ""
 "The current keyboard options in the configuration file /etc/default/keyboard "
 "are defined as XKBOPTIONS=\"${XKBOPTIONS}\"."
 msgstr ""
-"目前在設定檔 /etc/default/keyboard 中的鍵盤選項乃設定為 XKBOPTIONS="
-"\"${XKBOPTIONS}\"。"
+"目前在設定檔 /etc/default/keyboard 中的鍵盤選項乃設定為 "
+"XKBOPTIONS=\"${XKBOPTIONS}\"。"
 
 #. Type: boolean
 #. Description
@@ -492,9 +493,9 @@ msgstr "是否保留預設鍵盤選項 (${XKBOPTIONS})？"
 #. :sl3:
 #: ../keyboard-configuration.templates:10001
 msgid ""
-"The default value for the options of the keyboard layout is XKBOPTIONS="
-"\"${XKBOPTIONS}\".  It is based on the currently defined language/region and "
-"the settings in /etc/X11/xorg.conf."
+"The default value for the options of the keyboard layout is "
+"XKBOPTIONS=\"${XKBOPTIONS}\".  It is based on the currently defined language/"
+"region and the settings in /etc/X11/xorg.conf."
 msgstr ""
 "鍵盤排列方式的預設選項為 XKBOPTIONS=\"${XKBOPTIONS}\"。這個預設值乃是取決於目"
 "前所設定的語言/地區，及 /etc/X11/xorg.conf 裡的設定。"
@@ -593,6 +594,15 @@ msgstr "右 Logo 鍵"
 #: ../keyboard-configuration.templates:14001
 msgid "Menu key"
 msgstr "Menu 鍵"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:11001
+#, fuzzy
+#| msgid "Left Control+Left Shift"
+msgid "Left Alt+Left Shift"
+msgstr "左邊的 Control+左邊的 Shift"
 
 #. Type: select
 #. Choices
@@ -711,11 +721,18 @@ msgstr "您需要有個能讓鍵盤在 national 及 Latin 排列方式間切換�
 #. Description
 #. :sl1:
 #: ../keyboard-configuration.templates:11002
+#, fuzzy
+#| msgid ""
+#| "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in "
+#| "the latter case, use the combination Shift+Caps Lock for normal Caps "
+#| "toggle). Alt+Shift is also a popular combination; it will however lose "
+#| "its usual behavior in Emacs and other programs that use it for specific "
+#| "needs."
 msgid ""
 "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in the "
-"latter case, use the combination Shift+Caps Lock for normal Caps toggle). Alt"
-"+Shift is also a popular combination; it will however lose its usual "
-"behavior in Emacs and other programs that use it for specific needs."
+"latter case, use the combination Shift+Caps Lock for normal Caps toggle). "
+"Left Alt+Left Shift is also a popular combination; it will however lose its "
+"usual behavior in Emacs and other programs that use it for specific needs."
 msgstr ""
 "考慮到人體工學，常會選用右邊的 Alt 或 Caps Lock 鍵。 (在後述的狀況裡，可使用 "
 "Shift+Caps Lock 複合鍵來進行一般的 Caps 切換)。Alt+Shift 也是很常用的複合鍵，"
@@ -1482,6 +1499,14 @@ msgstr "土耳其語 (F 佈局)"
 #: ../keyboard-configuration.templates:16001
 msgid "Turkish (Q layout)"
 msgstr "土耳其語 (Q 佈局)"
+
+# console-keymaps-acorn, Japanese
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:16001
+msgid "Taiwanese"
+msgstr "繁體中文（台灣）"
 
 #. Type: select
 #. Choices

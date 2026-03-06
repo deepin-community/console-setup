@@ -23,7 +23,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Debian Installer Level 1\n"
 "Report-Msgid-Bugs-To: console-setup@packages.debian.org\n"
-"POT-Creation-Date: 2020-10-28 20:01+0000\n"
+"POT-Creation-Date: 2025-10-15 20:01+0000\n"
 "PO-Revision-Date: 2023-09-20 17:02+0000\n"
 "Last-Translator: Anish Sheela <aneesh.nl@gmail.com>\n"
 "Language-Team: Swatantra Malayalam Computing <discuss@lists.smc.org.in>\n"
@@ -261,12 +261,19 @@ msgstr "കണ്‍സോളിലുപയോഗിയ്ക്കേണ്ട
 #. relatively short.
 #. :sl3:
 #: ../console-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "\"VGA\" has a traditional appearance and has medium coverage of "
+#| "international scripts. \"Fixed\" has a simplistic appearance and has "
+#| "better coverage of international scripts. \"Terminus\" may help to reduce "
+#| "eye fatigue, though some symbols have a similar aspect which may be a "
+#| "problem for programmers."
 msgid ""
 "\"VGA\" has a traditional appearance and has medium coverage of "
 "international scripts. \"Fixed\" has a simplistic appearance and has better "
 "coverage of international scripts. \"Terminus\" may help to reduce eye "
 "fatigue, though some symbols have a similar aspect which may be a problem "
-"for programmers."
+"for programmers. \"DejaVu\" is suited to screens with HiDPI."
 msgstr ""
 "\"VGA\" യ്ക്കു് പരമ്പരാഗത ഭംഗിയും അന്താരാഷ്ട്ര ലിപികള്‍ക്കു് ഇടത്തരം പിന്തുണയും ഉണ്ടു്. \"Fixed\" "
 "നു് ലാളിത്യവും അന്താരാഷ്ട്ര ലിപികള്‍ക്കുള്ള കൂടിയ പിന്തുണയും ഉണ്ടു്. \"Terminus\" കണ്ണിന്റെ ക്ഷീണം "
@@ -280,9 +287,14 @@ msgstr ""
 #. relatively short.
 #. :sl3:
 #: ../console-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "If you prefer a bold version of the Terminus font, choose either "
+#| "TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
 msgid ""
 "If you prefer a bold version of the Terminus font, choose either "
-"TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
+"TerminusBold or DejaVuBold (if you use a framebuffer) or TerminusBoldVGA "
+"(otherwise)."
 msgstr ""
 "നിങ്ങള്‍ക്കു് ടെര്‍മിനസ് അക്ഷരസഞ്ചയം വേണമെങ്കില്‍ TerminusBold (ഫ്രെയിംബഫര്‍ "
 "ഉപയോഗിയ്ക്കുകയാണെങ്കില്‍) അല്ലെങ്കില്‍ TerminusBoldVGA (മറ്റുള്ളവയ്ക്കു്) എന്നിവയിലേതെങ്കിലും "
@@ -437,8 +449,8 @@ msgid ""
 "XKBVARIANT=\"${XKBVARIANT}\".  This default value is based on the currently "
 "defined language/region and the settings in /etc/X11/xorg.conf."
 msgstr ""
-"കീബോര്‍ഡ് വ്യന്യാസത്തിന്റെ സ്വതവേയുള്ള മൂല്യം XKBLAYOUT=\"${XKBLAYOUT}\" ഉം XKBVARIANT="
-"\"${XKBVARIANT}\" ഉം ആണ്. /etc/X11/xorg.conf ല്‍ പറഞിരിക്കുന്ന ദേശം/ഭാഷ "
+"കീബോര്‍ഡ് വ്യന്യാസത്തിന്റെ സ്വതവേയുള്ള മൂല്യം XKBLAYOUT=\"${XKBLAYOUT}\" ഉം "
+"XKBVARIANT=\"${XKBVARIANT}\" ഉം ആണ്. /etc/X11/xorg.conf ല്‍ പറഞിരിക്കുന്ന ദേശം/ഭാഷ "
 "ക്രമീകരണങ്ങളനുസരിച്ചാണ് ഈ മൂല്യം നിര്‍ണ്ണയിക്കുന്നത്."
 
 #. Type: boolean
@@ -466,8 +478,8 @@ msgid ""
 "The current keyboard options in the configuration file /etc/default/keyboard "
 "are defined as XKBOPTIONS=\"${XKBOPTIONS}\"."
 msgstr ""
-"/etc/default/keyboard ക്രമീകരണ ഫയലിലെ ഇപ്പോഴത്തെ കീബോര്‍ഡ് ക്രമീകരണം നിര്‍"
-"വ്വചിച്ചിരിക്കുന്നത് XKBOPTIONS=\"${XKBOPTIONS}\" എന്നാണ്."
+"/etc/default/keyboard ക്രമീകരണ ഫയലിലെ ഇപ്പോഴത്തെ കീബോര്‍ഡ് ക്രമീകരണം "
+"നിര്‍വ്വചിച്ചിരിക്കുന്നത് XKBOPTIONS=\"${XKBOPTIONS}\" എന്നാണ്."
 
 #. Type: boolean
 #. Description
@@ -490,9 +502,9 @@ msgstr "സ്വതവേയുള്ള കീബോഡ് ക്രമീക�
 #. :sl3:
 #: ../keyboard-configuration.templates:10001
 msgid ""
-"The default value for the options of the keyboard layout is XKBOPTIONS="
-"\"${XKBOPTIONS}\".  It is based on the currently defined language/region and "
-"the settings in /etc/X11/xorg.conf."
+"The default value for the options of the keyboard layout is "
+"XKBOPTIONS=\"${XKBOPTIONS}\".  It is based on the currently defined language/"
+"region and the settings in /etc/X11/xorg.conf."
 msgstr ""
 "കീബോര്‍ഡ് ലേയൗട്ടിന്റെ ഡീഫാള്‍ട്ട് വാല്യു XKBOPTIONS=\"${XKBOPTIONS}\" എന്നതാണ്. ഇത് /etc/"
 "X11/xorg.conf എന്ന ഫയലില്‍ ഇപ്പോള്‍ വിവരിച്ചിരിക്കുന്ന ഭാഷക്ക്/പ്രദേശത്തിന് നുസൃതമായാണ്."
@@ -591,6 +603,15 @@ msgstr "വലത് ലോഗോ കീ"
 #: ../keyboard-configuration.templates:14001
 msgid "Menu key"
 msgstr "മെനു കീ"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:11001
+#, fuzzy
+#| msgid "Left Control+Left Shift"
+msgid "Left Alt+Left Shift"
+msgstr "ഇടതു് കണ്ട്രോള്‍+ഇടതു് ഷിഫ്റ്റ്"
 
 #. Type: select
 #. Choices
@@ -711,11 +732,18 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../keyboard-configuration.templates:11002
+#, fuzzy
+#| msgid ""
+#| "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in "
+#| "the latter case, use the combination Shift+Caps Lock for normal Caps "
+#| "toggle). Alt+Shift is also a popular combination; it will however lose "
+#| "its usual behavior in Emacs and other programs that use it for specific "
+#| "needs."
 msgid ""
 "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in the "
-"latter case, use the combination Shift+Caps Lock for normal Caps toggle). Alt"
-"+Shift is also a popular combination; it will however lose its usual "
-"behavior in Emacs and other programs that use it for specific needs."
+"latter case, use the combination Shift+Caps Lock for normal Caps toggle). "
+"Left Alt+Left Shift is also a popular combination; it will however lose its "
+"usual behavior in Emacs and other programs that use it for specific needs."
 msgstr ""
 "ആരോഗ്യ കാരണങ്ങളാല്‍ വലതുവശത്തെ ആള്‍ട്ട് അല്ലെങ്കില്‍ കാപ്സ് ലോക്ക് കീകളാണു് സാധാരണയായി എടുക്കാറു് "
 "(രണ്ടാമത്തേതാണെങ്കില്‍ ഷിഫ്റ്റ് + കാപ്സ് ലോക്ക് എന്നിവ ഒന്നിച്ചുപയോഗിച്ചു് സാധാരണ കാപ്സ് ലോക്ക് "
@@ -766,8 +794,8 @@ msgid ""
 "That key may also be used to input national letters when the keyboard is in "
 "Latin mode."
 msgstr ""
-"കീബോര്‍ഡ് ദേശീയ ദശയിലായിരിയ്ക്കുമ്പോള്‍ ചില ലാറ്റിന്‍ അക്ഷരങ്ങള്‍ മാത്രം ടൈപ്പ് ചെയ്യേണ്ട സന്ദര്‍"
-"ഭങ്ങളില്‍ താത്കാലികമായി ലാറ്റിന്‍ ദശയിലേയ്ക്കു് മാറുന്നതായിരിയ്ക്കാം കൂടുതല്‍ അനുയോജ്യം. "
+"കീബോര്‍ഡ് ദേശീയ ദശയിലായിരിയ്ക്കുമ്പോള്‍ ചില ലാറ്റിന്‍ അക്ഷരങ്ങള്‍ മാത്രം ടൈപ്പ് ചെയ്യേണ്ട "
+"സന്ദര്‍ഭങ്ങളില്‍ താത്കാലികമായി ലാറ്റിന്‍ ദശയിലേയ്ക്കു് മാറുന്നതായിരിയ്ക്കാം കൂടുതല്‍ അനുയോജ്യം. "
 "തിരഞ്ഞെടുത്ത കീ അമര്‍ത്തിയിരിയ്ക്കുന്നിടത്തോളം ആ ദശയിലിരിയ്ക്കും. അതേ കീ തന്നെ ലാറ്റിന്‍ "
 "ദശയിലായിരിയ്ക്കുമ്പോള്‍ ദേശീയ അക്ഷരങ്ങള്‍ ഇന്‍പുട്ട് ചെയ്യാന്‍ ഉപയോഗിയ്ക്കാം."
 
@@ -862,8 +890,8 @@ msgid ""
 "Unicode mode, regardless of what you choose here, you can always also use "
 "the Control+period combination as a Compose key."
 msgstr ""
-"അടുത്ത കണ്‍സോളില്‍ കോമ്പോസ് കീ യൂണിക്കോഡ് മോഡില്‍ പ്രവര്‍ത്തിക്കില്ല. യൂണിക്കോഡ് മോഡിലല്ലെങ്കില്‍ കണ്‍"
-"ട്രോ‌‌ള്‍ + പിരീഡ് കോമ്പിനേഷന്‍ ഒരു കോമ്പോസ് കീ ആയി ഉപയോഗിക്കാവുന്നതാണ്. ഇവിടെ താങ്കള്‍ "
+"അടുത്ത കണ്‍സോളില്‍ കോമ്പോസ് കീ യൂണിക്കോഡ് മോഡില്‍ പ്രവര്‍ത്തിക്കില്ല. യൂണിക്കോഡ് മോഡിലല്ലെങ്കില്‍ "
+"കണ്‍ട്രോ‌‌ള്‍ + പിരീഡ് കോമ്പിനേഷന്‍ ഒരു കോമ്പോസ് കീ ആയി ഉപയോഗിക്കാവുന്നതാണ്. ഇവിടെ താങ്കള്‍ "
 "തിരഞ്ഞെടുത്തത് അതിനെ ബാധിക്കില്ല"
 
 #. Type: boolean
@@ -1484,6 +1512,16 @@ msgstr "തുര്‍ക്കിഷ് (F വിന്യാസം)"
 #: ../keyboard-configuration.templates:16001
 msgid "Turkish (Q layout)"
 msgstr "തുര്‍ക്കിഷ് (Q വിന്യാസം)"
+
+# console-keymaps-acorn, Japanese
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:16001
+#, fuzzy
+#| msgid "Japanese"
+msgid "Taiwanese"
+msgstr "ജപ്പാനീസ്"
 
 #. Type: select
 #. Choices

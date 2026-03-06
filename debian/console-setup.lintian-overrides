@@ -1,0 +1,2 @@
+# This is a dummy alternative dependency to avoid depending on console-setup-linux
+console-setup: depends-on-essential-package-without-using-version Depends: hurd

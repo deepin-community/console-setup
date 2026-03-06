@@ -18,21 +18,23 @@
 # Yuri Chornoivan <yurchor@ukr.net>, 2010, 2011, 2012, 2013.
 # Anton Gladky <gladk@debian.org>, 2011-2016
 # Taras Panchenko <top39@ukr.net>, 2021.
+# Denys Nykula <vegan@libre.net.ua>, 2022.
+# Yatsenko Alexandr <yatsenko.alexandr@gmail.com>, 2017.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: uk\n"
 "Report-Msgid-Bugs-To: console-setup@packages.debian.org\n"
-"POT-Creation-Date: 2020-10-28 20:01+0000\n"
-"PO-Revision-Date: 2021-12-03 23:44+0000\n"
-"Last-Translator: Taras Panchenko <top39@ukr.net>\n"
+"POT-Creation-Date: 2025-10-15 20:01+0000\n"
+"PO-Revision-Date: 2025-10-28 17:02+0000\n"
+"Last-Translator: Hotripak <hotr1pak@gmail.com>\n"
 "Language-Team: Ukrainian <translation-team-uk@lists.sourceforge.net>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #. Type: text
 #. Description
@@ -269,12 +271,13 @@ msgid ""
 "international scripts. \"Fixed\" has a simplistic appearance and has better "
 "coverage of international scripts. \"Terminus\" may help to reduce eye "
 "fatigue, though some symbols have a similar aspect which may be a problem "
-"for programmers."
+"for programmers. \"DejaVu\" is suited to screens with HiDPI."
 msgstr ""
-"\"VGA\" має традиційний вигляд та середній рівень підтримки міжнародних "
-"скриптів. \"Fixed\" виглядає спрощено і краще підтримує міжнародні системи "
-"письма. \"Terminus\" може допомогти зменшити втому очей, хоча деякі символи "
-"мають подібний аспект, що може стати певною проблемою для програмістів."
+"\"VGA\" має традиційний вигляд і середнє охоплення міжнародних шрифтів. "
+"\"Виправлена\" має спрощений вигляд і краще охоплює міжнародні шрифти. "
+"\"Термінал\" може допомогти зменшити втому очей, хоча деякі символи мають "
+"схожий аспект, що може бути проблемою для програмістів. \"DejaVu\" підходить "
+"для екранів з роздільною здатністю HiDPI."
 
 #. Type: select
 #. Description
@@ -285,11 +288,12 @@ msgstr ""
 #: ../console-setup.templates:6001
 msgid ""
 "If you prefer a bold version of the Terminus font, choose either "
-"TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
+"TerminusBold or DejaVuBold (if you use a framebuffer) or TerminusBoldVGA "
+"(otherwise)."
 msgstr ""
-"Якщо ви надаєте перевагу напівжирній версії шрифту Terminus, виберіть "
-"TerminusBold (якщо ви використовуєте framebuffer) або TerminusBoldVGA (в "
-"іншому випадку)."
+"Якщо ви віддаєте перевагу напівжирній версії шрифту Terminus, виберіть або "
+"TerminusBold, або DejaVuBold (якщо ви використовуєте фреймбуфер), або "
+"TerminusBoldVGA (в іншому випадку)."
 
 #. Type: select
 #. Description
@@ -409,8 +413,8 @@ msgid ""
 "is defined as XKBLAYOUT=\"${XKBLAYOUT}\" and XKBVARIANT=\"${XKBVARIANT}\"."
 msgstr ""
 "Наразі в файлі налаштувань /etc/default/keyboard вказано такі параметри для "
-"розкладки клавіатури: XKBLAYOUT=\"${XKBLAYOUT}\" та XKBVARIANT="
-"\"${XKBVARIANT}\"."
+"розкладки клавіатури: XKBLAYOUT=\"${XKBLAYOUT}\" та "
+"XKBVARIANT=\"${XKBVARIANT}\"."
 
 #. Type: boolean
 #. Description
@@ -497,9 +501,9 @@ msgstr "Залишити звичні налаштування клавіату�
 #. :sl3:
 #: ../keyboard-configuration.templates:10001
 msgid ""
-"The default value for the options of the keyboard layout is XKBOPTIONS="
-"\"${XKBOPTIONS}\".  It is based on the currently defined language/region and "
-"the settings in /etc/X11/xorg.conf."
+"The default value for the options of the keyboard layout is "
+"XKBOPTIONS=\"${XKBOPTIONS}\".  It is based on the currently defined language/"
+"region and the settings in /etc/X11/xorg.conf."
 msgstr ""
 "Звичним значенням для налаштувань клавіатури є XKBOPTIONS=\"${XKBOPTIONS}\". "
 "Воно встановлюється відповідно до поточних значень мови/регіону та "
@@ -601,6 +605,13 @@ msgstr "Права клавіша Logo"
 #: ../keyboard-configuration.templates:14001
 msgid "Menu key"
 msgstr "Клавіша Menu"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:11001
+msgid "Left Alt+Left Shift"
+msgstr "Лівий Alt+Лівий Shift"
 
 #. Type: select
 #. Choices
@@ -723,15 +734,15 @@ msgstr ""
 #: ../keyboard-configuration.templates:11002
 msgid ""
 "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in the "
-"latter case, use the combination Shift+Caps Lock for normal Caps toggle). Alt"
-"+Shift is also a popular combination; it will however lose its usual "
-"behavior in Emacs and other programs that use it for specific needs."
+"latter case, use the combination Shift+Caps Lock for normal Caps toggle). "
+"Left Alt+Left Shift is also a popular combination; it will however lose its "
+"usual behavior in Emacs and other programs that use it for specific needs."
 msgstr ""
-"Праву клавішу Alt або Caps Lock часто обирають з огляду на ергономічність (в "
-"останньому випадку звичний функціонал Caps Lock замінює комбінація клавіш "
-"Shift+Caps Lock). Досить популярною також є комбінація Alt+Shift; проте при "
-"цьому втрачається її звична поведінка в Emacs та інших програмах, в яких "
-"вона використовується для специфічних потреб."
+"Клавіші Правий Alt або Caps Lock часто вибирають з ергономічних міркувань (в "
+"останньому випадку використовуйте комбінацію Shift+Caps Lock для звичайного "
+"перемикання Caps). Лівий Alt+Лівий Shift також є популярною комбінацією; "
+"однак вона втратить свою звичайну поведінку в Emacs та інших програмах, які "
+"використовують її для конкретних потреб."
 
 #. Type: select
 #. Description
@@ -790,8 +801,8 @@ msgstr ""
 #: ../keyboard-configuration.templates:12002
 msgid "You can disable this feature by choosing \"No temporary switch\"."
 msgstr ""
-"Ви можете вимкнути цю можливість, обравши пункт \"Без тимчасового перемикача"
-"\"."
+"Ви можете вимкнути цю можливість, обравши пункт \"Без тимчасового "
+"перемикача\"."
 
 #. Type: select
 #. Choices
@@ -1469,6 +1480,13 @@ msgstr "Турецька (розкладка F)"
 #: ../keyboard-configuration.templates:16001
 msgid "Turkish (Q layout)"
 msgstr "Турецька (розкладка Q)"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:16001
+msgid "Taiwanese"
+msgstr "Тайванська"
 
 #. Type: select
 #. Choices

@@ -8,15 +8,15 @@
 # This file is distributed under the same license as the debian-installer package.
 # Yannig MARCHEGAY <yannick.marchegay@lokanova.com>, 2006.
 # Cédric VALMARY <cvalmary@yahoo.fr>, 2016.
-# Quentin PAGÈS <quentinantonin@free.fr>, 2020.
+# Quentin PAGÈS <quentinantonin@free.fr>, 2020, 2022.
 #
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer sublevel1\n"
 "Report-Msgid-Bugs-To: console-setup@packages.debian.org\n"
-"POT-Creation-Date: 2020-10-28 20:01+0000\n"
-"PO-Revision-Date: 2020-11-03 16:27+0000\n"
+"POT-Creation-Date: 2025-10-15 20:01+0000\n"
+"PO-Revision-Date: 2025-12-06 01:52+0000\n"
 "Last-Translator: Quentin PAGÈS <quentinantonin@free.fr>\n"
 "Language-Team: Occitan (post 1500) <ubuntu-l10n-oci@lists.ubuntu.com>\n"
 "Language: oc\n"
@@ -253,12 +253,13 @@ msgstr "Poliça de caractèrs per la consòla :"
 #. relatively short.
 #. :sl3:
 #: ../console-setup.templates:6001
+#, fuzzy
 msgid ""
 "\"VGA\" has a traditional appearance and has medium coverage of "
 "international scripts. \"Fixed\" has a simplistic appearance and has better "
 "coverage of international scripts. \"Terminus\" may help to reduce eye "
 "fatigue, though some symbols have a similar aspect which may be a problem "
-"for programmers."
+"for programmers. \"DejaVu\" is suited to screens with HiDPI."
 msgstr ""
 "« VGA » correspond a l'aparéncia tradicionala, possedís una cobertura mejana "
 "d'escripts internacionals. « Fixed » a un aspècte simplificat e una melhora "
@@ -273,9 +274,11 @@ msgstr ""
 #. relatively short.
 #. :sl3:
 #: ../console-setup.templates:6001
+#, fuzzy
 msgid ""
 "If you prefer a bold version of the Terminus font, choose either "
-"TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
+"TerminusBold or DejaVuBold (if you use a framebuffer) or TerminusBoldVGA "
+"(otherwise)."
 msgstr ""
 "Se vos agrada mai la version grassa de la poliça Terminus, causissètz siá "
 "TerminusBold s'utilizatz lo tampon vidèo (« framebuffer ») o TerminusBoldVGA "
@@ -400,8 +403,8 @@ msgid ""
 "is defined as XKBLAYOUT=\"${XKBLAYOUT}\" and XKBVARIANT=\"${XKBVARIANT}\"."
 msgstr ""
 "La disposicion del clavièr dins lo fichièr de configuracion /etc/default/"
-"keyboard es actualament definida per XKBLAYOUT=\"${XKBLAYOUT}\" e XKBVARIANT="
-"\"${XKBVARIANT}\"."
+"keyboard es actualament definida per XKBLAYOUT=\"${XKBLAYOUT}\" e "
+"XKBVARIANT=\"${XKBVARIANT}\"."
 
 #. Type: boolean
 #. Description
@@ -432,10 +435,10 @@ msgid ""
 "XKBVARIANT=\"${XKBVARIANT}\".  This default value is based on the currently "
 "defined language/region and the settings in /etc/X11/xorg.conf."
 msgstr ""
-"La valor per defaut de la disposicion de clavièr es XKBLAYOUT="
-"\"${XKBLAYOUT}\" e XKBVARIANT=\"${XKBVARIANT}\". La valor per defaut es "
-"basada sus la lenga e la region causidas e los reglatges de /etc/X11/xorg."
-"conf."
+"La valor per defaut de la disposicion de clavièr es "
+"XKBLAYOUT=\"${XKBLAYOUT}\" e XKBVARIANT=\"${XKBVARIANT}\". La valor per "
+"defaut es basada sus la lenga e la region causidas e los reglatges de /etc/"
+"X11/xorg.conf."
 
 #. Type: boolean
 #. Description
@@ -491,9 +494,9 @@ msgstr "Conservar las opcions per defaut del clavièr (${XKBOPTIONS}) ?"
 #. :sl3:
 #: ../keyboard-configuration.templates:10001
 msgid ""
-"The default value for the options of the keyboard layout is XKBOPTIONS="
-"\"${XKBOPTIONS}\".  It is based on the currently defined language/region and "
-"the settings in /etc/X11/xorg.conf."
+"The default value for the options of the keyboard layout is "
+"XKBOPTIONS=\"${XKBOPTIONS}\".  It is based on the currently defined language/"
+"region and the settings in /etc/X11/xorg.conf."
 msgstr ""
 "La valor per defaut de las opcions de la disposicion del clavièr es "
 "XKBOPTIONS=\"${XKBOPTIONS}\". Es basada sus la lenga e la region causidas e "
@@ -595,6 +598,13 @@ msgstr "Tòca « lògo » de drecha"
 #: ../keyboard-configuration.templates:14001
 msgid "Menu key"
 msgstr "Tòca menú"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:11001
+msgid "Left Alt+Left Shift"
+msgstr "Alt esquèrra + Majuscula esquèrra"
 
 #. Type: select
 #. Choices
@@ -715,11 +725,12 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../keyboard-configuration.templates:11002
+#, fuzzy
 msgid ""
 "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in the "
-"latter case, use the combination Shift+Caps Lock for normal Caps toggle). Alt"
-"+Shift is also a popular combination; it will however lose its usual "
-"behavior in Emacs and other programs that use it for specific needs."
+"latter case, use the combination Shift+Caps Lock for normal Caps toggle). "
+"Left Alt+Left Shift is also a popular combination; it will however lose its "
+"usual behavior in Emacs and other programs that use it for specific needs."
 msgstr ""
 "Las causidas mai ergonomicas semblan èsser la tòca Alt de drecha e la tòca "
 "de verrolhatge majuscula (dins aquel darrièr cas, utilizatz la combinason "
@@ -892,9 +903,9 @@ msgid ""
 "By default the combination Control+Alt+Backspace does nothing.  If you want "
 "it can be used to terminate the X server."
 msgstr ""
-"Per defaut, la combinason de tòcas Ctrl+Alt+Ret.Arr. (« Ctrl+Alt"
-"+Backspace ») a pas d'accion. Podètz causir de l'utilizar per arrestar lo "
-"servidor X."
+"Per defaut, la combinason de tòcas Ctrl+Alt+Ret.Arr. "
+"(« Ctrl+Alt+Backspace ») a pas d'accion. Podètz causir de l'utilizar per "
+"arrestar lo servidor X."
 
 #. Type: select
 #. Choices
@@ -1462,6 +1473,13 @@ msgstr "Turc (dispo. F)"
 #: ../keyboard-configuration.templates:16001
 msgid "Turkish (Q layout)"
 msgstr "Turc (dispo. Q)"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:16001
+msgid "Taiwanese"
+msgstr "taiwanés"
 
 #. Type: select
 #. Choices

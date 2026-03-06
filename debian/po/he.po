@@ -21,14 +21,14 @@
 # Meni Livne <livne@kde.org>, 2000.
 # Meital Bourvine <meitalbourvine@gmail.com>, 2007.
 # Lior Kaplan <kaplan@debian.org>, 2004-2007, 2008, 2010, 2011, 2015, 2017.
-# Yaron Shahrabani <sh.yaron@gmail.com>, 2018, 2019, 2020, 2021.
+# Yaron Shahrabani <sh.yaron@gmail.com>, 2018, 2019, 2020, 2021, 2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: console-setup@packages.debian.org\n"
-"POT-Creation-Date: 2020-10-28 20:01+0000\n"
-"PO-Revision-Date: 2021-12-03 23:44+0000\n"
+"POT-Creation-Date: 2025-10-15 20:01+0000\n"
+"PO-Revision-Date: 2025-10-20 04:50+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew (https://www.transifex.com/yaron/teams/79473/he/)\n"
 "Language: he\n"
@@ -268,12 +268,12 @@ msgid ""
 "international scripts. \"Fixed\" has a simplistic appearance and has better "
 "coverage of international scripts. \"Terminus\" may help to reduce eye "
 "fatigue, though some symbols have a similar aspect which may be a problem "
-"for programmers."
+"for programmers. \"DejaVu\" is suited to screens with HiDPI."
 msgstr ""
 "ל־„VGA” יש מראה מסורתי וכיסוי בינוני של סוגי כתב בינלאומיים. ל־„Fixed” יש "
 "מראה פשטני וכיסוי טוב יותר לשפות בינלאומיות. „Terminus” עשוי להקל על עייפות "
 "העיניים, למרות שלחלק מהסימנים עשויים להיות מאפיינים דומים, מה שעשוי להוות "
-"בעיה למתכנתים."
+"בעיה למתכנתים. „DejaVu” מותאם למסכים ברזולוציה מאוד גבוהה/HiDPI."
 
 #. Type: select
 #. Description
@@ -284,10 +284,12 @@ msgstr ""
 #: ../console-setup.templates:6001
 msgid ""
 "If you prefer a bold version of the Terminus font, choose either "
-"TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
+"TerminusBold or DejaVuBold (if you use a framebuffer) or TerminusBoldVGA "
+"(otherwise)."
 msgstr ""
-"אם עדיף לך להשתמש בגרסה עבה של הגופן Terminus, ניתן לבחור ב־TerminusBold "
-"(לשימוש עם מכלא חוזי) או ב־TerminusBoldVGA (לכל מקרה אחר)."
+"אם עדיף לך להשתמש בגרסה עבה של הגופן Terminus, ניתן לבחור ב־TerminusBold או "
+"ב־DejaVuBold (לשימוש עם מכלא חוזי/framebuffer) או ב־TerminusBoldVGA (לכל "
+"מקרה אחר)."
 
 #. Type: select
 #. Description
@@ -307,8 +309,8 @@ msgid ""
 "Please select the size of the font for the console. For reference, the font "
 "used when the computer boots has size 8x16."
 msgstr ""
-"נא לבחור בגודל הגופן עבור המסוף. לשם השוואה, בזמן אתחול המחשב, גודל הגופן הוא"
-" ‎8×16."
+"נא לבחור בגודל הגופן עבור המסוף. לשם השוואה, בזמן אתחול המחשב, גודל הגופן "
+"הוא ‎8×16."
 
 #. Type: select
 #. Description
@@ -403,8 +405,8 @@ msgid ""
 "The current keyboard layout in the configuration file /etc/default/keyboard "
 "is defined as XKBLAYOUT=\"${XKBLAYOUT}\" and XKBVARIANT=\"${XKBVARIANT}\"."
 msgstr ""
-"הפריסה הנוכחית בקובץ ההגדרות ‎/etc/default/keyboard מוגדרת בתור XKBLAYOUT="
-"\"${XKBLAYOUT}\"‎ וגם XKBVARIANT=\"${XKBVARIANT}\"‎."
+"הפריסה הנוכחית בקובץ ההגדרות ‎/etc/default/keyboard מוגדרת בתור "
+"XKBLAYOUT=\"${XKBLAYOUT}\"‎ וגם XKBVARIANT=\"${XKBVARIANT}\"‎."
 
 #. Type: boolean
 #. Description
@@ -434,9 +436,9 @@ msgid ""
 "XKBVARIANT=\"${XKBVARIANT}\".  This default value is based on the currently "
 "defined language/region and the settings in /etc/X11/xorg.conf."
 msgstr ""
-"ערך פריסת המקלדת כבררת המחדל הוא XKBLAYOUT=\"${XKBLAYOUT}\"‎ ו־XKBVARIANT="
-"\"${XKBVARIANT}\"‎.  בררת מחדל זו מבוססת על הגדרת השפה/אזור הנוכחיים ועל "
-"ההגדרות ב־‎/etc/X11/xorg.conf."
+"ערך פריסת המקלדת כבררת המחדל הוא XKBLAYOUT=\"${XKBLAYOUT}\"‎ "
+"ו־XKBVARIANT=\"${XKBVARIANT}\"‎.  בררת מחדל זו מבוססת על הגדרת השפה/אזור "
+"הנוכחיים ועל ההגדרות ב־‎/etc/X11/xorg.conf."
 
 #. Type: boolean
 #. Description
@@ -489,9 +491,9 @@ msgstr "לשמור על אפשרויות בררת המחדל של המקלדת (
 #. :sl3:
 #: ../keyboard-configuration.templates:10001
 msgid ""
-"The default value for the options of the keyboard layout is XKBOPTIONS="
-"\"${XKBOPTIONS}\".  It is based on the currently defined language/region and "
-"the settings in /etc/X11/xorg.conf."
+"The default value for the options of the keyboard layout is "
+"XKBOPTIONS=\"${XKBOPTIONS}\".  It is based on the currently defined language/"
+"region and the settings in /etc/X11/xorg.conf."
 msgstr ""
 "ערך בררת המחדל של פריסת המקלדת הוא XKBOPTIONS=\"${XKBOPTIONS}\"‎.  הוא מבוסס "
 "על ההגדרה הנוכחית של שפה/אזור ועל ההגדרות ב־‎/etc/X11/xorg.conf."
@@ -590,6 +592,13 @@ msgstr "מקש לוגו ימני"
 #: ../keyboard-configuration.templates:14001
 msgid "Menu key"
 msgstr "מקש תפריט"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:11001
+msgid "Left Alt+Left Shift"
+msgstr "Alt+Shift שמאליים"
 
 #. Type: select
 #. Choices
@@ -712,14 +721,14 @@ msgstr ""
 #: ../keyboard-configuration.templates:11002
 msgid ""
 "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in the "
-"latter case, use the combination Shift+Caps Lock for normal Caps toggle). Alt"
-"+Shift is also a popular combination; it will however lose its usual "
-"behavior in Emacs and other programs that use it for specific needs."
+"latter case, use the combination Shift+Caps Lock for normal Caps toggle). "
+"Left Alt+Left Shift is also a popular combination; it will however lose its "
+"usual behavior in Emacs and other programs that use it for specific needs."
 msgstr ""
 "מקובל לבחור במקשים Alt ימני או ב־Caps Lock מסיבות ארגונומיות (במקרה השני, נא "
-"להשתמש בצירוף Shift+Caps Lock לטובת החלפת מצב אותיות גדולות). הצירוף Alt"
-"+Shift הוא גם כן צירוף מקובל, אך צירוף זה יאבד את התנהגותו הרגילה ב־Emacs "
-"ובתכניות אחרות שמשתמשות בצירוף למטרות מיוחדות."
+"להשתמש בצירוף Shift+Caps Lock לטובת החלפת מצב אותיות גדולות). הצירוף "
+"Alt+Shift שמאליים הוא גם כן צירוף מקובל, אך צירוף זה יאבד את התנהגותו הרגילה "
+"ב־Emacs ובתכניות אחרות שמשתמשות בצירוף למטרות מיוחדות."
 
 #. Type: select
 #. Description
@@ -1482,6 +1491,14 @@ msgstr "טורקית (פריסת F)"
 #: ../keyboard-configuration.templates:16001
 msgid "Turkish (Q layout)"
 msgstr "טורקית (פריסת Q)"
+
+# console-keymaps-acorn, Japanese
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:16001
+msgid "Taiwanese"
+msgstr "טאיוואנית"
 
 #. Type: select
 #. Choices

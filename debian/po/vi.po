@@ -18,9 +18,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer sublevel1\n"
 "Report-Msgid-Bugs-To: console-setup@packages.debian.org\n"
-"POT-Creation-Date: 2020-10-28 20:01+0000\n"
-"PO-Revision-Date: 2023-02-24 10:38+0000\n"
-"Last-Translator: tictactoe <phandinhminh@protonmail.ch>\n"
+"POT-Creation-Date: 2025-10-15 20:01+0000\n"
+"PO-Revision-Date: 2025-02-25 16:41+0000\n"
+"Last-Translator: Dagon Vn <faigar1004@gmail.com>\n"
 "Language-Team: Vietnamese <debian-l10n-vietnamese@lists.debian.org>\n"
 "Language: vi\n"
 "MIME-Version: 1.0\n"
@@ -256,12 +256,13 @@ msgstr "Phông cho bàn giao tiếp:"
 #. relatively short.
 #. :sl3:
 #: ../console-setup.templates:6001
+#, fuzzy
 msgid ""
 "\"VGA\" has a traditional appearance and has medium coverage of "
 "international scripts. \"Fixed\" has a simplistic appearance and has better "
 "coverage of international scripts. \"Terminus\" may help to reduce eye "
 "fatigue, though some symbols have a similar aspect which may be a problem "
-"for programmers."
+"for programmers. \"DejaVu\" is suited to screens with HiDPI."
 msgstr ""
 " * VGA\thình thức truyền thống, hỗ trợ trung bình các chữ viết quốc tế.\n"
 " * Fixed\thình thức đơn giản, mà hỗ trợ nhiều chữ viết quốc tế hơn.\n"
@@ -275,9 +276,11 @@ msgstr ""
 #. relatively short.
 #. :sl3:
 #: ../console-setup.templates:6001
+#, fuzzy
 msgid ""
 "If you prefer a bold version of the Terminus font, choose either "
-"TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
+"TerminusBold or DejaVuBold (if you use a framebuffer) or TerminusBoldVGA "
+"(otherwise)."
 msgstr ""
 "Thích phông chữ Terminus in đậm thì hãy chọn TerminusBold nếu dùng vùng đệm "
 "khung, không thì chọn TerminusBoldVGA."
@@ -486,13 +489,13 @@ msgstr "Giữ tùy chọn phím mặc định (${XKBOPTIONS})?"
 #. :sl3:
 #: ../keyboard-configuration.templates:10001
 msgid ""
-"The default value for the options of the keyboard layout is XKBOPTIONS="
-"\"${XKBOPTIONS}\".  It is based on the currently defined language/region and "
-"the settings in /etc/X11/xorg.conf."
+"The default value for the options of the keyboard layout is "
+"XKBOPTIONS=\"${XKBOPTIONS}\".  It is based on the currently defined language/"
+"region and the settings in /etc/X11/xorg.conf."
 msgstr ""
-"Giá trị mặc định của tùy chọn bố cục bàn phím là XKBOPTIONS="
-"\"${XKBOPTIONS}\".  Nó dựa trên ngôn ngữ/vùng hiện tại và thiết lập trong /"
-"etc/X11/xorg.conf."
+"Giá trị mặc định của tùy chọn bố cục bàn phím là "
+"XKBOPTIONS=\"${XKBOPTIONS}\".  Nó dựa trên ngôn ngữ/vùng hiện tại và thiết "
+"lập trong /etc/X11/xorg.conf."
 
 #. Type: boolean
 #. Description
@@ -588,6 +591,15 @@ msgstr "Phím Win phải"
 #: ../keyboard-configuration.templates:14001
 msgid "Menu key"
 msgstr "Phím trình đơn"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:11001
+#, fuzzy
+#| msgid "Left Control+Left Shift"
+msgid "Left Alt+Left Shift"
+msgstr "Left trái+Left trái"
 
 #. Type: select
 #. Choices
@@ -708,11 +720,18 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../keyboard-configuration.templates:11002
+#, fuzzy
+#| msgid ""
+#| "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in "
+#| "the latter case, use the combination Shift+Caps Lock for normal Caps "
+#| "toggle). Alt+Shift is also a popular combination; it will however lose "
+#| "its usual behavior in Emacs and other programs that use it for specific "
+#| "needs."
 msgid ""
 "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in the "
-"latter case, use the combination Shift+Caps Lock for normal Caps toggle). Alt"
-"+Shift is also a popular combination; it will however lose its usual "
-"behavior in Emacs and other programs that use it for specific needs."
+"latter case, use the combination Shift+Caps Lock for normal Caps toggle). "
+"Left Alt+Left Shift is also a popular combination; it will however lose its "
+"usual behavior in Emacs and other programs that use it for specific needs."
 msgstr ""
 "Phím Alt bên phải hay Caps Lock thường được chọn vì lý do tối ưu nhân tố "
 "(trong trường hợp sau, dùng tổ hợp phím Shift+Caps Lock để bật/tắt chữ hoa "
@@ -1450,6 +1469,13 @@ msgstr "Thổ Nhĩ Kỳ (bố trí F)"
 #: ../keyboard-configuration.templates:16001
 msgid "Turkish (Q layout)"
 msgstr "Thổ Nhĩ Kỳ (bố trí Q)"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:16001
+msgid "Taiwanese"
+msgstr "Tiếng Đài Loan"
 
 #. Type: select
 #. Choices

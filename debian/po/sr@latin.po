@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: console-setup@packages.debian.org\n"
-"POT-Creation-Date: 2020-10-28 20:01+0000\n"
+"POT-Creation-Date: 2025-10-15 20:01+0000\n"
 "PO-Revision-Date: 2010-11-14 18:12+0100\n"
 "Last-Translator: Janos Guljas <janos@janos.in.rs>\n"
 "Language-Team: Serbian/Latin\n"
@@ -252,12 +252,19 @@ msgstr "Font konzole:"
 #. relatively short.
 #. :sl3:
 #: ../console-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "\"VGA\" has a traditional appearance and has medium coverage of "
+#| "international scripts. \"Fixed\" has a simplistic appearance and has "
+#| "better coverage of international scripts. \"Terminus\" may help to reduce "
+#| "eye fatigue, though some symbols have a similar aspect which may be a "
+#| "problem for programmers."
 msgid ""
 "\"VGA\" has a traditional appearance and has medium coverage of "
 "international scripts. \"Fixed\" has a simplistic appearance and has better "
 "coverage of international scripts. \"Terminus\" may help to reduce eye "
 "fatigue, though some symbols have a similar aspect which may be a problem "
-"for programmers."
+"for programmers. \"DejaVu\" is suited to screens with HiDPI."
 msgstr ""
 "„VGA“ ima tradicionalni izgled i osrednju pokrivenost internacionalizovanih "
 "skripti. „Fixed“ ima jednostavan izgled i bolju pokrivenost "
@@ -271,9 +278,14 @@ msgstr ""
 #. relatively short.
 #. :sl3:
 #: ../console-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "If you prefer a bold version of the Terminus font, choose either "
+#| "TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
 msgid ""
 "If you prefer a bold version of the Terminus font, choose either "
-"TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
+"TerminusBold or DejaVuBold (if you use a framebuffer) or TerminusBoldVGA "
+"(otherwise)."
 msgstr ""
 "Ako želite podebljanu verziju Terminus fonta, izaberite ili TerminusBold "
 "(ako koristite frejmbafer) ili TerminusBoldVGA."
@@ -487,9 +499,9 @@ msgstr "Zadržati podrazumevane opcije tastature (${XKBOPTIONS})?"
 #. :sl3:
 #: ../keyboard-configuration.templates:10001
 msgid ""
-"The default value for the options of the keyboard layout is XKBOPTIONS="
-"\"${XKBOPTIONS}\".  It is based on the currently defined language/region and "
-"the settings in /etc/X11/xorg.conf."
+"The default value for the options of the keyboard layout is "
+"XKBOPTIONS=\"${XKBOPTIONS}\".  It is based on the currently defined language/"
+"region and the settings in /etc/X11/xorg.conf."
 msgstr ""
 "Podrazumevana vrednost za opcije rasporeda tastature je "
 "XKBOPTIONS=„${XKBOPTIONS}“.  Bazirana je na trenutno definisanim jeziku/"
@@ -589,6 +601,15 @@ msgstr "Desni logo taster"
 #: ../keyboard-configuration.templates:14001
 msgid "Menu key"
 msgstr "Meni taster"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:11001
+#, fuzzy
+#| msgid "Left Control+Left Shift"
+msgid "Left Alt+Left Shift"
+msgstr "Levi Control+Left Shift"
 
 #. Type: select
 #. Choices
@@ -709,11 +730,18 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../keyboard-configuration.templates:11002
+#, fuzzy
+#| msgid ""
+#| "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in "
+#| "the latter case, use the combination Shift+Caps Lock for normal Caps "
+#| "toggle). Alt+Shift is also a popular combination; it will however lose "
+#| "its usual behavior in Emacs and other programs that use it for specific "
+#| "needs."
 msgid ""
 "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in the "
-"latter case, use the combination Shift+Caps Lock for normal Caps toggle). Alt"
-"+Shift is also a popular combination; it will however lose its usual "
-"behavior in Emacs and other programs that use it for specific needs."
+"latter case, use the combination Shift+Caps Lock for normal Caps toggle). "
+"Left Alt+Left Shift is also a popular combination; it will however lose its "
+"usual behavior in Emacs and other programs that use it for specific needs."
 msgstr ""
 "Desni Alt ili Caps Lock tasteri obično se koriste zbog ergonomskih razloga "
 "(ukoliko se koristi Caps Lock, prebacivanje na velika i mala slova se vrši "
@@ -1467,6 +1495,13 @@ msgstr ""
 #. :sl1:
 #: ../keyboard-configuration.templates:16001
 msgid "Turkish (Q layout)"
+msgstr ""
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:16001
+msgid "Taiwanese"
 msgstr ""
 
 #. Type: select

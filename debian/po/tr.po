@@ -30,9 +30,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: console-setup@packages.debian.org\n"
-"POT-Creation-Date: 2020-10-28 20:01+0000\n"
-"PO-Revision-Date: 2023-07-05 19:50+0000\n"
-"Last-Translator: Fatih Altun <fatih.altun@pardus.org.tr>\n"
+"POT-Creation-Date: 2025-10-15 20:01+0000\n"
+"PO-Revision-Date: 2025-11-02 14:51+0000\n"
+"Last-Translator: Erenay <erenaydev@proton.me>\n"
 "Language-Team: Debian L10N Turkish\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
@@ -275,12 +275,13 @@ msgid ""
 "international scripts. \"Fixed\" has a simplistic appearance and has better "
 "coverage of international scripts. \"Terminus\" may help to reduce eye "
 "fatigue, though some symbols have a similar aspect which may be a problem "
-"for programmers."
+"for programmers. \"DejaVu\" is suited to screens with HiDPI."
 msgstr ""
 "\"VGA\" geleneksel görünümlüdür ve uluslar arası kullanım için vasattır. "
 "\"Fixed\" basit görünümlüdür ve harf kapsamı en geniş olan yazıtipidir. "
 "\"Terminus\" göz yorgunluğunu azaltmayı amaçlar, ama bazı sembollerin "
-"birbirine benzemesi programcılar için sorun olabilir."
+"birbirine benzemesi programcılar için sorun olabilir. \"DejaVu\" "
+"HiDPI(yüksek çözünürlüklü) ekranlara uygundur."
 
 #. Type: select
 #. Description
@@ -291,11 +292,12 @@ msgstr ""
 #: ../console-setup.templates:6001
 msgid ""
 "If you prefer a bold version of the Terminus font, choose either "
-"TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
+"TerminusBold or DejaVuBold (if you use a framebuffer) or TerminusBoldVGA "
+"(otherwise)."
 msgstr ""
-"Terminus yazıtipininin kalın olanını tercih etmeniz halinde, eğer çerçeve "
-"tamponu kullanıyorsanız TerminusBold'u, kullanmıyorsanız TerminusBoldVGA'yı "
-"seçin."
+"Terminus yazı tipinin kalın olanını tercih etmeniz halinde, eğer görüntü "
+"arabelleği(framebuffer) kullanıyorsanız TerminusBold veya DejaVuBold'u, "
+"kullanmıyorsanız TerminusBoldVGA'yı seçin."
 
 # yazıtipi | yazı tipi ?
 #. Type: select
@@ -415,8 +417,9 @@ msgid ""
 "The current keyboard layout in the configuration file /etc/default/keyboard "
 "is defined as XKBLAYOUT=\"${XKBLAYOUT}\" and XKBVARIANT=\"${XKBVARIANT}\"."
 msgstr ""
-"/etc/default/keyboard yapılandırma dosyasındaki klavye düzeni XKBLAYOUT="
-"\"${XKBLAYOUT}\" ve XKBVARIANT=\"${XKBVARIANT}\" olarak tanımlanmış."
+"/etc/default/keyboard yapılandırma dosyasındaki klavye düzeni "
+"XKBLAYOUT=\"${XKBLAYOUT}\" ve XKBVARIANT=\"${XKBVARIANT}\" olarak "
+"tanımlanmış."
 
 #. Type: boolean
 #. Description
@@ -447,9 +450,9 @@ msgid ""
 "XKBVARIANT=\"${XKBVARIANT}\".  This default value is based on the currently "
 "defined language/region and the settings in /etc/X11/xorg.conf."
 msgstr ""
-"Öntanımlı klavye düzeni  XKBLAYOUT=\"${XKBLAYOUT}\" and XKBVARIANT="
-"\"${XKBVARIANT}\" şeklindedir. Bu öntanımlı değer dil/bölge ayarlarınıza ve /"
-"etc/X11/xorg.conf dosyasındaki ayarları temel alır."
+"Öntanımlı klavye düzeni  XKBLAYOUT=\"${XKBLAYOUT}\" and "
+"XKBVARIANT=\"${XKBVARIANT}\" şeklindedir. Bu öntanımlı değer dil/bölge "
+"ayarlarınıza ve /etc/X11/xorg.conf dosyasındaki ayarları temel alır."
 
 #. Type: boolean
 #. Description
@@ -506,9 +509,9 @@ msgstr ""
 #. :sl3:
 #: ../keyboard-configuration.templates:10001
 msgid ""
-"The default value for the options of the keyboard layout is XKBOPTIONS="
-"\"${XKBOPTIONS}\".  It is based on the currently defined language/region and "
-"the settings in /etc/X11/xorg.conf."
+"The default value for the options of the keyboard layout is "
+"XKBOPTIONS=\"${XKBOPTIONS}\".  It is based on the currently defined language/"
+"region and the settings in /etc/X11/xorg.conf."
 msgstr ""
 "Klavye düzeninin öntanımlı değeri XKBOPTIONS=\" ${XKBOPTIONS}\" şeklindedir "
 "ve bu değer  /etc/X11/xorg.conf dosyasındaki dil/bölge ayarlarına göre "
@@ -610,6 +613,13 @@ msgstr "Sağ Logo tuşu"
 #: ../keyboard-configuration.templates:14001
 msgid "Menu key"
 msgstr "Menü tuşu"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:11001
+msgid "Left Alt+Left Shift"
+msgstr "Sol Alt+Sol Shift"
 
 #. Type: select
 #. Choices
@@ -732,14 +742,14 @@ msgstr ""
 #: ../keyboard-configuration.templates:11002
 msgid ""
 "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in the "
-"latter case, use the combination Shift+Caps Lock for normal Caps toggle). Alt"
-"+Shift is also a popular combination; it will however lose its usual "
-"behavior in Emacs and other programs that use it for specific needs."
+"latter case, use the combination Shift+Caps Lock for normal Caps toggle). "
+"Left Alt+Left Shift is also a popular combination; it will however lose its "
+"usual behavior in Emacs and other programs that use it for specific needs."
 msgstr ""
 "Sağ Alt ya da Caps Lock tuşları genelde kullanımı kolay olduğu için tercih "
 "edilir. (Caps Lock'ı tercih ettiğiniz takdirde bu tuşu normal işlevle "
-"kullanmak için Shift+Caps Lock bileşimini kullanın.) Alt+Shift de popüler "
-"bir bileşimdir, ama bu durumda bu bileşimi kullanan Emacs ve diğer "
+"kullanmak için Shift+Caps Lock bileşimini kullanın.) Sol Alt+Sol Shift de "
+"popüler bir bileşimdir, ama bu durumda bu bileşimi kullanan Emacs ve diğer "
 "programların bazı işlevlerini kullanamayabilirsiniz."
 
 #. Type: select
@@ -1511,6 +1521,13 @@ msgstr "Türkçe (F düzeni)"
 #: ../keyboard-configuration.templates:16001
 msgid "Turkish (Q layout)"
 msgstr "Türkçe (Q düzeni)"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:16001
+msgid "Taiwanese"
+msgstr "Tayvan dili"
 
 #. Type: select
 #. Choices

@@ -17,7 +17,8 @@
 # #
 # Translations from iso-codes:
 # Translations taken from ICU SVN on 2007-09-09
-# Holger Wansing <hwansing@mailbox.org>, 2019, 2020, 2021, 2022.
+#
+# Holger Wansing <hwansing@mailbox.org>, 2019 - 2025.
 # Holger Wansing <linux@wansing-online.de>, 2008 - 2018.
 # Jens Seidel <jensseidel@users.sf.net>, 2005, 2006, 2007, 2008.
 # Dennis Stampfer <seppy@debian.org>, 2003, 2004, 2005.
@@ -35,12 +36,13 @@
 # Stefan Siegel <siegel@mandrakesoft.com>, 2001.
 # Tobias Quathamer <toddy@debian.org>, 2006, 2007, 2008, 2009, 2010.
 # Wolfgang Rohdewald <wolfgang@rohdewald.de>, 2005.
+# Helge Kreutzmann <debian@helgefjell.de>, 2017.
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: console-setup@packages.debian.org\n"
-"POT-Creation-Date: 2020-10-28 20:01+0000\n"
-"PO-Revision-Date: 2023-01-27 07:43+0100\n"
+"POT-Creation-Date: 2025-10-15 20:01+0000\n"
+"PO-Revision-Date: 2025-12-20 21:26+0100\n"
 "Last-Translator: Holger Wansing <hwansing@mailbox.org>\n"
 "Language-Team: German <debian-l10n-german@lists.debian.org>\n"
 "Language: de\n"
@@ -285,13 +287,14 @@ msgid ""
 "international scripts. \"Fixed\" has a simplistic appearance and has better "
 "coverage of international scripts. \"Terminus\" may help to reduce eye "
 "fatigue, though some symbols have a similar aspect which may be a problem "
-"for programmers."
+"for programmers. \"DejaVu\" is suited to screens with HiDPI."
 msgstr ""
-"»VGA« sieht traditionell aus und hat eine mittlere Abdeckung von "
-"internationalen Schriften. »Fixed« hat ein einfaches Aussehen und eine "
+"»VGA« sieht traditionell aus und hat eine mittelmäßige Abdeckung "
+"internationaler Schriften. »Fixed« hat ein einfaches Aussehen und eine "
 "bessere Abdeckung von internationalen Schriften; »Terminus« kann dabei "
 "helfen, die Ermüdung der Augen zu reduzieren. Allerdings haben manche "
-"Symbole ein ähnliches Aussehen, was ein Problem für Programmierer sein kann."
+"Symbole ein ähnliches Aussehen, was ein Problem für Programmierer sein kann. "
+"»DejaVu« ist passend für Bildschirme mit HiDPI-Auflösung."
 
 #. Type: select
 #. Description
@@ -302,11 +305,12 @@ msgstr ""
 #: ../console-setup.templates:6001
 msgid ""
 "If you prefer a bold version of the Terminus font, choose either "
-"TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
+"TerminusBold or DejaVuBold (if you use a framebuffer) or TerminusBoldVGA "
+"(otherwise)."
 msgstr ""
-"Falls Sie die fette Variante von Terminus vorziehen, wählen Sie entweder "
-"TerminusBold (falls Sie einen Framebuffer verwenden) oder andernfalls "
-"TerminusBoldVGA."
+"Falls Sie eine fette Schriftvariante vorziehen, wählen Sie entweder "
+"TerminusBold oder DejaVuBold (falls Sie einen Framebuffer verwenden) oder "
+"andernfalls TerminusBoldVGA."
 
 #. Type: select
 #. Description
@@ -519,9 +523,9 @@ msgstr ""
 #. :sl3:
 #: ../keyboard-configuration.templates:10001
 msgid ""
-"The default value for the options of the keyboard layout is XKBOPTIONS="
-"\"${XKBOPTIONS}\".  It is based on the currently defined language/region and "
-"the settings in /etc/X11/xorg.conf."
+"The default value for the options of the keyboard layout is "
+"XKBOPTIONS=\"${XKBOPTIONS}\".  It is based on the currently defined language/"
+"region and the settings in /etc/X11/xorg.conf."
 msgstr ""
 "Der voreingestellte Wert für die Optionen der Tastaturbelegung ist "
 "XKBOPTIONS=»${XKBOPTIONS}«. Er basiert auf dem derzeit definierten Wert für "
@@ -623,6 +627,13 @@ msgstr "Windows-Taste rechts"
 #: ../keyboard-configuration.templates:14001
 msgid "Menu key"
 msgstr "Menütaste"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:11001
+msgid "Left Alt+Left Shift"
+msgstr "Alt links+Umschalttaste links"
 
 #. Type: select
 #. Choices
@@ -745,15 +756,15 @@ msgstr ""
 #: ../keyboard-configuration.templates:11002
 msgid ""
 "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in the "
-"latter case, use the combination Shift+Caps Lock for normal Caps toggle). Alt"
-"+Shift is also a popular combination; it will however lose its usual "
-"behavior in Emacs and other programs that use it for specific needs."
+"latter case, use the combination Shift+Caps Lock for normal Caps toggle). "
+"Left Alt+Left Shift is also a popular combination; it will however lose its "
+"usual behavior in Emacs and other programs that use it for specific needs."
 msgstr ""
 "Aus Ergonomiegründen werden oft die Alt- oder Feststelltasten ausgewählt. Im "
 "letzteren Fall verwenden Sie die Kombination Umschalttaste+Feststelltaste "
-"für das normale Umschalten der Großschreibung. Alt+Umschalttaste ist auch "
-"eine beliebte Kombination; in Emacs und anderen Programmen, die diese "
-"Kombination benutzen, wird sie allerdings ihre gewöhnliche Bedeutung "
+"für das normale Umschalten der Großschreibung. Alt-links+Umschalttaste-links "
+"ist auch eine beliebte Kombination; in Emacs und anderen Programmen, die "
+"diese Kombination benutzen, wird sie allerdings ihre gewöhnliche Bedeutung "
 "verlieren."
 
 #. Type: select
@@ -1494,6 +1505,13 @@ msgstr "Türkisch (F-Anordnung)"
 #: ../keyboard-configuration.templates:16001
 msgid "Turkish (Q layout)"
 msgstr "Türkisch (Q-Anordnung)"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:16001
+msgid "Taiwanese"
+msgstr "Taiwanesisch"
 
 #. Type: select
 #. Choices

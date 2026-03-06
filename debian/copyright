@@ -75,12 +75,9 @@ WARRANTY; without even the implied warranty of MERCHANTABILITY or
 FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
 for more details.
 
-You should have received a copy of the GNU Lesser General Public
-License along with this library; if not, write to the Free Software
-Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
-02110-1301, USA
+A copy of the GNU General Public License is available as
+`/usr/share/common-licenses/GPL-2' on Debian systems or on the World Wide
+Web at <URL:https://www.gnu.org/licenses/old-licenses/gpl-2.0.html>.
 
 In the source package of console-setup the complete text of the GNU
-General Public License, version 2 can be found in the file GPL-2.  On
-Debian GNU/Linux systems, the complete text of the GNU General Public
-License can be found in /usr/share/common-licenses/GPL-2.
+General Public License, version 2 can be found in the file GPL-2.

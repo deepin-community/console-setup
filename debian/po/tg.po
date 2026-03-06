@@ -15,9 +15,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: console-setup@packages.debian.org\n"
-"POT-Creation-Date: 2020-10-28 20:01+0000\n"
-"PO-Revision-Date: 2019-09-10 18:06+0500\n"
-"Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
+"POT-Creation-Date: 2025-10-15 20:01+0000\n"
+"PO-Revision-Date: 2025-10-24 14:02+0000\n"
+"Last-Translator: bgo-eiu <huyaqoob+toolforge@gmail.com>\n"
 "Language-Team: Tajik <victor.ibragimov@gmail.com>\n"
 "Language: tg\n"
 "MIME-Version: 1.0\n"
@@ -253,12 +253,13 @@ msgstr "Шрифт барои консол:"
 #. relatively short.
 #. :sl3:
 #: ../console-setup.templates:6001
+#, fuzzy
 msgid ""
 "\"VGA\" has a traditional appearance and has medium coverage of "
 "international scripts. \"Fixed\" has a simplistic appearance and has better "
 "coverage of international scripts. \"Terminus\" may help to reduce eye "
 "fatigue, though some symbols have a similar aspect which may be a problem "
-"for programmers."
+"for programmers. \"DejaVu\" is suited to screens with HiDPI."
 msgstr ""
 "\"VGA\" намуди зоҳирии пешфарз дорад ва тарзҳои навишти байналмиллалиро ба "
 "таври миёна дастгирӣ мекунад. \"Fixed\" намуди зоҳирии оддӣ дорад ва тарзҳои "
@@ -273,9 +274,11 @@ msgstr ""
 #. relatively short.
 #. :sl3:
 #: ../console-setup.templates:6001
+#, fuzzy
 msgid ""
 "If you prefer a bold version of the Terminus font, choose either "
-"TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
+"TerminusBold or DejaVuBold (if you use a framebuffer) or TerminusBoldVGA "
+"(otherwise)."
 msgstr ""
 "Агар ба шумо гунаи пурранги шрифти Terminus маъқул бошад, TerminusBold (агар "
 "шумо фреймбуферро истифода баред) ё TerminusBoldVGA-ро (агар фреймбуферро "
@@ -491,9 +494,9 @@ msgstr "Имконоти пешфарзи ҳарфкалиди (${XKBOPTIONS})-�
 #. :sl3:
 #: ../keyboard-configuration.templates:10001
 msgid ""
-"The default value for the options of the keyboard layout is XKBOPTIONS="
-"\"${XKBOPTIONS}\".  It is based on the currently defined language/region and "
-"the settings in /etc/X11/xorg.conf."
+"The default value for the options of the keyboard layout is "
+"XKBOPTIONS=\"${XKBOPTIONS}\".  It is based on the currently defined language/"
+"region and the settings in /etc/X11/xorg.conf."
 msgstr ""
 "Қимати пешфарзи тарҳбандии ҳарфкалид XKBOPTIONS=\"${XKBOPTIONS}\" мебошад.  "
 "Он бо забон/минтақаи муайяншудаи ҷорӣ ва танзимоти /etc/X11/xorg.conf асос "
@@ -595,6 +598,14 @@ msgstr "Тугмаи рости тамға"
 #: ../keyboard-configuration.templates:14001
 msgid "Menu key"
 msgstr "Тугмаи меню"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:11001
+#, fuzzy
+msgid "Left Alt+Left Shift"
+msgstr "Control-и чап+Shift-и чап"
 
 #. Type: select
 #. Choices
@@ -715,11 +726,12 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../keyboard-configuration.templates:11002
+#, fuzzy
 msgid ""
 "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in the "
-"latter case, use the combination Shift+Caps Lock for normal Caps toggle). Alt"
-"+Shift is also a popular combination; it will however lose its usual "
-"behavior in Emacs and other programs that use it for specific needs."
+"latter case, use the combination Shift+Caps Lock for normal Caps toggle). "
+"Left Alt+Left Shift is also a popular combination; it will however lose its "
+"usual behavior in Emacs and other programs that use it for specific needs."
 msgstr ""
 "Тугмаҳои Alt-и рост ё Caps Lock одатан барои сабабҳои эргономӣ интихоб карда "
 "мешаванд (дар ҳолати пешина, вобастагии тугмаҳои Shift+Caps Lock-ро барои "
@@ -783,8 +795,8 @@ msgstr ""
 #: ../keyboard-configuration.templates:12002
 msgid "You can disable this feature by choosing \"No temporary switch\"."
 msgstr ""
-"Шумо метавонед ин хусусиятро тавассути интихоби \"Васлкунаки муваққатӣ нест"
-"\" ғайрифаъол намоед."
+"Шумо метавонед ин хусусиятро тавассути интихоби \"Васлкунаки муваққатӣ "
+"нест\" ғайрифаъол намоед."
 
 #. Type: select
 #. Choices
@@ -960,7 +972,7 @@ msgstr "Белгиягӣ"
 #. :sl1:
 #: ../keyboard-configuration.templates:16001
 msgid "Berber (Latin)"
-msgstr ""
+msgstr "Бербер (Лотин)"
 
 #. Type: select
 #. Choices
@@ -1465,6 +1477,13 @@ msgstr "Туркӣ (Тарҳбандии F)"
 #: ../keyboard-configuration.templates:16001
 msgid "Turkish (Q layout)"
 msgstr "Туркӣ (Тарҳбандии Q)"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:16001
+msgid "Taiwanese"
+msgstr "Тайванӣ"
 
 #. Type: select
 #. Choices

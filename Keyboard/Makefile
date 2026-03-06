@@ -72,7 +72,8 @@ gzipped-ekbds : $(gzipped-ekbds)
 
 kbdcleanfiles := $(wildcard $./*~ $./*.ekmap $./*.ekbd)			\
 		$./linux-keymaps $./freebsd-keymaps $./keymaps		\
-		$./ckbcomp.log $./keymaps.dir $./names.list		\
+		$(wildcard $./ckbcomp.*.log)				\
+		$./keymaps.dir $./names.list				\
 		$./charmap_functions.sh $./compose $(compose_files)	\
 		$(dkey_files) $(gzipped-ekmaps) $(gzipped-ekbds)
 

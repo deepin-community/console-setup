@@ -24,8 +24,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer_packages_po_sublevel1_mk\n"
 "Report-Msgid-Bugs-To: console-setup@packages.debian.org\n"
-"POT-Creation-Date: 2020-10-28 20:01+0000\n"
-"PO-Revision-Date: 2023-02-02 11:37+0000\n"
+"POT-Creation-Date: 2025-10-15 20:01+0000\n"
+"PO-Revision-Date: 2025-10-12 09:08+0000\n"
 "Last-Translator: Kristijan Fremen Velkovski <me@krisfremen.com>\n"
 "Language-Team: Macedonian <>\n"
 "Language: mk\n"
@@ -103,10 +103,8 @@ msgstr ""
 #. Choices
 #. :sl3:
 #: ../console-setup.templates:5001
-#, fuzzy
 msgid ". Cyrillic - Slavic languages (for blind users)"
-msgstr ""
-"# Кирилица - словенски јазици (исто така и латиница на босански и српски)"
+msgstr ". Кирилица - словенски јазици (за слепи корисници)"
 
 #. Type: select
 #. Choices
@@ -134,7 +132,7 @@ msgstr "# Грчки"
 #. :sl3:
 #: ../console-setup.templates:5001
 msgid ". Greek (for blind users)"
-msgstr ""
+msgstr ". Грчки (за слепи корисници)"
 
 #. Type: select
 #. Choices
@@ -265,12 +263,13 @@ msgstr "Фонт за конзолата:"
 #. relatively short.
 #. :sl3:
 #: ../console-setup.templates:6001
+#, fuzzy
 msgid ""
 "\"VGA\" has a traditional appearance and has medium coverage of "
 "international scripts. \"Fixed\" has a simplistic appearance and has better "
 "coverage of international scripts. \"Terminus\" may help to reduce eye "
 "fatigue, though some symbols have a similar aspect which may be a problem "
-"for programmers."
+"for programmers. \"DejaVu\" is suited to screens with HiDPI."
 msgstr ""
 "\"VGA\" има традиционален изглед и средна покриеност за интернационални "
 "писма. \"Fixed\" има едноставен изглед и подобра покриеност за "
@@ -284,9 +283,11 @@ msgstr ""
 #. relatively short.
 #. :sl3:
 #: ../console-setup.templates:6001
+#, fuzzy
 msgid ""
 "If you prefer a bold version of the Terminus font, choose either "
-"TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
+"TerminusBold or DejaVuBold (if you use a framebuffer) or TerminusBoldVGA "
+"(otherwise)."
 msgstr ""
 "Ако преферирате задебелена верзија на фонтот Terminus, изберете TerminusBold "
 "(ако користите framebuffer) или TerminusBoldVGA (ако не користите "
@@ -412,8 +413,8 @@ msgid ""
 "is defined as XKBLAYOUT=\"${XKBLAYOUT}\" and XKBVARIANT=\"${XKBVARIANT}\"."
 msgstr ""
 "Моменталниот распоред на тастатурата во конфигурациониот фајл /etc/default/"
-"keyboard е дефиниран како XKBLAYOUT=\"${XKBLAYOUT}\" и XKBVARIANT="
-"\"${XKBVARIANT}\"."
+"keyboard е дефиниран како XKBLAYOUT=\"${XKBLAYOUT}\" и "
+"XKBVARIANT=\"${XKBVARIANT}\"."
 
 #. Type: boolean
 #. Description
@@ -444,10 +445,10 @@ msgid ""
 "XKBVARIANT=\"${XKBVARIANT}\".  This default value is based on the currently "
 "defined language/region and the settings in /etc/X11/xorg.conf."
 msgstr ""
-"Основната вредност за распоредот на тастатурата е  XKBLAYOUT="
-"\"${XKBLAYOUT}\" и XKBVARIANT=\"${XKBVARIANT}\".  Оваа основна вредност е "
-"базирана на моментално дефинираниот јазик/регион и поставките во /etc/X11/"
-"xorg.conf."
+"Основната вредност за распоредот на тастатурата е  "
+"XKBLAYOUT=\"${XKBLAYOUT}\" и XKBVARIANT=\"${XKBVARIANT}\".  Оваа основна "
+"вредност е базирана на моментално дефинираниот јазик/регион и поставките во /"
+"etc/X11/xorg.conf."
 
 #. Type: boolean
 #. Description
@@ -502,13 +503,13 @@ msgstr "Зачувај го основниот распоред на таста�
 #. :sl3:
 #: ../keyboard-configuration.templates:10001
 msgid ""
-"The default value for the options of the keyboard layout is XKBOPTIONS="
-"\"${XKBOPTIONS}\".  It is based on the currently defined language/region and "
-"the settings in /etc/X11/xorg.conf."
+"The default value for the options of the keyboard layout is "
+"XKBOPTIONS=\"${XKBOPTIONS}\".  It is based on the currently defined language/"
+"region and the settings in /etc/X11/xorg.conf."
 msgstr ""
-"Основната вредност за опциите за распоредот на тастатурата е XKBOPTIONS="
-"\"${XKBOPTIONS}\".  Базирана е на моментално дефинираниот јазик/регион и "
-"поставките во /etc/X11/xorg.conf."
+"Основната вредност за опциите за распоредот на тастатурата е "
+"XKBOPTIONS=\"${XKBOPTIONS}\".  Базирана е на моментално дефинираниот јазик/"
+"регион и поставките во /etc/X11/xorg.conf."
 
 #. Type: boolean
 #. Description
@@ -606,6 +607,14 @@ msgstr "Десното Лого копче"
 #: ../keyboard-configuration.templates:14001
 msgid "Menu key"
 msgstr "Мени копче"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:11001
+#, fuzzy
+msgid "Left Alt+Left Shift"
+msgstr "Лев Control+Left Shift"
 
 #. Type: select
 #. Choices
@@ -726,11 +735,12 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../keyboard-configuration.templates:11002
+#, fuzzy
 msgid ""
 "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in the "
-"latter case, use the combination Shift+Caps Lock for normal Caps toggle). Alt"
-"+Shift is also a popular combination; it will however lose its usual "
-"behavior in Emacs and other programs that use it for specific needs."
+"latter case, use the combination Shift+Caps Lock for normal Caps toggle). "
+"Left Alt+Left Shift is also a popular combination; it will however lose its "
+"usual behavior in Emacs and other programs that use it for specific needs."
 msgstr ""
 "Right Alt или Caps Lock копчињата се често бирани поради ергономски причини "
 "(во вториот случај, користете ја комбинацијата Shift+Caps Lock за нормално "
@@ -1470,6 +1480,13 @@ msgstr "турска fu"
 #: ../keyboard-configuration.templates:16001
 msgid "Turkish (Q layout)"
 msgstr "турска qu"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:16001
+msgid "Taiwanese"
+msgstr "Тајвански"
 
 #. Type: select
 #. Choices

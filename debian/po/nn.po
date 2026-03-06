@@ -26,9 +26,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nn\n"
 "Report-Msgid-Bugs-To: console-setup@packages.debian.org\n"
-"POT-Creation-Date: 2020-10-28 20:01+0000\n"
-"PO-Revision-Date: 2023-05-17 23:53+0000\n"
-"Last-Translator: Yngve Spjeld-Landro <l10n@landro.net>\n"
+"POT-Creation-Date: 2025-10-15 20:01+0000\n"
+"PO-Revision-Date: 2024-03-19 11:01+0000\n"
+"Last-Translator: Ola Haugen Havrevoll <havrevoll@gmail.com>\n"
 "Language-Team: Norwegian Nynorsk <i18n-nn@lister.ping.uio.no>\n"
 "Language: nn\n"
 "MIME-Version: 1.0\n"
@@ -269,12 +269,19 @@ msgstr "Skrift i konsollen:"
 #. relatively short.
 #. :sl3:
 #: ../console-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "\"VGA\" has a traditional appearance and has medium coverage of "
+#| "international scripts. \"Fixed\" has a simplistic appearance and has "
+#| "better coverage of international scripts. \"Terminus\" may help to reduce "
+#| "eye fatigue, though some symbols have a similar aspect which may be a "
+#| "problem for programmers."
 msgid ""
 "\"VGA\" has a traditional appearance and has medium coverage of "
 "international scripts. \"Fixed\" has a simplistic appearance and has better "
 "coverage of international scripts. \"Terminus\" may help to reduce eye "
 "fatigue, though some symbols have a similar aspect which may be a problem "
-"for programmers."
+"for programmers. \"DejaVu\" is suited to screens with HiDPI."
 msgstr ""
 "«VGA» har ein tradisjonell utsjånad og middels dekning av internasjonale "
 "teikn. «Fixed» har ein enkel utsjånad og betre støtte for internasjonale "
@@ -288,9 +295,14 @@ msgstr ""
 #. relatively short.
 #. :sl3:
 #: ../console-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "If you prefer a bold version of the Terminus font, choose either "
+#| "TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
 msgid ""
 "If you prefer a bold version of the Terminus font, choose either "
-"TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
+"TerminusBold or DejaVuBold (if you use a framebuffer) or TerminusBoldVGA "
+"(otherwise)."
 msgstr ""
 "Viss du føretrekk ein halvfeit versjon av Terminus-skrifta, vel du anten "
 "TerminusBold (viss du brukar mellomlagring av bilete) eller TerminusBoldVGA "
@@ -499,13 +511,13 @@ msgstr "Hald på standard tastaturval (${XKBOPTIONS})?"
 #. :sl3:
 #: ../keyboard-configuration.templates:10001
 msgid ""
-"The default value for the options of the keyboard layout is XKBOPTIONS="
-"\"${XKBOPTIONS}\".  It is based on the currently defined language/region and "
-"the settings in /etc/X11/xorg.conf."
+"The default value for the options of the keyboard layout is "
+"XKBOPTIONS=\"${XKBOPTIONS}\".  It is based on the currently defined language/"
+"region and the settings in /etc/X11/xorg.conf."
 msgstr ""
-"Standardverdien for vala for tastaturutforminga er XKBOPTIONS="
-"\"${XKBOPTIONS}\". Den er basert på gjeldande definert språk/region og "
-"innstillingane i /etc/X11/xorg.conf."
+"Standardverdien for vala for tastaturutforminga er "
+"XKBOPTIONS=\"${XKBOPTIONS}\". Den er basert på gjeldande definert språk/"
+"region og innstillingane i /etc/X11/xorg.conf."
 
 #. Type: boolean
 #. Description
@@ -602,6 +614,15 @@ msgstr "Høgre logotast"
 #: ../keyboard-configuration.templates:14001
 msgid "Menu key"
 msgstr "Menytast"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:11001
+#, fuzzy
+#| msgid "Left Control+Left Shift"
+msgid "Left Alt+Left Shift"
+msgstr "Venste Ctrl + Venstre Shift"
 
 #. Type: select
 #. Choices
@@ -722,11 +743,18 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../keyboard-configuration.templates:11002
+#, fuzzy
+#| msgid ""
+#| "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in "
+#| "the latter case, use the combination Shift+Caps Lock for normal Caps "
+#| "toggle). Alt+Shift is also a popular combination; it will however lose "
+#| "its usual behavior in Emacs and other programs that use it for specific "
+#| "needs."
 msgid ""
 "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in the "
-"latter case, use the combination Shift+Caps Lock for normal Caps toggle). Alt"
-"+Shift is also a popular combination; it will however lose its usual "
-"behavior in Emacs and other programs that use it for specific needs."
+"latter case, use the combination Shift+Caps Lock for normal Caps toggle). "
+"Left Alt+Left Shift is also a popular combination; it will however lose its "
+"usual behavior in Emacs and other programs that use it for specific needs."
 msgstr ""
 "Høgre Alt eller Caps Lock blir ofte brukt av ergonomiske grunnar (i det "
 "siste tilfellet bruk kombinasjonen Shift + Caps Lock for vanleg Caps-"
@@ -1464,6 +1492,13 @@ msgstr "Tyrkisk (F-oppsett)"
 #: ../keyboard-configuration.templates:16001
 msgid "Turkish (Q layout)"
 msgstr "Tyrkisk (Q-oppsett)"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:16001
+msgid "Taiwanese"
+msgstr "Taiwanesisk"
 
 #. Type: select
 #. Choices

@@ -18,6 +18,8 @@
 # Rubén Porras Campo <nahoo@inicia.es>, 2005
 # Omar Campagne <ocampagne@gmail.com>, 2010
 # Javier Fernández-Sanguino <jfs@debian.org>, 2003-2012, 2014-2018, 2020
+# Camaleón <noelamac@gmail.com>, 2022, 2024.
+# Manuel \"Venturi\" Porras Peralta <venturi@openmailbox.org>, 2017.
 #
 # Equipo de traducción al español, por favor lean antes de traducir
 # los siguientes documentos:
@@ -58,14 +60,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: console-setup@packages.debian.org\n"
-"POT-Creation-Date: 2020-10-28 20:01+0000\n"
-"PO-Revision-Date: 2021-01-31 19:36+0100\n"
-"Last-Translator: Javier Fernández-Sanguino <jfs@debian.org>\n"
-"Language-Team:  Debian Spanish <debian-l10n-spanish@lists.debian.org>\n"
+"POT-Creation-Date: 2025-10-15 20:01+0000\n"
+"PO-Revision-Date: 2026-02-26 13:09+0000\n"
+"Last-Translator: emma peel <emma.peel@riseup.net>\n"
+"Language-Team: Debian Spanish <debian-l10n-spanish@lists.debian.org>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. Type: text
 #. Description
@@ -115,28 +118,28 @@ msgstr "# Cirílico - LOI8-R y KOI8-U"
 #. :sl3:
 #: ../console-setup.templates:5001
 msgid "# Cyrillic - non-Slavic languages"
-msgstr "# Cirílico - lenguas no Eslavas"
+msgstr "# Cirílico - lenguas no eslavas"
 
 #. Type: select
 #. Choices
 #. :sl3:
 #: ../console-setup.templates:5001
 msgid ". Cyrillic - non-Slavic languages (for blind users)"
-msgstr ". Cirílico - lenguas no Eslavas (para usuarios invidentes)"
+msgstr ". Cirílico - lenguas no eslavas (para usuarios invidentes)"
 
 #. Type: select
 #. Choices
 #. :sl3:
 #: ../console-setup.templates:5001
 msgid "# Cyrillic - Slavic languages (also Bosnian and Serbian Latin)"
-msgstr "# Cirílico - Lenguas Eslavas (también el Latino Serbio y Bosnio)"
+msgstr "# Cirílico - Lenguas eslavas (también el latino serbio y bosnio)"
 
 #. Type: select
 #. Choices
 #. :sl3:
 #: ../console-setup.templates:5001
 msgid ". Cyrillic - Slavic languages (for blind users)"
-msgstr ". Cirílico - Lenguas Eslavas (para usuarios invidentes)"
+msgstr ". Cirílico - Lenguas eslavas (para usuarios invidentes)"
 
 #. Type: select
 #. Choices
@@ -300,13 +303,14 @@ msgid ""
 "international scripts. \"Fixed\" has a simplistic appearance and has better "
 "coverage of international scripts. \"Terminus\" may help to reduce eye "
 "fatigue, though some symbols have a similar aspect which may be a problem "
-"for programmers."
+"for programmers. \"DejaVu\" is suited to screens with HiDPI."
 msgstr ""
-"«VGA» tiene el aspecto tradicional y una cobertura media de los scripts "
-"internacionales. «Fixed» tiene un aspecto simplista y una mejor cobertura de "
-"los scripts internacionales. «Terminus» puede ayudar a reducir la fatiga "
-"visual, aunque algunos símbolos tienen un aspecto similar lo que puede ser "
-"un problema para los programadores."
+"\"VGA\" tiene un aspecto tradicional y una cobertura media de los alfabetos "
+"internacionales. \"Fijo\" tiene un aspecto simplista y una mejor cobertura "
+"de los alfabetos internacionales. \"Terminus\" puede ayudar a reducir la "
+"fatiga ocular, aunque algunos símbolos tienen un aspecto similar que puede "
+"ser un problema para los programadores. \"DejaVu\" es adecuado para "
+"pantallas con HiDPI."
 
 #. Type: select
 #. Description
@@ -317,10 +321,12 @@ msgstr ""
 #: ../console-setup.templates:6001
 msgid ""
 "If you prefer a bold version of the Terminus font, choose either "
-"TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
+"TerminusBold or DejaVuBold (if you use a framebuffer) or TerminusBoldVGA "
+"(otherwise)."
 msgstr ""
-"Escoja «TerminusBold» (si utiliza «framebuffer») o «TerminusBoldVGA» (si no "
-"lo utiliza), si prefiere la versión en negrita de la tipografía Terminus."
+"Si prefiere una versión en negrita del tipo de letra Terminus, elija "
+"TerminusBold o DejaVuBold (si usa framebuffer) o TerminusBoldVGA (en caso "
+"contrario)."
 
 #. Type: select
 #. Description
@@ -442,8 +448,8 @@ msgid ""
 "is defined as XKBLAYOUT=\"${XKBLAYOUT}\" and XKBVARIANT=\"${XKBVARIANT}\"."
 msgstr ""
 "La distribución de teclado en el archivo de configuración «/etc/default/"
-"keyboard» está definida como XKBLAYOUT=\"${XKBLAYOUT}\" y XKBVARIANT="
-"\"${XKBVARIANT}\"."
+"keyboard» está definida como XKBLAYOUT=\"${XKBLAYOUT}\" y "
+"XKBVARIANT=\"${XKBVARIANT}\"."
 
 #. Type: boolean
 #. Description
@@ -475,10 +481,10 @@ msgid ""
 "XKBVARIANT=\"${XKBVARIANT}\".  This default value is based on the currently "
 "defined language/region and the settings in /etc/X11/xorg.conf."
 msgstr ""
-"El valor predeterminado de la distribución del teclado es XKBLAYOUT="
-"\"${XKBLAYOUT}\" y XKBVARIANT=\"${XKBVARIANT}\". Este valor predeterminado "
-"se basa en el idioma/región actualmente definido y en la configuración del "
-"archivo «/etc/X11/xorg.conf»."
+"El valor predeterminado de la distribución del teclado es "
+"XKBLAYOUT=\"${XKBLAYOUT}\" y XKBVARIANT=\"${XKBVARIANT}\". Este valor "
+"predeterminado se basa en el idioma/región actualmente definido y en la "
+"configuración del archivo «/etc/X11/xorg.conf»."
 
 #. Type: boolean
 #. Description
@@ -535,9 +541,9 @@ msgstr ""
 #. :sl3:
 #: ../keyboard-configuration.templates:10001
 msgid ""
-"The default value for the options of the keyboard layout is XKBOPTIONS="
-"\"${XKBOPTIONS}\".  It is based on the currently defined language/region and "
-"the settings in /etc/X11/xorg.conf."
+"The default value for the options of the keyboard layout is "
+"XKBOPTIONS=\"${XKBOPTIONS}\".  It is based on the currently defined language/"
+"region and the settings in /etc/X11/xorg.conf."
 msgstr ""
 "El valor predeterminado de las opciones de la distribución de teclado es "
 "XKBOPTIONS=\"${XKBOPTIONS}\". Este valor se basa en el idioma/región "
@@ -563,7 +569,7 @@ msgstr ""
 #: ../keyboard-configuration.templates:11001
 #: ../keyboard-configuration.templates:14001
 msgid "Caps Lock"
-msgstr "Bloqueo de mayúsculas"
+msgstr "Bloq Mayús"
 
 #. Type: select
 #. Choices
@@ -623,7 +629,7 @@ msgstr "«Shift» derecho"
 #: ../keyboard-configuration.templates:13001
 #: ../keyboard-configuration.templates:14001
 msgid "Right Logo key"
-msgstr "Tecla derecha de logo"
+msgstr "Tecla de logo derecha"
 
 #. Type: select
 #. Choices
@@ -639,6 +645,13 @@ msgstr "Tecla derecha de logo"
 #: ../keyboard-configuration.templates:14001
 msgid "Menu key"
 msgstr "Tecla de menú"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:11001
+msgid "Left Alt+Left Shift"
+msgstr "Izquierda Alt + Izquierda Shift"
 
 #. Type: select
 #. Choices
@@ -721,7 +734,7 @@ msgstr "«Shift» izquierdo"
 #: ../keyboard-configuration.templates:13001
 #: ../keyboard-configuration.templates:14001
 msgid "Left Logo key"
-msgstr "Tecla izquierda de logo"
+msgstr "Tecla de logo izquierda"
 
 #. Type: select
 #. Choices
@@ -759,11 +772,12 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../keyboard-configuration.templates:11002
+#, fuzzy
 msgid ""
 "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in the "
-"latter case, use the combination Shift+Caps Lock for normal Caps toggle). Alt"
-"+Shift is also a popular combination; it will however lose its usual "
-"behavior in Emacs and other programs that use it for specific needs."
+"latter case, use the combination Shift+Caps Lock for normal Caps toggle). "
+"Left Alt+Left Shift is also a popular combination; it will however lose its "
+"usual behavior in Emacs and other programs that use it for specific needs."
 msgstr ""
 "Las teclas Alt derecho y Bloqueo mayúsculas se escogen frecuentemente por "
 "razones ergonómicas (en el último caso, utilice la combinación "
@@ -1508,6 +1522,13 @@ msgstr "Turco (variante F)"
 #: ../keyboard-configuration.templates:16001
 msgid "Turkish (Q layout)"
 msgstr "Turco (variante Q)"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:16001
+msgid "Taiwanese"
+msgstr "Taiwanés"
 
 #. Type: select
 #. Choices

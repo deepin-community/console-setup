@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: console-setup@packages.debian.org\n"
-"POT-Creation-Date: 2020-10-28 20:01+0000\n"
+"POT-Creation-Date: 2025-10-15 20:01+0000\n"
 "PO-Revision-Date: 2022-03-06 22:56+0000\n"
 "Last-Translator: Ceiri Wyn Tudur <ceiri.tudur@gmail.com>\n"
 "Language-Team: Welsh <>\n"
@@ -258,12 +258,19 @@ msgstr "Ffont ar gyfer y consol:"
 #. relatively short.
 #. :sl3:
 #: ../console-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "\"VGA\" has a traditional appearance and has medium coverage of "
+#| "international scripts. \"Fixed\" has a simplistic appearance and has "
+#| "better coverage of international scripts. \"Terminus\" may help to reduce "
+#| "eye fatigue, though some symbols have a similar aspect which may be a "
+#| "problem for programmers."
 msgid ""
 "\"VGA\" has a traditional appearance and has medium coverage of "
 "international scripts. \"Fixed\" has a simplistic appearance and has better "
 "coverage of international scripts. \"Terminus\" may help to reduce eye "
 "fatigue, though some symbols have a similar aspect which may be a problem "
-"for programmers."
+"for programmers. \"DejaVu\" is suited to screens with HiDPI."
 msgstr ""
 "Mae gan \"VGA\" olwg traddodiadol ac yn cefnogi nifer cymhedrol o sgriptiau "
 "rhyngwladol. Mae gan \"Fixed\" olwg syml a gwell cefnogaeth i sgriptiau "
@@ -277,9 +284,14 @@ msgstr ""
 #. relatively short.
 #. :sl3:
 #: ../console-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "If you prefer a bold version of the Terminus font, choose either "
+#| "TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
 msgid ""
 "If you prefer a bold version of the Terminus font, choose either "
-"TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
+"TerminusBold or DejaVuBold (if you use a framebuffer) or TerminusBoldVGA "
+"(otherwise)."
 msgstr ""
 "Os yw'n well gennych gael fersiwn trwm o'r ffont Terminus, dewiswch naill ai "
 "TerminusBold (os ydych yn defnyddio framebuffer) neu TerminusBoldVGA (fel "
@@ -492,13 +504,13 @@ msgstr "Cadw'r dewisiadau bysellfwrdd diofyn (${XKBOPTIONS})?"
 #. :sl3:
 #: ../keyboard-configuration.templates:10001
 msgid ""
-"The default value for the options of the keyboard layout is XKBOPTIONS="
-"\"${XKBOPTIONS}\".  It is based on the currently defined language/region and "
-"the settings in /etc/X11/xorg.conf."
+"The default value for the options of the keyboard layout is "
+"XKBOPTIONS=\"${XKBOPTIONS}\".  It is based on the currently defined language/"
+"region and the settings in /etc/X11/xorg.conf."
 msgstr ""
-"Y gwerth diofyn ar gyfer dewisiadau y cynllun bysellfwrdd yw XKBOPTIONS="
-"\"${XKBOPTIONS}\". Mae hyn wedi ei seilio ar yr iaith/rhanbarth presennol "
-"a'r gosodiadau yn /etc/X11/xorg.conf."
+"Y gwerth diofyn ar gyfer dewisiadau y cynllun bysellfwrdd yw "
+"XKBOPTIONS=\"${XKBOPTIONS}\". Mae hyn wedi ei seilio ar yr iaith/rhanbarth "
+"presennol a'r gosodiadau yn /etc/X11/xorg.conf."
 
 #. Type: boolean
 #. Description
@@ -596,6 +608,15 @@ msgstr "Bysell Logo Dde"
 #: ../keyboard-configuration.templates:14001
 msgid "Menu key"
 msgstr "Bysell bwydlen"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:11001
+#, fuzzy
+#| msgid "Left Control+Left Shift"
+msgid "Left Alt+Left Shift"
+msgstr "Control Chwith+Shift Chwith"
 
 #. Type: select
 #. Choices
@@ -716,11 +737,18 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../keyboard-configuration.templates:11002
+#, fuzzy
+#| msgid ""
+#| "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in "
+#| "the latter case, use the combination Shift+Caps Lock for normal Caps "
+#| "toggle). Alt+Shift is also a popular combination; it will however lose "
+#| "its usual behavior in Emacs and other programs that use it for specific "
+#| "needs."
 msgid ""
 "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in the "
-"latter case, use the combination Shift+Caps Lock for normal Caps toggle). Alt"
-"+Shift is also a popular combination; it will however lose its usual "
-"behavior in Emacs and other programs that use it for specific needs."
+"latter case, use the combination Shift+Caps Lock for normal Caps toggle). "
+"Left Alt+Left Shift is also a popular combination; it will however lose its "
+"usual behavior in Emacs and other programs that use it for specific needs."
 msgstr ""
 "Dewisir y bysellau Alt Dde neu Capiau Clo fel arfer am resymau hwylustder "
 "(yn yr ail ddewis, defnyddiwch y cyfuniad Shift+Capiau Clo ar gyfer toglo "
@@ -1459,6 +1487,15 @@ msgstr "Tyrceg (Cynllun F)"
 #: ../keyboard-configuration.templates:16001
 msgid "Turkish (Q layout)"
 msgstr "Tyrceg (Cynllun Q)"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:16001
+#, fuzzy
+#| msgid "Japanese"
+msgid "Taiwanese"
+msgstr "Siapaneeg"
 
 #. Type: select
 #. Choices

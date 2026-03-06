@@ -2,6 +2,9 @@
 
 set -e
 
+# Source debconf library.
+. /usr/share/debconf/confmodule
+
 dpkg-maintscript-helper rm_conffile /etc/init.d/keyboard-setup 1.138~ -- "$@"
 dpkg-maintscript-helper rm_conffile /etc/init.d/console-setup 1.138~ -- "$@"
 if [ -x "/etc/init.d/keyboard-setup" ]; then
@@ -9,6 +12,15 @@ if [ -x "/etc/init.d/keyboard-setup" ]; then
 fi
 if [ -x "/etc/init.d/console-setup" ]; then
     update-rc.d console-setup remove >/dev/null
+fi
+
+if dpkg --compare-versions "$2" lt "1.243"; then
+    db_get keyboard-configuration/toggle
+    toggle="$RET"
+    if [ "$toggle" = "Alt+Shift" ]; then
+	# Automatically fix #1117976
+	db_set keyboard-configuration/toggle "Left Alt+Left Shift"
+    fi
 fi
 
 #DEBHELPER#

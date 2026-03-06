@@ -1,0 +1,20 @@
+---
+# https://salsa.debian.org/installer-team/branch2repo/-/blob/main/README.md?ref_type=heads#basic-use
+include:
+  - https://salsa.debian.org/installer-team/branch2repo/raw/main/trigger_b2r.yml
+
+workflow:
+  rules:
+    # set the branch name here \v/ to match your feature branch, for easier testing
+    - if: $CI_COMMIT_BRANCH == 'fixed-keymap-name'
+      variables:
+        OQA_JOBSTOCLONE: 'nonGUI@amd64'
+    - when: always
+
+variables:
+  ### b2r disables these, so uncomment the ones you want (useful for combined deb/udeb packages)
+  SALSA_CI_DISABLE_REPROTEST: 0
+  SALSA_CI_DISABLE_PIUPARTS: 0
+  SALSA_CI_DISABLE_BLHC: 0
+  # lintian currently complains about a missing call to rm_conffile
+  # SALSA_CI_DISABLE_LINTIAN: 0
