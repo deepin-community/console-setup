@@ -22,7 +22,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: console-setup@packages.debian.org\n"
-"POT-Creation-Date: 2020-10-28 20:01+0000\n"
+"POT-Creation-Date: 2025-10-15 20:01+0000\n"
 "PO-Revision-Date: 2021-02-03 16:48+0700\n"
 "Last-Translator: Theppitak Karoonboonyanan <theppitak@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -256,12 +256,19 @@ msgstr "แบบอักษรสำหรับคอนโซล:"
 #. relatively short.
 #. :sl3:
 #: ../console-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "\"VGA\" has a traditional appearance and has medium coverage of "
+#| "international scripts. \"Fixed\" has a simplistic appearance and has "
+#| "better coverage of international scripts. \"Terminus\" may help to reduce "
+#| "eye fatigue, though some symbols have a similar aspect which may be a "
+#| "problem for programmers."
 msgid ""
 "\"VGA\" has a traditional appearance and has medium coverage of "
 "international scripts. \"Fixed\" has a simplistic appearance and has better "
 "coverage of international scripts. \"Terminus\" may help to reduce eye "
 "fatigue, though some symbols have a similar aspect which may be a problem "
-"for programmers."
+"for programmers. \"DejaVu\" is suited to screens with HiDPI."
 msgstr ""
 "\"VGA\" จะมีรูปร่างตามแบบธรรมดา และมีอักษรภาษาต่างๆ แต่พอประมาณ  \"Fixed\" "
 "จะมีรูปร่างง่ายๆ และครอบคลุมอักษรภาษาต่างๆ มากกว่า  \"Terminus\" อาจช่วยให้ดูสบายตา "
@@ -274,9 +281,14 @@ msgstr ""
 #. relatively short.
 #. :sl3:
 #: ../console-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "If you prefer a bold version of the Terminus font, choose either "
+#| "TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
 msgid ""
 "If you prefer a bold version of the Terminus font, choose either "
-"TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
+"TerminusBold or DejaVuBold (if you use a framebuffer) or TerminusBoldVGA "
+"(otherwise)."
 msgstr ""
 "ถ้าคุณต้องการใช้แบบอักษร Terminus แบบหนา ก็ให้เลือก TerminusBold ในกรณีที่ใช้เฟรมบัฟเฟอร์ "
 "หรือถ้าไม่ใช้เฟรมบัฟเฟอร์ ก็เลือก TerminusBoldVGA"
@@ -394,8 +406,8 @@ msgid ""
 "The current keyboard layout in the configuration file /etc/default/keyboard "
 "is defined as XKBLAYOUT=\"${XKBLAYOUT}\" and XKBVARIANT=\"${XKBVARIANT}\"."
 msgstr ""
-"ผังแป้นพิมพ์ปัจจุบันในแฟ้มค่าตั้ง /etc/default/keyboard กำหนดไว้เป็น XKBLAYOUT="
-"\"${XKBLAYOUT}\" และ XKBVARIANT=\"${XKBVARIANT}\""
+"ผังแป้นพิมพ์ปัจจุบันในแฟ้มค่าตั้ง /etc/default/keyboard กำหนดไว้เป็น "
+"XKBLAYOUT=\"${XKBLAYOUT}\" และ XKBVARIANT=\"${XKBVARIANT}\""
 
 #. Type: boolean
 #. Description
@@ -425,9 +437,9 @@ msgid ""
 "XKBVARIANT=\"${XKBVARIANT}\".  This default value is based on the currently "
 "defined language/region and the settings in /etc/X11/xorg.conf."
 msgstr ""
-"ค่าปริยายของผังแป้นพิมพ์คือ XKBLAYOUT=\"${XKBLAYOUT}\" และ XKBVARIANT="
-"\"${XKBVARIANT}\" โดยค่านี้จะอ้างอิงจากภาษา/ภูมิภาคที่กำหนดอยู่ในปัจจุบัน และค่าตั้งใน /etc/"
-"X11/xorg.conf"
+"ค่าปริยายของผังแป้นพิมพ์คือ XKBLAYOUT=\"${XKBLAYOUT}\" และ "
+"XKBVARIANT=\"${XKBVARIANT}\" โดยค่านี้จะอ้างอิงจากภาษา/ภูมิภาคที่กำหนดอยู่ในปัจจุบัน "
+"และค่าตั้งใน /etc/X11/xorg.conf"
 
 #. Type: boolean
 #. Description
@@ -454,8 +466,8 @@ msgid ""
 "The current keyboard options in the configuration file /etc/default/keyboard "
 "are defined as XKBOPTIONS=\"${XKBOPTIONS}\"."
 msgstr ""
-"ตัวเลือกปัจจุบันของแป้นพิมพ์ในแฟ้มค่าตั้ง /etc/default/keyboard กำหนดไว้เป็น XKBOPTIONS="
-"\"${XKBOPTIONS}\""
+"ตัวเลือกปัจจุบันของแป้นพิมพ์ในแฟ้มค่าตั้ง /etc/default/keyboard กำหนดไว้เป็น "
+"XKBOPTIONS=\"${XKBOPTIONS}\""
 
 #. Type: boolean
 #. Description
@@ -478,9 +490,9 @@ msgstr "จะคงค่าตัวเลือกปริยายของ
 #. :sl3:
 #: ../keyboard-configuration.templates:10001
 msgid ""
-"The default value for the options of the keyboard layout is XKBOPTIONS="
-"\"${XKBOPTIONS}\".  It is based on the currently defined language/region and "
-"the settings in /etc/X11/xorg.conf."
+"The default value for the options of the keyboard layout is "
+"XKBOPTIONS=\"${XKBOPTIONS}\".  It is based on the currently defined language/"
+"region and the settings in /etc/X11/xorg.conf."
 msgstr ""
 "ค่าปริยายของตัวเลือกประกอบผังแป้นพิมพ์คือ XKBOPTIONS=\"${XKBOPTIONS}\" "
 "โดยค่านี้จะอ้างอิงจากภาษา/ภูมิภาคที่กำหนดอยู่ในปัจจุบัน และค่าตั้งใน /etc/X11/xorg.conf"
@@ -579,6 +591,15 @@ msgstr "ปุ่มโลโก้ขวา"
 #: ../keyboard-configuration.templates:14001
 msgid "Menu key"
 msgstr "ปุ่มเมนู"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:11001
+#, fuzzy
+#| msgid "Left Control+Left Shift"
+msgid "Left Alt+Left Shift"
+msgstr "Control ซ้าย+Shift ซ้าย"
 
 #. Type: select
 #. Choices
@@ -697,11 +718,18 @@ msgstr "คุณต้องกำหนดวิธีสลับภาษา
 #. Description
 #. :sl1:
 #: ../keyboard-configuration.templates:11002
+#, fuzzy
+#| msgid ""
+#| "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in "
+#| "the latter case, use the combination Shift+Caps Lock for normal Caps "
+#| "toggle). Alt+Shift is also a popular combination; it will however lose "
+#| "its usual behavior in Emacs and other programs that use it for specific "
+#| "needs."
 msgid ""
 "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in the "
-"latter case, use the combination Shift+Caps Lock for normal Caps toggle). Alt"
-"+Shift is also a popular combination; it will however lose its usual "
-"behavior in Emacs and other programs that use it for specific needs."
+"latter case, use the combination Shift+Caps Lock for normal Caps toggle). "
+"Left Alt+Left Shift is also a popular combination; it will however lose its "
+"usual behavior in Emacs and other programs that use it for specific needs."
 msgstr ""
 "Alt ขวา และ Caps Lock เป็นตัวเลือกที่มักจะเลือกกัน ด้วยเหตุผลด้านสุขลักษณะ (โดยในกรณีหลัง "
 "คุณสามารถใช้ Shift+Caps Lock สำหรับการยกแคร่ค้างตามปกติได้) ในขณะที่ Alt+Shift "
@@ -1437,6 +1465,14 @@ msgstr "ตุรกี (ผัง F)"
 #: ../keyboard-configuration.templates:16001
 msgid "Turkish (Q layout)"
 msgstr "ตุรกี (ผัง Q)"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:16001
+#, fuzzy
+msgid "Taiwanese"
+msgstr "ไต้หวัน"
 
 #. Type: select
 #. Choices

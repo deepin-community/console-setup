@@ -24,13 +24,14 @@
 #   Grégoire Colbert <gregus@linux-mandrake.com>, 2001.
 #   Tobias Quathamer <toddy@debian.org>, 2007, 2008.
 # Alban Vidal <alban.vidal@zordhak.fr>, 2018.
-# Baptiste Jammet <baptiste@mailoo.org>, 2019, 2020.
+# Baptiste Jammet <baptiste@mailoo.org>, 2019, 2020, 2022, 2023, 2024.
+# bubu <bubub@no-log.org>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: fr\n"
 "Report-Msgid-Bugs-To: console-setup@packages.debian.org\n"
-"POT-Creation-Date: 2020-10-28 20:01+0000\n"
-"PO-Revision-Date: 2020-11-27 18:46+0100\n"
+"POT-Creation-Date: 2025-10-15 20:01+0000\n"
+"PO-Revision-Date: 2025-03-14 13:55+0100\n"
 "Last-Translator: Baptiste Jammet <baptiste@mailoo.org>\n"
 "Language-Team: French <debian-l10n-french@lists.debian.org>\n"
 "Language: fr\n"
@@ -275,14 +276,14 @@ msgid ""
 "international scripts. \"Fixed\" has a simplistic appearance and has better "
 "coverage of international scripts. \"Terminus\" may help to reduce eye "
 "fatigue, though some symbols have a similar aspect which may be a problem "
-"for programmers."
+"for programmers. \"DejaVu\" is suited to screens with HiDPI."
 msgstr ""
 "« VGA » correspond à l'apparence traditionnelle, elle possède une couverture "
 "moyenne des écritures internationales. « Fixed » a un aspect simplifié et "
 "une meilleure couverture des écritures internationales. « Terminus » a pour "
 "but de limiter la fatigue oculaire. Cependant certains symboles peuvent "
 "apparaître presque semblables, ce qui peut représenter un problème pour les "
-"programmeurs."
+"programmeurs. « DejaVu » est adaptée aux écrans HiDPI."
 
 #. Type: select
 #. Description
@@ -293,11 +294,12 @@ msgstr ""
 #: ../console-setup.templates:6001
 msgid ""
 "If you prefer a bold version of the Terminus font, choose either "
-"TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
+"TerminusBold or DejaVuBold (if you use a framebuffer) or TerminusBoldVGA "
+"(otherwise)."
 msgstr ""
 "Si vous préférez la version grasse de la police Terminus, choisissez soit "
-"TerminusBold si vous utilisez le tampon vidéo (« framebuffer ») ou "
-"TerminusBoldVGA dans le cas contraire."
+"TerminusBold ou DejaVuBold si vous utilisez le tampon vidéo "
+"(« framebuffer »), soit TerminusBoldVGA sans tampon vidéo."
 
 #. Type: select
 #. Description
@@ -451,10 +453,10 @@ msgid ""
 "XKBVARIANT=\"${XKBVARIANT}\".  This default value is based on the currently "
 "defined language/region and the settings in /etc/X11/xorg.conf."
 msgstr ""
-"La valeur par défaut de la disposition clavier est XKBLAYOUT="
-"\"${XKBLAYOUT}\" et XKBVARIANT=\"${XKBVARIANT}\". La valeur par défaut est "
-"basée sur la langue et la région choisies et les réglages de /etc/X11/xorg."
-"conf."
+"La valeur par défaut de la disposition clavier est "
+"XKBLAYOUT=\"${XKBLAYOUT}\" et XKBVARIANT=\"${XKBVARIANT}\". La valeur par "
+"défaut est basée sur la langue et la région choisies et les réglages de /etc/"
+"X11/xorg.conf."
 
 #. Type: boolean
 #. Description
@@ -511,13 +513,13 @@ msgstr "Conserver les options par défaut du clavier (${XKBOPTIONS}) ?"
 #. :sl3:
 #: ../keyboard-configuration.templates:10001
 msgid ""
-"The default value for the options of the keyboard layout is XKBOPTIONS="
-"\"${XKBOPTIONS}\".  It is based on the currently defined language/region and "
-"the settings in /etc/X11/xorg.conf."
+"The default value for the options of the keyboard layout is "
+"XKBOPTIONS=\"${XKBOPTIONS}\".  It is based on the currently defined language/"
+"region and the settings in /etc/X11/xorg.conf."
 msgstr ""
-"La valeur par défaut des options de la disposition clavier est XKBOPTIONS="
-"\"${XKBOPTIONS}\". Elle est basée sur la langue et la région choisies et les "
-"réglages de /etc/X11/xorg.conf."
+"La valeur par défaut des options de la disposition clavier est "
+"XKBOPTIONS=\"${XKBOPTIONS}\". Elle est basée sur la langue et la région "
+"choisies et les réglages de /etc/X11/xorg.conf."
 
 #. Type: boolean
 #. Description
@@ -615,6 +617,15 @@ msgstr "Touche « logo » de droite"
 #: ../keyboard-configuration.templates:14001
 msgid "Menu key"
 msgstr "Touche Menu"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:11001
+#, fuzzy
+#| msgid "Left Control+Left Shift"
+msgid "Left Alt+Left Shift"
+msgstr "Ctrl gauche + Majuscule gauche"
 
 #. Type: select
 #. Choices
@@ -735,11 +746,18 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../keyboard-configuration.templates:11002
+#, fuzzy
+#| msgid ""
+#| "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in "
+#| "the latter case, use the combination Shift+Caps Lock for normal Caps "
+#| "toggle). Alt+Shift is also a popular combination; it will however lose "
+#| "its usual behavior in Emacs and other programs that use it for specific "
+#| "needs."
 msgid ""
 "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in the "
-"latter case, use the combination Shift+Caps Lock for normal Caps toggle). Alt"
-"+Shift is also a popular combination; it will however lose its usual "
-"behavior in Emacs and other programs that use it for specific needs."
+"latter case, use the combination Shift+Caps Lock for normal Caps toggle). "
+"Left Alt+Left Shift is also a popular combination; it will however lose its "
+"usual behavior in Emacs and other programs that use it for specific needs."
 msgstr ""
 "Les choix les plus ergonomiques semblent être la touche Alt de droite et la "
 "touche de verrouillage majuscule (dans ce dernier cas, utilisez la "
@@ -899,8 +917,8 @@ msgid ""
 msgstr ""
 "Sur les consoles en mode texte, la touche « compose » ne fonctionne pas en "
 "mode Unicode. Si l'on n'est pas en mode Unicode, indépendamment de ce que "
-"vous avez choisi ici, vous pouvez toujours utiliser la combinaison Ctrl"
-"+point comme touche « compose »."
+"vous avez choisi ici, vous pouvez toujours utiliser la combinaison "
+"Ctrl+point comme touche « compose »."
 
 #. Type: boolean
 #. Description
@@ -917,9 +935,9 @@ msgid ""
 "By default the combination Control+Alt+Backspace does nothing.  If you want "
 "it can be used to terminate the X server."
 msgstr ""
-"Par défaut, la combinaison de touches Ctrl+Alt+Ret.Arr. (« Ctrl+Alt"
-"+Backspace ») n'a pas d'action. Vous pouvez choisir de l'utiliser pour "
-"arrêter le serveur X."
+"Par défaut, la combinaison de touches Ctrl+Alt+Ret.Arr. "
+"(« Ctrl+Alt+Backspace ») n'a pas d'action. Vous pouvez choisir de l'utiliser "
+"pour arrêter le serveur X."
 
 #. Type: select
 #. Choices
@@ -1290,7 +1308,7 @@ msgstr "Letton"
 #. :sl1:
 #: ../keyboard-configuration.templates:16001
 msgid "Lithuanian"
-msgstr "Lithuanien"
+msgstr "Lituanien"
 
 #. Type: select
 #. Choices
@@ -1487,6 +1505,13 @@ msgstr "Turc (trfu)"
 #: ../keyboard-configuration.templates:16001
 msgid "Turkish (Q layout)"
 msgstr "Turc (trqu)"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:16001
+msgid "Taiwanese"
+msgstr "Taiwanais"
 
 #. Type: select
 #. Choices

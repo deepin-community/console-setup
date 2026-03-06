@@ -4,14 +4,13 @@ RULES_MK:=a conditional to make it included only once
 
 SHELL = /bin/sh
 
-build : build-linux build-freebsd build-mini-linux build-mini-freebsd
+build : build-linux build-mini-linux
 
-.PHONY: build build-linux build-freebsd build-common
+.PHONY: build build-linux build-common
 build-common:
-build-linux build-freebsd: build-common
-.PHONY: build-mini-linux build-mini-freebsd
+build-linux: build-common
+.PHONY: build-mini-linux
 build-mini-linux: build-linux
-build-mini-freebsd: build-freebsd
 .PHONY: clean maintainer-clean
 
 %.gz : %

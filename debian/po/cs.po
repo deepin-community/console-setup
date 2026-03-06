@@ -18,8 +18,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: console-setup@packages.debian.org\n"
-"POT-Creation-Date: 2020-10-28 20:01+0000\n"
-"PO-Revision-Date: 2020-11-13 20:49+0100\n"
+"POT-Creation-Date: 2025-10-15 20:01+0000\n"
+"PO-Revision-Date: 2025-03-10 07:28+0100\n"
 "Last-Translator:  Miroslav Kure <kurem@debian.cz>\n"
 "Language-Team:  Czech <provoz@debian.cz>\n"
 "Language: cs\n"
@@ -260,12 +260,13 @@ msgid ""
 "international scripts. \"Fixed\" has a simplistic appearance and has better "
 "coverage of international scripts. \"Terminus\" may help to reduce eye "
 "fatigue, though some symbols have a similar aspect which may be a problem "
-"for programmers."
+"for programmers. \"DejaVu\" is suited to screens with HiDPI."
 msgstr ""
-"„VGA“ má tradiční vzhled a střední pokrytí mezinárodních znaků;\n"
-"„Fixed“ má jednoduchý vzhled a lepší pokrytí mezinárodních znaků;\n"
+"„VGA“ má tradiční vzhled a střední pokrytí mezinárodních znaků.\n"
+"„Fixed“ má jednoduchý vzhled a lepší pokrytí mezinárodních znaků.\n"
 "„Terminus“ může snížit námahu očí, avšak některé znaky mají podobný vzhled, "
-"což může být problém třeba pro programátory."
+"což může být problém třeba pro programátory.\n"
+"„DejaVu“ je vhodný pro obrazovky s vysokým DPI."
 
 #. Type: select
 #. Description
@@ -276,11 +277,12 @@ msgstr ""
 #: ../console-setup.templates:6001
 msgid ""
 "If you prefer a bold version of the Terminus font, choose either "
-"TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
+"TerminusBold or DejaVuBold (if you use a framebuffer) or TerminusBoldVGA "
+"(otherwise)."
 msgstr ""
-"Preferujete-li tučnou variantu fontu Terminus, zvolte buď TerminusBold "
-"(používáte-li framebuffer) nebo TerminusBoldVGA (pokud framebuffer "
-"nepoužíváte)."
+"Preferujete-li tučnou variantu fontu Terminus, zvolte buď TerminusBold nebo "
+"DejaVuBold (používáte-li framebuffer), případně TerminusBoldVGA (pokud "
+"framebuffer nepoužíváte)."
 
 #. Type: select
 #. Description
@@ -431,9 +433,9 @@ msgid ""
 "XKBVARIANT=\"${XKBVARIANT}\".  This default value is based on the currently "
 "defined language/region and the settings in /etc/X11/xorg.conf."
 msgstr ""
-"Výchozí rozložení klávesnice je XKBLAYOUT=\"${XKBLAYOUT}\" a XKBVARIANT="
-"\"${XKBVARIANT}\". To je z založeno na aktuálně definovaných hodnotách "
-"jazyka, regionu a volbách v souboru /etc/X11/xorg.conf."
+"Výchozí rozložení klávesnice je XKBLAYOUT=\"${XKBLAYOUT}\" a "
+"XKBVARIANT=\"${XKBVARIANT}\". To je z založeno na aktuálně definovaných "
+"hodnotách jazyka, regionu a volbách v souboru /etc/X11/xorg.conf."
 
 #. Type: boolean
 #. Description
@@ -487,9 +489,9 @@ msgstr "Ponechat výchozí parametry klávesnice (${XKBOPTIONS})?"
 #. :sl3:
 #: ../keyboard-configuration.templates:10001
 msgid ""
-"The default value for the options of the keyboard layout is XKBOPTIONS="
-"\"${XKBOPTIONS}\".  It is based on the currently defined language/region and "
-"the settings in /etc/X11/xorg.conf."
+"The default value for the options of the keyboard layout is "
+"XKBOPTIONS=\"${XKBOPTIONS}\".  It is based on the currently defined language/"
+"region and the settings in /etc/X11/xorg.conf."
 msgstr ""
 "Výchozí parametry rozložení klávesnice jsou XKBOPTIONS=\"${XKBOPTIONS}\". To "
 "je z založeno na aktuálně definovaných hodnotách jazyka, regionu a volbách v "
@@ -591,6 +593,15 @@ msgstr "Pravá klávesa logo"
 #: ../keyboard-configuration.templates:14001
 msgid "Menu key"
 msgstr "Klávesa Menu"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:11001
+#, fuzzy
+#| msgid "Left Control+Left Shift"
+msgid "Left Alt+Left Shift"
+msgstr "Levý Control+levý Shift"
 
 #. Type: select
 #. Choices
@@ -711,11 +722,18 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../keyboard-configuration.templates:11002
+#, fuzzy
+#| msgid ""
+#| "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in "
+#| "the latter case, use the combination Shift+Caps Lock for normal Caps "
+#| "toggle). Alt+Shift is also a popular combination; it will however lose "
+#| "its usual behavior in Emacs and other programs that use it for specific "
+#| "needs."
 msgid ""
 "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in the "
-"latter case, use the combination Shift+Caps Lock for normal Caps toggle). Alt"
-"+Shift is also a popular combination; it will however lose its usual "
-"behavior in Emacs and other programs that use it for specific needs."
+"latter case, use the combination Shift+Caps Lock for normal Caps toggle). "
+"Left Alt+Left Shift is also a popular combination; it will however lose its "
+"usual behavior in Emacs and other programs that use it for specific needs."
 msgstr ""
 "Nejergonomičtější se zdá použití pravého Altu nebo Caps Lock (původní "
 "funkčnost Caps Lock pak získáte kombinací kláves Shift+Caps Lock). Další "
@@ -1452,6 +1470,13 @@ msgstr "turecká (rozložení F)"
 #: ../keyboard-configuration.templates:16001
 msgid "Turkish (Q layout)"
 msgstr "turecká (rozložení Q)"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:16001
+msgid "Taiwanese"
+msgstr "taiwanská"
 
 #. Type: select
 #. Choices

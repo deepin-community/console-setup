@@ -127,9 +127,13 @@ for my $layout (values %KeyboardNames::layouts) {
 		     ." -model $model"
 		     ." -layout $actual_layout -variant $actual_variant"
 		     ." >$dir/$model-$layout:$variant.new"
-                     ." 2>>ckbcomp.log";
-            execute ("echo '" .$cmd ."' >>ckbcomp.log");
-	    execute ($cmd) and die "$0: ckbcomp failed\n" if (! -f "$dir/$model-$layout:$variant.new");
+                     ." 2>>ckbcomp.$model.log";
+            execute ("echo '" .$cmd ."' >>ckbcomp.$model.log");
+	    if (execute ($cmd) != 0) {
+		execute ("cat ckbcomp.$model.log 1>&2");
+		die "$0: ckbcomp failed\n";
+	    }
+	    die "$0: ckbcomp failed to produce output\n" if (! -f "$dir/$model-$layout:$variant.new");
 	    checkrename "$dir/$model-$layout:$variant.new", "$dir/$model-$layout:$variant";
 	}
 	if (-f "$dir/$model-$layout:$variant") {

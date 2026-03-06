@@ -4,6 +4,7 @@
 # DO NOT MODIFY THIS FILE DIRECTLY: SUCH CHANGES WILL BE LOST
 #
 # Abdusalam <1810010207@s.upc.edu.cn>, 2020.
+# Abduqadir Abliz <sahran.ug@gmail.com>, 2017.
 #
 # Debian Installer master translation for Uyghur
 # Don't forget to properly fill-in the header of PO files
@@ -18,9 +19,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: console-setup@packages.debian.org\n"
-"POT-Creation-Date: 2020-10-28 20:01+0000\n"
-"PO-Revision-Date: 2020-07-21 17:24+0000\n"
-"Last-Translator: Abdusalam <1810010207@s.upc.edu.cn>\n"
+"POT-Creation-Date: 2025-10-15 20:01+0000\n"
+"PO-Revision-Date: 2025-10-20 04:50+0000\n"
+"Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "Language: ug\n"
 "MIME-Version: 1.0\n"
@@ -82,9 +83,8 @@ msgstr "# سلاۋيانچە - غەيرى سلاۋيان تىللىرى"
 #. Choices
 #. :sl3:
 #: ../console-setup.templates:5001
-#, fuzzy
 msgid ". Cyrillic - non-Slavic languages (for blind users)"
-msgstr "# سلاۋيانچە - غەيرى سلاۋيان تىللىرى"
+msgstr "- سلاۋيانچە - غەيرى سلاۋيان تىللىرى (ئەما كىشىلەر ئۈچۈن)"
 
 #. Type: select
 #. Choices
@@ -99,11 +99,8 @@ msgstr ""
 #. Choices
 #. :sl3:
 #: ../console-setup.templates:5001
-#, fuzzy
 msgid ". Cyrillic - Slavic languages (for blind users)"
-msgstr ""
-"# سلاۋيانچە - سلاۋيان تىللىرى (بوسنىيە ۋە سىربىيە لاتىنچىنىمۇ ئۆز ئىچىگە "
-"ئالىدۇ)"
+msgstr "- سلاۋيانچە - سلاۋيان تىللىرى (ئەما كىشىلەر ئۈچۈن)"
 
 #. Type: select
 #. Choices
@@ -131,7 +128,7 @@ msgstr "# گرېكچە"
 #. :sl3:
 #: ../console-setup.templates:5001
 msgid ". Greek (for blind users)"
-msgstr ""
+msgstr "- گىرېكچە (ئەما كىشىلەر ئۈچۈن)"
 
 #. Type: select
 #. Choices
@@ -265,13 +262,14 @@ msgid ""
 "international scripts. \"Fixed\" has a simplistic appearance and has better "
 "coverage of international scripts. \"Terminus\" may help to reduce eye "
 "fatigue, though some symbols have a similar aspect which may be a problem "
-"for programmers."
+"for programmers. \"DejaVu\" is suited to screens with HiDPI."
 msgstr ""
-"\"VGA\" نىڭ كۆرۈنۈشى ئەنئەنىۋىي بولۇپ، خەلقئارالىق يېزىقلارنى كۆرستىشى "
-"ئىقتىدارىمۇ ئوتتۇراھال دەرىجىدە. \"Fixed\" نىڭ كۆرۈنۈشى ئاددىيراق بولۇپ، "
-"خەلقئارالىق يېزىقلارنى كۆرسىتىش ئىقتىدارى ياخشىراق. \"Terminus\" نىڭ كۆز "
-"چارچاشنىڭ ئالدىنى ئېىلىشقا ياردىمى بولۇشى مۇمكىن، لېكىن بەزى "
-"بەلگىلەرئوخشىشىپ كەتكەچكە، پروگراممېرلارغا ئاۋارىچىلىق ئېلىپ كېلىشى مۇمكىن."
+"«VGA» نىڭ كۆرۈنۈشى ئەنئەنىۋىي بولۇپ، خەلقئارالىق يېزىقلارنى كۆرستىش "
+"ئىقتىدارىمۇ ئوتتۇراھال دەرىجىدە. «Fixed» نىڭ كۆرۈنۈشى ئاددىيراق بولۇپ، "
+"خەلقئارالىق يېزىقلارنى كۆرسىتىش ئىقتىدارى ياخشىراق. «Terminus» نىڭ كۆز "
+"چارچاشنىڭ ئالدىنى ئېىلىشقا ياردىمى بولۇشى مۇمكىن، لېكىن بەزى بەلگىلەر "
+"ئوخشىشىپ كەتكەچكە، پروگراممېرلارغا ئاۋارىچىلىق ئېلىپ كېلىشى مۇمكىن. «DejaVu» "
+"يۇقىرى پەرق ئېتىش نىسبىتىدىكى ئېكرانغا ماس كېلىدۇ."
 
 #. Type: select
 #. Description
@@ -282,11 +280,12 @@ msgstr ""
 #: ../console-setup.templates:6001
 msgid ""
 "If you prefer a bold version of the Terminus font, choose either "
-"TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
+"TerminusBold or DejaVuBold (if you use a framebuffer) or TerminusBoldVGA "
+"(otherwise)."
 msgstr ""
-"ئەگەر Terminus خەت نۇسخىسىنىڭ تومراقىغا ئامراق بولسىڭىز، TerminusBold ‏"
-"(كاندۇك يىغلەك ئىشلەتكەن بولسىڭىز) ياكى TerminusBoldVGA ‏(باشقا ئەھۋاللاردا) "
-"نىڭ بىرىنى تاللاڭ."
+"ئەگەر Terminus خەت نۇسخىسىنىڭ تومراقىغا ئامراق بولسىڭىز، TerminusBold ‏ياكى "
+"DejaVuBold (كاندۇك يىغلەك ئىشلەتكەن بولسىڭىز) ياكى TerminusBoldVGA ‏(باشقا "
+"ئەھۋاللاردا) نىڭ بىرىنى تاللاڭ."
 
 #. Type: select
 #. Description
@@ -313,13 +312,12 @@ msgstr ""
 #. Description
 #. :sl3:
 #: ../console-setup.templates:8001
-#, fuzzy
 msgid ""
 "Please select the size of the font for the console.  Some font sizes require "
 "framebuffer."
 msgstr ""
-"تىزگىن سۇپىسىنىڭ خەت چوڭلۇقىنى تاللاڭ. پايدىلىنىشىڭىز ئۈچۈن: كومپيۇتېر "
-"قوزغالغاندىكى خەتنىڭ چوڭلۇقى 8x16."
+"تىزگىن سۇپىسىنىڭ خەت چوڭلۇقىنى تاللاڭ. بەزى خەت نۇسخا چوڭلۇقى ئۈچۈن كاندۇك "
+"غەملەكنى قوزغىتىش زۆرۈر."
 
 #. Type: select
 #. Description
@@ -495,13 +493,13 @@ msgstr "كۆڭۈلدىكى ھەرپتاختا تاللانمىسى (${XKBOPTIONS
 #. :sl3:
 #: ../keyboard-configuration.templates:10001
 msgid ""
-"The default value for the options of the keyboard layout is XKBOPTIONS="
-"\"${XKBOPTIONS}\".  It is based on the currently defined language/region and "
-"the settings in /etc/X11/xorg.conf."
+"The default value for the options of the keyboard layout is "
+"XKBOPTIONS=\"${XKBOPTIONS}\".  It is based on the currently defined language/"
+"region and the settings in /etc/X11/xorg.conf."
 msgstr ""
-"ھەرپتاختا جايلاشتۇرۇشنىڭ كۆڭۈلدىكى قىممىتى XKBOPTIONS=\"${XKBOPTIONS}\" ۋە "
-"XKBVARIANT=\"${XKBVARIANT}\". بۇ كۆڭۈلدىكى قىممەت نۆۋەتتە بەلگىلەنگەن تىل/"
-"رايون شۇنداقلا /etc/X11/xorg.conf دىكى تەڭشەككە ئاساسەن جەزملىنىدۇ."
+"ھەرپتاختا جايلاشتۇرۇشنىڭ كۆڭۈلدىكى قىممىتى XKBOPTIONS=\"${XKBOPTIONS}\" ۋە . "
+"بۇ كۆڭۈلدىكى قىممەت نۆۋەتتە بەلگىلەنگەن تىل/رايون شۇنداقلا /etc/X11/xorg."
+"conf دىكى تەڭشەككە ئاساسەن جەزملىنىدۇ."
 
 #. Type: boolean
 #. Description
@@ -583,7 +581,7 @@ msgstr "ئوڭ Shift"
 #: ../keyboard-configuration.templates:13001
 #: ../keyboard-configuration.templates:14001
 msgid "Right Logo key"
-msgstr "ئوڭ  Logo كۇنۇپكا"
+msgstr "ئوڭ Logo كۇنۇپكا"
 
 #. Type: select
 #. Choices
@@ -599,6 +597,13 @@ msgstr "ئوڭ  Logo كۇنۇپكا"
 #: ../keyboard-configuration.templates:14001
 msgid "Menu key"
 msgstr "تىزىملىك كۇنۇپكا"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:11001
+msgid "Left Alt+Left Shift"
+msgstr "سول Alt+ سول Shift"
 
 #. Type: select
 #. Choices
@@ -721,14 +726,14 @@ msgstr ""
 #: ../keyboard-configuration.templates:11002
 msgid ""
 "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in the "
-"latter case, use the combination Shift+Caps Lock for normal Caps toggle). Alt"
-"+Shift is also a popular combination; it will however lose its usual "
-"behavior in Emacs and other programs that use it for specific needs."
+"latter case, use the combination Shift+Caps Lock for normal Caps toggle). "
+"Left Alt+Left Shift is also a popular combination; it will however lose its "
+"usual behavior in Emacs and other programs that use it for specific needs."
 msgstr ""
-"ئوڭ تەرەپتىكى Alt ياكى Caps Lock كۆپىنچە ھاللاردا ئىنسان بەدەن قۇرۇلمىسى "
+"ئوڭ تەرەپتىكى Alt ياكى Caps Lock كۆپىنچە ھاللاردائىنسان بەدەن قۇرۇلمىسى "
 "سەۋەبلىرىدىن تاللىنىلىدۇ (كېيىنكى ئەھۋالدا، نورمال Caps ئالماشتۇرۇش "
-"مەشغۇلاتىنى Shift+Caps Lock كۇنۇپكا بىرىكمىسى ئارقىلىق ئېلىپ بېرىڭ). Alt"
-"+Shift مۇ كۆپ ئۇچرايدىغان كۇنۇپكا بىرىكمىسى؛ ئەمما بۇ كۇنۇپكا بىرىكمىسى "
+"مەشغۇلاتىنى Shift+Caps Lock كۇنۇپكا بىرىكمىسى ئارقىلىق ئېلىپ بېرىڭ).سول Alt+ "
+"سول Shift مۇ كۆپ ئۇچرايدىغان كۇنۇپكا بىرىكمىسى؛ ئەمما بۇ كۇنۇپكا بىرىكمىسى "
 "Emacs ۋە باشقا ئۇنىڭغا ئالاھىدە ئېھتىياجى بار پروگراممىلاردا ئۆزىنىڭ "
 "ئادەتتىكى ئىقتىدارىدىن مەھرۇم بولىدۇ."
 
@@ -880,7 +885,7 @@ msgid ""
 msgstr ""
 "تېكىست تىزگىن سۇپىسىدا بىرىكمە كۇنۇپكا يۇنىكود ھالەتتە ئىشلىمەيدۇ. ئەگەر "
 "يۇنىكود ھالەتتە بولمىسا، مەيلى سىز قانداق تاللىماڭ، Control + . "
-"(چېكىت)بىرىكمە كۇنۇپكىسى قىلىپ  ئىشلەتكىلى بولىدۇ."
+"(چېكىت)بىرىكمە كۇنۇپكىسى قىلىپ ئىشلەتكىلى بولىدۇ."
 
 #. Type: boolean
 #. Description
@@ -962,7 +967,7 @@ msgstr "بىلگىيەچە"
 #. :sl1:
 #: ../keyboard-configuration.templates:16001
 msgid "Berber (Latin)"
-msgstr ""
+msgstr "بەربەرچە (لاتىن)"
 
 #. Type: select
 #. Choices
@@ -989,9 +994,8 @@ msgstr "ئەنگلىيە ئىنگلىزچە"
 #. Choices
 #. :sl1:
 #: ../keyboard-configuration.templates:16001
-#, fuzzy
 msgid "Bulgarian (BDS layout)"
-msgstr "بۇلغارچە (فونېتىكىلىق جايلاشتۇرۇش)"
+msgstr "بۇلغارچە (BDS جايلاشتۇرۇش)"
 
 #. Type: select
 #. Choices
@@ -1418,7 +1422,7 @@ msgstr "شىۋېتسىيە فىرانسۇزچە"
 #. :sl1:
 #: ../keyboard-configuration.templates:16001
 msgid "Swiss German"
-msgstr "شىۋېتسىيە  گېرمانچە"
+msgstr "شىۋېتسىيە گېرمانچە"
 
 #. Type: select
 #. Choices
@@ -1468,6 +1472,13 @@ msgstr "تۈركچە (F جايلاشتۇرۇش)"
 #: ../keyboard-configuration.templates:16001
 msgid "Turkish (Q layout)"
 msgstr "تۈركچە (Q جايلاشتۇرۇش)"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:16001
+msgid "Taiwanese"
+msgstr "تەيۋەنچە"
 
 #. Type: select
 #. Choices

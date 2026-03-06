@@ -23,7 +23,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer_packages_po_sublevel1_ne\n"
 "Report-Msgid-Bugs-To: console-setup@packages.debian.org\n"
-"POT-Creation-Date: 2020-10-28 20:01+0000\n"
+"POT-Creation-Date: 2025-10-15 20:01+0000\n"
 "PO-Revision-Date: 2019-08-28 18:10+0000\n"
 "Last-Translator: leela <53352@protonmail.com>\n"
 "Language-Team: Nepali <info@mpp.org.np>\n"
@@ -262,12 +262,19 @@ msgstr "कन्सोलको लागि फन्ट:"
 #. relatively short.
 #. :sl3:
 #: ../console-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "\"VGA\" has a traditional appearance and has medium coverage of "
+#| "international scripts. \"Fixed\" has a simplistic appearance and has "
+#| "better coverage of international scripts. \"Terminus\" may help to reduce "
+#| "eye fatigue, though some symbols have a similar aspect which may be a "
+#| "problem for programmers."
 msgid ""
 "\"VGA\" has a traditional appearance and has medium coverage of "
 "international scripts. \"Fixed\" has a simplistic appearance and has better "
 "coverage of international scripts. \"Terminus\" may help to reduce eye "
 "fatigue, though some symbols have a similar aspect which may be a problem "
-"for programmers."
+"for programmers. \"DejaVu\" is suited to screens with HiDPI."
 msgstr ""
 "\"VGA\" को पुरानो देखावट र आन्तरिक स्क्रिप्टको मध्यम कभरेज । \"स्थिर\" को सरल देखावट र "
 "आन्तरिक स्क्रिप्टको उचित कभरेज । कार्यक्रम बनाउनेको लागि समस्या हुनसक्ने उस्तै प्रकारका केहि "
@@ -280,9 +287,14 @@ msgstr ""
 #. relatively short.
 #. :sl3:
 #: ../console-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "If you prefer a bold version of the Terminus font, choose either "
+#| "TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
 msgid ""
 "If you prefer a bold version of the Terminus font, choose either "
-"TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
+"TerminusBold or DejaVuBold (if you use a framebuffer) or TerminusBoldVGA "
+"(otherwise)."
 msgstr ""
 "यदि तपाईँ टर्मिनस फन्ट को बोल्ड संस्करण चाहानुहुन्छ भने, कि त TerminusBold (यदि तपाईँ "
 "फ्रेम बफर प्रयोग गर्नुहुन्छ भने) कि त TerminusBoldVGA (अन्य तरिकाद्वारा) छनौट गर्नुहोस् ।"
@@ -493,9 +505,9 @@ msgstr ""
 #. :sl3:
 #: ../keyboard-configuration.templates:10001
 msgid ""
-"The default value for the options of the keyboard layout is XKBOPTIONS="
-"\"${XKBOPTIONS}\".  It is based on the currently defined language/region and "
-"the settings in /etc/X11/xorg.conf."
+"The default value for the options of the keyboard layout is "
+"XKBOPTIONS=\"${XKBOPTIONS}\".  It is based on the currently defined language/"
+"region and the settings in /etc/X11/xorg.conf."
 msgstr ""
 
 #. Type: boolean
@@ -595,6 +607,15 @@ msgstr "दाहिने Logo key"
 #: ../keyboard-configuration.templates:14001
 msgid "Menu key"
 msgstr "मेनु key"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:11001
+#, fuzzy
+#| msgid "Left Control+Left Shift"
+msgid "Left Alt+Left Shift"
+msgstr "देब्रे कन्ट्रोल + देब्रे शिफ्ट"
 
 #. Type: select
 #. Choices
@@ -713,11 +734,18 @@ msgstr "देशी तथा लैटिन मोड को बीचमा 
 #. Description
 #. :sl1:
 #: ../keyboard-configuration.templates:11002
+#, fuzzy
+#| msgid ""
+#| "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in "
+#| "the latter case, use the combination Shift+Caps Lock for normal Caps "
+#| "toggle). Alt+Shift is also a popular combination; it will however lose "
+#| "its usual behavior in Emacs and other programs that use it for specific "
+#| "needs."
 msgid ""
 "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in the "
-"latter case, use the combination Shift+Caps Lock for normal Caps toggle). Alt"
-"+Shift is also a popular combination; it will however lose its usual "
-"behavior in Emacs and other programs that use it for specific needs."
+"latter case, use the combination Shift+Caps Lock for normal Caps toggle). "
+"Left Alt+Left Shift is also a popular combination; it will however lose its "
+"usual behavior in Emacs and other programs that use it for specific needs."
 msgstr ""
 "दाहिने Alt वा क्याप्स लक कुञ्जीहरू अक्सर ergonomic कारणहरूका लागि चयन गरिन्छ (पछिल्लो "
 "अवस्थामा, सामान्य Caps टगलका लागि Shift + Caps Lock को प्रयोग गर्नुहोस्)। Alt + "
@@ -1440,6 +1468,15 @@ msgstr "टर्किस (F सजावट)"
 #: ../keyboard-configuration.templates:16001
 msgid "Turkish (Q layout)"
 msgstr "टर्किस (Q सजावट)"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:16001
+#, fuzzy
+#| msgid "Japanese"
+msgid "Taiwanese"
+msgstr "जापानी"
 
 #. Type: select
 #. Choices

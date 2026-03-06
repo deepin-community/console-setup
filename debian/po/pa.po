@@ -21,14 +21,14 @@
 # Amanpreet Singh Alam <aalam@users.sf.net>, 2008, 2009.
 # Amanpreet Singh Alam[ਆਲਮ] <amanpreetalam@yahoo.com>, 2005.
 # A S Alam <aalam@users.sf.net>, 2009, 2012, 2014, 2017.
-# Aman ALam <alam.yellow@gmail.com>, 2018, 2019, 2020.
+# Aman Alam <alam.yellow@gmail.com>, 2018, 2019, 2020, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: pa\n"
 "Report-Msgid-Bugs-To: console-setup@packages.debian.org\n"
-"POT-Creation-Date: 2020-10-28 20:01+0000\n"
-"PO-Revision-Date: 2020-11-09 17:26+0000\n"
-"Last-Translator: Aman Alam <alam.yellow@gmail.com>\n"
+"POT-Creation-Date: 2025-10-15 20:01+0000\n"
+"PO-Revision-Date: 2026-02-06 00:01+0000\n"
+"Last-Translator: Aman Alam <aalam@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
@@ -267,11 +267,12 @@ msgid ""
 "international scripts. \"Fixed\" has a simplistic appearance and has better "
 "coverage of international scripts. \"Terminus\" may help to reduce eye "
 "fatigue, though some symbols have a similar aspect which may be a problem "
-"for programmers."
+"for programmers. \"DejaVu\" is suited to screens with HiDPI."
 msgstr ""
-"\"VGA\" ਪੁਰਾਣਾ ਦਿੱਖ ਢੰਗ ਹੈ ਅਤੇ ਅੰਤਰਰਾਸ਼ਟਰੀ ਸਕ੍ਰਿਪਟਾਂ ਲਈ ਮੱਧਮ ਸਹਿਯੋਗ ਹੈ। \"Fixed\" ਸਧਾਰਨ "
-"ਦਿੱਖ ਅਤੇ ਅੰਟਰਰਾਸ਼ਟਰੀ ਸਕ੍ਰਿਪਟਾਂ ਲਈ ਵਧੀਆ ਸਹਿਯੋਗ ਹੈ। \"Terminus\" ਅੱਖ ਸਮੱਸਿਆ ਘਟਾਉਣ ਲਈ ਮੱਦਦ "
-"ਤਾਂ ਕਰ ਸਕਦਾ ਹੈ, ਪਰ ਇੰਝ ਦੇ ਕੁਝ ਰਲਦੇ ਮੁੱਦਿਆਂ ਉੱਤੇ ਪਰੋਗਰਾਮਰਾਂ ਲਈ ਸਮੱਸਿਆ ਆ ਸਕਦੀ ਹੈ।"
+"\"VGA\" ਪੁਰਾਣਾ ਦਿੱਖ ਢੰਗ ਹੈ ਅਤੇ ਕੌਮਾਂਤਰੀ ਸਕ੍ਰਿਪਟਾਂ ਲਈ ਮੱਧਮ ਸਹਿਯੋਗ ਹੈ। \"Fixed\" ਸਧਾਰਨ ਦਿੱਖ "
+"ਅਤੇ ਅੰਟਰਰਾਸ਼ਟਰੀ ਸਕ੍ਰਿਪਟਾਂ ਲਈ ਵਧੀਆ ਸਹਿਯੋਗ ਹੈ। \"Terminus\" ਅੱਖਾਂ ਲਈ ਸਮੱਸਿਆ ਘਟਾਉਣ ਲਈ ਮਦਦ "
+"ਤਾਂ ਕਰ ਸਕਦਾ ਹੈ, ਪਰ ਇੰਝ ਦੇ ਕੁਝ ਰਲਦੇ ਮੁੱਦਿਆਂ ਉੱਤੇ ਪਰੋਗਰਾਮਰਾਂ ਲਈ ਸਮੱਸਿਆ ਆ ਸਕਦੀ ਹੈ। \"DejaVu\" "
+"HiDPI ਸਕਰੀਨਾਂ ਲਈ ਢੁੱਕਵਾਂ ਹੈ।"
 
 #. Type: select
 #. Description
@@ -282,10 +283,11 @@ msgstr ""
 #: ../console-setup.templates:6001
 msgid ""
 "If you prefer a bold version of the Terminus font, choose either "
-"TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
+"TerminusBold or DejaVuBold (if you use a framebuffer) or TerminusBoldVGA "
+"(otherwise)."
 msgstr ""
-"ਜੇ ਤੁਸੀਂ Terminus ਫੋਂਟ ਦਾ ਗੂੜ੍ਹਾ ਵਰਜਨ ਵਰਤਣਾ ਚਾਹੁੰਦੇ ਹੋ ਤਾਂ, TerminusBold ਚੁਣੋ (ਜੇ ਤੁਸੀਂ "
-"ਫਰੇਮਬਫ਼ਰ ਵਰਤਦੇ ਹੋ) ਜਾਂ TerminusBoldVGA (ਹੋਰ ਕਿਸੇ ਲਈ ਵੀ)।"
+"ਜੇ ਤੁਸੀਂ Terminus ਫੋਂਟ ਦਾ ਗੂੜ੍ਹਾ ਵਰਜਨ ਵਰਤਣਾ ਚਾਹੁੰਦੇ ਹੋ ਤਾਂ, TerminusBold ਜਾਂ DejaVuBold "
+"ਚੁਣੋ (ਜੇ ਤੁਸੀਂ ਫਰੇਮਬਫ਼ਰ ਵਰਤਦੇ ਹੋ) ਜਾਂ TerminusBoldVGA (ਹੋਰ ਕਿਸੇ ਲਈ ਵੀ)।"
 
 #. Type: select
 #. Description
@@ -432,9 +434,9 @@ msgid ""
 "XKBVARIANT=\"${XKBVARIANT}\".  This default value is based on the currently "
 "defined language/region and the settings in /etc/X11/xorg.conf."
 msgstr ""
-"ਡੀਫਾਲਟ ਕੀ-ਬੋਰਡ ਲੇਆਉਟ ਹੈ  XKBLAYOUT=\"${XKBLAYOUT}\"  ਅਤੇXKBVARIANT="
-"\"${XKBVARIANT}\" । ਇਹ ਡੀਫਾਲਟ ਕੀਮਤ /etc/X11/xorg.conf ਵਿੱਚ ਦਰਸ਼ਾਈ ਗਈ ਭਾਸ਼ਾ/ਇਲਾਕੇ "
-"ਅਤੇ ਸੈਟਿੰਗ ਤੇ ਅਧਾਰਿਤ ਹੈ ।"
+"ਡਿਫਾਲਟ ਕੀ-ਬੋਰਡ ਲੇਆਉਟ ਹੈ XKBLAYOUT=\"${XKBLAYOUT}\" "
+"ਅਤੇXKBVARIANT=\"${XKBVARIANT}\" । ਇਹ ਡੀਫਾਲਟ ਕੀਮਤ /etc/X11/xorg.conf ਵਿੱਚ ਦਰਸਾਈ "
+"ਗਈ ਭਾਸ਼ਾ/ਇਲਾਕੇ ਅਤੇ ਸੈਟਿੰਗ ਤੇ ਅਧਾਰਿਤ ਹੈ ।"
 
 #. Type: boolean
 #. Description
@@ -460,8 +462,8 @@ msgid ""
 "The current keyboard options in the configuration file /etc/default/keyboard "
 "are defined as XKBOPTIONS=\"${XKBOPTIONS}\"."
 msgstr ""
-"/etc/default/keyboard ਸੰਰਚਨਾ ਫਾਇਲ ਵਿੱਚ ਮੌਜੂਦਾ ਕੀਬੋਰਡ ਚੋਣਾਂ ਨੂੰ XKBOPTIONS="
-"\"${XKBOPTIONS}\" ਰਾਹੀਂ ਦਰਸਾਇਆ ਗਿਆ ਹੈ।"
+"/etc/default/keyboard ਸੰਰਚਨਾ ਫਾਇਲ ਵਿੱਚ ਮੌਜੂਦਾ ਕੀਬੋਰਡ ਚੋਣਾਂ ਨੂੰ "
+"XKBOPTIONS=\"${XKBOPTIONS}\" ਰਾਹੀਂ ਦਰਸਾਇਆ ਗਿਆ ਹੈ।"
 
 #. Type: boolean
 #. Description
@@ -477,19 +479,19 @@ msgstr "ਚੁਣੋ ਕਿ ਕੀ ਤੁਸੀਂ ਨਵਾਂ ਪਾਰਟੀ�
 #. :sl3:
 #: ../keyboard-configuration.templates:10001
 msgid "Keep default keyboard options (${XKBOPTIONS})?"
-msgstr "ਕੀ ਡੀਫਾਲਟ ਕੀ-ਬੋਰਡ ਲੇਆਉਟ ਰੱਖਣਾ ਹੈ (${XKBOPTIONS})?"
+msgstr "ਡਿਫਾਲਟ ਕੀ-ਬੋਰਡ ਲੇਆਉਟ ਰੱਖਣਾ ਹੈ (${XKBOPTIONS})?"
 
 #. Type: boolean
 #. Description
 #. :sl3:
 #: ../keyboard-configuration.templates:10001
 msgid ""
-"The default value for the options of the keyboard layout is XKBOPTIONS="
-"\"${XKBOPTIONS}\".  It is based on the currently defined language/region and "
-"the settings in /etc/X11/xorg.conf."
+"The default value for the options of the keyboard layout is "
+"XKBOPTIONS=\"${XKBOPTIONS}\".  It is based on the currently defined language/"
+"region and the settings in /etc/X11/xorg.conf."
 msgstr ""
-"ਡੀਫਾਲਟ ਕੀ-ਬੋਰਡ ਲੇਆਉਟ ਹੈ XKBOPTIONS=\"${XKBOPTIONS}\"। ਇਹ ਡੀਫਾਲਟ ਕੀਮਤ /etc/X11/"
-"xorg.conf ਵਿੱਚ ਦਰਸ਼ਾਈ ਗਈ ਭਾਸ਼ਾ/ਇਲਾਕੇ ਅਤੇ ਸੈਟਿੰਗ ਤੇ ਅਧਾਰਿਤ ਹੈ ।"
+"ਡਿਫਾਲਟ ਕੀ-ਬੋਰਡ ਲੇਆਉਟ ਹੈ XKBOPTIONS=\"${XKBOPTIONS}\"। ਇਹ ਡਿਫਾਲਟ ਮੁੱਲ /etc/X11/"
+"xorg.conf ਵਿੱਚ ਦਰਸਾਈ ਗਈ ਭਾਸ਼ਾ/ਇਲਾਕੇ ਅਤੇ ਸੈਟਿੰਗ ਤੇ ਅਧਾਰਿਤ ਹੈ ।"
 
 #. Type: boolean
 #. Description
@@ -585,6 +587,13 @@ msgstr "ਸੱਜੀ ਲੋਗੋ ਸਵਿੱਚ"
 #: ../keyboard-configuration.templates:14001
 msgid "Menu key"
 msgstr "ਮੇਨੂ ਸਵਿੱਚ"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:11001
+msgid "Left Alt+Left Shift"
+msgstr "ਖੱਬੀ Alt+Left ਸਿਫ਼ਟ"
 
 #. Type: select
 #. Choices
@@ -705,13 +714,14 @@ msgstr "ਤੁਹਾਨੂੰ ਰਾਸ਼ਟਰੀ ਲੇਆਉਟ ਤੇ ਸਟ�
 #: ../keyboard-configuration.templates:11002
 msgid ""
 "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in the "
-"latter case, use the combination Shift+Caps Lock for normal Caps toggle). Alt"
-"+Shift is also a popular combination; it will however lose its usual "
-"behavior in Emacs and other programs that use it for specific needs."
+"latter case, use the combination Shift+Caps Lock for normal Caps toggle). "
+"Left Alt+Left Shift is also a popular combination; it will however lose its "
+"usual behavior in Emacs and other programs that use it for specific needs."
 msgstr ""
 "ਏਰਗੋਨੋਮਿਕ ਕਾਰਨਾਂ ਕਰਕੇ ਸੱਜੀ Alt ਜਾਂ Caps Lock ਸਵਿੱਚ ਆਮ ਤੋਰ ਤੇ ਚੁਣੇ ਜਾਂਦੇ ਹਨ (ਮਗਰਲੇ ਕੇਸ ਵਿੱਚ "
-"Shift+Caps Lock ਆਮ Caps ਬਦਲਣ ਲਈ ਵਰਤੋ)। Alt+Shift ਦਾ ਜੋੜ ਆਮ ਵਰਤਿਆ ਜਾਂਦਾ ਏ, ਪਰ "
-"ਈਮੈਕਸ ਤੇ ਹੋਰ ਪਰੋਗਰਾਮ, ਜਿੰਨਾ ਦੀਆਂ ਇਸ ਜੋੜ ਤੋਂ ਸਪੈਸ਼ਲ ਲੋੜ ਏ, ਵਿੱਚ ਇਹ ਆਪਣਾ ਆਮ ਸੁਭਾਅ ਗਵਾ ਦਿੰਦਾ ਹੈ।"
+"Shift+Caps Lock ਆਮ Caps ਬਦਲਣ ਲਈ ਵਰਤੋ)। ਖੱਬੀ Alt+Left ਸਿਫ਼ਟ ਦਾ ਜੋੜ ਆਮ ਵਰਤਿਆ ਜਾਂਦਾ "
+"ਏ, ਪਰ ਈਮੈਕਸ ਤੇ ਹੋਰ ਪਰੋਗਰਾਮ, ਜਿੰਨਾ ਦੀਆਂ ਇਸ ਜੋੜ ਤੋਂ ਸਪੈਸ਼ਲ ਲੋੜ ਏ, ਵਿੱਚ ਇਹ ਆਪਣਾ ਆਮ ਸੁਭਾਅ ਗਵਾ "
+"ਦਿੰਦਾ ਹੈ।"
 
 #. Type: select
 #. Description
@@ -859,7 +869,7 @@ msgstr ""
 #. :sl3:
 #: ../keyboard-configuration.templates:15001
 msgid "Use Control+Alt+Backspace to terminate the X server?"
-msgstr "ਕੀ Control+Alt+Backspace ਨੂੰ X ਸੇਰ੍ਵੇਰ ਨੂੰ ਬੰਦ ਕਰਨ ਲਈ ਵਰਤਣਾ ਚਾਹੁੰਦੇ ਹੋ?"
+msgstr "ਕੀ Control+Alt+Backspace ਨੂੰ X ਸਰਵਰ ਨੂੰ ਬੰਦ ਕਰਨ ਲਈ ਵਰਤਣਾ ਚਾਹੁੰਦੇ ਹੋ?"
 
 #. Type: boolean
 #. Description
@@ -869,7 +879,7 @@ msgid ""
 "By default the combination Control+Alt+Backspace does nothing.  If you want "
 "it can be used to terminate the X server."
 msgstr ""
-"ਆਮ ਤੋਰ ਤੇ Control+Alt+Backspace ਦਾ ਜੋੜ ਕੁਝ ਨਹੀਂ ਕਰਦਾ। ਜੇ ਤੁਸੀਂ ਇਹ ਚਾਹੁੰਦੇ  ਹੋ, ਤਾਂ ਇਸ ਨੂੰ X "
+"ਆਮ ਤੌਰ ਉੱਤੇ Control+Alt+Backspace ਦਾ ਜੋੜ ਕੁਝ ਨਹੀਂ ਕਰਦਾ। ਜੇ ਤੁਸੀਂ ਇਹ ਚਾਹੁੰਦੇ ਹੋ, ਤਾਂ ਇਸ ਨੂੰ X "
 "Server ਬੰਦ ਕਰਨ ਲਈ ਵਰਤਿਆ ਜਾ ਸਕਦਾ ਹੈ।"
 
 #. Type: select
@@ -1438,6 +1448,13 @@ msgstr "ਤੁਰਕੀ (F ਲੇਆਊਟ )"
 #: ../keyboard-configuration.templates:16001
 msgid "Turkish (Q layout)"
 msgstr "ਤੁਰਕੀ (Q ਲੇਆਊਟ )"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:16001
+msgid "Taiwanese"
+msgstr "ਤਾਈਵਾਨੀ"
 
 #. Type: select
 #. Choices

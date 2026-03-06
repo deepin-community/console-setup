@@ -29,16 +29,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: console-setup@packages.debian.org\n"
-"POT-Creation-Date: 2020-10-28 20:01+0000\n"
-"PO-Revision-Date: 2021-07-06 21:18+0000\n"
-"Last-Translator: Gediminas Murauskas <muziejusinfo@gmail.com>\n"
+"POT-Creation-Date: 2025-10-15 20:01+0000\n"
+"PO-Revision-Date: 2025-02-24 13:00+0000\n"
+"Last-Translator: Rimas Kudelis <rimas@kudelis.lt>\n"
 "Language-Team: Lithuanian <komp_lt@konferencijos.lt>\n"
 "Language: lt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
-"%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"(n%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #. Type: text
 #. Description
@@ -273,12 +273,14 @@ msgid ""
 "international scripts. \"Fixed\" has a simplistic appearance and has better "
 "coverage of international scripts. \"Terminus\" may help to reduce eye "
 "fatigue, though some symbols have a similar aspect which may be a problem "
-"for programmers."
+"for programmers. \"DejaVu\" is suited to screens with HiDPI."
 msgstr ""
-"„VGA“ yra tradicinės išvaizdos ir turi pusę tarptautinių simbolių. „Fixed“ "
-"yra supaprastintos išvaizdos, bet turi daugiau tarptautinių simbolių. "
-"„Terminus“ mažiau vargina akis, nors kai kurie simboliai yra labai panašūs "
-"ir gali sukelti problemų programuotojams."
+"„VGA“ šriftas yra įprastinės išvaizdos ir pasižymi vidutine skirtingų raštų "
+"sistemų aprėptimi. „Fixed“ yra šiek tiek supaprastintos išvaizdos, pasižymi "
+"didesne raštų sistemų aprėptimi. „Terminus“ šriftas galbūt mažiau vargintų "
+"akis, tačiau kai kurie rašmenys jame yra labai panašūs tarpusavyje ir gali "
+"sukelti nepatogumų programuojant/ „DejaVu“ šriftas tinkamas ypač aukštos "
+"raiškos („HiDPI“) ekranams."
 
 #. Type: select
 #. Description
@@ -289,11 +291,12 @@ msgstr ""
 #: ../console-setup.templates:6001
 msgid ""
 "If you prefer a bold version of the Terminus font, choose either "
-"TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
+"TerminusBold or DejaVuBold (if you use a framebuffer) or TerminusBoldVGA "
+"(otherwise)."
 msgstr ""
-"Jei norite naudoti pastorintą „Terminus“ šrifto variantą, pasirinkite "
-"„TerminusBold“ (jei naudojate kadrų buferį) arba „TerminusBoldVGA“ (jei "
-"nenaudojate)."
+"Jei norite naudoti pastorintą šrifto variantą, pasirinkite „TerminusBold“ ar "
+"„DejaVuBold“ (jei naudojate kadrų buferį) arba „TerminusBoldVGA“ (priešingu "
+"atveju)."
 
 #. Type: select
 #. Description
@@ -414,8 +417,8 @@ msgid ""
 "is defined as XKBLAYOUT=\"${XKBLAYOUT}\" and XKBVARIANT=\"${XKBVARIANT}\"."
 msgstr ""
 "Šiuo metu konfigūraciniame faile /etc/default/keyboard klaviatūros "
-"išdėstymas aprašytas kaip XKBLAYOUT=\"${XKBLAYOUT}\" ir XKBVARIANT="
-"\"${XKBVARIANT}\"."
+"išdėstymas aprašytas kaip XKBLAYOUT=\"${XKBLAYOUT}\" ir "
+"XKBVARIANT=\"${XKBVARIANT}\"."
 
 #. Type: boolean
 #. Description
@@ -504,13 +507,13 @@ msgstr ""
 #. :sl3:
 #: ../keyboard-configuration.templates:10001
 msgid ""
-"The default value for the options of the keyboard layout is XKBOPTIONS="
-"\"${XKBOPTIONS}\".  It is based on the currently defined language/region and "
-"the settings in /etc/X11/xorg.conf."
+"The default value for the options of the keyboard layout is "
+"XKBOPTIONS=\"${XKBOPTIONS}\".  It is based on the currently defined language/"
+"region and the settings in /etc/X11/xorg.conf."
 msgstr ""
-"Numatytosios klaviatūros išdėstymo parinktys yra XKBOPTIONS="
-"\"${XKBOPTIONS}\". Ši reikšmė pagrįsta nurodyta kalba ir regionu bei /etc/"
-"X11/xorg.conf faile esančiomis nuostatomis."
+"Numatytosios klaviatūros išdėstymo parinktys yra "
+"XKBOPTIONS=\"${XKBOPTIONS}\". Ši reikšmė pagrįsta nurodyta kalba ir regionu "
+"bei /etc/X11/xorg.conf faile esančiomis nuostatomis."
 
 #. Type: boolean
 #. Description
@@ -608,6 +611,15 @@ msgstr "Dešinysis Logo klavišas"
 #: ../keyboard-configuration.templates:14001
 msgid "Menu key"
 msgstr "Meniu klavišas"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:11001
+#, fuzzy
+#| msgid "Left Control+Left Shift"
+msgid "Left Alt+Left Shift"
+msgstr "Kairysis Vald+kairysis Lyg2"
 
 #. Type: select
 #. Choices
@@ -728,11 +740,18 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../keyboard-configuration.templates:11002
+#, fuzzy
+#| msgid ""
+#| "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in "
+#| "the latter case, use the combination Shift+Caps Lock for normal Caps "
+#| "toggle). Alt+Shift is also a popular combination; it will however lose "
+#| "its usual behavior in Emacs and other programs that use it for specific "
+#| "needs."
 msgid ""
 "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in the "
-"latter case, use the combination Shift+Caps Lock for normal Caps toggle). Alt"
-"+Shift is also a popular combination; it will however lose its usual "
-"behavior in Emacs and other programs that use it for specific needs."
+"latter case, use the combination Shift+Caps Lock for normal Caps toggle). "
+"Left Alt+Left Shift is also a popular combination; it will however lose its "
+"usual behavior in Emacs and other programs that use it for specific needs."
 msgstr ""
 "Ergonomikos sumetimais dažnai pasirenkamas dešinysis Alt arba Didž klavišas "
 "(pastaruoju atveju didžiosios raidės gali būti fiksuojamos klavišų "
@@ -1476,6 +1495,13 @@ msgstr "Turkų (F)"
 #: ../keyboard-configuration.templates:16001
 msgid "Turkish (Q layout)"
 msgstr "Turkų (Q)"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:16001
+msgid "Taiwanese"
+msgstr "Taivaniečių"
 
 #. Type: select
 #. Choices

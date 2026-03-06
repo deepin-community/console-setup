@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: console-setup@packages.debian.org\n"
-"POT-Creation-Date: 2020-10-28 20:01+0000\n"
+"POT-Creation-Date: 2025-10-15 20:01+0000\n"
 "PO-Revision-Date: 2019-08-28 18:10+0000\n"
 "Last-Translator: leela <53352@protonmail.com>\n"
 "Language-Team: Softastur\n"
@@ -259,12 +259,19 @@ msgstr "Fonte pa la consola:"
 #. relatively short.
 #. :sl3:
 #: ../console-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "\"VGA\" has a traditional appearance and has medium coverage of "
+#| "international scripts. \"Fixed\" has a simplistic appearance and has "
+#| "better coverage of international scripts. \"Terminus\" may help to reduce "
+#| "eye fatigue, though some symbols have a similar aspect which may be a "
+#| "problem for programmers."
 msgid ""
 "\"VGA\" has a traditional appearance and has medium coverage of "
 "international scripts. \"Fixed\" has a simplistic appearance and has better "
 "coverage of international scripts. \"Terminus\" may help to reduce eye "
 "fatigue, though some symbols have a similar aspect which may be a problem "
-"for programmers."
+"for programmers. \"DejaVu\" is suited to screens with HiDPI."
 msgstr ""
 "\"VGA\" tien una apariencia tradicinal y tien una cobertura media de scripts "
 "internacional. \"Fixed\" tien una apariencia simple y meyor cobertura "
@@ -279,9 +286,14 @@ msgstr ""
 #. relatively short.
 #. :sl3:
 #: ../console-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "If you prefer a bold version of the Terminus font, choose either "
+#| "TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
 msgid ""
 "If you prefer a bold version of the Terminus font, choose either "
-"TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
+"TerminusBold or DejaVuBold (if you use a framebuffer) or TerminusBoldVGA "
+"(otherwise)."
 msgstr ""
 "Si prefieres una versión negrina de la fonte Terminus, escueyi TerminusBold "
 "(si uses un framebuffer) o TerminusBoldVGA (n'otru casu)."
@@ -405,8 +417,8 @@ msgid ""
 "is defined as XKBLAYOUT=\"${XKBLAYOUT}\" and XKBVARIANT=\"${XKBVARIANT}\"."
 msgstr ""
 "La disposición actual del tecláu nel ficheru de configuración /etc/default/"
-"keyboard ta definida como XKBLAYOUT=\"${XKBLAYOUT}\" y XKBVARIANT="
-"\"${XKBVARIANT}\"."
+"keyboard ta definida como XKBLAYOUT=\"${XKBLAYOUT}\" y "
+"XKBVARIANT=\"${XKBVARIANT}\"."
 
 #. Type: boolean
 #. Description
@@ -437,10 +449,10 @@ msgid ""
 "XKBVARIANT=\"${XKBVARIANT}\".  This default value is based on the currently "
 "defined language/region and the settings in /etc/X11/xorg.conf."
 msgstr ""
-"El valor por defeutu pa la disposición de tecláu ye XKBLAYOUT="
-"\"${XKBLAYOUT}\" and XKBVARIANT=\"${XKBVARIANT}\". Esti valor por defeutu ta "
-"basáu nel territoriu/llingua definíos y la configuración en /etc/X11/xorg."
-"conf."
+"El valor por defeutu pa la disposición de tecláu ye "
+"XKBLAYOUT=\"${XKBLAYOUT}\" and XKBVARIANT=\"${XKBVARIANT}\". Esti valor por "
+"defeutu ta basáu nel territoriu/llingua definíos y la configuración en /etc/"
+"X11/xorg.conf."
 
 #. Type: boolean
 #. Description
@@ -494,13 +506,13 @@ msgstr "Caltener les opciones por defeutu del tecláu (${XKBOPTIONS})?"
 #. :sl3:
 #: ../keyboard-configuration.templates:10001
 msgid ""
-"The default value for the options of the keyboard layout is XKBOPTIONS="
-"\"${XKBOPTIONS}\".  It is based on the currently defined language/region and "
-"the settings in /etc/X11/xorg.conf."
+"The default value for the options of the keyboard layout is "
+"XKBOPTIONS=\"${XKBOPTIONS}\".  It is based on the currently defined language/"
+"region and the settings in /etc/X11/xorg.conf."
 msgstr ""
-"El valor por defeutu pa les opciones del tecláu ye XKBOPTIONS="
-"\"${XKBOPTIONS}\". Ta basao nel territoriu/llingua definíos actualmente y na "
-"configuración en /etc/X11/xorg.conf."
+"El valor por defeutu pa les opciones del tecláu ye "
+"XKBOPTIONS=\"${XKBOPTIONS}\". Ta basao nel territoriu/llingua definíos "
+"actualmente y na configuración en /etc/X11/xorg.conf."
 
 #. Type: boolean
 #. Description
@@ -597,6 +609,15 @@ msgstr "Tecla Logu Derecha"
 #: ../keyboard-configuration.templates:14001
 msgid "Menu key"
 msgstr "Tecla Menú"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:11001
+#, fuzzy
+#| msgid "Left Control+Left Shift"
+msgid "Left Alt+Left Shift"
+msgstr "Control Izquierda+Left Izquierda"
 
 #. Type: select
 #. Choices
@@ -717,11 +738,18 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../keyboard-configuration.templates:11002
+#, fuzzy
+#| msgid ""
+#| "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in "
+#| "the latter case, use the combination Shift+Caps Lock for normal Caps "
+#| "toggle). Alt+Shift is also a popular combination; it will however lose "
+#| "its usual behavior in Emacs and other programs that use it for specific "
+#| "needs."
 msgid ""
 "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in the "
-"latter case, use the combination Shift+Caps Lock for normal Caps toggle). Alt"
-"+Shift is also a popular combination; it will however lose its usual "
-"behavior in Emacs and other programs that use it for specific needs."
+"latter case, use the combination Shift+Caps Lock for normal Caps toggle). "
+"Left Alt+Left Shift is also a popular combination; it will however lose its "
+"usual behavior in Emacs and other programs that use it for specific needs."
 msgstr ""
 "Alt Derecha o tecla Caps Lock escuéyense normalmente por razones "
 "ergonómiques (nel casu caberu, usa la combinación May+Caps Lock p'alternar "
@@ -1460,6 +1488,15 @@ msgstr "Turcu (F layout)"
 #: ../keyboard-configuration.templates:16001
 msgid "Turkish (Q layout)"
 msgstr "Turcu (Q layout)"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:16001
+#, fuzzy
+#| msgid "Japanese"
+msgid "Taiwanese"
+msgstr "Xaponés"
 
 #. Type: select
 #. Choices

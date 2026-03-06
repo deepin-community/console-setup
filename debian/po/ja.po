@@ -24,13 +24,14 @@
 #
 #   Kentaro Hayashi <kenhys@gmail.com>, 2021.
 #   YOSHINO Yoshihito <yy.y.ja.jp@gmail.com>, 2021.
+#   Norimitsu SUGIMOTO <dictoss@live.jp>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: console-setup@packages.debian.org\n"
-"POT-Creation-Date: 2020-10-28 20:01+0000\n"
-"PO-Revision-Date: 2021-05-06 03:32+0000\n"
-"Last-Translator: Nozomu KURASAWA <nabetaro@caldron.jp>\n"
+"POT-Creation-Date: 2025-10-15 20:01+0000\n"
+"PO-Revision-Date: 2025-11-09 22:12+0000\n"
+"Last-Translator: Mikenu Takeru <mikenu-jp@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Debian L10n Japanese <debian-japanese@lists.debian.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -271,11 +272,12 @@ msgid ""
 "international scripts. \"Fixed\" has a simplistic appearance and has better "
 "coverage of international scripts. \"Terminus\" may help to reduce eye "
 "fatigue, though some symbols have a similar aspect which may be a problem "
-"for programmers."
+"for programmers. \"DejaVu\" is suited to screens with HiDPI."
 msgstr ""
-"\"VGA\" は伝統的な外観で、万国の書体の半分ほどをカバーします。\"Fixed\" は単"
-"純化した表現でさらにより良く書体をカバーします。\"Terminus\" は眼精疲労を軽減"
-"するでしょうが、いくつかの文字が似た外観となり、プログラマには問題となり得ま"
+"\"VGA\" は伝統的な表示形式で、世界中の文字を半分ほどをカバーしま"
+"す。\"Fixed\" は単純化した表現でさらにより多くの書体をカバーしま"
+"す。\"Terminus\" は眼精疲労を軽減するでしょうが、いくつかの文字が似通ってしま"
+"い、プログラマには不評になり得ます。\"DejaVu\" は HiDPI の画面に適していま"
 "す。"
 
 #. Type: select
@@ -287,11 +289,12 @@ msgstr ""
 #: ../console-setup.templates:6001
 msgid ""
 "If you prefer a bold version of the Terminus font, choose either "
-"TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
+"TerminusBold or DejaVuBold (if you use a framebuffer) or TerminusBoldVGA "
+"(otherwise)."
 msgstr ""
-"Terminus フォントの太字バージョンのほうがよいなら、TerminusBold (フレームバッ"
-"ファを利用している場合) か TerminusBoldVGA (それ以外) のどちらかを選んでくだ"
-"さい。"
+"Terminus フォントの太字バージョンのほうがよいなら、TerminusBoldまたは "
+"DejaVuBold (フレームバッファを利用している場合) か TerminusBoldVGA (それ以"
+"外) のどちらかを選んでください。"
 
 #. Type: select
 #. Description
@@ -497,13 +500,13 @@ msgstr "デフォルトのキーボードオプション (${XKBOPTIONS}) を保�
 #. :sl3:
 #: ../keyboard-configuration.templates:10001
 msgid ""
-"The default value for the options of the keyboard layout is XKBOPTIONS="
-"\"${XKBOPTIONS}\".  It is based on the currently defined language/region and "
-"the settings in /etc/X11/xorg.conf."
+"The default value for the options of the keyboard layout is "
+"XKBOPTIONS=\"${XKBOPTIONS}\".  It is based on the currently defined language/"
+"region and the settings in /etc/X11/xorg.conf."
 msgstr ""
-"キーボードレイアウトのオプションのデフォルト値は、XKBOPTIONS="
-"\"${XKBOPTIONS}\" です。これは、現在定義されている言語/地域および /etc/X11/"
-"xorg.conf の設定に基づいています。"
+"キーボードレイアウトのオプションのデフォルト値は、"
+"XKBOPTIONS=\"${XKBOPTIONS}\" です。これは、現在定義されている言語/地域およ"
+"び /etc/X11/xorg.conf の設定に基づいています。"
 
 #. Type: boolean
 #. Description
@@ -600,6 +603,13 @@ msgstr "右ロゴキー"
 #: ../keyboard-configuration.templates:14001
 msgid "Menu key"
 msgstr "メニューキー"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:11001
+msgid "Left Alt+Left Shift"
+msgstr "左 Alt + 左 Shift"
 
 #. Type: select
 #. Choices
@@ -721,12 +731,12 @@ msgstr ""
 #: ../keyboard-configuration.templates:11002
 msgid ""
 "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in the "
-"latter case, use the combination Shift+Caps Lock for normal Caps toggle). Alt"
-"+Shift is also a popular combination; it will however lose its usual "
-"behavior in Emacs and other programs that use it for specific needs."
+"latter case, use the combination Shift+Caps Lock for normal Caps toggle). "
+"Left Alt+Left Shift is also a popular combination; it will however lose its "
+"usual behavior in Emacs and other programs that use it for specific needs."
 msgstr ""
 "右 Alt または Caps Lock キーが人間工学的な理由でよく使われます (後者の場合、"
-"普通の Caps 切り替えには Shift+Caps Lockの組み合わせを使うことになります)。"
+"普通の Caps 切り替えには Shift+Caps Lockの組み合わせを使うことになります)。左"
 "Alt+Shift も一般的な組み合わせのひとつですが、この組み合わせを特に必要とする"
 "ような Emacs その他プログラムでの通常の動作を損うことになります。"
 
@@ -1499,6 +1509,13 @@ msgstr "トルコ語 (F 配置)"
 #: ../keyboard-configuration.templates:16001
 msgid "Turkish (Q layout)"
 msgstr "トルコ語 (Q レイアウト)"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:16001
+msgid "Taiwanese"
+msgstr "台湾語"
 
 #. Type: select
 #. Choices

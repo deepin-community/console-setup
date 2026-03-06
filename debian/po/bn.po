@@ -32,9 +32,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bn\n"
 "Report-Msgid-Bugs-To: console-setup@packages.debian.org\n"
-"POT-Creation-Date: 2020-10-28 20:01+0000\n"
-"PO-Revision-Date: 2023-05-14 17:53+0000\n"
-"Last-Translator: Indrani Roy <indrani@scriptek.co.in>\n"
+"POT-Creation-Date: 2025-10-15 20:01+0000\n"
+"PO-Revision-Date: 2026-02-25 09:09+0000\n"
+"Last-Translator: emma peel <emma.peel@riseup.net>\n"
 "Language-Team: Bengali\n"
 "Language: bn\n"
 "MIME-Version: 1.0\n"
@@ -270,12 +270,13 @@ msgstr "কনসোলের জন্য ফন্ট:"
 #. relatively short.
 #. :sl3:
 #: ../console-setup.templates:6001
+#, fuzzy
 msgid ""
 "\"VGA\" has a traditional appearance and has medium coverage of "
 "international scripts. \"Fixed\" has a simplistic appearance and has better "
 "coverage of international scripts. \"Terminus\" may help to reduce eye "
 "fatigue, though some symbols have a similar aspect which may be a problem "
-"for programmers."
+"for programmers. \"DejaVu\" is suited to screens with HiDPI."
 msgstr ""
 "\"VGA\" এর একটি সনাতন অবয়ব রয়েছে এবং আন্তর্জাতিক স্ক্রিপ্টের জন্য একটি মধ্যম "
 "কাভারেজ রয়েছে। \"Fixed\" এর সহজতর অবয়ব রয়েছে এবং আন্তর্জাতিক সক্রিপ্টের একটি "
@@ -289,9 +290,11 @@ msgstr ""
 #. relatively short.
 #. :sl3:
 #: ../console-setup.templates:6001
+#, fuzzy
 msgid ""
 "If you prefer a bold version of the Terminus font, choose either "
-"TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
+"TerminusBold or DejaVuBold (if you use a framebuffer) or TerminusBoldVGA "
+"(otherwise)."
 msgstr ""
 "আপনি যদি Terminus ফন্টের গাঢ় সংস্করণ পছন্দ করেন তাহলে, হয় TerminusBold "
 "(ফ্রেমবাফার ব্যবহার করলে) অথবা TerminusBoldVGA (অন্যথায়) নির্বাচন করতে পারেন।"
@@ -413,8 +416,8 @@ msgid ""
 "The current keyboard layout in the configuration file /etc/default/keyboard "
 "is defined as XKBLAYOUT=\"${XKBLAYOUT}\" and XKBVARIANT=\"${XKBVARIANT}\"."
 msgstr ""
-" /etc/default/keyboard কনফিগারেশন ফাইলে বর্তমান কীবোর্ড লেআউট  এখন XKBLAYOUT="
-"\"${XKBLAYOUT}\" এবং XKBVARIANT=\"${XKBVARIANT}\" তে নির্দেশিত হল"
+" /etc/default/keyboard কনফিগারেশন ফাইলে বর্তমান কীবোর্ড লেআউট  এখন "
+"XKBLAYOUT=\"${XKBLAYOUT}\" এবং XKBVARIANT=\"${XKBVARIANT}\" তে নির্দেশিত হল"
 
 #. Type: boolean
 #. Description
@@ -444,9 +447,9 @@ msgid ""
 "XKBVARIANT=\"${XKBVARIANT}\".  This default value is based on the currently "
 "defined language/region and the settings in /etc/X11/xorg.conf."
 msgstr ""
-"কীবোর্ড লেআউটের ডিফল্ট মান হল  XKBLAYOUT=\"${XKBLAYOUT}\" এবং XKBVARIANT="
-"\"${XKBVARIANT}\".  এই ডিফল্ট মান নির্দেশিত হয়েছে বর্তমান  language/region "
-"এবং  /etc/X11/xorg.conf ফাইলের  সেটিং এর উপর ভিত্তি করে।"
+"কীবোর্ড লেআউটের ডিফল্ট মান হল  XKBLAYOUT=\"${XKBLAYOUT}\" এবং "
+"XKBVARIANT=\"${XKBVARIANT}\".  এই ডিফল্ট মান নির্দেশিত হয়েছে বর্তমান  language/"
+"region এবং  /etc/X11/xorg.conf ফাইলের  সেটিং এর উপর ভিত্তি করে।"
 
 #. Type: boolean
 #. Description
@@ -474,8 +477,8 @@ msgid ""
 "The current keyboard options in the configuration file /etc/default/keyboard "
 "are defined as XKBOPTIONS=\"${XKBOPTIONS}\"."
 msgstr ""
-"/etc/default/keyboard কনফিগারেশন ফাইলে বর্তমান কীবোর্ড অপশন  এখন XKBOPTIONS="
-"\"${XKBOPTIONS}\" তে নির্দেশিত হল"
+"/etc/default/keyboard কনফিগারেশন ফাইলে বর্তমান কীবোর্ড অপশন  এখন "
+"XKBOPTIONS=\"${XKBOPTIONS}\" তে নির্দেশিত হল"
 
 #. Type: boolean
 #. Description
@@ -499,9 +502,9 @@ msgstr "ডিফল্ট কীবোর্ড অপশন  (${XKBOPTIONS})�
 #. :sl3:
 #: ../keyboard-configuration.templates:10001
 msgid ""
-"The default value for the options of the keyboard layout is XKBOPTIONS="
-"\"${XKBOPTIONS}\".  It is based on the currently defined language/region and "
-"the settings in /etc/X11/xorg.conf."
+"The default value for the options of the keyboard layout is "
+"XKBOPTIONS=\"${XKBOPTIONS}\".  It is based on the currently defined language/"
+"region and the settings in /etc/X11/xorg.conf."
 msgstr ""
 "কীবোর্ড লেআউট অপশনের ডিফল্ট মান হল XKBOPTIONS=\"${XKBOPTIONS}\". এটা বর্তমানে "
 "নির্দেশিত  language/region এবং /etc/X11/xorg.conf এর সেটিং এর উপর ভিত্তি করে "
@@ -601,6 +604,14 @@ msgstr "ডান লোগো কী"
 #: ../keyboard-configuration.templates:14001
 msgid "Menu key"
 msgstr "মেনু কী"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:11001
+#, fuzzy
+msgid "Left Alt+Left Shift"
+msgstr "বাম কন্ট্রোল+বাম শিফট্"
 
 #. Type: select
 #. Choices
@@ -721,11 +732,12 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../keyboard-configuration.templates:11002
+#, fuzzy
 msgid ""
 "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in the "
-"latter case, use the combination Shift+Caps Lock for normal Caps toggle). Alt"
-"+Shift is also a popular combination; it will however lose its usual "
-"behavior in Emacs and other programs that use it for specific needs."
+"latter case, use the combination Shift+Caps Lock for normal Caps toggle). "
+"Left Alt+Left Shift is also a popular combination; it will however lose its "
+"usual behavior in Emacs and other programs that use it for specific needs."
 msgstr ""
 "ডান Alt বা Caps Lock কীগুলি প্রায়শই এর্গোনোমিক কারণে বেছে নেওয়া হয় (দ্বিতীয় "
 "ক্ষেত্রে, সাধারণ ক্যাপ টগলের জন্য Shift+Caps Lock ব্যবহার করুন)। Alt+Shift ও "
@@ -762,7 +774,7 @@ msgstr "উভয় লোগো কী"
 #. :sl2:
 #: ../keyboard-configuration.templates:12002
 msgid "Method for temporarily toggling between national and Latin input:"
-msgstr "ন্যাশনাল ও ল্যাটিন ইনপুটের টগল এর অস্থায়ী নিয়ম: "
+msgstr "ন্যাশনাল ও ল্যাটিন ইনপুটের টগল এর অস্থায়ী নিয়ম:"
 
 #. Type: select
 #. Description
@@ -841,7 +853,7 @@ msgstr ""
 #. :sl2:
 #: ../keyboard-configuration.templates:14001
 msgid "No compose key"
-msgstr "কোন কম্পোজ কী নয় "
+msgstr "কোন কম্পোজ কী নয়"
 
 #. Type: select
 #. Description
@@ -859,8 +871,8 @@ msgid ""
 "the next few keystrokes as a combination in order to produce a character not "
 "found on the keyboard."
 msgstr ""
-" কীবোর্ডে নেই এমন ক্যারেক্টার লিখতে কম্পোজ কী (যা  মাল্টি_কী হিসাবেও পরিচিত) "
-"পরবর্তী কিছু কীষ্ট্রোকের কম্বিনেশন দিয়ে কম্পিউটারকে ইন্টারপ্রেট করতে বলে।"
+"কীবোর্ডে নেই এমন ক্যারেক্টার লিখতে কম্পোজ কী (যা মাল্টি_কী হিসাবেও পরিচিত) পরবর্তী "
+"কিছু কীষ্ট্রোকের কম্বিনেশন দিয়ে কম্পিউটারকে ইন্টারপ্রেট করতে বলে।"
 
 #. Type: select
 #. Description
@@ -1493,6 +1505,15 @@ msgstr "তুর্কি (F লেআউট)"
 #: ../keyboard-configuration.templates:16001
 msgid "Turkish (Q layout)"
 msgstr "তুর্কি (Q লেআউট)"
+
+# console-keymaps-acorn, Japanese
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:16001
+#, fuzzy
+msgid "Taiwanese"
+msgstr "জাপানি"
 
 #. Type: select
 #. Choices

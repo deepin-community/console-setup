@@ -13,9 +13,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: km\n"
 "Report-Msgid-Bugs-To: console-setup@packages.debian.org\n"
-"POT-Creation-Date: 2020-10-28 20:01+0000\n"
-"PO-Revision-Date: 2019-08-28 18:10+0000\n"
-"Last-Translator: leela <53352@protonmail.com>\n"
+"POT-Creation-Date: 2025-10-15 20:01+0000\n"
+"PO-Revision-Date: 2025-05-23 12:01+0000\n"
+"Last-Translator: Chou Chamnan <chou.chamnan.kh@gmail.com>\n"
 "Language-Team: Khmer <support@khmeros.info>\n"
 "Language: km\n"
 "MIME-Version: 1.0\n"
@@ -251,12 +251,13 @@ msgstr "ពុម្ពអក្សរ​សម្រាប់​កុងសូ
 #. relatively short.
 #. :sl3:
 #: ../console-setup.templates:6001
+#, fuzzy
 msgid ""
 "\"VGA\" has a traditional appearance and has medium coverage of "
 "international scripts. \"Fixed\" has a simplistic appearance and has better "
 "coverage of international scripts. \"Terminus\" may help to reduce eye "
 "fatigue, though some symbols have a similar aspect which may be a problem "
-"for programmers."
+"for programmers. \"DejaVu\" is suited to screens with HiDPI."
 msgstr ""
 "\"VGA\" មាន​រូបរាង​បន្ថែម និង​គម្រប​ឧបករណ៍​ផ្ទុក​របស់​ស្គ្រីប​អន្តរជាតិ ។ \"ថេរ\" មាន​រូបរាង​សាមញ្ញា "
 "និង​មាន​គម្រោង​ស្គ្រីប​អន្តរជាតិ​ល្អជាង ។ \"គុណភាព​បង្ហាញ\" ប្រហែលជា​ជួយ​កាត់​បន្ថយ​ភាព​លំបាក​របស់​ភ្នែក "
@@ -269,9 +270,11 @@ msgstr ""
 #. relatively short.
 #. :sl3:
 #: ../console-setup.templates:6001
+#, fuzzy
 msgid ""
 "If you prefer a bold version of the Terminus font, choose either "
-"TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
+"TerminusBold or DejaVuBold (if you use a framebuffer) or TerminusBoldVGA "
+"(otherwise)."
 msgstr ""
 "ប្រសិនបើ​​អ្នកពេញចិត្ត​កំណែ​ដិត​របស់​ពុម្ពអក្សរ Terminus ជ្រើស TerminusBold (ប្រសិនបើ​អ្នក​ប្រើ​"
 "សតិបណ្ដោះអាសន្ន) បើ​មិន​ដូច្នេះ​ទេ ប្រើ TerminusBoldVGA  ។"
@@ -424,9 +427,9 @@ msgid ""
 "XKBVARIANT=\"${XKBVARIANT}\".  This default value is based on the currently "
 "defined language/region and the settings in /etc/X11/xorg.conf."
 msgstr ""
-"តម្លៃ​លំនាំដើម​សម្រាប់​ប្លង់​ក្ដារចុច​គឺ XKBLAYOUT=\"${XKBLAYOUT}\" និងXKBVARIANT="
-"\"${XKBVARIANT}\" ។  តម្លៃ​លំនាំដើម​នេះ​មាន​មូលដ្ឋាន​លើ​តំបន់/ភាសា​ដែល​បាន​កំណត់​​បច្ចុប្បន្ន ហើយ​និង​នៅ​"
-"ក្នុង​​ការ​កំណត់​នៅ​ក្នុង /etc/X11/xorg.conf."
+"តម្លៃ​លំនាំដើម​សម្រាប់​ប្លង់​ក្ដារចុច​គឺ XKBLAYOUT=\"${XKBLAYOUT}\" "
+"និងXKBVARIANT=\"${XKBVARIANT}\" ។  តម្លៃ​លំនាំដើម​នេះ​មាន​មូលដ្ឋាន​លើ​តំបន់/ភាសា​ដែល​បាន​កំណត់​​"
+"បច្ចុប្បន្ន ហើយ​និង​នៅ​ក្នុង​​ការ​កំណត់​នៅ​ក្នុង /etc/X11/xorg.conf."
 
 #. Type: boolean
 #. Description
@@ -478,9 +481,9 @@ msgstr "រក្សាទុក​ជម្រើស​ក្ដារចុច
 #. :sl3:
 #: ../keyboard-configuration.templates:10001
 msgid ""
-"The default value for the options of the keyboard layout is XKBOPTIONS="
-"\"${XKBOPTIONS}\".  It is based on the currently defined language/region and "
-"the settings in /etc/X11/xorg.conf."
+"The default value for the options of the keyboard layout is "
+"XKBOPTIONS=\"${XKBOPTIONS}\".  It is based on the currently defined language/"
+"region and the settings in /etc/X11/xorg.conf."
 msgstr ""
 "តម្លៃ​លំនាំដើម​សម្រាប់​ជម្រើស​ប្លង់​ក្ដារចុច​គឺ XKBOPTIONS=\"${XKBOPTIONS}\" ។  វា​​ផ្អែក​លើ​តំបន់/"
 "ភាសា​ដែល​បាន​កំណត់​បច្ចុប្បន្ន និង​នៅ​ក្នុង​ការ​កំណត់ /etc/X11/xorg.conf."
@@ -579,6 +582,15 @@ msgstr "គ្រាប់ចុច Logo ខាង​ស្ដាំ"
 #: ../keyboard-configuration.templates:14001
 msgid "Menu key"
 msgstr "គ្រាប់ចុច​ម៉ឺនុយ"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:11001
+#, fuzzy
+#| msgid "Left Control+Left Shift"
+msgid "Left Alt+Left Shift"
+msgstr "គ្របា់ចុច​បញ្ជា(Ctrl+ ប្ដូរ(Shift) ខាង​ឆ្វេង"
 
 #. Type: select
 #. Choices
@@ -697,11 +709,18 @@ msgstr "អ្នក​​ត្រូវ​ការ​វិធី​មួយ
 #. Description
 #. :sl1:
 #: ../keyboard-configuration.templates:11002
+#, fuzzy
+#| msgid ""
+#| "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in "
+#| "the latter case, use the combination Shift+Caps Lock for normal Caps "
+#| "toggle). Alt+Shift is also a popular combination; it will however lose "
+#| "its usual behavior in Emacs and other programs that use it for specific "
+#| "needs."
 msgid ""
 "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in the "
-"latter case, use the combination Shift+Caps Lock for normal Caps toggle). Alt"
-"+Shift is also a popular combination; it will however lose its usual "
-"behavior in Emacs and other programs that use it for specific needs."
+"latter case, use the combination Shift+Caps Lock for normal Caps toggle). "
+"Left Alt+Left Shift is also a popular combination; it will however lose its "
+"usual behavior in Emacs and other programs that use it for specific needs."
 msgstr ""
 "គ្រាប់ចុច​ជំនួស (Alt) ឬ​ប្ដូរ​ជាប់ (Caps Lock) ​ជា​រឿយៗ​ត្រូវ​បាន​ជ្រើស​សម្រាប់​ហេតុផល ergonomic "
 "(នៅក្នុង​លក្ខណៈ​អក្សរ ប្រើ​បន្សំ​គ្រាប់ចុច​ប្ដូរ (Shift)+ ប្ដូរ​ជាប់ (Caps Lock) សម្រាប់​បិទ/បើក​ប្ដូរ​"
@@ -932,7 +951,7 @@ msgstr "បែលហ្សិក-ឡាតាំង១"
 #. :sl1:
 #: ../keyboard-configuration.templates:16001
 msgid "Berber (Latin)"
-msgstr ""
+msgstr "ប៊ឺរ (ឡាតាំង)"
 
 #. Type: select
 #. Choices
@@ -975,7 +994,7 @@ msgstr "ប៊ុលហ្គារី-phonetic"
 #. :sl1:
 #: ../keyboard-configuration.templates:16001
 msgid "Burmese"
-msgstr ""
+msgstr "ភូមា"
 
 #. Type: select
 #. Choices
@@ -1290,7 +1309,7 @@ msgstr "ភឺសៀន​​"
 #. :sl1:
 #: ../keyboard-configuration.templates:16001
 msgid "Philippines"
-msgstr ""
+msgstr "ហ្វីលីពីន"
 
 #. Type: select
 #. Choices
@@ -1395,7 +1414,7 @@ msgstr "ស្វីស អាល្លឺម៉ង់"
 #. :sl1:
 #: ../keyboard-configuration.templates:16001
 msgid "Tajik"
-msgstr ""
+msgstr "តាជីក"
 
 #. Type: select
 #. Choices
@@ -1423,7 +1442,7 @@ msgstr "ថៃ"
 #. :sl1:
 #: ../keyboard-configuration.templates:16001
 msgid "Tibetan"
-msgstr ""
+msgstr "ទីបេ"
 
 #. Type: select
 #. Choices
@@ -1438,6 +1457,14 @@ msgstr "ទួរគី (ប្លង់ F)"
 #: ../keyboard-configuration.templates:16001
 msgid "Turkish (Q layout)"
 msgstr "ទួរគី (ប្លង់ Q)"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:16001
+#, fuzzy
+msgid "Taiwanese"
+msgstr "ជប៉ុន"
 
 #. Type: select
 #. Choices

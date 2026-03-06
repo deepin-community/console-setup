@@ -84,7 +84,9 @@
               and 1m16x3222m), 1mTerminusBoldVGA 22m(sizes 1m8x14  22mand  1m8x1622m),  and  1mFixed0m
               (sizes   1m8x1322m,   1m8x1422m,   1m8x1522m,   1m8x16  22mand  1m8x1822m).   If  however
               1mCODESET22m=1mEthiopian22m, then the available font faces  are  1mGoha  22mand
-              1mGohaClassic22m, each in sizes 1m8x1222m, 1m8x14 22mand 1m8x1622m.
+              1mGohaClassic22m,  each  in  sizes  1m8x1222m,  1m8x14 22mand 1m8x1622m.  1mDejaVu 22mand
+              1mDejaVuBold 22m(sizes 1m30x1622m,  1m36x2022m,  1m43x2422m,  1m51x2822m,  1m59x3222m,  1m74x4022m,
+              1m89x48 22mand 1m118x6422m).
 
               Set  1mFONTFACE  22mand 1mFONTSIZE 22mto empty strings if you want to con-
               figure only the keyboard and  to  leave  the  console  font  un-

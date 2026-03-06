@@ -10,6 +10,7 @@
 #
 # Safir Secerovic <sapphire@linux.org.ba>, 2006.
 # Armin Besirovic <armin@linux.org.ba>, 2008.
+# Amar Tufo <bhllinux@gmail.com>, 2022.
 #
 # Translations from iso-codes:
 #   Alastair McKinstry <mckinstry@computer.org>, 2001,2002.
@@ -25,15 +26,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer_packages_po_sublevel1_bs\n"
 "Report-Msgid-Bugs-To: console-setup@packages.debian.org\n"
-"POT-Creation-Date: 2020-10-28 20:01+0000\n"
-"PO-Revision-Date: 2019-08-28 18:10+0000\n"
-"Last-Translator: leela <53352@protonmail.com>\n"
+"POT-Creation-Date: 2025-10-15 20:01+0000\n"
+"PO-Revision-Date: 2022-04-28 20:08+0000\n"
+"Last-Translator: Amar Tufo <bhllinux@gmail.com>\n"
 "Language-Team: Bosnian <lokal@linux.org.ba>\n"
 "Language: bs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: 3;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
 #. Type: text
 #. Description
@@ -267,12 +269,19 @@ msgstr "Izgled slova za konzolu:"
 #. relatively short.
 #. :sl3:
 #: ../console-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "\"VGA\" has a traditional appearance and has medium coverage of "
+#| "international scripts. \"Fixed\" has a simplistic appearance and has "
+#| "better coverage of international scripts. \"Terminus\" may help to reduce "
+#| "eye fatigue, though some symbols have a similar aspect which may be a "
+#| "problem for programmers."
 msgid ""
 "\"VGA\" has a traditional appearance and has medium coverage of "
 "international scripts. \"Fixed\" has a simplistic appearance and has better "
 "coverage of international scripts. \"Terminus\" may help to reduce eye "
 "fatigue, though some symbols have a similar aspect which may be a problem "
-"for programmers."
+"for programmers. \"DejaVu\" is suited to screens with HiDPI."
 msgstr ""
 "\"VGA\" ima tradicionalan izgled i osrednje pokriće internacionalnih "
 "skripti. \"Fixed\" ima jednostavan izgled i bolje pokriće internacionalnih "
@@ -286,9 +295,14 @@ msgstr ""
 #. relatively short.
 #. :sl3:
 #: ../console-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "If you prefer a bold version of the Terminus font, choose either "
+#| "TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
 msgid ""
 "If you prefer a bold version of the Terminus font, choose either "
-"TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
+"TerminusBold or DejaVuBold (if you use a framebuffer) or TerminusBoldVGA "
+"(otherwise)."
 msgstr ""
 "Ako preferirate deblju verziju Terminus slova, odaberite ili TerminusBold "
 "(ako koristite framebuffer) ili TeminusBoldVGA."
@@ -414,8 +428,8 @@ msgid ""
 "is defined as XKBLAYOUT=\"${XKBLAYOUT}\" and XKBVARIANT=\"${XKBVARIANT}\"."
 msgstr ""
 "Trenutni raspored tastera na tastaturi u konfiguracijskom fajlu /etc/default/"
-"keyboard je definiran sa XBKLAYOUT=\"${XKBLAYOUT}\" i XKBVARIANT="
-"\"${XKBVARIANT}\"."
+"keyboard je definiran sa XBKLAYOUT=\"${XKBLAYOUT}\" i "
+"XKBVARIANT=\"${XKBVARIANT}\"."
 
 #. Type: boolean
 #. Description
@@ -503,13 +517,13 @@ msgstr "Zadrži standardne postavke tastature (${XKBOPTIONS})?"
 #. :sl3:
 #: ../keyboard-configuration.templates:10001
 msgid ""
-"The default value for the options of the keyboard layout is XKBOPTIONS="
-"\"${XKBOPTIONS}\".  It is based on the currently defined language/region and "
-"the settings in /etc/X11/xorg.conf."
+"The default value for the options of the keyboard layout is "
+"XKBOPTIONS=\"${XKBOPTIONS}\".  It is based on the currently defined language/"
+"region and the settings in /etc/X11/xorg.conf."
 msgstr ""
-"Standardna vrijednost za postavke rasporeda tastera je XKBOPTIONS="
-"\"${XKBOPTIONS}\".  Bazirane su na trenutno definisanom jeziku/regionu i "
-"postavkama u /etc/X11/xorg.conf."
+"Standardna vrijednost za postavke rasporeda tastera je "
+"XKBOPTIONS=\"${XKBOPTIONS}\".  Bazirane su na trenutno definisanom jeziku/"
+"regionu i postavkama u /etc/X11/xorg.conf."
 
 #. Type: boolean
 #. Description
@@ -606,6 +620,15 @@ msgstr "Desni Logo taster"
 #: ../keyboard-configuration.templates:14001
 msgid "Menu key"
 msgstr "Meni taster"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:11001
+#, fuzzy
+#| msgid "Left Control+Left Shift"
+msgid "Left Alt+Left Shift"
+msgstr "Lijevi Control+Lijevi Shift"
 
 #. Type: select
 #. Choices
@@ -726,11 +749,18 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../keyboard-configuration.templates:11002
+#, fuzzy
+#| msgid ""
+#| "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in "
+#| "the latter case, use the combination Shift+Caps Lock for normal Caps "
+#| "toggle). Alt+Shift is also a popular combination; it will however lose "
+#| "its usual behavior in Emacs and other programs that use it for specific "
+#| "needs."
 msgid ""
 "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in the "
-"latter case, use the combination Shift+Caps Lock for normal Caps toggle). Alt"
-"+Shift is also a popular combination; it will however lose its usual "
-"behavior in Emacs and other programs that use it for specific needs."
+"latter case, use the combination Shift+Caps Lock for normal Caps toggle). "
+"Left Alt+Left Shift is also a popular combination; it will however lose its "
+"usual behavior in Emacs and other programs that use it for specific needs."
 msgstr ""
 "Desni Alt ili Caps Lock tipke su obično izabrani iz ergonomskih razloga (u "
 "drugom slučaju, koristite kombinaciju Shift+Caps Lock kao obični Caps "
@@ -882,8 +912,8 @@ msgid ""
 "the Control+period combination as a Compose key."
 msgstr ""
 "U tekstualnoj konzoli Compose tipka ne radi u Unicode modu. Ako niste u "
-"Unicode modu, bez obzira šta izaberete ovdje, možete uvijek koristiti Control"
-"+tačka kombinaciju kao Compose tipku."
+"Unicode modu, bez obzira šta izaberete ovdje, možete uvijek koristiti "
+"Control+tačka kombinaciju kao Compose tipku."
 
 #. Type: boolean
 #. Description
@@ -1471,6 +1501,14 @@ msgstr "Turski (F raspored)"
 #: ../keyboard-configuration.templates:16001
 msgid "Turkish (Q layout)"
 msgstr "Turski (Q raspored)"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:16001
+#, fuzzy
+msgid "Taiwanese"
+msgstr "Tajvan"
 
 #. Type: select
 #. Choices

@@ -13,6 +13,7 @@ keyboard_present () {
 
     [ -d /sys/bus/usb/devices ] || return 0
     for d in /sys/bus/usb/devices/*:*; do
+	[ -e "$d" ] || continue
 	class=$(cat "$d/bInterfaceClass") # 03 = Human Interface Device
 	subclass=$(cat "$d/bInterfaceSubClass") # 01 = Boot Interface Subclass
 	protocol=$(cat "$d/bInterfaceProtocol") # 01 = Keyboard
@@ -35,6 +36,8 @@ keyboard_present () {
     kbdpattern="$kbdpattern\|HIL keyboard"
     kbdpattern="$kbdpattern\|ADB keyboard"
     kbdpattern="$kbdpattern\|Sun Type"
+    kbdpattern="$kbdpattern\|Apple MTP keyboard"
+    kbdpattern="$kbdpattern\|Apple SPI Keyboard"
     kbdpattern="$kbdpattern\|bluetooth.*keyboard"
     if grep -i "$kbdpattern" /proc/bus/input/devices >/dev/null; then
 	return 0

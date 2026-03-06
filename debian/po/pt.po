@@ -7,7 +7,7 @@
 # Copyright (C) 2003 Software in the Public Interest, Inc.
 # Console-setup strings translations:
 # (identified by "./console-setup.templates")
-# Copyright (C) 2003-2019 Miguel Figueiredo <elmig@debianpt.org>
+# Copyright (C) 2003-2025 Miguel Figueiredo <elmig@debianpt.org>
 # This file is distributed under the same license as debian-installer.
 #
 #
@@ -18,13 +18,15 @@
 #   Filipe Maia <fmaia@gmx.net>, 2001.
 #   Alastair McKinstry <mckinstry@computer.org>, 2001.
 #   Miguel Figueiredo <elmig@debianpt.org>, 2005-2020
+#   Rui Branco - DebianPT <ruipb@debianpt.org>, 2017.
+#
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: console-setup@packages.debian.org\n"
-"POT-Creation-Date: 2020-10-28 20:01+0000\n"
-"PO-Revision-Date: 2020-10-30 10:52+0000\n"
+"POT-Creation-Date: 2025-10-15 20:01+0000\n"
+"PO-Revision-Date: 2025-12-24 18:05+0000\n"
 "Last-Translator:  Miguel Figueiredo <elmig@debianpt.org>\n"
 "Language-Team:  Portuguese <traduz@debianpt.org>\n"
 "Language: pt\n"
@@ -265,13 +267,13 @@ msgid ""
 "international scripts. \"Fixed\" has a simplistic appearance and has better "
 "coverage of international scripts. \"Terminus\" may help to reduce eye "
 "fatigue, though some symbols have a similar aspect which may be a problem "
-"for programmers."
+"for programmers. \"DejaVu\" is suited to screens with HiDPI."
 msgstr ""
 "\"VGA\" tem uma aparência tradicional e suporta medianamente os alfabetos "
 "internacionais. \"Fixed\" tem uma aparência simplista mas melhor suporte "
 "para alfabetos internacionais. \"Terminus\" pode ajudar a reduzir a fadiga "
 "ocular, embora alguns símbolos tenham aspecto semelhante, o que pode ser um "
-"problema para programadores."
+"problema para programadores. \"DejaVu\" é adequado para ecrãs com HiDPI."
 
 #. Type: select
 #. Description
@@ -282,10 +284,12 @@ msgstr ""
 #: ../console-setup.templates:6001
 msgid ""
 "If you prefer a bold version of the Terminus font, choose either "
-"TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
+"TerminusBold or DejaVuBold (if you use a framebuffer) or TerminusBoldVGA "
+"(otherwise)."
 msgstr ""
 "Se preferir a versão negrito do tipo de letra Terminus escolha TerminusBold "
-"(se usa framebuffer) ou TerminusBoldVGA (se não usa framebuffer)."
+"ou DejavuBold (se utilizar um framebuffer) ou TerminusBoldVGA (caso "
+"contrário)."
 
 #. Type: select
 #. Description
@@ -406,8 +410,8 @@ msgid ""
 "is defined as XKBLAYOUT=\"${XKBLAYOUT}\" and XKBVARIANT=\"${XKBVARIANT}\"."
 msgstr ""
 "A disposição actual do teclado no ficheiro de configuração /etc/default/"
-"keyboard está definido como  XKBLAYOUT=\"${XKBLAYOUT}\" e XKBVARIANT="
-"\"${XKBVARIANT}\"."
+"keyboard está definido como  XKBLAYOUT=\"${XKBLAYOUT}\" e "
+"XKBVARIANT=\"${XKBVARIANT}\"."
 
 #. Type: boolean
 #. Description
@@ -494,13 +498,13 @@ msgstr "Manter as opções padrão do teclado (${XKBOPTIONS})?"
 #. :sl3:
 #: ../keyboard-configuration.templates:10001
 msgid ""
-"The default value for the options of the keyboard layout is XKBOPTIONS="
-"\"${XKBOPTIONS}\".  It is based on the currently defined language/region and "
-"the settings in /etc/X11/xorg.conf."
+"The default value for the options of the keyboard layout is "
+"XKBOPTIONS=\"${XKBOPTIONS}\".  It is based on the currently defined language/"
+"region and the settings in /etc/X11/xorg.conf."
 msgstr ""
-"O valor padrão para as opções da disposição do teclado é XKBOPTIONS="
-"\"${XKBOPTIONS}\". É baseada na definição actual de idioma/região e "
-"definições em /etc/X11/xorg.conf."
+"O valor padrão para as opções da disposição do teclado é "
+"XKBOPTIONS=\"${XKBOPTIONS}\". É baseada na definição actual de idioma/região "
+"e definições em /etc/X11/xorg.conf."
 
 #. Type: boolean
 #. Description
@@ -598,6 +602,13 @@ msgstr "Tecla Logotipo Direito"
 #: ../keyboard-configuration.templates:14001
 msgid "Menu key"
 msgstr "Tecla Menu"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:11001
+msgid "Left Alt+Left Shift"
+msgstr "Left Alt+Left Shift"
 
 #. Type: select
 #. Choices
@@ -720,14 +731,15 @@ msgstr ""
 #: ../keyboard-configuration.templates:11002
 msgid ""
 "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in the "
-"latter case, use the combination Shift+Caps Lock for normal Caps toggle). Alt"
-"+Shift is also a popular combination; it will however lose its usual "
-"behavior in Emacs and other programs that use it for specific needs."
+"latter case, use the combination Shift+Caps Lock for normal Caps toggle). "
+"Left Alt+Left Shift is also a popular combination; it will however lose its "
+"usual behavior in Emacs and other programs that use it for specific needs."
 msgstr ""
-"AltGr ou Caps Lock são escolhidos muitas vezes por razões ergonómicas (neste "
-"último caso para ligar as maiúsculas usa-se Shift+Caps Lock). Alt+Shift é "
-"também uma combinação popular; no entanto perderá o seu significado habitual "
-"no Emacs e noutros programas que fazem uso dela."
+"As teclas Alt Direito ou Caps Lock são muitas vezes escolhidas por razões "
+"ergonómicas (neste último caso, utilize a combinação Shift+Caps lock para "
+"comutação normal de Caps). Alt Esquerdo+Shift Esquerdo também é uma "
+"combinação popular; no entanto perderá o seu comportamento habitual em Emacs "
+"e noutros programas que fazem uso dela."
 
 #. Type: select
 #. Description
@@ -1460,6 +1472,13 @@ msgstr "Turco (layout F)"
 #: ../keyboard-configuration.templates:16001
 msgid "Turkish (Q layout)"
 msgstr "Turco (layout Q)"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:16001
+msgid "Taiwanese"
+msgstr "Taiwanês"
 
 #. Type: select
 #. Choices

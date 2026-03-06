@@ -31,7 +31,7 @@ case "$LANGUAGE" in
 esac
 
 FONT=
-if lsmod | grep -q speakup ; then
+if lsmod 2> /dev/null | grep -q speakup ; then
 	# Try to load full font for the screen reader
 	FONT="`eval echo /usr/share/consolefonts/Full$CODESET*`"
 fi

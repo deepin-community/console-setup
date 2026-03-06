@@ -17,8 +17,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: console-setup@packages.debian.org\n"
-"POT-Creation-Date: 2020-10-28 20:01+0000\n"
-"PO-Revision-Date: 2019-08-28 18:10+0000\n"
+"POT-Creation-Date: 2025-10-15 20:01+0000\n"
+"PO-Revision-Date: 2025-05-17 19:56+0000\n"
 "Last-Translator: leela <53352@protonmail.com>\n"
 "Language-Team: Sinhala <info@hanthana.org>\n"
 "Language: si\n"
@@ -255,17 +255,18 @@ msgstr "කොන්සෝලය සඳහා අකුර"
 #. relatively short.
 #. :sl3:
 #: ../console-setup.templates:6001
+#, fuzzy
 msgid ""
 "\"VGA\" has a traditional appearance and has medium coverage of "
 "international scripts. \"Fixed\" has a simplistic appearance and has better "
 "coverage of international scripts. \"Terminus\" may help to reduce eye "
 "fatigue, though some symbols have a similar aspect which may be a problem "
-"for programmers."
+"for programmers. \"DejaVu\" is suited to screens with HiDPI."
 msgstr ""
 "\"VGA\" සතුව සාම්ප්‍රදායික පෙනුමක් පවතින අතර අන්තර්ජාතික විධානාවලි සඳහා මධ්‍යම  ආවර්ණයක් පවතී. "
-"\"ස්ථිර\" සතුව සරල පෙනුමක් පවතින අතර අන්තර්ජාතික විධානාවලි සඳහා හොඳ ආවර්ණයක් දක්වයි. \"අන්තය"
-"\" ඇතැම් විට ඇස් විඩාව අඩු කිරීමට උපකාරී විය හැක, ඇතැම් සංඛේතයන් සතුව කේතරචකයන්ට ගැටළුවක් "
-"විය හැකි පරිදි සමාන දසුන් පැවතිය හැක. "
+"\"ස්ථිර\" සතුව සරල පෙනුමක් පවතින අතර අන්තර්ජාතික විධානාවලි සඳහා හොඳ ආවර්ණයක් දක්වයි. "
+"\"අන්තය\" ඇතැම් විට ඇස් විඩාව අඩු කිරීමට උපකාරී විය හැක, ඇතැම් සංඛේතයන් සතුව කේතරචකයන්ට "
+"ගැටළුවක් විය හැකි පරිදි සමාන දසුන් පැවතිය හැක."
 
 #. Type: select
 #. Description
@@ -274,9 +275,11 @@ msgstr ""
 #. relatively short.
 #. :sl3:
 #: ../console-setup.templates:6001
+#, fuzzy
 msgid ""
 "If you prefer a bold version of the Terminus font, choose either "
-"TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
+"TerminusBold or DejaVuBold (if you use a framebuffer) or TerminusBoldVGA "
+"(otherwise)."
 msgstr ""
 "ඔබ අන්ත අකුරු වල තද සංස්කරණයකට කැමති නම්, අන්තතද (රාමුබෆර යොදාගනී නම්) හෝ අන්තතදVGA "
 "තෝරන්න"
@@ -299,7 +302,7 @@ msgid ""
 "Please select the size of the font for the console. For reference, the font "
 "used when the computer boots has size 8x16."
 msgstr ""
-"කරුණාකර කොන්සෝලය සඳහා අකුරු ප්‍රමාණයක් තෝරන්න, උදාහරණයක් ලෙස පරිගණයක ආරම්භ  වන විට පවතින "
+"කරුණාකර කොන්සෝලය සඳහා අකුරු ප්‍රමාණයක් තෝරන්න. උදාහරණයක් ලෙස පරිගණයක ආරම්භ  වන විට පවතින "
 "අකුරේ ප්‍රමාණය 8x16 වීම ගත හැක."
 
 #. Type: select
@@ -398,8 +401,8 @@ msgid ""
 "The current keyboard layout in the configuration file /etc/default/keyboard "
 "is defined as XKBLAYOUT=\"${XKBLAYOUT}\" and XKBVARIANT=\"${XKBVARIANT}\"."
 msgstr ""
-"දැ/ට ඇති යතුරුපුවතුව etc/default/keyboard ගොනුවේ දක්වා ඇත්තේXKBLAYOUT="
-"\"${XKBLAYOUT}\" හා XKBVARIANT=\"${XKBVARIANT}\" ලෙසයි."
+"දැ/ට ඇති යතුරුපුවතුව etc/default/keyboard ගොනුවේ දක්වා "
+"ඇත්තේXKBLAYOUT=\"${XKBLAYOUT}\" හා XKBVARIANT=\"${XKBVARIANT}\" ලෙසයි."
 
 #. Type: boolean
 #. Description
@@ -429,9 +432,9 @@ msgid ""
 "XKBVARIANT=\"${XKBVARIANT}\".  This default value is based on the currently "
 "defined language/region and the settings in /etc/X11/xorg.conf."
 msgstr ""
-"යතුරුපුවරු සැකැස්ම සඳහා පෙරනිමි අගය වනුයේ XKBLAYOUT=\"${XKBLAYOUT}\" හා XKBVARIANT="
-"\"${XKBVARIANT}\".  මෙම පෙරනිමි අගය දැනට යොදා ඇති භාශා/ප්‍රදේශය හා  /etc/X11/xorg."
-"conf හි සැකසුම් මත පදනම් වේ."
+"යතුරුපුවරු සැකැස්ම සඳහා පෙරනිමි අගය වනුයේ XKBLAYOUT=\"${XKBLAYOUT}\" හා "
+"XKBVARIANT=\"${XKBVARIANT}\".  මෙම පෙරනිමි අගය දැනට යොදා ඇති භාශා/ප්‍රදේශය හා  /"
+"etc/X11/xorg.conf හි සැකසුම් මත පදනම් වේ."
 
 #. Type: boolean
 #. Description
@@ -459,8 +462,8 @@ msgid ""
 "The current keyboard options in the configuration file /etc/default/keyboard "
 "are defined as XKBOPTIONS=\"${XKBOPTIONS}\"."
 msgstr ""
-"/etc/default/keyboard සැකසුම් ගොනුවේ ඇති වත්මන් යතුරුපුවරු අභිප්‍රේත XKBOPTIONS="
-"\"${XKBOPTIONS}\" ලෙස හැඳින්වේ."
+"/etc/default/keyboard සැකසුම් ගොනුවේ ඇති වත්මන් යතුරුපුවරු අභිප්‍රේත "
+"XKBOPTIONS=\"${XKBOPTIONS}\" ලෙස හැඳින්වේ."
 
 #. Type: boolean
 #. Description
@@ -484,9 +487,9 @@ msgstr "පෙරනිමි යතුරුපුවරු අභිප්‍�
 #. :sl3:
 #: ../keyboard-configuration.templates:10001
 msgid ""
-"The default value for the options of the keyboard layout is XKBOPTIONS="
-"\"${XKBOPTIONS}\".  It is based on the currently defined language/region and "
-"the settings in /etc/X11/xorg.conf."
+"The default value for the options of the keyboard layout is "
+"XKBOPTIONS=\"${XKBOPTIONS}\".  It is based on the currently defined language/"
+"region and the settings in /etc/X11/xorg.conf."
 msgstr ""
 "යතුරුපුවරු සැකැස්මේ අභිප්‍රේත සඳහා වන පෙරනිමි අගය XKBOPTIONS=\"${XKBOPTIONS}\" යි. එය "
 "දැනට යොදා ඇති භාශා/ප්‍රදේශ හා /etc/X11/xorg.conf සැකසුම් මත පදනම් වේ."
@@ -585,6 +588,15 @@ msgstr "දකුණු ලාංඡය යතුර"
 #: ../keyboard-configuration.templates:14001
 msgid "Menu key"
 msgstr "මෙනු යතුර"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:11001
+#, fuzzy
+#| msgid "Left Control+Left Shift"
+msgid "Left Alt+Left Shift"
+msgstr "වම් Control+වම් Shift"
 
 #. Type: select
 #. Choices
@@ -703,11 +715,18 @@ msgstr "ඔබට යතුරුපුවරුව ජාතික සැකැ
 #. Description
 #. :sl1:
 #: ../keyboard-configuration.templates:11002
+#, fuzzy
+#| msgid ""
+#| "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in "
+#| "the latter case, use the combination Shift+Caps Lock for normal Caps "
+#| "toggle). Alt+Shift is also a popular combination; it will however lose "
+#| "its usual behavior in Emacs and other programs that use it for specific "
+#| "needs."
 msgid ""
 "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in the "
-"latter case, use the combination Shift+Caps Lock for normal Caps toggle). Alt"
-"+Shift is also a popular combination; it will however lose its usual "
-"behavior in Emacs and other programs that use it for specific needs."
+"latter case, use the combination Shift+Caps Lock for normal Caps toggle). "
+"Left Alt+Left Shift is also a popular combination; it will however lose its "
+"usual behavior in Emacs and other programs that use it for specific needs."
 msgstr ""
 "දකුණු Alt යතුර හෝ Caps අගුළු යතුර බොහෝවිට කාර්යක්‍ෂමතා හේතූන් සඳහා යොදාගැනේ (දෙවන කරුණේදී, "
 "Shift+Caps අගුළු යතුරු සංයුක්තය සාමාන්‍ය Caps මාරුවට යොදාගැනේ). Alt +Shift යනුද ප්‍රකට "
@@ -758,8 +777,8 @@ msgid ""
 "Latin mode."
 msgstr ""
 "යතුරු පුවරුව ජාතික ප්‍රකාරයේ තිබෙන විට කිසිවෙකුට ලතින් අකුරු කිහිපයක් ලිවීමට ඇවැසි වූයේ නම් , "
-"තාවකාලිකව ලතින් ප්‍රකාරයට මාරුවීම වඩාත් සුදුසු වේ. තෝරාගත් යතුර ඔබා සිටින තෙක් යතුරුපුවරුව එම ප්‍"
-"රකාරයේ පවතිනු ඇති අතර. යතුරු පුවරුව ලතින් ප්‍රකාරයේ ඇති විට ජාතික ප්‍රකාරයේ අකුරු ඇතුළත් කිරීම "
+"තාවකාලිකව ලතින් ප්‍රකාරයට මාරුවීම වඩාත් සුදුසු වේ. තෝරාගත් යතුර ඔබා සිටින තෙක් යතුරුපුවරුව එම "
+"ප්‍රකාරයේ පවතිනු ඇති අතර. යතුරු පුවරුව ලතින් ප්‍රකාරයේ ඇති විට ජාතික ප්‍රකාරයේ අකුරු ඇතුළත් කිරීම "
 "සඳහාද එම යතුර භාවිත කල හැක."
 
 #. Type: select
@@ -1441,6 +1460,14 @@ msgstr "තුර්කි (F සැකැස්ම)"
 #: ../keyboard-configuration.templates:16001
 msgid "Turkish (Q layout)"
 msgstr "තුර්කි (Q සැකැස්ම)"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:16001
+#, fuzzy
+msgid "Taiwanese"
+msgstr "ජපාන"
 
 #. Type: select
 #. Choices

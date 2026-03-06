@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: console-setup@packages.debian.org\n"
-"POT-Creation-Date: 2020-10-28 20:01+0000\n"
+"POT-Creation-Date: 2025-10-15 20:01+0000\n"
 "PO-Revision-Date: 2019-08-28 18:09+0000\n"
 "Last-Translator: leela <53352@protonmail.com>\n"
 "Language-Team: Amharic <linux-ethiopia@googlegroups.com>\n"
@@ -253,12 +253,19 @@ msgstr "የኮንሶል የፊደል ቅርፅ፦"
 #. relatively short.
 #. :sl3:
 #: ../console-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "\"VGA\" has a traditional appearance and has medium coverage of "
+#| "international scripts. \"Fixed\" has a simplistic appearance and has "
+#| "better coverage of international scripts. \"Terminus\" may help to reduce "
+#| "eye fatigue, though some symbols have a similar aspect which may be a "
+#| "problem for programmers."
 msgid ""
 "\"VGA\" has a traditional appearance and has medium coverage of "
 "international scripts. \"Fixed\" has a simplistic appearance and has better "
 "coverage of international scripts. \"Terminus\" may help to reduce eye "
 "fatigue, though some symbols have a similar aspect which may be a problem "
-"for programmers."
+"for programmers. \"DejaVu\" is suited to screens with HiDPI."
 msgstr ""
 "\"VGA\" ተለምዷዊ መልክ ያለው ሲሆን የያዘው ዓለም አቀፍ ፊደላት መጠን መሃከለኛ ነው። \"Fixed\" ቀለል ያለ "
 "ሲሆን ብዙ ዓለም አቀፍ ፊደላትን ይዟል።  \"Terminus\" የዐይን ድክመትን ሊቀንስ ይችላል። ግን አንዳንድ ፊደላት "
@@ -271,9 +278,14 @@ msgstr ""
 #. relatively short.
 #. :sl3:
 #: ../console-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "If you prefer a bold version of the Terminus font, choose either "
+#| "TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
 msgid ""
 "If you prefer a bold version of the Terminus font, choose either "
-"TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
+"TerminusBold or DejaVuBold (if you use a framebuffer) or TerminusBoldVGA "
+"(otherwise)."
 msgstr ""
 "ጎላ ያለ የተርሚነስ ፊደል TerminusBoldን ይምረጡ (framebuffer የሚጠቀሙ ከሆነ።) ያለዚያ "
 "TerminusBoldVGA ይምረጡ:"
@@ -474,9 +486,9 @@ msgstr ""
 #. :sl3:
 #: ../keyboard-configuration.templates:10001
 msgid ""
-"The default value for the options of the keyboard layout is XKBOPTIONS="
-"\"${XKBOPTIONS}\".  It is based on the currently defined language/region and "
-"the settings in /etc/X11/xorg.conf."
+"The default value for the options of the keyboard layout is "
+"XKBOPTIONS=\"${XKBOPTIONS}\".  It is based on the currently defined language/"
+"region and the settings in /etc/X11/xorg.conf."
 msgstr ""
 
 #. Type: boolean
@@ -574,6 +586,15 @@ msgstr "ቀኝ Logo key"
 #: ../keyboard-configuration.templates:14001
 msgid "Menu key"
 msgstr "ምናሌ ቁልፍ"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:11001
+#, fuzzy
+#| msgid "Left Control+Left Shift"
+msgid "Left Alt+Left Shift"
+msgstr "ግራ Control+ግራ Shift"
 
 #. Type: select
 #. Choices
@@ -692,11 +713,18 @@ msgstr "በቁልፍ ገበታው ላይ በብሔራዊና  በላቲን ፊደ
 #. Description
 #. :sl1:
 #: ../keyboard-configuration.templates:11002
+#, fuzzy
+#| msgid ""
+#| "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in "
+#| "the latter case, use the combination Shift+Caps Lock for normal Caps "
+#| "toggle). Alt+Shift is also a popular combination; it will however lose "
+#| "its usual behavior in Emacs and other programs that use it for specific "
+#| "needs."
 msgid ""
 "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in the "
-"latter case, use the combination Shift+Caps Lock for normal Caps toggle). Alt"
-"+Shift is also a popular combination; it will however lose its usual "
-"behavior in Emacs and other programs that use it for specific needs."
+"latter case, use the combination Shift+Caps Lock for normal Caps toggle). "
+"Left Alt+Left Shift is also a popular combination; it will however lose its "
+"usual behavior in Emacs and other programs that use it for specific needs."
 msgstr ""
 "የእርግን ቀኝ Alt ወይም Caps Lock ቁልፎች keys በአብዛኛው ለምቾት ሲባል ጥቅም ላይ ይውላሉ። (የኋለኛውን ወደ "
 "ተለምዶው ለመቀየር Shift+Capsን ይጠቀሙ). Alt+Shift እንዲሁ ተወዳጅ ቅንብር ነው። ነገርግን በEmacsና "
@@ -1416,6 +1444,15 @@ msgstr "ቱርክኛ  (F layout)"
 #: ../keyboard-configuration.templates:16001
 msgid "Turkish (Q layout)"
 msgstr "ቱርክኛ  (Q layout)"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:16001
+#, fuzzy
+#| msgid "Japanese"
+msgid "Taiwanese"
+msgstr "ጃፓናዊ"
 
 #. Type: select
 #. Choices

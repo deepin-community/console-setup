@@ -12,9 +12,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer sublevel1\n"
 "Report-Msgid-Bugs-To: console-setup@packages.debian.org\n"
-"POT-Creation-Date: 2020-10-28 20:01+0000\n"
-"PO-Revision-Date: 2021-01-22 00:39+0000\n"
-"Last-Translator: Selyan Sliman Amiri <selyan.kab@gmail.com>\n"
+"POT-Creation-Date: 2025-10-15 20:01+0000\n"
+"PO-Revision-Date: 2025-11-09 22:12+0000\n"
+"Last-Translator: Azwaw <azwaw10@proton.me>\n"
 "Language-Team: Kabyle <kab@li.org>\n"
 "Language: kab\n"
 "MIME-Version: 1.0\n"
@@ -260,12 +260,13 @@ msgid ""
 "international scripts. \"Fixed\" has a simplistic appearance and has better "
 "coverage of international scripts. \"Terminus\" may help to reduce eye "
 "fatigue, though some symbols have a similar aspect which may be a problem "
-"for programmers."
+"for programmers. \"DejaVu\" is suited to screens with HiDPI."
 msgstr ""
 "\"VGA\" ɣur-s udem ansayan akked tduli tallemast n yiskripten igraɣlanen. "
-"\"Usbiḍ\" ɣur-s udem afessasakked tduli meqqren n yiskriptenigraɣlanen. "
-"\"Terminus\" izmer ad iɛiwen deg usenɣesn ɛeyyu n wallen, xas ma kra n "
-"yizamulen iyettemcabin ayen ara d-yeglun s kra n wuguren i yineflayen."
+"\"Usbiḍ\" ɣur-s udem afessas akked tduli meqqren n yiskripten igraɣlanen. "
+"\"Terminus\" izmer ad iɛiwen deg usenɣes n ɛeyyu n wallen, xas ma kra n "
+"yizamulen i yettemcabin ayen ara d-yeglun s kra n wuguren i yineflayen. "
+"\"DejaVu\" iwulem igilalen i yellan s HiDPI."
 
 #. Type: select
 #. Description
@@ -276,10 +277,12 @@ msgstr ""
 #: ../console-setup.templates:6001
 msgid ""
 "If you prefer a bold version of the Terminus font, choose either "
-"TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
+"TerminusBold or DejaVuBold (if you use a framebuffer) or TerminusBoldVGA "
+"(otherwise)."
 msgstr ""
-"Ma yella tesmenyafeḍ lqem tuzert n tsefsit Terminus, fren TerminusBold (ma "
-"yella tesqedceḍ framebuffer) neɣ TerminusBoldVGA (mgal ayenni)."
+"Ma yella tesmenyafeḍ lqem tuzert n tsefsit Terminus, fren TerminusBold neɣ "
+"DejaVuBold (ma yella tesqedceḍ framebuffer) neɣ TerminusBoldVGA (mgal "
+"ayenni)."
 
 #. Type: select
 #. Description
@@ -429,9 +432,9 @@ msgid ""
 "XKBVARIANT=\"${XKBVARIANT}\".  This default value is based on the currently "
 "defined language/region and the settings in /etc/X11/xorg.conf."
 msgstr ""
-"Azal amezwer i tneɣruft n unasiw d XKBLAYOUT=\"${XKBLAYOUT}\" d XKBVARIANT="
-"\"${XKBVARIANT}\".  Azal-a amezwer yebna ɣef tutlayt/tamurt yettusbadun akka "
-"tura d yiɣewwaren deg /rtg/X11/xorg.conf."
+"Azal amezwer i tneɣruft n unasiw d XKBLAYOUT=\"${XKBLAYOUT}\" d "
+"XKBVARIANT=\"${XKBVARIANT}\".  Azal-a amezwer yebna ɣef tutlayt/tamurt "
+"yettusbadun akka tura d yiɣewwaren deg /rtg/X11/xorg.conf."
 
 #. Type: boolean
 #. Description
@@ -485,13 +488,13 @@ msgstr "Eǧǧ tixtiṛiyin n unasiw timezwer (${XKBOPTIONS})?"
 #. :sl3:
 #: ../keyboard-configuration.templates:10001
 msgid ""
-"The default value for the options of the keyboard layout is XKBOPTIONS="
-"\"${XKBOPTIONS}\".  It is based on the currently defined language/region and "
-"the settings in /etc/X11/xorg.conf."
+"The default value for the options of the keyboard layout is "
+"XKBOPTIONS=\"${XKBOPTIONS}\".  It is based on the currently defined language/"
+"region and the settings in /etc/X11/xorg.conf."
 msgstr ""
-"Azal amezwer i textiṛiyin n tneɣruft n unasiw d XKBOPTIONS="
-"\"${XKBOPTIONS}\".  Tebna ɣef tutlayt/tamurt tamirant yettusbadun akked "
-"yiɣewwaren deg /etc/X11/xorg.conf."
+"Azal amezwer i textiṛiyin n tneɣruft n unasiw d "
+"XKBOPTIONS=\"${XKBOPTIONS}\".  Tebna ɣef tutlayt/tamurt tamirant yettusbadun "
+"akked yiɣewwaren deg /etc/X11/xorg.conf."
 
 #. Type: boolean
 #. Description
@@ -589,6 +592,13 @@ msgstr "Tasarut n ulugu tayeffust"
 #: ../keyboard-configuration.templates:14001
 msgid "Menu key"
 msgstr "Tasarut n wumuɣ"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:11001
+msgid "Left Alt+Left Shift"
+msgstr "Alt azelmaḍ+Shift azelmaḍ"
 
 #. Type: select
 #. Choices
@@ -711,14 +721,14 @@ msgstr ""
 #: ../keyboard-configuration.templates:11002
 msgid ""
 "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in the "
-"latter case, use the combination Shift+Caps Lock for normal Caps toggle). Alt"
-"+Shift is also a popular combination; it will however lose its usual "
-"behavior in Emacs and other programs that use it for specific needs."
+"latter case, use the combination Shift+Caps Lock for normal Caps toggle). "
+"Left Alt+Left Shift is also a popular combination; it will however lose its "
+"usual behavior in Emacs and other programs that use it for specific needs."
 msgstr ""
 "Tiqeffalin Right Alt neɣ Caps Lock zgant ttufernent i ssebbat n unagrahal "
 "(deg tegnit-a taneggarut, seqdec tuddsa Shift+Caps Lock i uqluqel amagnu n "
-"Caps). Alt+Shift d tuddsa daɣen yettwassnen,; ad as-iruh wudem-is i nennum "
-"deg Emacs d wahilen ara tt-iseqdacen i yisuturen usdiden."
+"Caps). Alt azelmaḍ+azlmaḍ d tuddsa daɣen yettwassnen,; ad as-iruh wudem-is i "
+"nennum deg Emacs d wahilen ara tt-iseqdacen i yisuturen usdiden."
 
 #. Type: select
 #. Description
@@ -1450,6 +1460,13 @@ msgstr "Taturkit (taneɣruft F)"
 #: ../keyboard-configuration.templates:16001
 msgid "Turkish (Q layout)"
 msgstr "Taturkit (taneɣruft Q)"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:16001
+msgid "Taiwanese"
+msgstr "Taṭaywanit"
 
 #. Type: select
 #. Choices

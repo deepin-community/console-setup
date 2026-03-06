@@ -27,7 +27,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: di-sublevel1_eu\n"
 "Report-Msgid-Bugs-To: console-setup@packages.debian.org\n"
-"POT-Creation-Date: 2020-10-28 20:01+0000\n"
+"POT-Creation-Date: 2025-10-15 20:01+0000\n"
 "PO-Revision-Date: 2022-06-09 19:45+0000\n"
 "Last-Translator: Gontzal Manuel Pujana Onaindia <thadahdenyse@gmail.com>\n"
 "Language-Team: Basque <librezale@librezale.eus>\n"
@@ -265,12 +265,19 @@ msgstr "Kontsolaren letra-tipoa:"
 #. relatively short.
 #. :sl3:
 #: ../console-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "\"VGA\" has a traditional appearance and has medium coverage of "
+#| "international scripts. \"Fixed\" has a simplistic appearance and has "
+#| "better coverage of international scripts. \"Terminus\" may help to reduce "
+#| "eye fatigue, though some symbols have a similar aspect which may be a "
+#| "problem for programmers."
 msgid ""
 "\"VGA\" has a traditional appearance and has medium coverage of "
 "international scripts. \"Fixed\" has a simplistic appearance and has better "
 "coverage of international scripts. \"Terminus\" may help to reduce eye "
 "fatigue, though some symbols have a similar aspect which may be a problem "
-"for programmers."
+"for programmers. \"DejaVu\" is suited to screens with HiDPI."
 msgstr ""
 "\"VGA\" itxura tradizionala da eta grafia internazionalen onarpen ertaina "
 "du. \"Fixed\"-ek itxura sinpleagoa du eta grafia internazionalen onarpen "
@@ -285,9 +292,14 @@ msgstr ""
 #. relatively short.
 #. :sl3:
 #: ../console-setup.templates:6001
+#, fuzzy
+#| msgid ""
+#| "If you prefer a bold version of the Terminus font, choose either "
+#| "TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
 msgid ""
 "If you prefer a bold version of the Terminus font, choose either "
-"TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
+"TerminusBold or DejaVuBold (if you use a framebuffer) or TerminusBoldVGA "
+"(otherwise)."
 msgstr ""
 "Terminus letra-tipoaren bertsio lodia nahiago baduzu hautatu TerminusBold "
 "(framebuffer erabiltzen baduzu) edo TerminusBoldVGA (bestela)."
@@ -409,8 +421,9 @@ msgid ""
 "The current keyboard layout in the configuration file /etc/default/keyboard "
 "is defined as XKBLAYOUT=\"${XKBLAYOUT}\" and XKBVARIANT=\"${XKBVARIANT}\"."
 msgstr ""
-"Uneko teklatuaren diseinua XKBLAYOUT=\"${XKBLAYOUT}\" eta XKBVARIANT="
-"\"${XKBVARIANT}\" bezala ezarrita dago /etc/default/keyboard fitxategian."
+"Uneko teklatuaren diseinua XKBLAYOUT=\"${XKBLAYOUT}\" eta "
+"XKBVARIANT=\"${XKBVARIANT}\" bezala ezarrita dago /etc/default/keyboard "
+"fitxategian."
 
 #. Type: boolean
 #. Description
@@ -497,13 +510,13 @@ msgstr "Mantendu teklatuaren aukera lehenetsiak (${XKBOPTIONS})?"
 #. :sl3:
 #: ../keyboard-configuration.templates:10001
 msgid ""
-"The default value for the options of the keyboard layout is XKBOPTIONS="
-"\"${XKBOPTIONS}\".  It is based on the currently defined language/region and "
-"the settings in /etc/X11/xorg.conf."
+"The default value for the options of the keyboard layout is "
+"XKBOPTIONS=\"${XKBOPTIONS}\".  It is based on the currently defined language/"
+"region and the settings in /etc/X11/xorg.conf."
 msgstr ""
-"Teklatuaren diseinuaren aukeren balio lehenetsia XKBOPTIONS="
-"\"${XKBOPTIONS}\" da. Unean definitutako hizkuntza/eskualdea eta /etc/X11/"
-"xorg.conf fitxategiko ezarpenetan oinarritzen da."
+"Teklatuaren diseinuaren aukeren balio lehenetsia "
+"XKBOPTIONS=\"${XKBOPTIONS}\" da. Unean definitutako hizkuntza/eskualdea eta /"
+"etc/X11/xorg.conf fitxategiko ezarpenetan oinarritzen da."
 
 #. Type: boolean
 #. Description
@@ -601,6 +614,15 @@ msgstr "Eskuineko Logotipoa tekla"
 #: ../keyboard-configuration.templates:14001
 msgid "Menu key"
 msgstr "Menua tekla"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:11001
+#, fuzzy
+#| msgid "Left Control+Left Shift"
+msgid "Left Alt+Left Shift"
+msgstr "Ezkerreko Ktrl + ezkerreko Maius"
 
 #. Type: select
 #. Choices
@@ -721,11 +743,18 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../keyboard-configuration.templates:11002
+#, fuzzy
+#| msgid ""
+#| "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in "
+#| "the latter case, use the combination Shift+Caps Lock for normal Caps "
+#| "toggle). Alt+Shift is also a popular combination; it will however lose "
+#| "its usual behavior in Emacs and other programs that use it for specific "
+#| "needs."
 msgid ""
 "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in the "
-"latter case, use the combination Shift+Caps Lock for normal Caps toggle). Alt"
-"+Shift is also a popular combination; it will however lose its usual "
-"behavior in Emacs and other programs that use it for specific needs."
+"latter case, use the combination Shift+Caps Lock for normal Caps toggle). "
+"Left Alt+Left Shift is also a popular combination; it will however lose its "
+"usual behavior in Emacs and other programs that use it for specific needs."
 msgstr ""
 "Arrazoi ergonomikoak direla eta aukeratu ohi dira Eskuineko Alt edo Blok. "
 "Maius teklak (azken kasuan, erabili Maius+Blokeatu Maiuskulak tamaina "
@@ -1467,6 +1496,14 @@ msgstr "Turkiera (F diseinua)"
 #: ../keyboard-configuration.templates:16001
 msgid "Turkish (Q layout)"
 msgstr "Turkiera (Q diseinua)"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:16001
+#, fuzzy
+msgid "Taiwanese"
+msgstr "Tailandia"
 
 #. Type: select
 #. Choices

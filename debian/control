@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
 Uploaders: Anton Zinoviev <zinoviev@debian.org>
 Build-Depends-Indep: xkb-data (>= 1.6), locales-all, sharutils
-Build-Depends: perl, debhelper (>= 9.20160709), po-debconf, libxml-parser-perl, bdfresize, liblocale-gettext-perl, unifont, unifont-bin
+Build-Depends: perl, debhelper (>= 9.20160709), po-debconf, libxml-parser-perl, bdfresize, liblocale-gettext-perl, unifont, unifont-bin, otf2bdf, fonts-dejavu-mono
 Standards-Version: 3.9.1
 Vcs-Browser: https://salsa.debian.org/installer-team/console-setup
 Vcs-Git: https://salsa.debian.org/installer-team/console-setup.git
@@ -26,7 +26,7 @@ Package: console-setup
 Architecture: all
 Multi-Arch: foreign
 Pre-Depends: debconf | debconf-2.0
-Depends: console-setup-linux | console-setup-freebsd | hurd, xkb-data (>= 0.9), keyboard-configuration (= ${source:Version}), ${misc:Depends}
+Depends: console-setup-linux | hurd, xkb-data (>= 0.9), keyboard-configuration (= ${source:Version}), ${misc:Depends}
 Suggests: lsb-base (>= 3.0-6), locales
 Conflicts: console-setup-mini
 Breaks: lsb-core (<< 2.0-6), lsb (<< 2.0-6), lsb-base (<< 3.0-6)
@@ -47,7 +47,7 @@ Package: console-setup-mini
 Architecture: all
 Multi-Arch: foreign
 Recommends: kbd | console-tools
-Depends: console-setup-linux | console-setup-freebsd, debconf (>= 0.5) | debconf-2.0, keyboard-configuration (= ${source:Version}), ${misc:Depends}
+Depends: console-setup-linux, debconf (>= 0.5) | debconf-2.0, keyboard-configuration (= ${source:Version}), ${misc:Depends}
 Suggests: lsb-base (>= 3.0-6)
 Conflicts: console-setup
 Breaks: lsb-core (<< 2.0-6), lsb (<< 2.0-6), lsb-base (<< 3.0-6)
@@ -65,26 +65,15 @@ Description: console font and keymap setup program - reduced version for Linux
 Package: console-setup-linux
 Architecture: all
 Multi-Arch: foreign
+Static-built-Using: ${built-using}
 Depends: kbd (>= 0.99-12) | console-tools (>= 1:0.2.3-16), keyboard-configuration (= ${source:Version}), ${misc:Depends}, init-system-helpers (>= 1.29~) | initscripts
 Suggests: console-setup
-Conflicts: console-setup-freebsd
 Breaks: console-terminus, console-cyrillic (<= 0.9-11), console-setup (<< 1.71)
 Replaces: console-terminus, console-setup (<< 1.71)
 Provides: console-terminus
 Description: Linux specific part of console-setup
  This package includes fonts in psf format and definitions of various
  8-bit charmaps.
-
-Package: console-setup-freebsd
-Architecture: all
-Multi-Arch: foreign
-Depends: vidcontrol, kbdcontrol, keyboard-configuration (= ${source:Version}), ${misc:Depends}, init-system-helpers (>= 1.29~) | initscripts
-Suggests: console-setup
-Conflicts: console-setup-linux
-Breaks: console-setup (<< 1.71)
-Replaces: console-setup (<< 1.71)
-Description: FreeBSD specific part of console-setup
- This package includes raw, uuencoded fonts and various screen maps.
 
 Package: bdf2psf
 Architecture: all
@@ -158,14 +147,6 @@ Architecture: all
 Description: encoded Linux keyboard layouts for Sun5 keyboards
 Package-Type: udeb
 
-Package: console-setup-pc-ekbd
-Provides: console-setup-ekmap
-Section: debian-installer
-Depends: ${misc:Depends}
-Architecture: all
-Description: encoded FreeBSD keyboard layouts for PC keyboards
-Package-Type: udeb
-
 Package: console-setup-linux-fonts-udeb
 Section: debian-installer
 Depends: ${misc:Depends}, kbd-udeb
@@ -173,23 +154,9 @@ Architecture: all
 Description: Linux console fonts for Debian Installer
 Package-Type: udeb
 
-Package: console-setup-freebsd-fonts-udeb
-Section: debian-installer
-Depends: ${misc:Depends}
-Architecture: all
-Description: FreeBSD console fonts for Debian Installer
-Package-Type: udeb
-
 Package: console-setup-linux-charmaps-udeb
 Section: debian-installer
 Depends: ${misc:Depends}
 Architecture: all
 Description: Linux 8-bit charmaps for console-setup-udeb
-Package-Type: udeb
-
-Package: console-setup-freebsd-charmaps-udeb
-Section: debian-installer
-Depends: ${misc:Depends}
-Architecture: all
-Description: FreeBSD 8-bit charmaps for console-setup-udeb
 Package-Type: udeb

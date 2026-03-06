@@ -15,14 +15,15 @@
 # Y Giridhar Appaji Nag <appaji@debian.org>, 2008, 2009.
 # Krishna Babu K <kkrothap@redhat.com>, 2009.
 # Arjuna Rao Chavala <arjunaraoc@googlemail.com>, 2011, 2012.
-# Praveen Illa <mail2ipn@gmail.com>, 2018.
+# Praveen Illa <mail2ipn@gmail.com>, 2018, 2020.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: te\n"
 "Report-Msgid-Bugs-To: console-setup@packages.debian.org\n"
-"POT-Creation-Date: 2020-10-28 20:01+0000\n"
-"PO-Revision-Date: 2019-08-28 18:10+0000\n"
-"Last-Translator: leela <53352@protonmail.com>\n"
+"POT-Creation-Date: 2025-10-15 20:01+0000\n"
+"PO-Revision-Date: 2025-05-14 17:03+0000\n"
+"Last-Translator: Sripath Roy Koganti <sripathroy@swecha.net>\n"
 "Language-Team: d-i <kde-i18n-doc@kde.org>\n"
 "Language: te\n"
 "MIME-Version: 1.0\n"
@@ -257,12 +258,13 @@ msgstr "కన్సోల్  కొరకు ఖతి(Font):"
 #. relatively short.
 #. :sl3:
 #: ../console-setup.templates:6001
+#, fuzzy
 msgid ""
 "\"VGA\" has a traditional appearance and has medium coverage of "
 "international scripts. \"Fixed\" has a simplistic appearance and has better "
 "coverage of international scripts. \"Terminus\" may help to reduce eye "
 "fatigue, though some symbols have a similar aspect which may be a problem "
-"for programmers."
+"for programmers. \"DejaVu\" is suited to screens with HiDPI."
 msgstr ""
 "\"VGA\" సాంప్రదాయక రూపు కలిగి, అంతార్జాతీయ లిపులకు మధ్యస్థ స్థాయి తోడ్పాటు వున్నది.\"Fixed\" "
 "సామాన్య రూపు కలిగి  అంతార్జాతీయ లిపులకు పెద్ద స్థాయి తోడ్పాటు వున్నది . \"Terminus\" కంటి శ్రమని "
@@ -276,9 +278,11 @@ msgstr ""
 #. relatively short.
 #. :sl3:
 #: ../console-setup.templates:6001
+#, fuzzy
 msgid ""
 "If you prefer a bold version of the Terminus font, choose either "
-"TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
+"TerminusBold or DejaVuBold (if you use a framebuffer) or TerminusBoldVGA "
+"(otherwise)."
 msgstr ""
 "బొద్దురూపుగల  Terminus ఖతి వాడటానికి TerminusBold (ఫ్రేం బఫర్ వాడుతున్నట్లయితే) లేక  "
 "TerminusBoldVGA(ఇతరత్రా)ఎంచుకో."
@@ -429,9 +433,9 @@ msgid ""
 "XKBVARIANT=\"${XKBVARIANT}\".  This default value is based on the currently "
 "defined language/region and the settings in /etc/X11/xorg.conf."
 msgstr ""
-"కీ బోర్డు నమూనా అప్రమేయ విలువలు XKBLAYOUT=\"${XKBLAYOUT}\" మరియు XKBVARIANT="
-"\"${XKBVARIANT}\".  ఈ అప్రమేయ విలువ  /etc/X11/xorg.conf లో నిర్వచించబడిన ప్రస్తుత  భాషా/"
-"ప్రాంతపు ఎంపికపై ఆధారపడినవి."
+"కీ బోర్డు నమూనా అప్రమేయ విలువలు XKBLAYOUT=\"${XKBLAYOUT}\" మరియు "
+"XKBVARIANT=\"${XKBVARIANT}\".  ఈ అప్రమేయ విలువ  /etc/X11/xorg.conf లో నిర్వచించబడిన "
+"ప్రస్తుత  భాషా/ప్రాంతపు ఎంపికపై ఆధారపడినవి."
 
 #. Type: boolean
 #. Description
@@ -459,8 +463,8 @@ msgid ""
 "The current keyboard options in the configuration file /etc/default/keyboard "
 "are defined as XKBOPTIONS=\"${XKBOPTIONS}\"."
 msgstr ""
-"/etc/default/keyboard ఫైల్ లో  ప్రస్తుత కీబోర్డు అభీష్టాల  వివరము XKBOPTIONS="
-"\"${XKBOPTIONS}\"."
+"/etc/default/keyboard ఫైల్ లో  ప్రస్తుత కీబోర్డు అభీష్టాల  వివరము "
+"XKBOPTIONS=\"${XKBOPTIONS}\"."
 
 #. Type: boolean
 #. Description
@@ -482,13 +486,14 @@ msgstr "అప్రమేయ కీబోర్డు ఐచ్ఛికాల�
 #. Description
 #. :sl3:
 #: ../keyboard-configuration.templates:10001
+#, fuzzy
 msgid ""
-"The default value for the options of the keyboard layout is XKBOPTIONS="
-"\"${XKBOPTIONS}\".  It is based on the currently defined language/region and "
-"the settings in /etc/X11/xorg.conf."
+"The default value for the options of the keyboard layout is "
+"XKBOPTIONS=\"${XKBOPTIONS}\".  It is based on the currently defined language/"
+"region and the settings in /etc/X11/xorg.conf."
 msgstr ""
-"కీ బోర్డు నమూనా అప్రమేయ విలువలు XKBLAYOUT=\"${XKBLAYOUT}\" . ఈ అప్రమేయ విలువ  /etc/X11/"
-"xorg.conf లో నిర్వచించబడిన ప్రస్తుత  భాషా/ప్రాంతపు ఎంపికపై ఆధారపడినవి."
+"కీ బోర్డు నమూనా అప్రమేయ విలువలు XKBOPTIONS=\"${XKBOPTIONS}\" . ఈ అప్రమేయ విలువ  /etc/"
+"X11/xorg.conf లో నిర్వచించబడిన ప్రస్తుత  భాషా/ప్రాంతపు ఎంపికపై ఆధారపడినవి."
 
 #. Type: boolean
 #. Description
@@ -584,6 +589,15 @@ msgstr "కుడి బొమ్మ కీ"
 #: ../keyboard-configuration.templates:14001
 msgid "Menu key"
 msgstr "మెనూ కీ"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:11001
+#, fuzzy
+#| msgid "Left Control+Left Shift"
+msgid "Left Alt+Left Shift"
+msgstr "ఎడమ కంట్రోల్+ఎడమ షిఫ్ట్"
 
 #. Type: select
 #. Choices
@@ -702,11 +716,18 @@ msgstr "కీ బోర్డు ను జాతీయ లేఔట్ మర�
 #. Description
 #. :sl1:
 #: ../keyboard-configuration.templates:11002
+#, fuzzy
+#| msgid ""
+#| "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in "
+#| "the latter case, use the combination Shift+Caps Lock for normal Caps "
+#| "toggle). Alt+Shift is also a popular combination; it will however lose "
+#| "its usual behavior in Emacs and other programs that use it for specific "
+#| "needs."
 msgid ""
 "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in the "
-"latter case, use the combination Shift+Caps Lock for normal Caps toggle). Alt"
-"+Shift is also a popular combination; it will however lose its usual "
-"behavior in Emacs and other programs that use it for specific needs."
+"latter case, use the combination Shift+Caps Lock for normal Caps toggle). "
+"Left Alt+Left Shift is also a popular combination; it will however lose its "
+"usual behavior in Emacs and other programs that use it for specific needs."
 msgstr ""
 "కుడి ఆల్ట్ లేక కేప్స్ లాక్  కీలు సౌకర్యవంతంగా వుండటానికి  ఎంచుకుంటారు(రెండవది వాడేటప్పుడు షిఫ్ట్+ కేప్స్ "
 "లాక్ వాడి మామూలు కేప్స్ లాక్ కి మారవచ్చు). ఆల్ట్ + షిఫ్ట్ కూడా ప్రజాదరణ పొందినది; కాని ఈమాక్స్ మరియి ఇతర "
@@ -1435,6 +1456,14 @@ msgstr "టర్కిష్ (F అమరిక)"
 #: ../keyboard-configuration.templates:16001
 msgid "Turkish (Q layout)"
 msgstr "టర్కిష్ (Q అమరిక)"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:16001
+#, fuzzy
+msgid "Taiwanese"
+msgstr "జపనీస్"
 
 #. Type: select
 #. Choices

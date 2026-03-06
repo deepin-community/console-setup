@@ -18,14 +18,16 @@
 # Marce Villarino <mvillarino@gmail.com>, 2009.
 # Jorge Barreiro <xurxo@findomundo.es>, 2010, 2011, 2012, 2013, 2014, 2015, 2017.
 # mantinan <github@manty.net>, 2018, 2021.
+# Jorge Teijeiro <jorge.teijeiro.ramos@gmail.com>, 2022.
+# antonpaidoslalin <anton.paidoslalin@gmail.com>, 2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: gl\n"
 "Report-Msgid-Bugs-To: console-setup@packages.debian.org\n"
-"POT-Creation-Date: 2020-10-28 20:01+0000\n"
-"PO-Revision-Date: 2021-01-06 18:53+0000\n"
-"Last-Translator: mantinan <github@manty.net>\n"
+"POT-Creation-Date: 2025-10-15 20:01+0000\n"
+"PO-Revision-Date: 2026-02-11 12:09+0000\n"
+"Last-Translator: HackingAll <hacking.all.YT@gmail.com>\n"
 "Language-Team: Galician <proxecto@trasno.net>\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
@@ -265,13 +267,14 @@ msgid ""
 "international scripts. \"Fixed\" has a simplistic appearance and has better "
 "coverage of international scripts. \"Terminus\" may help to reduce eye "
 "fatigue, though some symbols have a similar aspect which may be a problem "
-"for programmers."
+"for programmers. \"DejaVu\" is suited to screens with HiDPI."
 msgstr ""
 "«VGA» ten un aspecto tradicional e ten cobertura media dos alfabetos "
 "internacionais. «Fixed» ten un aspecto simple e ten mellor cobertura dos "
 "alfabetos internacionais. «Terminus» pode axudar a reducir a fatiga visual "
 "aínda que algúns símbolos teñen un aspecto similar, o que pode ser un "
-"problema para os programadores."
+"problema para os programadores. \"DejaVu\" está enfocada para monitores con "
+"HiDPI."
 
 #. Type: select
 #. Description
@@ -282,10 +285,11 @@ msgstr ""
 #: ../console-setup.templates:6001
 msgid ""
 "If you prefer a bold version of the Terminus font, choose either "
-"TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
+"TerminusBold or DejaVuBold (if you use a framebuffer) or TerminusBoldVGA "
+"(otherwise)."
 msgstr ""
-"Se prefire a versión en negriña do tipo Terminus, escolla o tipo "
-"TerminusBold (se emprega o «framebuffer») ou TerminusBoldVGA (noutro caso)."
+"Se prefire a versión en grosa do tipo Terminus, escolla o tipo TerminusBold "
+"(se emprega o «framebuffer») ou TerminusBoldVGA (noutro caso)."
 
 #. Type: select
 #. Description
@@ -405,8 +409,8 @@ msgid ""
 "is defined as XKBLAYOUT=\"${XKBLAYOUT}\" and XKBVARIANT=\"${XKBVARIANT}\"."
 msgstr ""
 "A disposición de teclado actual no ficheiro de configuración /etc/default/"
-"keyboard está definida como XKBLAYOUT=\"${XKBLAYOUT}\" e XKBVARIANT="
-"\"${XKBVARIANT}\"."
+"keyboard está definida como XKBLAYOUT=\"${XKBLAYOUT}\" e "
+"XKBVARIANT=\"${XKBVARIANT}\"."
 
 #. Type: boolean
 #. Description
@@ -437,9 +441,10 @@ msgid ""
 "XKBVARIANT=\"${XKBVARIANT}\".  This default value is based on the currently "
 "defined language/region and the settings in /etc/X11/xorg.conf."
 msgstr ""
-"O valor predeterminado da disposición do teclado é XKBLAYOUT="
-"\"${XKBLAYOUT}\" e XKBVARIANT=\"${XKBVARIANT}\". Este valor está baseado no "
-"idioma/rexión definida actualmente e na configuración en /etc/X11/xorg.conf."
+"O valor predeterminado da disposición do teclado é "
+"XKBLAYOUT=\"${XKBLAYOUT}\" e XKBVARIANT=\"${XKBVARIANT}\". Este valor está "
+"baseado no idioma/rexión definida actualmente e na configuración en /etc/X11/"
+"xorg.conf."
 
 #. Type: boolean
 #. Description
@@ -494,13 +499,13 @@ msgstr "Desexa manter as opcións de teclado predeterminadas (${XKBOPTIONS})?"
 #. :sl3:
 #: ../keyboard-configuration.templates:10001
 msgid ""
-"The default value for the options of the keyboard layout is XKBOPTIONS="
-"\"${XKBOPTIONS}\".  It is based on the currently defined language/region and "
-"the settings in /etc/X11/xorg.conf."
+"The default value for the options of the keyboard layout is "
+"XKBOPTIONS=\"${XKBOPTIONS}\".  It is based on the currently defined language/"
+"region and the settings in /etc/X11/xorg.conf."
 msgstr ""
-"O valor predeterminado das opcións da disposición de teclado é XKBOPTIONS="
-"\"${XKBOPTIONS}\". Este valor está baseado no idioma/rexión actualmente "
-"definida e na configuración en /etc/X11/xorg.conf."
+"O valor predeterminado das opcións da disposición de teclado é "
+"XKBOPTIONS=\"${XKBOPTIONS}\". Este valor está baseado no idioma/rexión "
+"actualmente definida e na configuración en /etc/X11/xorg.conf."
 
 #. Type: boolean
 #. Description
@@ -597,6 +602,14 @@ msgstr "Tecla Logo dereita"
 #: ../keyboard-configuration.templates:14001
 msgid "Menu key"
 msgstr "Tecla Menú"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:11001
+#, fuzzy
+msgid "Left Alt+Left Shift"
+msgstr "Tecla Ctrl esquerda+Tecla Maiús esquerda"
 
 #. Type: select
 #. Choices
@@ -719,9 +732,9 @@ msgstr ""
 #: ../keyboard-configuration.templates:11002
 msgid ""
 "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in the "
-"latter case, use the combination Shift+Caps Lock for normal Caps toggle). Alt"
-"+Shift is also a popular combination; it will however lose its usual "
-"behavior in Emacs and other programs that use it for specific needs."
+"latter case, use the combination Shift+Caps Lock for normal Caps toggle). "
+"Left Alt+Left Shift is also a popular combination; it will however lose its "
+"usual behavior in Emacs and other programs that use it for specific needs."
 msgstr ""
 "Polo xeral escóllense Alt dereita ou Bloq maiús por ergonomía (neste último "
 "caso empregue a combinación de Maiús+Bloq maiús para conmutar entre "
@@ -1460,6 +1473,13 @@ msgstr "Turco (esquema F)"
 #: ../keyboard-configuration.templates:16001
 msgid "Turkish (Q layout)"
 msgstr "Turco (esquema Q)"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:16001
+msgid "Taiwanese"
+msgstr "Taiwanés"
 
 #. Type: select
 #. Choices

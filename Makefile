@@ -47,20 +47,6 @@ install-common-linux: build-linux
 	install -m 644 Keyboard/compose.*.inc $(etcdir)/console-setup/
 	install -m 644 Keyboard/remap.inc $(etcdir)/console-setup/
 
-.PHONY: install-common-freebsd
-install-common-freebsd: build-freebsd
-	install -d $(prefix)/share/syscons/fonts/
-	install -m 644 Fonts/*.fnt $(prefix)/share/syscons/fonts/
-	install -d $(prefix)/share/syscons/scrnmaps/
-	install -m 644 Fonts/*.scm $(prefix)/share/syscons/scrnmaps/
-	install -d $(prefix)/share/consoletrans
-	install -m 644 acm/*.acm $(prefix)/share/consoletrans/
-	install -d $(etcdir)/console-setup
-	install -m 644 Fonts/terminfo $(etcdir)/console-setup/
-	install -m 644 Fonts/termcap $(etcdir)/console-setup/
-	install -m 644 Keyboard/dkey.*.inc $(etcdir)/console-setup/
-	install -m 644 Keyboard/remap.inc $(etcdir)/console-setup/
-
 .PHONY: install-ckbcomp
 install-ckbcomp: 
 	if [ -z "$(xkbdir)" ]; then \
@@ -73,10 +59,9 @@ install-ckbcomp:
 	install -m 644 man/ckbcomp.1 $(mandir)/man1/
 
 .PHONY : install-ckbcomp-mini
-install-ckbcomp-mini: build-mini-linux build-mini-freebsd
+install-ckbcomp-mini: build-mini-linux
 	install -d $(prefix)/share/console-setup/
 	-install -m 644 Keyboard/*.ekmap.gz $(prefix)/share/console-setup/
-	-install -m 644 Keyboard/*.ekbd.gz $(prefix)/share/console-setup/
 	install -m 644 Keyboard/charmap_functions.sh $(prefix)/share/console-setup/
 	install -d $(prefix)/bin/
 	install -m 755 Keyboard/ckbcomp-mini $(prefix)/bin/
@@ -88,16 +73,10 @@ install-ckbcomp-mini: build-mini-linux build-mini-freebsd
 .PHONY: install-linux
 install-linux: install-common install-common-linux install-ckbcomp
 
-.PHONY: install-freebsd
-install-freebsd: install-common install-common-freebsd install-ckbcomp
-
 .PHONY : install-mini-linux
 install-mini-linux: install-common install-common-linux install-ckbcomp-mini
 
-.PHONY : install-mini-freebsd
-install-mini-freebsd: install-common install-common-freebsd install-ckbcomp-mini
-
-common-uninstall: | build-linux build-mini-linux build-freebsd build-mini-freebsd
+common-uninstall: | build-linux build-mini-linux
 	-for font in Fonts/*.psf.gz; do \
 		rm $(prefix)/share/consolefonts/$${font##*/}; \
 	done
@@ -126,12 +105,6 @@ uninstall-linux: build-linux common-uninstall
 
 .PHONY: uninstall-mini-linux
 uninstall-mini-linux: build-mini-linux common-uninstall
-
-.PHONY: uninstall-freebsd
-uninstall-freebsd: build-freebsd common-uninstall
-
-.PHONY: uninstall-mini-freebsd
-uninstall-mini-freebsd: build-mini-freebsd common-uninstall
 
 %.txt : %
 	groff -mandoc -Tascii $< | col -bx >$@

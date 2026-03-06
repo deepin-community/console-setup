@@ -37,9 +37,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: console-setup@packages.debian.org\n"
-"POT-Creation-Date: 2020-10-28 20:01+0000\n"
-"PO-Revision-Date: 2022-04-17 17:12+0000\n"
-"Last-Translator: Wenbin Lv <wenbin816@gmail.com>\n"
+"POT-Creation-Date: 2025-10-15 20:01+0000\n"
+"PO-Revision-Date: 2025-11-27 05:02+0000\n"
+"Last-Translator: Sketch6580 <sketch6580@users.noreply.hosted.weblate.org>\n"
 "Language-Team: <debian-l10n-chinese@lists.debian.org>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
@@ -276,11 +276,11 @@ msgid ""
 "international scripts. \"Fixed\" has a simplistic appearance and has better "
 "coverage of international scripts. \"Terminus\" may help to reduce eye "
 "fatigue, though some symbols have a similar aspect which may be a problem "
-"for programmers."
+"for programmers. \"DejaVu\" is suited to screens with HiDPI."
 msgstr ""
-"\"VGA\" 具有传统的外观和中等的国际化脚本覆盖程度。\"Fixed\" 具有简化的外观和"
-"更好的国际化脚本覆盖程度。\"Terminus\" 可帮助减少视觉疲劳，但有些字符可能会看"
-"起来类似，这可能会给程序员带来一些麻烦。"
+"\"VGA\" 具有传统的外观和中等的国际化文字覆盖程度。\"Fixed\" 具有简化的外观和"
+"更好的国际化文字覆盖程度。\"Terminus\" 可帮助减少视觉疲劳，但有些字符可能会看"
+"起来类似，这可能会给程序员带来一些麻烦。\"DejaVu\" 适合高分辨率屏幕。"
 
 #. Type: select
 #. Description
@@ -291,10 +291,11 @@ msgstr ""
 #: ../console-setup.templates:6001
 msgid ""
 "If you prefer a bold version of the Terminus font, choose either "
-"TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
+"TerminusBold or DejaVuBold (if you use a framebuffer) or TerminusBoldVGA "
+"(otherwise)."
 msgstr ""
-"如果您希望使用 Terminus 字体的粗体，请选择 TerminusBold (如果您使用帧缓冲) 或"
-"者 TerminusBoldVGA (其他情况)。"
+"如果您希望使用 Terminus 字体的粗体，请选择 TerminusBold 或 DejaVuBold (如果您"
+"使用帧缓冲) 或者 TerminusBoldVGA (其他情况)。"
 
 #. Type: select
 #. Description
@@ -439,9 +440,9 @@ msgid ""
 "XKBVARIANT=\"${XKBVARIANT}\".  This default value is based on the currently "
 "defined language/region and the settings in /etc/X11/xorg.conf."
 msgstr ""
-"键盘布局的默认值是 XKBLAYOUT=\"${XKBLAYOUT}\" 和 XKBVARIANT="
-"\"${XKBVARIANT}\"。此默认值是根据当前的语言和区域设置，以及 /etc/X11/xorg."
-"conf 中的设置确定的。"
+"键盘布局的默认值是 XKBLAYOUT=\"${XKBLAYOUT}\" 和 "
+"XKBVARIANT=\"${XKBVARIANT}\"。此默认值是根据当前的语言和区域设置，以及 /etc/"
+"X11/xorg.conf 中的设置确定的。"
 
 #. Type: boolean
 #. Description
@@ -468,8 +469,8 @@ msgid ""
 "The current keyboard options in the configuration file /etc/default/keyboard "
 "are defined as XKBOPTIONS=\"${XKBOPTIONS}\"."
 msgstr ""
-"在 /etc/default/keyboard 中，当前键盘选项的定义为 XKBOPTIONS="
-"\"${XKBOPTIONS}\"。"
+"在 /etc/default/keyboard 中，当前键盘选项的定义为 "
+"XKBOPTIONS=\"${XKBOPTIONS}\"。"
 
 #. Type: boolean
 #. Description
@@ -492,9 +493,9 @@ msgstr "保留默认键盘选项 (${XKBOPTIONS})？"
 #. :sl3:
 #: ../keyboard-configuration.templates:10001
 msgid ""
-"The default value for the options of the keyboard layout is XKBOPTIONS="
-"\"${XKBOPTIONS}\".  It is based on the currently defined language/region and "
-"the settings in /etc/X11/xorg.conf."
+"The default value for the options of the keyboard layout is "
+"XKBOPTIONS=\"${XKBOPTIONS}\".  It is based on the currently defined language/"
+"region and the settings in /etc/X11/xorg.conf."
 msgstr ""
 "键盘布局选项的默认值为 XKBOPTIONS=\"${XKBOPTIONS}\"。它是基于当前定义的语言和"
 "区域，以及 /etc/X11/xorg.conf 中的设置确定的。"
@@ -593,6 +594,13 @@ msgstr "右徽标键"
 #: ../keyboard-configuration.templates:14001
 msgid "Menu key"
 msgstr "菜单键"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:11001
+msgid "Left Alt+Left Shift"
+msgstr "左 Alt+左 Shift"
 
 #. Type: select
 #. Choices
@@ -713,13 +721,13 @@ msgstr "您需要在国家布局和标准拉丁布局之间切换键盘布局的
 #: ../keyboard-configuration.templates:11002
 msgid ""
 "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in the "
-"latter case, use the combination Shift+Caps Lock for normal Caps toggle). Alt"
-"+Shift is also a popular combination; it will however lose its usual "
-"behavior in Emacs and other programs that use it for specific needs."
+"latter case, use the combination Shift+Caps Lock for normal Caps toggle). "
+"Left Alt+Left Shift is also a popular combination; it will however lose its "
+"usual behavior in Emacs and other programs that use it for specific needs."
 msgstr ""
-"考虑到人体工程学，常会选用右边的 Alt 或大写锁定键 (如选择后者，则会使用 Shift"
-"+大写锁定键的组合来进行正常的大小写切换)。Alt+Shift 也是很流行的组合键；但在 "
-"Emacs 和其他将其用于特殊用途的程序中它会失去其通常的功能。"
+"考虑到人体工程学，常会选用右边的 Alt 或大写锁定键 (如选择后者，则会使用 "
+"Shift+大写锁定键的组合来进行正常的大小写切换)。左 Alt+左 Shift 也是很流行的组"
+"合键；但在 Emacs 和其他将其用于特殊用途的程序中它会失去其通常的功能。"
 
 #. Type: select
 #. Description
@@ -1447,6 +1455,13 @@ msgstr "土耳其语 (F 布局)"
 #: ../keyboard-configuration.templates:16001
 msgid "Turkish (Q layout)"
 msgstr "土耳其语 (Q 布局)"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:16001
+msgid "Taiwanese"
+msgstr "繁体中文（台湾）"
 
 #. Type: select
 #. Choices

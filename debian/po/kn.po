@@ -21,9 +21,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kn\n"
 "Report-Msgid-Bugs-To: console-setup@packages.debian.org\n"
-"POT-Creation-Date: 2020-10-28 20:01+0000\n"
-"PO-Revision-Date: 2020-07-21 17:24+0000\n"
-"Last-Translator: Yogesh <yogesh@karnatakaeducation.org.in>\n"
+"POT-Creation-Date: 2025-10-15 20:01+0000\n"
+"PO-Revision-Date: 2026-01-13 12:12+0000\n"
+"Last-Translator: Prasannakumar T Bhat <pbhat99@gmail.com>\n"
 "Language-Team: Kannada <debian-l10n-kannada@lists.debian.org>\n"
 "Language: kn\n"
 "MIME-Version: 1.0\n"
@@ -130,7 +130,7 @@ msgstr "# ಗ್ರೀಕ್"
 #. :sl3:
 #: ../console-setup.templates:5001
 msgid ". Greek (for blind users)"
-msgstr ""
+msgstr ". ಗ್ರೀಕ್ (ಕುರುಡು ಬಳಕೆದಾರರಿಗೆ)"
 
 #. Type: select
 #. Choices
@@ -259,12 +259,13 @@ msgstr "ಆಜ್ಞಾಫಲಕದ ಫಾಂಟ್:"
 #. relatively short.
 #. :sl3:
 #: ../console-setup.templates:6001
+#, fuzzy
 msgid ""
 "\"VGA\" has a traditional appearance and has medium coverage of "
 "international scripts. \"Fixed\" has a simplistic appearance and has better "
 "coverage of international scripts. \"Terminus\" may help to reduce eye "
 "fatigue, though some symbols have a similar aspect which may be a problem "
-"for programmers."
+"for programmers. \"DejaVu\" is suited to screens with HiDPI."
 msgstr ""
 "\"VGA\" ಸಾಂಪ್ರದಾಯಿಕ ರೂಪವನ್ನು ಹೊಂದಿದೆ ಮತ್ತು ಅಂತರರಾಷ್ಟೀಯ ಲಿಪಿಗಳ ಮಧ್ಯಮ ವ್ಯಾಪ್ತಿಯನ್ನು "
 "ಕೂಡ ಹೊಂದಿದೆ. \"Fixed\" ಸರಳ ರೂಪವನ್ನು ಹೊಂದಿದೆ ಮತ್ತು ಅಂತರರಾಷ್ಟೀಯ ಲಿಪಿಗಳ ಉತ್ತಮ "
@@ -278,9 +279,11 @@ msgstr ""
 #. relatively short.
 #. :sl3:
 #: ../console-setup.templates:6001
+#, fuzzy
 msgid ""
 "If you prefer a bold version of the Terminus font, choose either "
-"TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
+"TerminusBold or DejaVuBold (if you use a framebuffer) or TerminusBoldVGA "
+"(otherwise)."
 msgstr ""
 "ನೀವು ದಪ್ಪ ಜಾತಿಯ Terminusಅಕ್ಷರವನ್ನು ಬಳಸುವ ಹಾಗಿದ್ದರೆ, TerminusBold "
 "(framebufferಬಳಸುವಾಗ ಮಾತ್ರ) ಅಥವಾ TerminusBoldVGA ಅನ್ನು ಬಳಸಿ."
@@ -403,8 +406,8 @@ msgid ""
 "is defined as XKBLAYOUT=\"${XKBLAYOUT}\" and XKBVARIANT=\"${XKBVARIANT}\"."
 msgstr ""
 "ಸಂರಚನಾ ಕಡತ /etc/default/keyboardನಲ್ಲಿರುವ ಪ್ರಸ್ತುತ ಕೀಲಿಮಣೆಯ ವಿನ್ಯಾಸವನ್ನು ಹೀಗೆಂದು "
-"ಅರ್ಥನಿರೂಪಣೆ ಮಾಡಲಾಗಿದೆ  XKBLAYOUT=\"${XKBLAYOUT}\" ಮತ್ತು XKBVARIANT="
-"\"${XKBVARIANT}\"."
+"ಅರ್ಥನಿರೂಪಣೆ ಮಾಡಲಾಗಿದೆ  XKBLAYOUT=\"${XKBLAYOUT}\" ಮತ್ತು "
+"XKBVARIANT=\"${XKBVARIANT}\"."
 
 #. Type: boolean
 #. Description
@@ -435,9 +438,9 @@ msgid ""
 "XKBVARIANT=\"${XKBVARIANT}\".  This default value is based on the currently "
 "defined language/region and the settings in /etc/X11/xorg.conf."
 msgstr ""
-"ಕೀಲಿಮಣೆ ವಿನ್ಯಾಸದ ಪೂರ್ವನಿಯೋಜಿತ ಮೌಲ್ಯ XKBLAYOUT=\"${XKBLAYOUT}\" ಮತ್ತು XKBVARIANT="
-"\"${XKBVARIANT}\" ಆಗಿರುತ್ತದೆ.ಈ ಪೂರ್ವನಿಯೋಜಿತ ಮೌಲ್ಯ ಪ್ರಸ್ತುತ ಸೂಚಿಸಲ್ಪಟ್ಟ ಭಾಷೆ/ಕ್ಷೇತ್ರ್ "
-"ಮತ್ತು /etc/X11/xorg.confನಲ್ಲಿ ಇರುವ ಸಂಯೋಜನೆಗಳನ್ನು ಅವಲಂಭಿಸಿರುತ್ತದೆ."
+"ಕೀಲಿಮಣೆ ವಿನ್ಯಾಸದ ಪೂರ್ವನಿಯೋಜಿತ ಮೌಲ್ಯ XKBLAYOUT=\"${XKBLAYOUT}\" ಮತ್ತು "
+"XKBVARIANT=\"${XKBVARIANT}\" ಆಗಿರುತ್ತದೆ.ಈ ಪೂರ್ವನಿಯೋಜಿತ ಮೌಲ್ಯ ಪ್ರಸ್ತುತ ಸೂಚಿಸಲ್ಪಟ್ಟ "
+"ಭಾಷೆ/ಕ್ಷೇತ್ರ್ ಮತ್ತು /etc/X11/xorg.confನಲ್ಲಿ ಇರುವ ಸಂಯೋಜನೆಗಳನ್ನು ಅವಲಂಭಿಸಿರುತ್ತದೆ."
 
 #. Type: boolean
 #. Description
@@ -465,8 +468,8 @@ msgid ""
 "The current keyboard options in the configuration file /etc/default/keyboard "
 "are defined as XKBOPTIONS=\"${XKBOPTIONS}\"."
 msgstr ""
-"ಸಂರಚನಾ ಕಡತ /etc/default/keyboardದಲ್ಲಿನ ಪ್ರಸ್ತುತ ಕೀಲಿಮಣೆ ಆಯ್ಕೆಗಳು XKBOPTIONS="
-"\"${XKBOPTIONS}\" ಎಂದು ವಿವರಿಸಲಾಗಿದೆ."
+"ಸಂರಚನಾ ಕಡತ /etc/default/keyboardದಲ್ಲಿನ ಪ್ರಸ್ತುತ ಕೀಲಿಮಣೆ ಆಯ್ಕೆಗಳು "
+"XKBOPTIONS=\"${XKBOPTIONS}\" ಎಂದು ವಿವರಿಸಲಾಗಿದೆ."
 
 #. Type: boolean
 #. Description
@@ -491,13 +494,13 @@ msgstr "ಪೂರ್ವನಿಯೋಜಿತ ಕೀಲಿಮಣೆ (${XKBOPTIONS
 #. :sl3:
 #: ../keyboard-configuration.templates:10001
 msgid ""
-"The default value for the options of the keyboard layout is XKBOPTIONS="
-"\"${XKBOPTIONS}\".  It is based on the currently defined language/region and "
-"the settings in /etc/X11/xorg.conf."
+"The default value for the options of the keyboard layout is "
+"XKBOPTIONS=\"${XKBOPTIONS}\".  It is based on the currently defined language/"
+"region and the settings in /etc/X11/xorg.conf."
 msgstr ""
-"ಕೀಲಿಮಣೆ ವಿನ್ಯಾಸದ ಆಯ್ಕೆಗಳ ಪೂರ್ವನಿಯೋಜಿತ ಮೌಲ್ಯ XKBOPTIONS="
-"\"${XKBOPTIONS}\"ಆಗಿರುತ್ತದೆ. ಈ ಪೂರ್ವನಿಯೋಜಿತ ಮೌಲ್ಯ ಪ್ರಸ್ತುತ ಸೂಚಿಸಲ್ಪಟ್ಟ ಭಾಷೆ/ಕ್ಷೇತ್ರ್ "
-"ಮತ್ತು /etc/X11/xorg.confನಲ್ಲಿ ಇರುವ ಸಂಯೋಜನೆಗಳನ್ನು ಅವಲಂಭಿಸಿರುತ್ತದೆ."
+"ಕೀಲಿಮಣೆ ವಿನ್ಯಾಸದ ಆಯ್ಕೆಗಳ ಪೂರ್ವನಿಯೋಜಿತ ಮೌಲ್ಯ "
+"XKBOPTIONS=\"${XKBOPTIONS}\"ಆಗಿರುತ್ತದೆ. ಈ ಪೂರ್ವನಿಯೋಜಿತ ಮೌಲ್ಯ ಪ್ರಸ್ತುತ ಸೂಚಿಸಲ್ಪಟ್ಟ "
+"ಭಾಷೆ/ಕ್ಷೇತ್ರ್ ಮತ್ತು /etc/X11/xorg.confನಲ್ಲಿ ಇರುವ ಸಂಯೋಜನೆಗಳನ್ನು ಅವಲಂಭಿಸಿರುತ್ತದೆ."
 
 #. Type: boolean
 #. Description
@@ -595,6 +598,14 @@ msgstr "ಬಲ ಲೋಗೊ ಕೀಲಿ"
 #: ../keyboard-configuration.templates:14001
 msgid "Menu key"
 msgstr "ಮೆನು ಕೀಲಿ"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:11001
+#, fuzzy
+msgid "Left Alt+Left Shift"
+msgstr "ಎಡ ಕಂಟ್ರೋಲ್ + ಎಡ ಶಿಫ್ಟ್"
 
 #. Type: select
 #. Choices
@@ -715,11 +726,12 @@ msgstr ""
 #. Description
 #. :sl1:
 #: ../keyboard-configuration.templates:11002
+#, fuzzy
 msgid ""
 "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in the "
-"latter case, use the combination Shift+Caps Lock for normal Caps toggle). Alt"
-"+Shift is also a popular combination; it will however lose its usual "
-"behavior in Emacs and other programs that use it for specific needs."
+"latter case, use the combination Shift+Caps Lock for normal Caps toggle). "
+"Left Alt+Left Shift is also a popular combination; it will however lose its "
+"usual behavior in Emacs and other programs that use it for specific needs."
 msgstr ""
 "ಬಲ ಆಲ್ಟ್ ಅಥವಾ ಕ್ಯಪ್ಸ್ ಲಾಕ್ ಕೀಲಿಗಳನ್ನು ಸಾಮಾನ್ಯವಾಗಿ ದಕ್ಷತಾಶಾಸ್ತ್ರದ ಕಾರಣಗಳಿಂದಾಗಿ ಆಯ್ಕೆ "
 "ಮಾಡಲಾಗುತ್ತದೆ (ಎರಡನೆ ಸಂಧರ್ಭದಲ್ಲಿ ಸಮಾನ್ಯ ಕ್ಯಾಪ್ಸ್ ಅದಲು-ಬದಲು ಮಾಡಲು ಶಿಫ್ಟ್ + ಕ್ಯಾಪ್ಸ್ ಲಾಕ್  "
@@ -949,7 +961,7 @@ msgstr "ಬೆಲ್ಜಿಯನ್"
 #. :sl1:
 #: ../keyboard-configuration.templates:16001
 msgid "Berber (Latin)"
-msgstr ""
+msgstr "ಬರ್ಬರ್ (ಲ್ಯಾಟಿನ್)"
 
 #. Type: select
 #. Choices
@@ -1454,6 +1466,14 @@ msgstr "ತುರ್ಕಿಶ್ (F ವಿನ್ಯಾಸ)"
 #: ../keyboard-configuration.templates:16001
 msgid "Turkish (Q layout)"
 msgstr "ತುರ್ಕಿಶ್ (Q ವಿನ್ಯಾಸ)"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:16001
+#, fuzzy
+msgid "Taiwanese"
+msgstr "ಜಪನೀಸ್"
 
 #. Type: select
 #. Choices

@@ -22,8 +22,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: console-setup@packages.debian.org\n"
-"POT-Creation-Date: 2020-10-28 20:01+0000\n"
-"PO-Revision-Date: 2022-12-04 17:19+0600\n"
+"POT-Creation-Date: 2025-10-15 20:01+0000\n"
+"PO-Revision-Date: 2026-01-20 22:01+0500\n"
 "Last-Translator: Baurzhan Muftakhidinov <baurthefirst@gmail.com>\n"
 "Language-Team: Kazakh\n"
 "Language: kk\n"
@@ -262,12 +262,13 @@ msgid ""
 "international scripts. \"Fixed\" has a simplistic appearance and has better "
 "coverage of international scripts. \"Terminus\" may help to reduce eye "
 "fatigue, though some symbols have a similar aspect which may be a problem "
-"for programmers."
+"for programmers. \"DejaVu\" is suited to screens with HiDPI."
 msgstr ""
-"\"VGA\" қалыпты көрініске ие және халықаралық жазуларды орташа түрде "
-"қолдайды. \"Fixed\" көрінісі жәйша, ал халықаралық жазуларды жақсырақ "
-"қолдайды. \"Terminus\" көздің шаршауын төмендете алады, бірақ ондағы кейбір "
-"таңбалар өзара ұқсас, сол үшін бағдарлама жазушыларға мәселе болуы мүмкін."
+"\"VGA\" сыртқы түрі дәстүрлі және халықаралық жазуларды орташа деңгейде "
+"қамтиды. \"Fixed\" сыртқы түрі қарапайым және халықаралық жазуларды жақсырақ "
+"қамтиды. \"Terminus\" көздің шаршауын азайтуға көмектесуі мүмкін, бірақ "
+"кейбір таңбалардың сыртқы түрі ұқсас, бұл бағдарламалаушылар үшін қиындық "
+"тудыруы мүмкін. \"DejaVu\" HiDPI экрандарына қолайлы."
 
 #. Type: select
 #. Description
@@ -278,10 +279,12 @@ msgstr ""
 #: ../console-setup.templates:6001
 msgid ""
 "If you prefer a bold version of the Terminus font, choose either "
-"TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
+"TerminusBold or DejaVuBold (if you use a framebuffer) or TerminusBoldVGA "
+"(otherwise)."
 msgstr ""
-"Terminus қарібінің жуан түрін қаласаңыз, TerminusBold (фреймбуфер "
-"қолдансаңыз) немесе TerminusBoldVGA (қалған жағдайда) таңдаңыз."
+"Егер сіз Terminus қаріпінің жуан нұсқасын қаласаңыз, TerminusBold немесе "
+"DejaVuBold (егер фреймбуферді қолдансаңыз) немесе TerminusBoldVGA (басқа "
+"жағдайда) таңдаңыз."
 
 #. Type: select
 #. Description
@@ -463,8 +466,8 @@ msgid ""
 "The current keyboard options in the configuration file /etc/default/keyboard "
 "are defined as XKBOPTIONS=\"${XKBOPTIONS}\"."
 msgstr ""
-"Ағымдағы пернетақта опциялары /etc/default/keyboard файлында XKBOPTIONS="
-"\"${XKBOPTIONS}\" ретінде анықталған."
+"Ағымдағы пернетақта опциялары /etc/default/keyboard файлында "
+"XKBOPTIONS=\"${XKBOPTIONS}\" ретінде анықталған."
 
 #. Type: boolean
 #. Description
@@ -489,9 +492,9 @@ msgstr "Бастапқы пернетақта опцияларын (${XKBOPTIONS
 #. :sl3:
 #: ../keyboard-configuration.templates:10001
 msgid ""
-"The default value for the options of the keyboard layout is XKBOPTIONS="
-"\"${XKBOPTIONS}\".  It is based on the currently defined language/region and "
-"the settings in /etc/X11/xorg.conf."
+"The default value for the options of the keyboard layout is "
+"XKBOPTIONS=\"${XKBOPTIONS}\".  It is based on the currently defined language/"
+"region and the settings in /etc/X11/xorg.conf."
 msgstr ""
 "Пернетақта опциялары үшін бастапқы мәні XKBOPTIONS=\"${XKBOPTIONS}\". Ол "
 "ағымдағы ел/аймақ және /etc/X11/xorg.conf ішіндегі баптаулар негізінде "
@@ -593,6 +596,13 @@ msgstr "Оң жақ Logo пернесі"
 #: ../keyboard-configuration.templates:14001
 msgid "Menu key"
 msgstr "Menu пернесі"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:11001
+msgid "Left Alt+Left Shift"
+msgstr "Сол жақ Alt+Сол жақ Shift"
 
 #. Type: select
 #. Choices
@@ -715,14 +725,15 @@ msgstr ""
 #: ../keyboard-configuration.templates:11002
 msgid ""
 "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in the "
-"latter case, use the combination Shift+Caps Lock for normal Caps toggle). Alt"
-"+Shift is also a popular combination; it will however lose its usual "
-"behavior in Emacs and other programs that use it for specific needs."
+"latter case, use the combination Shift+Caps Lock for normal Caps toggle). "
+"Left Alt+Left Shift is also a popular combination; it will however lose its "
+"usual behavior in Emacs and other programs that use it for specific needs."
 msgstr ""
-"Оң жақ Alt немесе Caps Lock пернелері жиі ыңғайлылық есебінен қолданылады "
-"(соңғы жағдайда, қалыпты Caps ауыстыру үшін Shift+Caps Lock қолданылады). Alt"
-"+Shift тіркесі де жиі қолданылады; бірақта, ол тіркесті қолданатын Emacs "
-"немесе басқа қолданбалар оны жоғалтатын болады."
+"Оң жақ Alt немесе Caps Lock пернелері көбінесе эргономикалық себептермен "
+"таңдалады (соңғы жағдайда, әдеттегі Caps ауыстыру үшін Shift+Caps Lock "
+"комбинациясын пайдаланыңыз). Сол жақ Alt+Сол жақ Shift те танымал "
+"комбинация; дегенмен ол Emacs және оны арнайы қажеттіліктер үшін "
+"пайдаланатын басқа бағдарламаларда өзінің әдеттегі әрекетін жоғалтады."
 
 #. Type: select
 #. Description
@@ -1457,6 +1468,13 @@ msgstr "Түрік (F layout)"
 #: ../keyboard-configuration.templates:16001
 msgid "Turkish (Q layout)"
 msgstr "Түрік (Q layout)"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:16001
+msgid "Taiwanese"
+msgstr "Тайваньдық"
 
 #. Type: select
 #. Choices

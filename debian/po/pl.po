@@ -29,21 +29,23 @@
 # Marcin Owsiany <porridge@debian.org>, 2011.
 # Michał Kułach <michal.kulach@gmail.com>, 2012, 2013, 2014, 2015, 2016, 2017, 2018.
 # Bartosz Feński <fenio@debian.org>, 2020.
+# Matthaiks <kitynska@gmail.com>, 2021, 2022.
+# Łukasz Dulny <BartekChom@poczta.onet.pl>, 2017.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: console-setup@packages.debian.org\n"
-"POT-Creation-Date: 2020-10-28 20:01+0000\n"
-"PO-Revision-Date: 2021-04-25 18:20+0000\n"
+"POT-Creation-Date: 2025-10-15 20:01+0000\n"
+"PO-Revision-Date: 2025-10-20 04:50+0000\n"
 "Last-Translator: Matthaiks <kitynska@gmail.com>\n"
 "Language-Team: Polish <debian-l10n-polish@lists.debian.org>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
-"|| n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
 
 #. Type: text
 #. Description
@@ -163,14 +165,14 @@ msgstr "# lao"
 #. :sl3:
 #: ../console-setup.templates:5001
 msgid "# Latin1 and Latin5 - western Europe and Turkic languages"
-msgstr "# Latin1 i Latin5 - Europa zachodnia i języki tureckie"
+msgstr "# Latin1 i Latin5 - Europa Zachodnia i języki tureckie"
 
 #. Type: select
 #. Choices
 #. :sl3:
 #: ../console-setup.templates:5001
 msgid "# Latin2 - central Europe and Romanian"
-msgstr "# Latin2 - Europa centralna i rumuński"
+msgstr "# Latin2 - Europa Środkowa i rumuński"
 
 #. Type: select
 #. Choices
@@ -255,8 +257,8 @@ msgid ""
 "If you don't use a framebuffer, the choices that start with \".\" will "
 "reduce the number of available colors on the console."
 msgstr ""
-"Jeśli nie korzystasz z bufora ramki wybranie opcji zaczynających się od \"."
-"\" zmniejszy ilość dostępnych w konsoli kolorów."
+"Jeśli nie korzystasz z bufora ramki, wybranie opcji zaczynających się od \"."
+"\" zmniejszy liczbę dostępnych w konsoli kolorów."
 
 #. Type: select
 #. Description
@@ -280,13 +282,14 @@ msgid ""
 "international scripts. \"Fixed\" has a simplistic appearance and has better "
 "coverage of international scripts. \"Terminus\" may help to reduce eye "
 "fatigue, though some symbols have a similar aspect which may be a problem "
-"for programmers."
+"for programmers. \"DejaVu\" is suited to screens with HiDPI."
 msgstr ""
 "Czcionka \"VGA\" ma tradycyjny wygląd i średnio obsługiwana jest przez "
 "międzynarodowe skrypty. Czcionka \"Fixed\" ma prostszy wygląd i lepiej "
 "obsługiwana jest przez międzynarodowe skrypty. Czcionka \"Terminus\" może "
 "zmniejszyć zmęczenie oczu, ale niektóre symbole są podobne do siebie co może "
-"być kłopotliwe dla programistów."
+"być kłopotliwe dla programistów. \"DejaVu\" jest dostosowana do ekranów z "
+"HiDPI."
 
 #. Type: select
 #. Description
@@ -297,10 +300,12 @@ msgstr ""
 #: ../console-setup.templates:6001
 msgid ""
 "If you prefer a bold version of the Terminus font, choose either "
-"TerminusBold (if you use a framebuffer) or TerminusBoldVGA (otherwise)."
+"TerminusBold or DejaVuBold (if you use a framebuffer) or TerminusBoldVGA "
+"(otherwise)."
 msgstr ""
-"Jeśli wolisz pogrubioną wersje czcionki Terminus, użyj TerminusBold (w "
-"przypadku gdy korzystasz z bufora ramki) lub TerminusBoldVGA."
+"Jeśli wolisz pogrubioną wersje czcionki Terminus, użyj TerminusBold lub "
+"DejaVuBold (jeśli używasz bufora ramki) albo TerminusBoldVGA (w przeciwnym "
+"razie)."
 
 #. Type: select
 #. Description
@@ -463,7 +468,7 @@ msgid ""
 "Please choose whether you want to keep it. If you choose this option, no "
 "questions about the keyboard layout will be asked."
 msgstr ""
-"Proszę wybrać czy chcesz go zatrzymać. Jeśli wybierzesz tą opcję, nie "
+"Proszę wybrać, czy chcesz go zatrzymać. Jeśli wybierzesz tę opcję, nie "
 "zostaną zadane żadne pytania na temat układu klawiatury."
 
 #. Type: boolean
@@ -507,9 +512,9 @@ msgstr "Zachować obecne opcje klawiatury (${XKBOPTIONS})?"
 #. :sl3:
 #: ../keyboard-configuration.templates:10001
 msgid ""
-"The default value for the options of the keyboard layout is XKBOPTIONS="
-"\"${XKBOPTIONS}\".  It is based on the currently defined language/region and "
-"the settings in /etc/X11/xorg.conf."
+"The default value for the options of the keyboard layout is "
+"XKBOPTIONS=\"${XKBOPTIONS}\".  It is based on the currently defined language/"
+"region and the settings in /etc/X11/xorg.conf."
 msgstr ""
 "Domyślne ustawienie opcji klawiatury to XKBOPTIONS=\"${XKBOPTIONS}\". Jest "
 "ono oparte na obecnie zdefiniowanym kraju/regionie i ustawieniach w /etc/X11/"
@@ -611,6 +616,13 @@ msgstr "Prawy klawisz logo"
 #: ../keyboard-configuration.templates:14001
 msgid "Menu key"
 msgstr "Klawisz menu"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:11001
+msgid "Left Alt+Left Shift"
+msgstr "Lewy Alt + lewy Shift"
 
 #. Type: select
 #. Choices
@@ -733,15 +745,15 @@ msgstr ""
 #: ../keyboard-configuration.templates:11002
 msgid ""
 "Right Alt or Caps Lock keys are often chosen for ergonomic reasons (in the "
-"latter case, use the combination Shift+Caps Lock for normal Caps toggle). Alt"
-"+Shift is also a popular combination; it will however lose its usual "
-"behavior in Emacs and other programs that use it for specific needs."
+"latter case, use the combination Shift+Caps Lock for normal Caps toggle). "
+"Left Alt+Left Shift is also a popular combination; it will however lose its "
+"usual behavior in Emacs and other programs that use it for specific needs."
 msgstr ""
-"Z powodów ergonomii często wybiera się prawy klawisz Alt lub Caps Lock (w "
-"tym drugim przypadku zwykła funkcja Caps Lock jest dostępna w kombinacji z "
-"klawiszem Shift). Innym popularnym ustawieniem jest Alt+Shift, jednak ta "
-"kombinacja straci swoje zachowanie w programie Emacs lub innych, które "
-"używają je do swoich potrzeb."
+"Z powodów ergonomii często wybiera się prawy klawisz Alt lub Caps Lock "
+"(w tym drugim przypadku zwykła funkcja Caps Lock jest dostępna w kombinacji "
+"z klawiszem Shift). Innym popularnym ustawieniem jest lewy Alt + lewy Shift, "
+"jednak ta kombinacja straci swoje zachowanie w programie Emacs lub innych, "
+"które używają je do swoich potrzeb."
 
 #. Type: select
 #. Description
@@ -788,11 +800,11 @@ msgid ""
 "That key may also be used to input national letters when the keyboard is in "
 "Latin mode."
 msgstr ""
-"Gdy klawiatura jest w trybie narodowym, a użytkownik chce wprowadzić tylko "
-"kilka liter łacińskich, właściwsze może być tymczasowe przełączenie do trybu "
-"łacińskiego. Klawiatura pozostaje w tym trybie dopóki wybrany klawisz "
-"pozostaje naciśnięty. Tego klawisza można użyć też do wprowadzania znaków "
-"narodowych gdy klawiatura jest w trybie łacińskim."
+"Gdy klawiatura jest w trybie narodowym i chce się wpisać tylko kilka liter "
+"łacińskich, bardziej odpowiednie może być tymczasowe przełączenie się na "
+"tryb łaciński. Klawiatura pozostaje w tym trybie tak długo, jak długo "
+"wybrany klawisz jest wciśnięty. Klawisz ten może być również używany do "
+"wprowadzania liter narodowych, gdy klawiatura jest w trybie łacińskim."
 
 #. Type: select
 #. Description
@@ -876,9 +888,9 @@ msgid ""
 "the next few keystrokes as a combination in order to produce a character not "
 "found on the keyboard."
 msgstr ""
-"Klawisz Compose (znany także jako Multi_klawisz) powoduje, że komputer "
-"interpretuje następnych kilka uderzeń klawiszy jako kombinację mającą na "
-"celu wprowadzenie znaku nie dostępnego na klawiaturze."
+"Klawisz Compose (znany również jako Multi_key) powoduje, że komputer "
+"interpretuje następne naciśnięcia klawiszy jako kombinację w celu "
+"wygenerowania znaku, którego nie ma na klawiaturze."
 
 #. Type: select
 #. Description
@@ -889,9 +901,9 @@ msgid ""
 "Unicode mode, regardless of what you choose here, you can always also use "
 "the Control+period combination as a Compose key."
 msgstr ""
-"Na konsoli tekstowej klawisz Compose nie działa w trybie Unicode. Poza tym "
-"trybem, niezależnie od wyboru można jako klawisza Compose używać kombinacji "
-"Control+kropka."
+"W konsoli tekstowej klawisz Compose nie działa w trybie Unicode. Jeśli nie "
+"jest w trybie Unicode, niezależnie od tego, co tutaj wybierzesz, możesz "
+"zawsze użyć kombinacji Control+kropka jako klawisza Compose."
 
 #. Type: boolean
 #. Description
@@ -1477,6 +1489,13 @@ msgstr "turecki (układ F)"
 #: ../keyboard-configuration.templates:16001
 msgid "Turkish (Q layout)"
 msgstr "turecki (układ Q)"
+
+#. Type: select
+#. Choices
+#. :sl1:
+#: ../keyboard-configuration.templates:16001
+msgid "Taiwanese"
+msgstr "tajwański"
 
 #. Type: select
 #. Choices

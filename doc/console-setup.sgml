@@ -386,7 +386,7 @@ to BDF format.  During the conversion of the fonts, only one BDF font
 was generated for a group of fonts that share common typeface.
 Console fonts that didn't have embedded Unicode table were simply
 ignored.  The fonts <prgn>LatArCyrHeb*</prgn> were also ignored -
-partialy due to technical reasons and partialy because the other BDF
+partially due to technical reasons and partially because the other BDF
 fonts are better source for making Unicode console fonts.
 
 <p> The resulting BDF fonts are named after the scheme
@@ -463,7 +463,7 @@ from the legacy fonts.  This font is named after the scheme
 <var>CHARSET</var>-vga<var>SIZE</var>.psf.  For example
 <file>Greek-vga14.psf</file> is the legacy font for Greek character
 set and size 14.  The list of BDF fonts that is used to produce
-Greek-vga14.psf was determined as folows.
+Greek-vga14.psf was determined as follows.
 
 <p> First, see which one of the legacy BDF fonts can provide as many
 glyphs for <file>Greek-vga14.psf</file> as possible.  This was
@@ -551,6 +551,11 @@ TerminusBold20x10, TerminusBold24x12, TerminusBold28x14,
 TerminusBold32x16, TerminusBoldVGA14, TerminusBoldVGA16, Goha12,
 Goha14, Goha16, GohaClassic12, GohaClassic14 and GohaClassic16.  See
 the <prgn>GOOD_PSF_FONTS</prgn> variable in the <prgn>Makefile</prgn>.
+
+<p> Additionally, some large fonts are generated from the DejaVu vector
+font. The following fonts are generated so: DejaVu30x16, DejaVu36x20,
+DejaVu43x24, DejaVu51x28, DejaVu59x32, DejaVu74x40, DejaVu89x48,
+DejaVu118x64.
 
 <chapt id="ckbcomp"> The <prgn>ckbcomp</prgn> Utility
 
